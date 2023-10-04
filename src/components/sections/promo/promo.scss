@@ -1,0 +1,24 @@
+.video {
+  height: 192px;
+  background: #6D6A6A;
+}
+
+@media(min-width: 768px) {
+  .video{
+    height: 388px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .video{
+    height: 458px;
+  }
+}
+
+@media(min-width: 1280px) {
+  .video{
+    height: 525px;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+  }
+}
