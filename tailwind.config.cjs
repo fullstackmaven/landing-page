@@ -40,6 +40,8 @@ module.exports = {
 			13: '64px',
 			14: '86px',
 			15: '160px',
+			16: '240px',
+			17: '300px',
 			// todo: there are some exceptions in designs, find out what to do with them
 		},
 		borderRadius: {
@@ -56,12 +58,32 @@ module.exports = {
 			xs: '14px',
 			s: '16px',
 			base: '20px',
-			l: '32px',
-			xl: '40px',
-			'2xl': '44px',
-			'3xl': '56px'
+			l: '24px',
+			xl: '32px',
+			'2xl': '40px',
+			'3xl': '44px',
+			'4xl': '56px',
+			'5xl': '72px',
 		},
-		extend: {},
+		container: {
+			center: true,
+			padding: {
+				sm: '16px',
+				md: '32px',
+				lg: '48px',
+				xl: '62px',
+			},
+		},
+		extend: {
+			lineHeight: {
+				xxs: '14px',
+				xs: '19px',
+				base: '24px',
+				s: '29px',
+				l: '67px',
+				xl: '86px',
+			}
+		},
 	},
 	plugins: [],
 }
