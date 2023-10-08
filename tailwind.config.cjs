@@ -66,6 +66,7 @@ module.exports = {
 			'5xl': '72px',
 		},
 		container: {
+			center: true,
 			padding: {
 				sm: '16px',
 				md: '32px',
@@ -75,7 +76,10 @@ module.exports = {
 		},
 		extend: {
 			lineHeight: {
+				xxs: '14px',
+				xs: '19px',
 				base: '24px',
+				s: '29px',
 				l: '67px',
 				xl: '86px',
 			}
