@@ -4,30 +4,32 @@ import CourseCard from './course_card/CourseCard.astro';
 
 type Props = {
   courses?: Course[];
-}
+};
 
 const defaultCourses: Course[] = [
   {
     image: 'public/home-page/course-image.svg',
     alt: '#',
     courseTitle: 'Software Engineering',
-    skills: 'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
+    skills:
+      'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
     startingSalary: '$85,000',
     duration: 8,
-    price: '$12,700'
+    price: '$12,700',
   },
   {
     image: 'public/home-page/course-image.svg',
     alt: '#',
     courseTitle: 'Quality Assurance',
-    skills: 'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
+    skills:
+      'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
     startingSalary: '$85,000',
     duration: 8,
-    price: '$12,700'
-  }
+    price: '$12,700',
+  },
 ];
 
-const { courses =defaultCourses } = Astro.props;
+const { courses = defaultCourses } = Astro.props;
 
 type Course = {
   image: string;
@@ -35,10 +37,9 @@ type Course = {
   courseTitle: string;
   skills: string;
   startingSalary: string;
-  duration: number
+  duration: number;
   price: string;
-}
-
+};
 ---
 
 <div
@@ -51,6 +52,6 @@ type Course = {
       current job while gaining expertise in a new profession, all at your own
       pace.
     </div>
-    {courses.map(course => <CourseCard course={course}/>)}
+    {courses.map((course) => <CourseCard course={course} />)}
   </div>
 </div>

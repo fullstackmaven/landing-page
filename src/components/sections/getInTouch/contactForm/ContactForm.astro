@@ -1,15 +1,19 @@
 ---
 import './contactForm.scss';
 import Dropdown from '../../../Dropdown.tsx';
-import {Button} from '../../../Button.tsx';
+import { Button } from '../../../Button.tsx';
 ---
 
 <form class='flex flex-col py-8 px-4'>
-  <input class="py-4 px-5 mb-4" type='text' placeholder='Name' />
-  <input class="py-4 px-5 mb-4" type='email' placeholder='Email' />
-  <div class="flex flex-row  justify-between">
+  <input class='py-4 px-5 mb-4' type='text' placeholder='Name' />
+  <input class='py-4 px-5 mb-4' type='email' placeholder='Email' />
+  <div class='flex flex-row justify-between'>
     <Dropdown client:load />
-    <input class="py-4 px-5 mb-4 w-8/12" type='number' placeholder='Phone Number' />
+    <input
+      class='py-4 px-5 mb-4 w-8/12'
+      type='number'
+      placeholder='Phone Number'
+    />
   </div>
-   <Button title={'Continue'} className={'w-full secondary-bg py-4 text-dark'}/>
-</from>
+  <Button title={'Continue'} className={'w-full secondary-bg py-4 text-dark'} />
+</form>
