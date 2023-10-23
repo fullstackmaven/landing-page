@@ -32,29 +32,31 @@ const defaultDefinitions: TDefinition[] = [
 <div class='container'>
   <h1 class='text-dark text-l font-bold leading-normal pb-4'>What is QA?</h1>
   <div class='space-y-3'>
-    <p class='text-dark-gray text-xxs font-normal leading-normal uppercase'>
+    <p class='text-dark-gray text-s font-normal leading-normal uppercase'>
       {`HERE'S THE DEAL:`}
     </p>
     {
       defaultDefinitions.map((definition, index) => (
         <p
           key={`qa-definition-${index}`}
-          class='text-xxs leading-4 text-dark-gray '
+          class='text-s text-dark-gray font-normal'
         >
-          <span class='text-secondary font-bold'>{definition.title}:</span>{' '}
+          <span class='text-secondary font-extrabold'>
+            {definition.title}:{' '}
+          </span>
           {definition.description}
         </p>
       ))
     }
     <div
-      class='bg-white p-6 flex flex-col justify-center items-center space-y-4'
+      class='bg-white p-6 flex flex-col justify-center items-center space-y-4 rounded-s border border-[#DFDBD1]'
     >
-      <p class='text-xxs font-medium leading-3 text-dark-gray'>
+      <p class='text-s font-medium leading-normal text-dark-gray'>
         So, if you're ready to be a tech hero and explore the world of test
         automation, our QA program is your gateway to supercharging your tech
         career!
       </p>
-      <Button className='w-full' title='Book a call' />
+      <Button className='w-full text-s' title='Book a call' />
     </div>
   </div>
 </div>
