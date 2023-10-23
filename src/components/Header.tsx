@@ -1,18 +1,22 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Button } from './Button.tsx';
 
-export const Header = () => {
-  const menuItems = ['Programs', 'Why Cyram', 'Resources', 'Blog'];
+type THeaderProps = {
+  menuItems: string[];
+};
 
+export const Header: FC<THeaderProps> = ({ menuItems = [] }) => {
   return (
-    <div className=' sticky top-0 flex justify-between items-center px-2 py-6 md:px-8 lg:px-4 mt'>
+    <div className='sticky top-0 w-full flex justify-between items-center px-2 py-6 md:px-8 lg:px-4 bg-secondary'>
       <div className='text-primary text-l font-extrabold'>Cyram</div>
       <nav className='hidden lg:flex'>
         <ul className='flex justify-between items-center lg:gap-3'>
-          {menuItems.map((menuItem) => (
-            <li className='text-primary text-s leading-[21px] font-medium px-3 py-2'>
+          {menuItems.map((menuItem, index) => (
+            <li key={`header-${index}`} className='px-3 py-2'>
               <a href='#' className='flex justify-between items-center gap-1'>
-                {menuItem}{' '}
+                <p className='text-primary text-s leading-[21px] font-medium'>
+                  {menuItem}
+                </p>
                 <img src='public/home-page/show-more.svg' alt='dropdown-icon' />
               </a>
             </li>
