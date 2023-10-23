@@ -54,6 +54,7 @@ module.exports = {
       DEFAULT: '8px',
       l: '12px',
       xl: '20px',
+      full: '50%',
     },
     fontSize: {
       xxs: '12px',

@@ -1,6 +1,6 @@
 ---
-import './courses.scss';
 import CourseCard from './course_card/CourseCard.astro';
+import './courses.scss';
 
 type Props = {
   courses?: Course[];
@@ -42,9 +42,7 @@ type Course = {
 };
 ---
 
-<div
-  class='courses pt-12 mx-auto px-4 flex flex-col gap-6 md:px-8 md:gap-4 lg:gap-6 xl:px-13 xl:gap-4'
->
+<div class='courses pt-12 flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'>
   <div class='container'>
     <h2 class='text-dark text-l font-bold leading-s pb-3'>Our Courses</h2>
     <div class='description text-xs font-normal leading-tight max-w-3xl'>
