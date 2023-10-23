@@ -1,0 +1,48 @@
+---
+import Footer from '../components/Footer.astro';
+import { Header } from '../components/Header';
+import GetInTouch from '../components/sections/getInTouch/GetInTouch.astro';
+import BootcampAlumni from '../components/sections/qaCourse/bootcampAlumni/BootcampAlumni.astro';
+import BootcampTeam from '../components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
+import BootcampTuition from '../components/sections/qaCourse/bootcampTuition/BootcampTuition.astro';
+import Curriculum from '../components/sections/qaCourse/curriculum/Curriculum.astro';
+import Lectures from '../components/sections/qaCourse/lectures/Lectures.astro';
+import Overview from '../components/sections/qaCourse/overview/Overview.astro';
+import Promo from '../components/sections/qaCourse/promo/Promo.astro';
+import QADefinition from '../components/sections/qaCourse/qaDefinition/QADefinition.astro';
+import WhyCyram from '../components/sections/qaCourse/whyCyram/WhyCyram.astro';
+import Questions from '../components/sections/questions/Questions.astro';
+import '../index.scss';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title='QA Course page'>
+  <Header
+    className='bg-light-orange'
+    menuItems={[
+      'Introduction',
+      'Learning Process',
+      'Curriculum',
+      'Tuition',
+      'FAQ',
+    ]}
+  />
+  <div class='bg-light-orange'>
+    <Promo />
+    <Lectures />
+  </div>
+  <div class='bg-cultured space-y-12 pt-12'>
+    <QADefinition />
+    <Overview />
+    <Curriculum />
+    <BootcampTeam />
+    <WhyCyram />
+    <BootcampAlumni />
+    <BootcampTuition />
+  </div>
+  <div class='bg-cultured'>
+    <Questions />
+    <GetInTouch />
+    <Footer />
+  </div>
+</Layout>

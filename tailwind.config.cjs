@@ -17,6 +17,10 @@ module.exports = {
       'mountain-meadow': '#1FCD9C',
       pear: '#BFDB38',
       vermilion: '#E03E19',
+      'light-orange': '#FFBB5C',
+      'dark-orange': '#F95D05',
+      'dark-gray': '#505050',
+      success: '#D6F3F5',
     },
     fontFamily: {
       sans: ['Lato', 'sans-serif'],
@@ -50,6 +54,7 @@ module.exports = {
       DEFAULT: '8px',
       l: '12px',
       xl: '20px',
+      full: '50%',
     },
     fontSize: {
       xxs: '12px',
@@ -66,6 +71,7 @@ module.exports = {
     container: {
       center: true,
       padding: {
+        DEFAULT: '16px',
         sm: '16px',
         md: '32px',
         lg: '48px',

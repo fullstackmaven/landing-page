@@ -1,0 +1,36 @@
+---
+import LectureCard from './lectureCard/LectureCard.astro';
+
+type TLecture = {
+  title: string;
+  description: string;
+};
+
+const defaultLectures: TLecture[] = [
+  {
+    title: 'Hands-On Learning',
+    description:
+      "Dive into real-world QA challenges with our hands-on approach. You won't just learn theory; you'll practice it in interactive labs and projects. Get ready to apply your skills from day one!",
+  },
+  {
+    title: 'Job Placement Support',
+    description:
+      "We're not just about education; we're about your future. Benefit from our job placement support and industry connections. Our success stories speak for themselves – your dream job awaits!",
+  },
+];
+---
+
+<div class='container pt-8 pb-12'>
+  <img
+    src='https://placehold.co/340x230'
+    alt={'img-placeholder'}
+    class='w-full pb-12'
+  />
+  <div class='space-y-3'>
+    {
+      defaultLectures.map((lecture, index) => (
+        <LectureCard key={`qa-course-promo-${index}`} lecture={lecture} />
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,60 @@
+---
+import { Button } from '../../../Button.tsx';
+type TDefinition = {
+  title: string;
+  description: string;
+};
+
+const defaultDefinitions: TDefinition[] = [
+  {
+    title: `Bug busters`,
+    description: `QA Engineers test software to find those pesky bugs and glitches. It's a bit like a treasure hunt, but instead of gold, you discover issues in software.`,
+  },
+  {
+    title: `Tech team players`,
+    description: `They team up with software experts to supercharge software quality. It's a bit like being the strategist behind the team, making sure they achieve victory!`,
+  },
+  {
+    title: `Embrace automation`,
+    description: `In our QA course, we introduce you to the world of programming with a focus on test automation! You won't need to be a full-blown developer, but you'll grasp the essential skills to automate testing processes. It's like learning a new superpower in the tech world!`,
+  },
+  {
+    title: `Fast-track to tech`,
+    description: `Start as a QA enthusiast and, as you dive into the tech universe, you'll discover endless possibilities. Whether you want to explore further in automation or explore other tech roles, the path is yours to chart.`,
+  },
+  {
+    title: `Rewards await`,
+    description: `Junior QA roles pay well, averaging around $88,000 per year. And as you level up in the tech world, your income potential soars higher`,
+  },
+];
+---
+
+<div class='container'>
+  <h1 class='text-dark text-l font-bold leading-normal pb-4'>What is QA?</h1>
+  <div class='space-y-3'>
+    <p class='text-dark-gray text-xxs font-normal leading-normal uppercase'>
+      {`HERE'S THE DEAL:`}
+    </p>
+    {
+      defaultDefinitions.map((definition, index) => (
+        <p
+          key={`qa-definition-${index}`}
+          class='text-xxs leading-4 text-dark-gray '
+        >
+          <span class='text-secondary font-bold'>{definition.title}:</span>{' '}
+          {definition.description}
+        </p>
+      ))
+    }
+    <div
+      class='bg-white p-6 flex flex-col justify-center items-center space-y-4'
+    >
+      <p class='text-xxs font-medium leading-3 text-dark-gray'>
+        So, if you're ready to be a tech hero and explore the world of test
+        automation, our QA program is your gateway to supercharging your tech
+        career!
+      </p>
+      <Button className='w-full' title='Book a call' />
+    </div>
+  </div>
+</div>

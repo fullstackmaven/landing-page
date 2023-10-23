@@ -1,15 +1,20 @@
 ---
-import Promo from '../components/sections/promo/Promo.astro';
-import Layout from '../layouts/Layout.astro';
-import Courses from '../components/sections/courses/Courses.astro';
-import SucessStories from '../components/sections/sucessStories/SucessStories.astro';
-import OurGrads from '../components/sections/ourGrads/OurGrads.astro';
-import Questions from '../components/sections/questions/Questions.astro';
-import GetInTouch from '../components/sections/getInTouch/GetInTouch.astro';
 import Footer from '../components/Footer.astro';
+import { Header } from '../components/Header';
+import Courses from '../components/sections/courses/Courses.astro';
+import GetInTouch from '../components/sections/getInTouch/GetInTouch.astro';
+import OurGrads from '../components/sections/ourGrads/OurGrads.astro';
+import Promo from '../components/sections/promo/Promo.astro';
+import Questions from '../components/sections/questions/Questions.astro';
+import SucessStories from '../components/sections/sucessStories/SucessStories.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Home page'>
+  <Header
+    className='bg-secondary'
+    menuItems={['Programs', 'Why Cyram', 'Resources', 'Blog']}
+  />
   <Promo />
   <Courses />
   <SucessStories />
