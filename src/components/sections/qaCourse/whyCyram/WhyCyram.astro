@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 type TAnswers = {
   title: string;
   description: string;
@@ -46,7 +48,7 @@ const defaultAnswers = [
         <div class='space-y-2'>
           <p class='flex text-dark text-s font-bold leading-4 items-center'>
             <span class='pr-1'>
-              <image src='public/qa-course/star.svg' />
+              <Image src='qa-course/star.svg' alt='fff' />
             </span>
             {answer.title}
           </p>

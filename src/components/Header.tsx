@@ -28,7 +28,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
                 <p className='text-primary text-s leading-[21px] font-medium'>
                   {menuItem}
                 </p>
-                <img src='public/home-page/show-more.svg' alt='dropdown-icon' />
+                <img src='home-page/show-more.svg' alt='dropdown-icon' />
               </a>
             </li>
           ))}
@@ -38,7 +38,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
         <Button title='Book a call' />
         <button>
           <img
-            src='public/home-page/hamburger.svg'
+            src='hamburger.svg'
             alt='mobile-menu-icon'
             className='w-6 h-4 lg:hidden'
           />
