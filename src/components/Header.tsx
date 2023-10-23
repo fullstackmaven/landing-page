@@ -14,7 +14,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
   return (
     <div
       className={classNames(
-        'sticky top-0 w-full flex justify-between items-center px-2 py-6 md:px-8 lg:px-4 z-10',
+        'lg:sticky top-0 w-full flex justify-between items-center px-2 py-6 md:px-8 lg:px-4 z-10',
         className,
       )}
       {...otherProps}
