@@ -1,0 +1,60 @@
+---
+type TAnswers = {
+  title: string;
+  description: string;
+};
+
+const defaultAnswers = [
+  {
+    title: `Live QA Workshops`,
+    description: `Start as a QA enthusiast and, as you dive into the tech universe, you'll discover endless possibilities. Whether you want to explore further in automation or explore other tech roles, the path is yours to chart.`,
+  },
+  {
+    title: `Real-World Case Studies`,
+    description: `Apply your skills by tackling real-world QA scenarios, preparing you for actual industry challenges.`,
+  },
+  {
+    title: `Personalized Feedback`,
+    description: `Receive valuable feedback from your instructors to refine your QA skills.`,
+  },
+  {
+    title: `Engaging QA Community:`,
+    description: `Join a vibrant QA community for support, collaboration, and networking opportunities.`,
+  },
+  {
+    title: `Certification`,
+    description: `Earn a prestigious Cyram certification upon successful completion of your QA Bootcamp.`,
+  },
+];
+---
+
+<div class='container'>
+  <p class='text-dark-gray text-xxs font-normal leading-normal uppercase pb-3'>
+    WHY CYRAM
+  </p>
+  <h1 class='text-dark text-l font-bold leading-normal pb-3'>
+    A live and immersive learning experience
+  </h1>
+  <p class='text-s font-normal leading-5 text-dark-gray pb-6'>
+    {
+      `Our live classes are an opportunity to learn-by-doing with other students. We take an active learning approach to ensure you retain and practice key skills.`
+    }
+  </p>
+  <div class='space-y-6'>
+    {
+      defaultAnswers.map((answer) => (
+        <div class='space-y-2'>
+          <p class='flex text-dark text-s font-bold leading-4 items-center'>
+            <span class='pr-1'>
+              <image src='public/qa-course/star.svg' />
+            </span>
+            {answer.title}
+          </p>
+          <p class='text-dark-gray text-s font-normal leading-5'>
+            {answer.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>
