@@ -4,14 +4,15 @@ module.exports = {
   theme: {
     screens: {
       sm: '376px', // mobile
-      md: '768px', //
-      lg: '1024px', // tablet
+      md: '768px', // tablet
+      lg: '1024px', // desktop
       xl: '1280px', // desktop
     },
     colors: {
-      primary: '#000000',
+      primary: '#000000', // TODO: we don't use pure black, `dark` should be our primary black color.
       dark: '#1D1E22',
       cultured: '#F6F4F2',
+      'blue-gray': '#686F7C',
       white: '#FFFFFF',
       secondary: '#FF8551',
       'mountain-meadow': '#1FCD9C',
@@ -48,10 +49,8 @@ module.exports = {
     },
     borderRadius: {
       none: '0',
-      xxs: '4px',
-      xs: '5px',
-      s: '6px',
-      DEFAULT: '8px',
+      xs: '4px',
+      s: '8px',
       l: '12px',
       xl: '20px',
       full: '50%',

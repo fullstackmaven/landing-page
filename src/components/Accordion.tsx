@@ -25,7 +25,7 @@ const Accordion: FC<
         className='items-center cursor-pointer grow flex justify-between'
       >
         <p className='text-[#2D2D2D] text-s font-semibold leading-4'>{title}</p>
-        <p className='text-primary/75 bg-success px-2 p-1 text-center text-xxs font-medium leading-normal rounded-xxs'>
+        <p className='text-primary/75 bg-success px-2 p-1 text-center text-xxs font-medium leading-normal rounded-xs'>
           {subtitle}
         </p>
       </label>
