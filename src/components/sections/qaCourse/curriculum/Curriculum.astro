@@ -1,0 +1,81 @@
+---
+import Accordion from '../../../Accordion.tsx';
+import { Button } from '../../../Button.tsx';
+import AccordionContent from './accordionContent/AccordionContent.astro';
+
+type TCurriculum = {
+  title: string;
+  subtitle: string;
+  description: string;
+  topics: string[];
+};
+
+const sampleDescription = `This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git, and debugging. This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git, and debugging. You will be diving deep into:`;
+const sampleTopics = ['HTML', 'CSS', 'Javascript'];
+
+const defaultCurriculum = [
+  {
+    title: 'Testing Fundamentals',
+    subtitle: 'Module 1',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'Core Java Programming',
+    subtitle: 'Module 2',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'Test Automation',
+    subtitle: 'Module 3',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'API Automation',
+    subtitle: 'Module 4',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'Portfolio Projects',
+    subtitle: 'Module 5',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'Prepare for interviews',
+    subtitle: 'Module 6',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+];
+---
+
+<div class='container'>
+  <p class='text-dark-gray text-xxs font-normal leading-normal uppercase pb-3'>
+    CURRICULUM
+  </p>
+  <h1 class='text-dark text-l font-bold leading-normal pb-3'>
+    Mastery-based learning with real world projects
+  </h1>
+  <p class='text-s font-normal leading-5 text-dark-gray pb-4'>
+    {
+      `Our QA bootcamp follows a mastery-based learning approach that focuses on hands-on experience. Unlike traditional QA courses that rely heavily on theory, our bootcamp immerses you in the latest tools, industry workflows, and best practices, making you proficient in the skills demanded by today's QA professionals.`
+    }
+  </p>
+  <div class='space-y-2 pb-4'>
+    {
+      defaultCurriculum.map((curriculum, index) => (
+        <Accordion title={curriculum.title} subtitle={curriculum.subtitle}>
+          <AccordionContent
+            key={`accordion-content-curriculum-${index}`}
+            {...curriculum}
+          />
+        </Accordion>
+      ))
+    }
+  </div>
+  <Button className='w-full' title='Apply now' />
+</div>

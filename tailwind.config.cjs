@@ -20,6 +20,7 @@ module.exports = {
       'light-orange': '#FFBB5C',
       'dark-orange': '#F95D05',
       'dark-gray': '#505050',
+      success: '#D6F3F5',
     },
     fontFamily: {
       sans: ['Lato', 'sans-serif'],
