@@ -1,0 +1,39 @@
+---
+import { Button } from '../../../Button.tsx';
+---
+
+<div class='container'>
+  <p class='text-dark-gray text-xxs font-normal leading-normal uppercase pb-3'>
+    Bootcamp tuition
+  </p>
+  <h1 class='text-dark text-l font-bold leading-normal pb-4'>
+    Tuition made simple and affordable
+  </h1>
+  <ul class='bg-white p-6 rounded space-y-3'>
+    <li class='flex justify-between'>
+      <h1 class='text-dark text-base font-bold leading-[26px]'>Upfront</h1>
+      <h1 class='flex flex-col text-dark text-base font-bold leading-normal'>
+        $8,700
+        <span
+          class='pt-2 text-dark bg-[#DDF7C7] rounded-xxs px-[6px] py-1 text-[8px] font-normal leading-[10.4px] text-center'
+          >Pay total • save $800</span
+        >
+      </h1>
+    </li>
+    <li class='h-[1px] bg-[#DADADA]'></li>
+    <li class='flex justify-between'>
+      <h1 class='text-dark text-base font-bold leading-[26px]'>Installments</h1>
+      <h1 class='flex flex-col text-dark text-base font-bold leading-normal'>
+        $1,180 / month
+        <span
+          class='pt-2 text-dark bg-[#DDF7C7] rounded-xxs px-[6px] py-1 text-[8px] font-normal leading-[10.4px] text-center'
+          >$9,440 in total</span
+        >
+      </h1>
+    </li>
+    <li class='h-[1px] bg-[#DADADA]'></li>
+    <li>
+      <Button className='w-full' title='Apply now' />
+    </li>
+  </ul>
+</div>
