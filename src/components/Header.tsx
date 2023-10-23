@@ -1,13 +1,24 @@
-import type { FC } from 'react';
+import classNames from 'classnames';
+import type { FC, HTMLAttributes } from 'react';
 import { Button } from './Button.tsx';
 
 type THeaderProps = {
   menuItems: string[];
 };
 
-export const Header: FC<THeaderProps> = ({ menuItems = [] }) => {
+export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
+  menuItems = [],
+  className,
+  ...otherProps
+}) => {
   return (
-    <div className='sticky top-0 w-full flex justify-between items-center px-2 py-6 md:px-8 lg:px-4 bg-secondary'>
+    <div
+      className={classNames(
+        'sticky top-0 w-full flex justify-between items-center px-2 py-6 md:px-8 lg:px-4',
+        className,
+      )}
+      {...otherProps}
+    >
       <div className='text-primary text-l font-extrabold'>Cyram</div>
       <nav className='hidden lg:flex'>
         <ul className='flex justify-between items-center lg:gap-3'>

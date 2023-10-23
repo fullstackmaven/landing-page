@@ -1,5 +1,23 @@
 ---
+import { Header } from '../components/Header';
+import Lectures from '../components/sections/qaCourse/lectures/Lectures.astro';
+import Promo from '../components/sections/qaCourse/promo/Promo.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title='QA Course page' />
+<Layout title='QA Course page'>
+  <Header
+    className='bg-light-orange'
+    menuItems={[
+      'Introduction',
+      'Learning Process',
+      'Curriculum',
+      'Tuition',
+      'FAQ',
+    ]}
+  />
+  <div class='bg-light-orange'>
+    <Promo />
+    <Lectures />
+  </div>
+</Layout>

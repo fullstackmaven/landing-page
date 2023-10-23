@@ -11,7 +11,10 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Home page'>
-  <Header menuItems={['Programs', 'Why Cyram', 'Resources', 'Blog']} />
+  <Header
+    className='bg-secondary'
+    menuItems={['Programs', 'Why Cyram', 'Resources', 'Blog']}
+  />
   <Promo />
   <Courses />
   <SucessStories />
