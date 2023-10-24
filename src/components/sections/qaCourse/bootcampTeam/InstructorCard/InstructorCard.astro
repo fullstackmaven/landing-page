@@ -1,0 +1,28 @@
+---
+const { title, imageUrl, name, jobTitle, imageCompanyUrl, companyname } =
+  Astro.props;
+---
+
+<div
+  class={`relative w-1/2 h-[259px] bg-cover bg-no-repeat bg-center rounded-s last:hidden`}
+  style={{ backgroundImage: `url('${imageUrl}')` }}
+>
+  <p
+    class='absolute top-2 left-2 px-2 py-1 rounded-xs bg-cultured text-dark text-xxs font-normal'
+  >
+    {title}
+  </p>
+  <div class='absolute bottom-2 left-2 w-full'>
+    <p class='text-white text-xxs font-bold'>{name}</p>
+    <p class='text-[#DEDCD3] text-[8px] font-medium'>{jobTitle}</p>
+    <div class='flex flex-row w-full items-center space-x-1'>
+      <div
+        class={`h-5 w-5`}
+        style={{ backgroundImage: `url('${imageCompanyUrl}')` }}
+      >
+      </div>
+      <div class='border border-white w-4 h-[1px]'></div>
+      <p class='text-white text-[8px] font-medium'>{companyname}</p>
+    </div>
+  </div>
+</div>
