@@ -35,7 +35,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
         </ul>
       </nav>
       <div className='flex justify-between items-center gap-4'>
-        <Button title='Book a call' />
+        <Button title='Book a call' className='font-semibold' />
         <button>
           <img
             src='hamburger.svg'
