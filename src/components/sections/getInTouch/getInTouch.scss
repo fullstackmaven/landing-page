@@ -1,22 +1,18 @@
-.orange-bg {
-    background: var(--Secondary, #FF8551) !important;
-}
-
 .overlap-left {
-    margin-left: -30px;
+  @apply -ml-[30px] md:-ml-[15px];
 }
 
 .black-bg {
-    background: #1D1E22;
+  background: #1d1e22;
 }
 
 .grey-bg {
-    background: #EBEBEB;
+  background: #ebebeb;
 }
 
 .form-step {
-    width: 32px;
-    height: 32px;
-    border-radius: 22.031px;
-    background: #EBEBEB;
+  width: 32px;
+  height: 32px;
+  border-radius: 22.031px;
+  background: #ebebeb;
 }
