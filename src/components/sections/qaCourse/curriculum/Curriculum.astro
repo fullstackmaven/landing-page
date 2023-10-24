@@ -68,7 +68,11 @@ const defaultCurriculum = [
   <div class='space-y-2 pb-4'>
     {
       defaultCurriculum.map((curriculum, index) => (
-        <Accordion title={curriculum.title} subtitle={curriculum.subtitle}>
+        <Accordion
+          id={`accordion-${index}`}
+          title={curriculum.title}
+          subtitle={curriculum.subtitle}
+        >
           <AccordionContent
             key={`accordion-content-curriculum-${index}`}
             {...curriculum}

@@ -8,7 +8,7 @@ type TAccordionProps = {
 
 const Accordion: FC<
   PropsWithChildren<TAccordionProps & HTMLAttributes<HTMLDivElement>>
-> = ({ title, subtitle, children, className, ...otherProps }) => {
+> = ({ title, subtitle, children, className, id, ...otherProps }) => {
   return (
     <div
       className={classNames(
@@ -17,11 +17,18 @@ const Accordion: FC<
       )}
       {...otherProps}
     >
-      <input type='checkbox' id='faq1' className='peer appearance-none' />
-      <i className='fa-solid fa-chevron-right peer-checked:hidden flex items-center w-6 h-6'></i>
-      <i className='fa-solid fa-chevron-down peer-checked:flex items-center hidden w-6 h-6'></i>
+      <div className='w-6 h-6 flex justify-center mr-2'>
+        <input
+          type='checkbox'
+          id={id}
+          className='peer appearance-none'
+          hidden
+        />
+        <i className='fa-solid fa-chevron-right peer-checked:hidden flex items-center'></i>
+        <i className='fa-solid fa-chevron-down peer-checked:flex items-center hidden'></i>
+      </div>
       <label
-        htmlFor='faq1'
+        htmlFor={id}
         className='items-center cursor-pointer grow flex justify-between'
       >
         <p className='text-[#2D2D2D] text-s font-semibold leading-4'>{title}</p>
