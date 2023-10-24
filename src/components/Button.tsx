@@ -3,7 +3,6 @@ import React, { type HTMLAttributes } from 'react';
 
 type Props = {
   title: string;
-  className: string;
 };
 
 export const Button: React.FC<Props & HTMLAttributes<HTMLButtonElement>> = ({
