@@ -1,19 +1,52 @@
 ---
-import './contactForm.scss';
-import Dropdown from '../../../Dropdown.tsx';
 import { Button } from '../../../Button.tsx';
+import Dropdown from '../../../Dropdown.tsx';
+import './contactForm.scss';
 ---
 
-<form class='flex flex-col py-8 px-4'>
-  <input class='py-4 px-5 mb-4' type='text' placeholder='Name' />
-  <input class='py-4 px-5 mb-4' type='email' placeholder='Email' />
-  <div class='flex flex-row justify-between'>
-    <Dropdown client:load />
-    <input
-      class='py-4 px-5 mb-4 w-8/12'
-      type='number'
-      placeholder='Phone Number'
-    />
+<div class='bg-white w-full h-full p-4 md:p-6 rounded-xs'>
+  <div class='flex justify-around content-center mb-4'>
+    <div class='flex flex-col justify-center content-center'>
+      <div class='flex justify-center self-center form-step'>
+        <p class='text-xs self-center'>1</p>
+      </div>
+      <p class='m-2'>Contact info</p>
+    </div>
+    <div class='flex flex-col justify-center content-center'>
+      <div class='flex justify-center self-center form-step'>
+        <p class='text-xs self-center'>2</p>
+      </div>
+      <p class='m-2'>Q&A</p>
+    </div>
+    <div class='flex flex-col justify-center content-center'>
+      <div class='flex justify-center self-center form-step'>
+        <p class='text-xs self-center'>3</p>
+      </div>
+      <p class='m-2'>Book a Call</p>
+    </div>
   </div>
-  <Button title={'Continue'} className={'w-full secondary-bg py-4 text-dark'} />
-</form>
+  <form class='flex flex-col px-4 mt-6'>
+    <input
+      class='py-4 md:py-2 md:px-3 md:text-xxs px-5 mb-4'
+      type='text'
+      placeholder='Name'
+    />
+    <input
+      class='py-4 md:py-2 md:px-3 md:text-xxs px-5 mb-4'
+      type='email'
+      placeholder='Email'
+    />
+    <div class='flex flex-row justify-between space-x-2 md:space-x-1 mb-4'>
+      <Dropdown client:load />
+      <input
+        class='py-4 md:py-2 md:px-3 md:text-xxs px-5 w-8/12'
+        type='number'
+        placeholder='Phone Number'
+      />
+    </div>
+    <Button
+      title={'Continue'}
+      className={'w-full secondary-bg py-4 text-dark mt-6'}
+    />
+  </form>
+</div>

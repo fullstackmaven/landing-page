@@ -1,5 +1,7 @@
 ---
 import { Button } from '../../../Button.tsx';
+import GetPaidCard from './Cards/GetPaidCard.astro';
+import NotSureYetCard from './Cards/NotSureYetCard.astro';
 ---
 
 <div class='container'>
@@ -9,50 +11,46 @@ import { Button } from '../../../Button.tsx';
   <h1 class='text-dark text-l font-bold leading-normal pb-4'>
     Tuition made simple and affordable
   </h1>
-  <ul class='bg-white p-6 rounded space-y-3 mb-4'>
-    <li class='flex justify-between'>
-      <h1 class='text-dark text-base font-bold leading-[26px]'>Upfront</h1>
-      <h1 class='flex flex-col text-dark text-base font-bold leading-normal'>
-        $8,700
-        <span
-          class='pt-2 text-dark bg-[#DDF7C7] rounded-xs px-[6px] py-1 text-[8px] font-normal leading-[10.4px] text-center'
-          >Pay total • save $800</span
-        >
-      </h1>
-    </li>
-    <li class='h-[1px] bg-[#DADADA]'></li>
-    <li class='flex justify-between'>
-      <h1 class='text-dark text-base font-bold leading-[26px]'>Installments</h1>
-      <h1 class='flex flex-col text-dark text-base font-bold leading-normal'>
-        $1,180 / month
-        <span
-          class='pt-2 text-dark bg-[#DDF7C7] rounded-xs px-[6px] py-1 text-[8px] font-normal leading-[10.4px] text-center'
-          >$9,440 in total</span
-        >
-      </h1>
-    </li>
-    <li class='h-[1px] bg-[#DADADA]'></li>
-    <li>
-      <Button className='w-full' title='Apply now' />
-    </li>
-  </ul>
-  <div class='space-y-2 px-4 py-6 rounded-xs bg-secondary mb-2'>
-    <h1 class='text-base font-bold leading-normal text-dark'>Not sure yet?</h1>
-    <p class='text-dark text-xxs font-normal leading-normal'>
-      Try our online introductory course at no cost.
-    </p>
-    <Button title='Try for free' />
+  <div class='flex flex-col md:flex-row md:space-x-6 md:mb-6'>
+    <ul class='bg-white p-6 rounded-xs space-y-3 mb-4 md:mb-0 w-full md:w-1/2'>
+      <li class='flex justify-between'>
+        <h1 class='text-dark text-base font-bold leading-[26px]'>Upfront</h1>
+        <h1 class='flex flex-col text-dark text-base font-bold leading-normal'>
+          $8,700
+          <span
+            class='pt-2 text-dark bg-[#DDF7C7] rounded-xs px-[6px] py-1 text-[8px] font-normal leading-[10.4px] text-center'
+            >Pay total • save $800</span
+          >
+        </h1>
+      </li>
+      <li class='h-[1px] bg-[#DADADA]'></li>
+      <li class='flex justify-between'>
+        <h1 class='text-dark text-base font-bold leading-[26px]'>
+          Installments
+        </h1>
+        <h1 class='flex flex-col text-dark text-base font-bold leading-normal'>
+          $1,180 / month
+          <span
+            class='pt-2 text-dark bg-[#DDF7C7] rounded-xs px-[6px] py-1 text-[8px] font-normal leading-[10.4px] text-center'
+            >$9,440 in total</span
+          >
+        </h1>
+      </li>
+      <li class='h-[1px] bg-[#DADADA]'></li>
+      <li>
+        <Button className='w-full' title='Apply now' />
+      </li>
+    </ul>
+    <div
+      class='appearance-none hidden md:block md:visible w-full max-h-fit md:w-1/2'
+    >
+      <GetPaidCard />
+    </div>
   </div>
-  <div class='space-y-2 px-4 py-6 rounded-xs bg-mountain-meadow'>
-    <h1 class='text-base font-bold leading-normal text-dark'>
-      Get paid or get a refund
-    </h1>
-    <p class='text-dark text-xxs font-normal leading-normal'>
-      If you don’t get a job within a year of graduating Cyram, we will refund
-      100% of your tuition.
-    </p>
-    <p class='text-dark text-[8px] font-medium leading-normal underline'>
-      Read more in Terms of Use
-    </p>
+  <div>
+    <NotSureYetCard />
+  </div>
+  <div class='md:hidden'>
+    <GetPaidCard />
   </div>
 </div>
