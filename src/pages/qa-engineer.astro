@@ -18,20 +18,22 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title='Quality Assurance Bootcamp'>
   <Header
+    client:load
     className='bg-light-orange'
     menuItems={[
-      'Introduction',
-      'Learning Process',
-      'Curriculum',
-      'Tuition',
-      'FAQ',
+      { label: 'Overview', id: 'qa-overview' },
+      { label: 'Curriculum', id: 'qa-curriculum' },
+      { label: 'Why Cyram ', id: 'why-cyram' },
+      { label: 'Tuition', id: 'qa-tuition' },
+      { label: 'Education Team', id: 'qa-education-team' },
+      { label: 'FAQ', id: 'faq' },
     ]}
   />
-  <div class='bg-light-orange'>
+  <div class='bg-light-orange mt-14 lg:pt-13'>
     <Promo />
     <Lectures />
   </div>
-  <div class='space-y-12 pt-12'>
+  <div class='child:pt-12 md:child:pt-13 lg:child:pt-15'>
     <QADefinition />
     <Overview />
     <Curriculum />
@@ -39,9 +41,8 @@ import Layout from '../layouts/Layout.astro';
     <WhyCyram />
     <BootcampAlumni />
     <BootcampTuition />
+    <Questions />
+    <GetInTouch />
+    <Footer />
   </div>
-
-  <Questions />
-  <GetInTouch />
-  <Footer />
 </Layout>

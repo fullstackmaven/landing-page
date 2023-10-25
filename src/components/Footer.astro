@@ -1,38 +1,71 @@
 <footer
-  class='courses container pt-12 pb-8 flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'
+  class='courses container pt-12 pb-8 grid grid-cols-1 gap-6 md:gap-4 lg:gap-6 xl:gap-4 lg:grid-cols-4'
 >
   <section class='pm-6'>
     <div class='flex flex-row jusitfy-around content-center w-full'>
-      <h4 class='font-bold pr-4'>Programs</h4>
-      <div class='line w-full self-center'></div>
+      <h4 class='font-bold pr-4 lg:text-base'>Programs</h4>
+      <div class='lg:hidden line w-full self-center'></div>
     </div>
     <ul class='my-4'>
-      <li class='mb-2'>Software Engineering</li>
-      <li class='mb-2'>Quality Assurance</li>
-      <li class='mb-2'>Free HTML Course</li>
-      <li class='mb-2'>Free CSS Course</li>
+      <li class='mb-2 lg:text-s'>Software Engineering</li>
+      <li class='mb-2 lg:text-s'>Quality Assurance</li>
+      <li class='mb-2 lg:text-s'>Free HTML Course</li>
+      <li class='mb-2 lg:text-s'>Free CSS Course</li>
     </ul>
   </section>
   <section class='pm-6'>
     <div class='flex flex-row jusitfy-around content-center w-full'>
-      <h4 class='font-bold pr-4'>Useful</h4>
-      <div class='line w-full self-center'></div>
+      <h4 class='font-bold pr-4 lg:text-base'>Useful</h4>
+      <div class='lg:hidden line w-full self-center'></div>
     </div>
     <ul class='my-4'>
-      <li class='mb-2'>Career Quiz</li>
-      <li class='mb-2'>Blog</li>
-      <li class='mb-2'>Outcomes</li>
-      <li class='mb-2'>Payment options</li>
-      <li class='mb-2'>FAQ</li>
+      <li class='mb-2 lg:text-s'>Career Quiz</li>
+      <li class='mb-2 lg:text-s'>Blog</li>
+      <li class='mb-2 lg:text-s'>Outcomes</li>
+      <li class='mb-2 lg:text-s'>Payment options</li>
+      <li class='mb-2 lg:text-s'>FAQ</li>
     </ul>
   </section>
   <section class='pm-6'>
     <div class='flex flex-row jusitfy-around content-center w-full'>
-      <h4 class='font-bold pr-4'>Contact</h4>
-      <div class='line w-full self-center'></div>
+      <h4 class='font-bold pr-4 lg:text-base'>Company</h4>
+      <div class='lg:hidden line w-full self-center'></div>
     </div>
     <ul class='my-4'>
-      <li class='mb-2'>support@cyram.io</li>
+      <li class='mb-2 lg:text-s'>Company</li>
+      <li class='mb-2 lg:text-s'>Support</li>
+      <li class='mb-2 lg:text-s'>Terms of use</li>
+      <li class='mb-2 lg:text-s'>Referral program policy</li>
+      <li class='mb-2 lg:text-s'>Privacy policy</li>
     </ul>
+  </section>
+  <section class='pm-6'>
+    <div class='flex flex-row jusitfy-around content-center w-full'>
+      <h4 class='font-bold pr-4 lg:text-base'>Contact</h4>
+      <div class='lg:hidden line w-full self-center'></div>
+    </div>
+    <ul class='my-4'>
+      <li class='mb-2 lg:text-s'>support@cyram.io</li>
+    </ul>
+  </section>
+  <section class='flex justify-between w-full lg:col-span-4'>
+    <p class='text-dark text-xs font-medium'>© 2023 cyram.io</p>
+    <div class='flex space-x-3'>
+      <div
+        class={`cursor-pointer h-5 w-5 rounded-full bg-no-repeat bg-center p-3 border border-dark/10 bg-[#EBEBEB]`}
+        style={{ backgroundImage: `url('facebook-icon.svg')` }}
+      >
+      </div>
+      <div
+        class={`cursor-pointer h-5 w-5 rounded-full bg-no-repeat bg-center p-3 border border-dark/10 bg-[#EBEBEB]`}
+        style={{ backgroundImage: `url('linkedin-icon.svg')` }}
+      >
+      </div>
+      <div
+        class={`cursor-pointer h-5 w-5 rounded-full bg-no-repeat bg-center p-3 border border-dark/10 bg-[#EBEBEB]`}
+        style={{ backgroundImage: `url('youtube-icon.svg')` }}
+      >
+      </div>
+    </div>
   </section>
 </footer>

@@ -22,30 +22,46 @@ const { questions = defaultQuestions } = Astro.props;
 ---
 
 <div
+  id='faq'
   class='courses container pt-12 flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'
 >
-  <div class='flex flex-col bg-white rounded-xs p-6'>
-    <h2 class='text-l text-dark font-bold'>
-      Still having a doubt? Let’s be even clearer!
-    </h2>
-    {
-      questions.map((question) => (
-        <div class='mt-4'>
-          <h3 class='text-sm font-semibold text-dark'>{question.question}</h3>
-          <p class='description text-xs font-normal leading-tight mt-1 text-blue-gray'>
-            {question.answer}
-          </p>
-        </div>
-      ))
-    }
-
-    <p
-      class='description text-xs text-blue-gray font-normal leading-tight mt-4'
-    >
-      Can’t find the answer you’re looking for? Reach out to our <a
-        href='#'
-        class='text-secondary'>customer support</a
-      > team.
-    </p>
+  <div class='grid grid-cols-1 bg-white rounded-xs p-6 lg:grid-cols-2'>
+    <div>
+      <h2 class='text-l text-dark font-bold lg:text-2xl'>
+        Still having a doubt? Let’s be even clearer!
+      </h2>
+      <p
+        class='hidden lg:block description text-xs lg:text-s text-blue-gray font-normal leading-tight mt-4'
+      >
+        Can’t find the answer you’re looking for? Reach out to our <a
+          href='#'
+          class='text-secondary'>customer support</a
+        > team.
+      </p>
+    </div>
+    <div>
+      <div>
+        {
+          questions.map((question) => (
+            <div class='mt-4 lg:space-y-4'>
+              <h3 class='text-s lg:text-base font-semibold text-dark'>
+                {question.question}
+              </h3>
+              <p class='description text-xs lg:text-s font-normal leading-tight mt-1 text-blue-gray'>
+                {question.answer}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+      <p
+        class='lg:hidden description text-xs lg:text-s text-blue-gray font-normal leading-tight mt-4'
+      >
+        Can’t find the answer you’re looking for? Reach out to our <a
+          href='#'
+          class='text-secondary'>customer support</a
+        > team.
+      </p>
+    </div>
   </div>
 </div>
