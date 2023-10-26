@@ -65,7 +65,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
           {menuItems.map((menuItem, index) => (
             <li
               key={`header-${index}`}
-              className='cursor-pointer px-3 py-2 hover:bg-[#EBEBEB] hover:rounded-xs transition duration-150 ease-out hover:ease-in'
+              className='cursor-pointer px-3 py-2 hover:bg-[#EBEBEB] hover:rounded-s transition duration-150 ease-out hover:ease-in'
             >
               <a
                 href={`#${menuItem.id}`}
