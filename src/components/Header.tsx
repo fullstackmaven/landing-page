@@ -16,22 +16,19 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
   ...otherProps
 }) => {
   const [isScrollAtTop, setIsScrollAtTop] = useState(true);
-  const [isScrolling, setIsScrolling] = useState(false);
 
   const handleScroll = () => {
     // Handle the scroll event here
-
-    const threshold = 100; // Adjust this value as needed
-    setIsScrolling(true);
-
+    const threshold = 88; // Adjust this value as needed
     if (window.scrollY <= threshold) {
       setIsScrollAtTop(true);
     } else {
       setIsScrollAtTop(false);
     }
   };
-
   useEffect(() => {
+    handleScroll();
+
     // Add a scroll event listener when the component mounts
     window.addEventListener('scroll', handleScroll);
 
@@ -44,32 +41,35 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
   return (
     <div
       className={classNames(
-        'fixed top-0 w-full flex justify-between items-center px-2 py-6 md:px-8 lg:px-4 z-10 transition-colors duration-150 ease-in',
+        'sticky top-0 w-full flex items-center px-2 py-6 md:px-8 lg:px-4 z-10 transition-all duration-150 ease-in',
         className,
         {
-          'bg-white !w-fit md:!w-[calc(100%-16px)] !right-2 md:left-2  !top-6 rounded-l !px-2 !py-3 shadow-md':
-            isScrolling && !isScrollAtTop,
+          'bg-transparent md:!w-[calc(100%-16px)] !py-3 md:bg-white rounded-l md:shadow-md top-0 md:top-2 !left-2 w-fit':
+            !isScrollAtTop,
         },
       )}
       {...otherProps}
     >
       <div
-        className={classNames('text-primary text-l font-extrabold', {
-          'hidden md:block': isScrolling && !isScrollAtTop,
-        })}
+        className={classNames(
+          'flex-1 lg:flex-none text-primary text-l font-extrabold',
+          {
+            'opacity-0 md:opacity-100': !isScrollAtTop,
+          },
+        )}
       >
         Cyram
       </div>
-      <nav className='hidden lg:flex'>
+      <nav className='hidden lg:flex-1 md:justify-center lg:flex'>
         <ul className='flex justify-between items-center lg:gap-3'>
           {menuItems.map((menuItem, index) => (
             <li
               key={`header-${index}`}
-              className='cursor-pointer px-3 py-2 hover:bg-[#EBEBEB] hover:rounded-s transition duration-150 ease-out hover:ease-in'
+              className='lg:cursor-pointer lg:hover:bg-[#EBEBEB] hover:rounded-s transition duration-150 ease-out hover:ease-in'
             >
               <a
                 href={`#${menuItem.id}`}
-                className='flex justify-between items-center gap-1'
+                className='px-3 py-2 w-full flex justify-between items-center gap-1'
               >
                 <p className='text-primary text-s leading-[21px] font-medium'>
                   {menuItem.label}
@@ -83,11 +83,15 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
       <div className='flex justify-between items-center gap-4'>
         <Button
           title='Book a call'
-          className={classNames({
-            'hidden md:block font-medium': isScrolling && !isScrollAtTop,
+          className={classNames('!h-[35px] !text-s font-medium', {
+            'hidden md:flex': !isScrollAtTop,
           })}
         />
-        <button>
+        <button
+          className={classNames('py-2 px-1 h-[35px]', {
+            'bg-white md:bg-transparent rounded-xs': !isScrollAtTop,
+          })}
+        >
           <img
             src='hamburger.svg'
             alt='mobile-menu-icon'

@@ -1,0 +1,13 @@
+---
+const { className } = Astro.props;
+import classNames from 'classnames';
+---
+
+<div class={classNames('relative', className)}>
+  <div
+    class='lg:cursor-pointer absolute inset-0 m-auto bg-primary py-2 px-5 w-fit h-fit'
+  >
+    <img src='qa-course/play-button.svg' />
+  </div>
+  <slot />
+</div>

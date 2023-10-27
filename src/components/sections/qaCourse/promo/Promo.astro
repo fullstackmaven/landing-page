@@ -2,10 +2,12 @@
 import { Button } from '../../../Button';
 ---
 
-<div class='container flex flex-col lg:flex-row lg:space-x-6'>
-  <div class='space-y-4 lg:space-y-6'>
+<div
+  class='container flex flex-col lg:flex-row space-x-0 lg:space-x-6 xl:space-x-8'
+>
+  <div class='space-y-4 lg:w-1/2 lg:space-y-6'>
     <h1
-      class='text-xl font-bold text-dark lg:leading-snug lg:text-3xl self-stretch'
+      class='text-xl font-bold text-dark lg:leading-snug lg:text-[48px] self-stretch'
     >
       Quality Assurance Bootcamp: Ignite Your Tech Journey!
     </h1>
@@ -18,9 +20,11 @@ import { Button } from '../../../Button';
       className='font-medium lg:px-8 lg:py-4'
     />
   </div>
-  <div class='relative mt-8 lg:mt-0 w-full h-[235px] md:h-[486px] lg:h-auto'>
+  <div
+    class='relative mt-8 lg:mt-0 w-full lg:w-1/2 h-[235px] md:h-[486px] lg:h-auto'
+  >
     <div
-      class='bg-[url("/qa-course/live-lecture-image.png")] w-full h-full bg-no-repeat bg-cover bg-center rounded-s md:rounded-l'
+      class='bg-[url("/qa-course/live-lecture-image.svg")] w-full h-full bg-no-repeat bg-cover bg-center rounded-s md:rounded-l'
     >
       <div
         class='flex absolute left-3 top-4 pl-2 pr-3 py-1 border border-dark-orange backdrop-blur-[2px] rounded-xs items-center gap-2'
@@ -35,7 +39,7 @@ import { Button } from '../../../Button';
         <p class='text-dark text-s font-normal'>Live Lectures</p>
       </div>
       <img
-        src='qa-course/live-lecture-tools-image.png'
+        src='qa-course/live-lecture-tools-image.svg'
         alt={'live-lecture-tools-image'}
         class='absolute bottom-4 left-4'
       />

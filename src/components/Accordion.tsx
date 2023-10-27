@@ -22,7 +22,7 @@ const Accordion: FC<
       <i className='fa-solid fa-chevron-down peer-checked:flex items-center hidden justify-center w-6 h-6'></i>
       <label
         htmlFor={id}
-        className='items-center cursor-pointer grow flex justify-between pl-2'
+        className='items-center grow flex justify-between pl-2'
       >
         <p className='text-[#2D2D2D] text-s font-semibold leading-4'>{title}</p>
         <p className='text-primary/75 bg-success px-2 p-1 text-center text-xxs font-medium  rounded-xs'>

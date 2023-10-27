@@ -29,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
       { label: 'FAQ', id: 'faq' },
     ]}
   />
-  <div class='bg-light-orange mt-14 lg:pt-13'>
+  <div class='bg-light-orange pt-6 lg:pt-13 xl:pt-[88px]'>
     <Promo />
     <Lectures />
   </div>
@@ -41,8 +41,10 @@ import Layout from '../layouts/Layout.astro';
     <WhyCyram />
     <BootcampAlumni />
     <BootcampTuition />
-    <Questions />
-    <GetInTouch />
+    <div>
+      <Questions />
+      <GetInTouch />
+    </div>
     <Footer />
   </div>
 </Layout>

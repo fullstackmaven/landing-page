@@ -26,7 +26,7 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
               type='radio'
               name='curriculum-radio'
               id={`curriculum-${index}`}
-              className='peer appearance-none'
+              className='peer appearance-none hidden'
               hidden
               value={index}
               onChange={(e) => {
@@ -46,7 +46,7 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
             </label>
           </li>
         ))}
-        <li className='py-8 px-6'>
+        <li className='py-8 px-6 flex justify-center items-center'>
           <Button title='Apply now' className='w-full px-6 py-4' />
         </li>
       </ul>
