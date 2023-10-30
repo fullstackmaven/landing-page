@@ -1,5 +1,5 @@
 ---
-import { Button } from '../../Button';
+import { Button } from '../../../Button';
 import './promo.scss';
 ---
 
@@ -24,12 +24,12 @@ import './promo.scss';
     className='mx-auto font-semibold hidden md:block xl:block'
     title='Choose your career'
   />
-  <video
-    src='#'
-    class='video flex flex-col justify-center items-center self-stretch rounded-xs md:mb-13 md:rounded-xs lg:mx-13 lg:rounded-xl xl:mt-12'
-  ></video>
+  <div class='relative'>
+      <img src='home-page/play-circle.svg' class='w-12 h-12 absolute top-0 bottom-0 right-0 left-0 m-auto cursor-pointer' />
+      <video src='#' class='video flex flex-col justify-center items-center self-stretch rounded-xs md:mb-13 md:rounded-xs lg:mx-13 lg:rounded-xl xl:mt-12' />
+  </div>
   <Button
-    className='mx-auto font-semibold mb-12 md:hidden md:mb-0'
+    className='mx-auto font-semibold mb-12 md:hidden md:mb-0 tracking-[0.32px]'
     title='Choose your career'
   />
 </div>
