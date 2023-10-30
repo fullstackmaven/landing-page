@@ -6,7 +6,7 @@ type TContentProps = Pick<TCurriculum, 'topics' | 'description'>;
 const Content: FC<TContentProps> = ({ topics, description }) => {
   return (
     <div className='w-full h-full'>
-      <div className='flex items-center justify-start space-x-3 lg:space-x-0 w-full h-10 lg:h-fit rounded-l lg:min-h-[239px]'>
+      <div className='flex items-center justify-start gap-x-3 lg:gap-x-0 w-full h-10 lg:h-fit rounded-l lg:min-h-[239px]'>
         <img src='https://placehold.co/41x39' className='block lg:hidden' />
         <img
           src='/qa-course/video-intro.svg'

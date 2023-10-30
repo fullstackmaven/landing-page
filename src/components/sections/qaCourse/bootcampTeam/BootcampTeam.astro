@@ -53,7 +53,7 @@ const defaultInstructors: TInstructor[] = [
       `During your training, you will be guided step by step from our highly experienced instructors who worked at top companies of various industries.`
     }
   </p>
-  <div class='flex flex-row w-full space-x-4'>
+  <div class='flex flex-row w-full gap-x-4'>
     {
       defaultInstructors.map((instructor, index) => (
         <InstructorCard key={`qa-course-instructor-${index}`} {...instructor} />
