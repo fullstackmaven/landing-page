@@ -1,15 +1,31 @@
+---
+import VideoImage from './VideoImage/VideoImage.astro';
+---
+
 <div class='container'>
-  <p class='text-dark-gray text-xxs font-normal leading-normal uppercase pb-3'>
+  <p
+    class='text-dark-gray text-xxs font-normal uppercase pb-3 lg:pb-6 lg:text-s tracking-[0.32px]'
+  >
     BOOTCAMP ALUMNI
   </p>
-  <h1 class='text-dark text-l font-bold leading-normal pb-6'>
+  <h1 class='text-dark text-l font-bold pb-6 lg:pb-8 lg:text-2xl'>
     Meet our alumni who work at companies like Meta, Google, and Nike!
   </h1>
-  <div class='space-x-4 w-full grid grid-cols-2 md:grid-cols-3'>
-    <img src='qa-course/alumni-1.png' />
-    <img src='qa-course/alumni-2.png' />
-    <img src='qa-course/alumni-3.png' class='hidden md:block md:visible' />
-    <img src='qa-course/alumni-4.png' class='hidden' />
-    <img src='qa-course/alumni-5.png' class='hidden' />
+  <div class='gap-x-4 w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
+    <VideoImage>
+      <img src='qa-course/alumni-1.svg' class='w-full' />
+    </VideoImage>
+    <VideoImage>
+      <img src='qa-course/alumni-2.svg' class='w-full' />
+    </VideoImage>
+    <VideoImage className='hidden md:block md:visible'>
+      <img src='qa-course/alumni-3.svg' class='w-full' />
+    </VideoImage>
+    <VideoImage className='hidden lg:block'>
+      <img src='qa-course/alumni-4.svg' class='w-full' />
+    </VideoImage>
+    <VideoImage className='hidden lg:block'>
+      <img src='qa-course/alumni-5.svg' class='w-full' />
+    </VideoImage>
   </div>
 </div>

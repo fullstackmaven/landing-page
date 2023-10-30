@@ -28,29 +28,33 @@ const defaultAnswers = [
 ];
 ---
 
-<div class='container'>
-  <p class='text-dark-gray text-xxs font-normal leading-normal uppercase pb-3'>
+<div id='why-cyram' class='container'>
+  <p
+    class='text-dark-gray text-xxs font-normal lg:text-s tracking-[0.32px] uppercase pb-3 lg:pb-6'
+  >
     WHY CYRAM
   </p>
-  <h1 class='text-dark text-l font-bold leading-normal pb-3'>
+  <h1
+    class='text-dark text-l font-bold pb-3 lg:pb-6 lg:text-2xl tracking-[0.8px]'
+  >
     A live and immersive learning experience
   </h1>
-  <p class='text-s font-normal leading-5 text-dark-gray pb-6'>
+  <p class='text-s font-normal leading-5 text-dark-gray pb-6 lg:text-base'>
     {
       `Our live classes are an opportunity to learn-by-doing with other students. We take an active learning approach to ensure you retain and practice key skills.`
     }
   </p>
-  <div class='space-y-6'>
+  <div class='grid gap-y-6'>
     {
       defaultAnswers.map((answer) => (
-        <div class='space-y-2'>
-          <p class='flex text-dark text-s font-bold leading-4 items-center'>
+        <div class='grid gap-y-2'>
+          <p class='flex text-dark text-s lg:text-base font-bold tracking-[0.4px] items-center'>
             <span class='pr-1'>
               <img src='qa-course/star.svg' alt='fff' />
             </span>
             {answer.title}
           </p>
-          <p class='text-dark-gray text-s font-normal leading-5'>
+          <p class='text-dark-gray text-s lg:text-base tracking-[0.4px] font-normal'>
             {answer.description}
           </p>
         </div>

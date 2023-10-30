@@ -22,6 +22,8 @@ module.exports = {
       'dark-orange': '#F95D05',
       'dark-gray': '#505050',
       success: '#D6F3F5',
+      'accent-6': '#E4E4E4',
+      transparent: 'transparent',
     },
     fontFamily: {
       sans: ['Lato', 'sans-serif'],
@@ -74,7 +76,7 @@ module.exports = {
         sm: '16px',
         md: '32px',
         lg: '48px',
-        xl: '62px',
+        xl: '64px',
       },
     },
     extend: {
@@ -88,5 +90,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '& > *');
+      addVariant('child-hover', '& > *:hover');
+    },
+  ],
 };

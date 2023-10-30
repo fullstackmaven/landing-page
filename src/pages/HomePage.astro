@@ -10,16 +10,38 @@ import SucessStories from '../components/sections/sucessStories/SucessStories.as
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title='Home page'>
+<Layout title='Home page' className='bg-secondary'>
   <Header
+    client:load
     className='bg-secondary'
-    menuItems={['Programs', 'Why Cyram', 'Resources', 'Blog']}
+    menuItems={[
+      {
+        label: 'Programs',
+        id: 'home-programs',
+      },
+      {
+        label: 'Why Cyram',
+        id: 'home-why-cyram',
+      },
+      {
+        label: 'Resources',
+        id: 'home-resources',
+      },
+      {
+        label: 'Blog',
+        id: 'home-blog',
+      },
+    ]}
   />
-  <Promo />
-  <Courses />
-  <SucessStories />
-  <OurGrads />
-  <Questions />
-  <GetInTouch />
-  <Footer />
+  <div class='bg-secondary pt-6 lg:pt-13 xl:pt-[88px]'>
+    <Promo />
+  </div>
+  <div class='!bg-cultured'>
+    <Courses />
+    <SucessStories />
+    <OurGrads />
+    <Questions />
+    <GetInTouch />
+    <Footer />
+  </div>
 </Layout>

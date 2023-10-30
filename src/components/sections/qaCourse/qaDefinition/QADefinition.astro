@@ -30,30 +30,32 @@ const defaultDefinitions: TDefinition[] = [
 ---
 
 <div class='container'>
-  <h1 class='text-dark text-l font-bold leading-normal pb-4'>What is QA?</h1>
-  <div class='space-y-3'>
-    <p class='text-dark-gray text-s font-normal leading-normal uppercase'>
+  <h1 class='text-dark text-l font-bold pb-4 lg:text-2xl'>What is QA?</h1>
+  <div class='grid gap-y-3'>
+    <p class='text-dark-gray text-s font-normal uppercase'>
       {`HERE'S THE DEAL:`}
     </p>
-    {
-      defaultDefinitions.map((definition, index) => (
-        <p class='text-s text-dark-gray font-normal'>
-          <span class='text-secondary font-extrabold'>
-            {definition.title}:{' '}
-          </span>
-          {definition.description}
+    <div class='gap-y-3 lg:gap-y-6 lg:gap-x-6 grid grid-cols-1 lg:grid-cols-2'>
+      {
+        defaultDefinitions.map((definition, index) => (
+          <p class='text-s lg:text-base text-dark-gray font-normal'>
+            <span class='text-secondary font-extrabold'>
+              {definition.title}:{' '}
+            </span>
+            {definition.description}
+          </p>
+        ))
+      }
+      <div
+        class='bg-white p-6 flex flex-col justify-center items-center gap-y-4 rounded-s border border-[#DFDBD1]'
+      >
+        <p class='text-s lg:text-base font-medium text-dark-gray'>
+          So, if you're ready to be a tech hero and explore the world of test
+          automation, our QA program is your gateway to supercharging your tech
+          career!
         </p>
-      ))
-    }
-    <div
-      class='bg-white p-6 flex flex-col justify-center items-center space-y-4 rounded-s border border-[#DFDBD1]'
-    >
-      <p class='text-s font-medium leading-normal text-dark-gray'>
-        So, if you're ready to be a tech hero and explore the world of test
-        automation, our QA program is your gateway to supercharging your tech
-        career!
-      </p>
-      <Button className='w-full text-s' title='Book a call' />
+        <Button className='w-full text-s' title='Book a call' />
+      </div>
     </div>
   </div>
 </div>

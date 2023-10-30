@@ -2,36 +2,45 @@
 import { Button } from '../../../Button';
 ---
 
-<div class='container flex flex-col'>
-  <div class='space-y-6'>
-    <h1 class='text-xl font-bold text-dark leading-10'>
+<div class='container flex flex-col lg:flex-row gap-x-0 lg:gap-x-6 xl:gap-x-8'>
+  <div class='grid gap-y-4 lg:w-1/2 lg:gap-y-6'>
+    <h1
+      class='text-xl font-bold text-dark lg:leading-snug lg:text-[48px] self-stretch'
+    >
       Quality Assurance Bootcamp: Ignite Your Tech Journey!
     </h1>
-    <p class='text-dark text-s font-normal leading-5'>
+    <p class='text-dark text-s font-normal xl:text-base leading-5'>
       Transform into a QA engineer in just 5 months and gain in-demand skills.
       Join our live online classes and master the art of quality assurance.
     </p>
-    <Button title='Start your adventure' className='font-medium' />
+    <Button
+      title='Start your adventure'
+      className='font-medium lg:px-8 lg:py-4 w-fit'
+    />
   </div>
   <div
-    class='relative mt-8 bg-[url("/qa-course/live-lecture-image.png")] w-full h-[235px] md:h-[486px] bg-no-repeat bg-cover rounded-s md:rounded-l'
+    class='relative mt-8 lg:mt-0 w-full lg:w-1/2 h-[235px] md:h-[486px] lg:h-auto'
   >
     <div
-      class='flex absolute left-3 top-4 pl-2 pr-3 py-1 border border-dark-orange backdrop-blur-[2px] rounded-xs items-center gap-2'
+      class='bg-[url("/qa-course/live-lecture-image.svg")] w-full h-full bg-no-repeat bg-cover bg-center rounded-s md:rounded-l'
     >
-      <div class='relative flex h-2 w-2'>
-        <span
-          class='animate-ping absolute inline-flex h-full w-full rounded-full bg-vermilion/90 opacity-75'
-        ></span>
-        <span class='relative inline-flex rounded-full h-2 w-2 bg-vermilion'
-        ></span>
+      <div
+        class='flex absolute left-3 top-4 pl-2 pr-3 py-1 border border-dark-orange backdrop-blur-[2px] rounded-xs items-center gap-2'
+      >
+        <div class='relative flex h-2 w-2'>
+          <span
+            class='animate-ping absolute inline-flex h-full w-full rounded-full bg-vermilion/90 opacity-75'
+          ></span>
+          <span class='relative inline-flex rounded-full h-2 w-2 bg-vermilion'
+          ></span>
+        </div>
+        <p class='text-dark text-s font-normal'>Live Lectures</p>
       </div>
-      <p class='text-dark text-s font-normal leading-normal'>Live Lectures</p>
+      <img
+        src='qa-course/live-lecture-tools-image.svg'
+        alt={'live-lecture-tools-image'}
+        class='absolute bottom-4 left-4'
+      />
     </div>
-    <img
-      src='qa-course/live-lecture-tools-image.png'
-      alt={'live-lecture-tools-image'}
-      class='absolute bottom-4 left-4'
-    />
   </div>
 </div>
