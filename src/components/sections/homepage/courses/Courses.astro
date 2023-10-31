@@ -10,22 +10,24 @@ const defaultCourses: Course[] = [
   {
     image: 'home-page/course-image.svg',
     alt: '#',
-    courseTitle: 'Software Engineering',
+    courseTitle: 'Software Engineering Bootcamp',
     skills:
       'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
     startingSalary: '$85,000',
     duration: 8,
     price: '$12,700',
+    type: 'Part time',
   },
   {
     image: 'home-page/course-image.svg',
     alt: '#',
-    courseTitle: 'Quality Assurance',
+    courseTitle: 'Quality Assurance Bootcamp',
     skills:
       'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
     startingSalary: '$85,000',
     duration: 8,
     price: '$12,700',
+    type: 'Part time',
   },
 ];
 
@@ -39,17 +41,24 @@ type Course = {
   startingSalary: string;
   duration: number;
   price: string;
+  type: string;
 };
 ---
 
-<div class='courses pt-12 flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'>
-  <div class='container'>
-    <h2 class='text-dark text-l font-bold leading-s pb-3 tracking-[0.48px]'>Our Courses</h2>
-    <div class='description text-xxs font-normal leading-tight max-w-3xl tracking-[0.24px]'>
-      Start a life-changing journey with our fully online courses. Keep your
-      current job while gaining expertise in a new profession, all at your own
-      pace.
-    </div>
+<div class='container courses flex flex-col lg:items-center'>
+  <h2
+    class='text-dark text-xl md:text-3xl lg:text-[48px] md:text-center font-bold tracking-[0.64px] mb-4'
+  >
+    Our Courses
+  </h2>
+  <div
+    class='w-full text-dark-gray text-s md:text-base lg:text-l font-normal leading-[22px] lg:w-[840px] lg:text-center lg:leading-8 lg:tracking-[0.48px] tracking-[0.32px] mb-4 lg:mb-8'
+  >
+    Start a life-changing journey with our fully online courses. Keep your
+    current job while gaining expertise in a new profession, all at your own
+    pace.
+  </div>
+  <div class='grid md:grid-cols-2 gap-3 md:gap-6 lg:gap-8 w-full'>
     {courses.map((course) => <CourseCard course={course} />)}
   </div>
 </div>

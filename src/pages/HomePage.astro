@@ -1,12 +1,11 @@
 ---
 import Footer from '../components/Footer.astro';
 import { Header } from '../components/Header';
-import Courses from '../components/sections/homepage/courses/Courses.astro';
 import GetInTouch from '../components/sections/common/getInTouch/GetInTouch.astro';
+import Questions from '../components/sections/common/questions/Questions.astro';
+import Courses from '../components/sections/homepage/courses/Courses.astro';
 import OurGrads from '../components/sections/homepage/ourGrads/OurGrads.astro';
 import Promo from '../components/sections/homepage/promo/Promo.astro';
-import Questions from '../components/sections/common/questions/Questions.astro';
-import SucessStories from '../components/sections/homepage/sucessStories/SucessStories.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -36,10 +35,14 @@ import Layout from '../layouts/Layout.astro';
   <div class='bg-secondary pt-6 lg:pt-13 xl:pt-[88px]'>
     <Promo />
   </div>
-  <Courses />
-  <SucessStories />
-  <OurGrads />
-  <Questions />
-  <GetInTouch />
+  <div
+    class='grid py-13 md:py-[80px] lg:pt-[144px] lg:pb-[128px] gap-13 md:gap-[80px] lg:gap-[128px]'
+  >
+    <Courses />
+    <!-- <SucessStories /> -->
+    <OurGrads />
+    <Questions />
+    <GetInTouch />
+  </div>
   <Footer />
 </Layout>

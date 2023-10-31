@@ -1,36 +1,39 @@
 ---
-import { Button } from '../../../../Button';
+import LiveIndicatorPulse from '../../../../LiveIndicatorPulse.astro';
 import '../courses.scss';
 const { course } = Astro.props;
 ---
 
 <div
-  class='flex flex-col mt-8 p-4 bg-white rounded-xs justify-center content-center'
+  class='relative flex flex-col items-center p-3 lg:p-4 gap-6 lg:gap-8 self-stretch rounded-[16px] border-[#DEDCD3] bg-white'
 >
-  <div class='flex flex-col justify-center content-center'>
-    <img src='https://placehold.co/300x160' alt={course.alt} class='w-full' />
-    <h2 class='text-dark text-center m-3 text-l font-bold leading-s w-full'>
+  <div
+    class='bg-[url("/home-page/live-lecture-image.jpeg")] w-full h-[314px] lg:h-[431px] bg-no-repeat bg-cover bg-center rounded-l md:rounded-l'
+  >
+    <div class='backdrop-blur-[2px] w-full h-full rounded-xl'>
+      <div
+        class='flex absolute left-4 top-5 px-2 py-1 border border-[#C0BFB2] backdrop-blur-[2px] rounded-xs items-center gap-3'
+      >
+        <LiveIndicatorPulse />
+        <p
+          class='text-xs lg:text-l tracking-[0.28px] lg:tracking-[0.48px] font-normal text-white'
+        >
+          Live Lectures
+        </p>
+      </div>
+      <img
+        src='home-page/live-lecture-tools-image.svg'
+        alt={'live-lecture-tools-image'}
+        class='absolute right-4 top-5'
+      />
+    </div>
+  </div>
+  <div class='flex flex-col w-full gap-2 lg:gap-3'>
+    <h2 class='text-dark text-base lg:text-l font-bold tracking-[0.4px]'>
       {course.courseTitle}
     </h2>
-  </div>
-
-  <div class='flex flex-col justify-center items-start gap-4'>
-    <div>
-      <h4 class='text-dark text-base font-medium leading-xs mb-3'>Skillset</h4>
-      <div class='skills text-xxs font-normal leading-xxs'>
-        {course.skills}
-      </div>
-      <div
-        class='px-4 py-2 mt-2 flex flex-col justify-between items-start gap-2'
-      >
-        <div class='text-[#2D2D2D] text-xxs font-medium leading-xxs'>
-          Mediate Graduate Starting Salary {course.startingSalary}
-        </div>
-        <div class='text-[#2D2D2D] text-xxs font-medium leading-xxs'>
-          {course.duration} months {course.price}
-        </div>
-      </div>
-    </div>
-    <Button title={'Learn more'} className={'w-full bg-secondary text-dark'} />
+    <p class='text-dark-gray text-s lg:text-base font-medium tracking-[0.32px]'>
+      {course.type} &#183; {course.duration} months
+    </p>
   </div>
 </div>
