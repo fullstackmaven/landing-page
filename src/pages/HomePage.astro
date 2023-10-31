@@ -10,7 +10,7 @@ import SucessStories from '../components/sections/sucessStories/SucessStories.as
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title='Home page' className='bg-secondary'>
+<Layout title='Home page'>
   <Header
     client:load
     className='bg-secondary'
@@ -36,12 +36,10 @@ import Layout from '../layouts/Layout.astro';
   <div class='bg-secondary pt-6 lg:pt-13 xl:pt-[88px]'>
     <Promo />
   </div>
-  <div class='!bg-cultured'>
-    <Courses />
-    <SucessStories />
-    <OurGrads />
-    <Questions />
-    <GetInTouch />
-    <Footer />
-  </div>
+  <Courses />
+  <SucessStories />
+  <OurGrads />
+  <Questions />
+  <GetInTouch />
+  <Footer />
 </Layout>
