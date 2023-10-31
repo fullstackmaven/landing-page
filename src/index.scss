@@ -12,3 +12,13 @@ footer {
   background: #dadada;
   height: 4px;
 }
+
+input,
+textarea,
+button,
+select,
+a,
+label {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
