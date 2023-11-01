@@ -13,7 +13,7 @@
     trusted by industry leading teams like Google, Figma, Revolut, and Shopify
   </p>
   <div
-    class='w-full grid grid-cols-3 md:grid-cols-5 child:h-[34px] child:md:h-[31px] child:lg:h-[46px] child:w-[96px] child:md:w-[85px] h-[155px] md:h-[166px] items-center justify-self-center place-items-center'
+    class='w-full grid grid-cols-3 md:grid-cols-5 gap-6 child:h-[34px] child:md:h-[31px] child:lg:h-[46px] child:w-[96px] child:md:w-[85px] h-[155px] md:h-[166px] items-center justify-self-center place-items-center'
   >
     <div>
       <img class='w-full h-full' src='home-page/google-logo.svg' />
@@ -42,20 +42,40 @@
     <div>
       <img class='w-full h-full' src='home-page/linkedin-logo.svg' />
     </div>
-    <div>
+    <div class='hidden appearance-none md:block'>
       <img class='w-full h-full' src='home-page/doordash-logo.svg' />
     </div>
-    <div>
-      <img class='w-full h-full' src='home-page/notion-logo.svg' />
+
+    <div class='hidden appearance-none md:block'>
+      <img
+        class='w-full h-full hidden appearance-none md:block'
+        src='home-page/notion-logo.svg'
+      />
     </div>
-    <div>
-      <img class='w-full h-full' src='home-page/paypal-logo.svg' />
+
+    <div class='hidden appearance-none md:block'>
+      <img
+        class='w-full h-full hidden appearance-none md:block'
+        src='home-page/paypal-logo.svg'
+      />
     </div>
-    <div>
-      <img class='w-full h-full' src='home-page/tesla-logo.svg' />
+
+    <div class='hidden appearance-none md:block'>
+      <img
+        class='w-full h-full hidden appearance-none md:block'
+        src='home-page/tesla-logo.svg'
+      />
     </div>
-    <div>
-      <img class='w-full h-full' src='home-page/zoom-logo.svg' />
+
+    <div class='hidden appearance-none md:block'>
+      <img
+        class='w-full h-full hidden appearance-none md:block'
+        src='home-page/zoom-logo.svg'
+      />
+    </div>
+
+    <div class='hidden appearance-none lg:block'>
+      <img class='w-full h-full' src='home-page/airbnb-logo.svg' />
     </div>
   </div>
 
@@ -64,11 +84,11 @@
   >
     <img
       src='home-page/grad-work-video.svg'
-      class='object-cover w-full md:rounded-[16px] lg:rounded-xl md:hidden'
+      class='object-contain w-full md:rounded-[16px] lg:rounded-xl md:hidden'
     />
     <img
       src='home-page/grad-work-video-desktop.svg'
-      class='object-cover w-full md:rounded-[16px] lg:rounded-xl hidden md:block'
+      class='object-contain w-full md:rounded-[16px] lg:rounded-xl hidden md:block'
     />
   </div>
 </div>

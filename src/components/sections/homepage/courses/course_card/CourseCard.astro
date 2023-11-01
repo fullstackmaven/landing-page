@@ -1,30 +1,37 @@
 ---
+import classNames from 'classnames';
 import LiveIndicatorPulse from '../../../../LiveIndicatorPulse.astro';
 import '../courses.scss';
 const { course } = Astro.props;
 ---
 
-<div
-  class='relative flex flex-col items-center p-3 lg:p-4 gap-6 lg:gap-8 self-stretch rounded-[16px] border-[#DEDCD3] bg-white'
+<a
+  href='#'
+  role='button'
+  class='relative flex flex-col items-center p-3 lg:p-4 gap-6 lg:gap-8 self-stretch rounded-[16px] border-[#DEDCD3] bg-white cursor-pointer transition ease-in-out delay-150 hover:bg-dark-gray/10 hover:-translate-y-4 focus:bg-dark-gray/10 focus:-translate-y-4'
 >
   <div
-    class='bg-[url("/home-page/live-lecture-image.jpeg")] w-full h-[314px] lg:h-[431px] bg-no-repeat bg-cover bg-center rounded-l md:rounded-l'
+    class={classNames(
+      'bg-[url("/home-page/live-lecture-image.jpeg")] w-full h-[314px] lg:h-[431px] xl:h-[504px] bg-no-repeat bg-cover bg-center rounded-l md:rounded-l',
+    )}
   >
-    <div class='backdrop-blur-[2px] w-full h-full rounded-xl'>
-      <div
-        class='flex absolute left-4 top-5 px-2 py-1 border border-[#C0BFB2] backdrop-blur-[2px] rounded-xs items-center gap-3'
-      >
-        <LiveIndicatorPulse />
-        <p
-          class='text-xs lg:text-l tracking-[0.28px] lg:tracking-[0.48px] font-normal text-white'
+    <div class='backdrop-blur-[2px] w-full h-full rounded-l'>
+      <div class='absolute flex justify-between left-6 lg:left-6 pt-5'>
+        <div
+          class='flex px-2 py-1 border border-[#C0BFB2] backdrop-blur-[2px] rounded-xs items-center gap-3 w-fit'
         >
-          Live Lectures
-        </p>
+          <LiveIndicatorPulse />
+          <p
+            class='text-xs lg:text-l tracking-[0.28px] lg:tracking-[0.48px] font-normal text-white'
+          >
+            Live Lectures
+          </p>
+        </div>
       </div>
       <img
         src='home-page/live-lecture-tools-image.svg'
-        alt={'live-lecture-tools-image'}
-        class='absolute right-4 top-5'
+        alt={'live-lecture-tools-image h-full'}
+        class='absolute right-6 lg:right-6 pt-5'
       />
     </div>
   </div>
@@ -36,4 +43,4 @@ const { course } = Astro.props;
       {course.type} &#183; {course.duration} months
     </p>
   </div>
-</div>
+</a>
