@@ -6,4 +6,5 @@ export type Course = {
   startingSalary: string;
   duration: number;
   price: string;
+  type: string;
 };

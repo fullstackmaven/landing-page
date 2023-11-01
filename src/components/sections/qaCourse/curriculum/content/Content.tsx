@@ -22,7 +22,7 @@ const Content: FC<TContentProps> = ({ topics, description }) => {
       <p className='hidden lg:block text-dark-gray text-base font-semibold tracking-[0.4px]'>
         What you'll focus on
       </p>
-      <ul className='pl-3 list-disc text-dark-gray text-xxs font-medium lg:text-s tracking-[0.32px]'>
+      <ul className='pl-5 list-disc text-dark-gray text-xxs font-medium lg:text-s tracking-[0.32px]'>
         {topics.map((topic, index) => (
           <li key={`topics-${index}`}>{topic}</li>
         ))}

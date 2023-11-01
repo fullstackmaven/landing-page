@@ -1,17 +1,26 @@
 import classNames from 'classnames';
-import { useEffect, useState, type FC, type HTMLAttributes } from 'react';
+import {
+  useEffect,
+  useState,
+  type FC,
+  type HTMLAttributes,
+  type ReactNode,
+} from 'react';
 import { Button } from './Button.tsx';
 
-type TMenuItem = {
+export type TMenuItem = {
   label: string;
-  id: string;
+  id?: string;
+  dropdownComponent?: ReactNode;
 };
 type THeaderProps = {
   menuItems: TMenuItem[];
+  isSticky?: boolean;
 };
 
 export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
   menuItems = [],
+  isSticky = true,
   className,
   ...otherProps
 }) => {
@@ -19,7 +28,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
 
   const handleScroll = () => {
     // Handle the scroll event here
-    const threshold = 88; // Adjust this value as needed
+    const threshold = 104; // Adjust this value as needed
     if (window.scrollY <= threshold) {
       setIsScrollAtTop(true);
     } else {
@@ -40,64 +49,81 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
 
   return (
     <div
-      className={classNames(
-        'sticky top-0 w-full flex items-center px-2 py-6 md:px-8 lg:px-4 z-10 transition-all duration-150 ease-in',
-        className,
-        {
-          'bg-transparent md:!w-[calc(100%-16px)] !py-3 md:bg-white rounded-l md:shadow-md top-0 md:top-2 !left-2 w-fit':
-            !isScrollAtTop,
-        },
-      )}
+      className={classNames('sticky top-0 z-10', className, {
+        'bg-transparent md:px-2 md:pt-8': isSticky && !isScrollAtTop,
+        '!relative': !isSticky,
+      })}
       {...otherProps}
     >
       <div
         className={classNames(
-          'flex-1 lg:flex-none text-primary text-l font-extrabold',
+          'w-full flex items-center px-2 py-6 md:px-8 lg:px-4',
           {
-            'opacity-0 md:opacity-100': !isScrollAtTop,
+            'bg-transparent rounded-l md:bg-white md:shadow-md':
+              isSticky && !isScrollAtTop,
+            'transition-all duration-150 ease-in': !isSticky,
           },
         )}
       >
-        Cyram
-      </div>
-      <nav className='hidden lg:flex-1 md:justify-center lg:flex'>
-        <ul className='flex justify-between items-center lg:gap-3'>
-          {menuItems.map((menuItem, index) => (
-            <li
-              key={`header-${index}`}
-              className='lg:cursor-pointer lg:hover:bg-[#EBEBEB] hover:rounded-s transition duration-150 ease-out hover:ease-in'
-            >
-              <a
-                href={`#${menuItem.id}`}
-                className='px-3 py-2 w-full flex justify-between items-center gap-1'
-              >
-                <p className='text-primary text-s leading-[21px] font-medium'>
-                  {menuItem.label}
-                </p>
-                {/* <img src='home-page/show-more.svg' alt='dropdown-icon' /> */}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div className='flex justify-between items-center gap-4'>
-        <Button
-          title='Book a call'
-          className={classNames('!h-[35px] !text-s font-medium', {
-            'hidden md:flex': !isScrollAtTop,
-          })}
-        />
-        <button
-          className={classNames('py-2 px-1 h-[35px]', {
-            'bg-white md:bg-transparent rounded-xs': !isScrollAtTop,
-          })}
+        <div
+          className={classNames(
+            'flex-1 lg:flex-none text-primary text-l font-extrabold',
+            {
+              'opacity-0 md:opacity-100': !isScrollAtTop,
+            },
+          )}
         >
-          <img
-            src='hamburger.svg'
-            alt='mobile-menu-icon'
-            className='w-6 h-4 lg:hidden'
+          Cyram
+        </div>
+        <nav className='hidden lg:flex-1 md:justify-center lg:flex'>
+          <ul className='flex justify-between items-center lg:gap-3'>
+            {menuItems.map((menuItem, index) => (
+              <li
+                key={`header-${index}`}
+                className={classNames(
+                  'relativelg:cursor-pointer lg:hover:bg-[#EBEBEB] hover:rounded-s transition duration-150 ease-out hover:ease-in group',
+                )}
+                onMouseOver={() => {}}
+              >
+                <a
+                  href={`#${menuItem.id}`}
+                  className='px-3 py-2 w-full flex justify-between items-center gap-1'
+                >
+                  <p className='text-primary text-s leading-[21px] font-medium'>
+                    {menuItem.label}
+                  </p>
+                  {/* <img src='home-page/show-more.svg' alt='dropdown-icon' /> */}
+                </a>
+                {menuItem.id && otherProps[menuItem.id] && (
+                  <div className='absolute origin-top-right bg-transparent z-10 px-6 left-0 right-0 mx-auto w-full hidden group-hover:block'>
+                    <div className='flex bg-cultured w-full h-full p-6 mt-6 rounded-xl shadow-lg'>
+                      {menuItem.id && otherProps[menuItem.id]}
+                    </div>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className='flex justify-between items-center gap-4'>
+          <Button
+            title='Book a call'
+            className={classNames('!h-[35px] !text-s font-medium', {
+              'hidden md:flex': !isScrollAtTop,
+            })}
           />
-        </button>
+          <button
+            className={classNames('py-2 px-1 h-[35px]', {
+              'bg-white md:bg-transparent rounded-xs': !isScrollAtTop,
+            })}
+          >
+            <img
+              src='hamburger.svg'
+              alt='mobile-menu-icon'
+              className='w-6 h-4 lg:hidden'
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
