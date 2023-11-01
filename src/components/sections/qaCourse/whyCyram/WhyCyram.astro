@@ -28,29 +28,25 @@ const defaultAnswers = [
 ];
 ---
 
-<div id='why-cyram' class='container'>
-  <p
-    class='text-dark-gray text-xxs font-normal lg:text-s tracking-[0.32px] uppercase pb-3 lg:pb-6'
-  >
+<div id='why-cyram' class='container grid gap-y-4 lg:gap-y-6'>
+  <p class='text-dark-gray text-xs leading-5 font-normal uppercase'>
     WHY CYRAM
   </p>
-  <h1
-    class='text-dark text-l font-bold pb-3 lg:pb-6 lg:text-2xl tracking-[0.8px]'
-  >
+  <h1 class='text-dark text-l leading-8 font-bold lg:text-2xl'>
     A live and immersive learning experience
   </h1>
-  <p class='text-s font-normal leading-5 text-dark-gray pb-6 lg:text-base'>
-    {
-      `Our live classes are an opportunity to learn-by-doing with other students. We take an active learning approach to ensure you retain and practice key skills.`
-    }
+  <p class='text-s lg:text-base font-normal leading-6 text-dark-gray'>
+    Our live classes are an opportunity to learn-by-doing with other students.
+    We take an active learning approach to ensure you retain and practice key
+    skills.
   </p>
   <div class='grid gap-y-6'>
     {
       defaultAnswers.map((answer) => (
         <div class='grid gap-y-2'>
           <p class='flex text-dark text-s lg:text-base font-bold tracking-[0.4px] items-center'>
-            <span class='pr-1'>
-              <img src='qa-course/star.svg' alt='fff' />
+            <span class='pr-2'>
+              <img src='qa-course/star-mobile.svg' alt='fff' />
             </span>
             {answer.title}
           </p>

@@ -17,11 +17,8 @@ const defaultQuestions = [
 const { questions = defaultQuestions } = Astro.props;
 ---
 
-<div
-  id='faq'
-  class='courses container flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'
->
-  <div class='grid grid-cols-1 bg-white rounded-xs p-6 lg:grid-cols-2'>
+<div id='faq' class='container flex flex-col md:gap-4 lg:gap-6 xl:gap-4'>
+  <div class='grid grid-cols-1 gap-6 bg-white rounded-s p-4 lg:grid-cols-2'>
     <div>
       <h2 class='text-xl text-dark font-bold lg:text-2xl'>Still not sure?</h2>
       <p
@@ -34,28 +31,28 @@ const { questions = defaultQuestions } = Astro.props;
       </p>
     </div>
     <div>
-      <div>
+      <div class='flex flex-col gap-4'>
         {
           questions.map((question) => (
-            <div class='mt-4 lg:space-y-4'>
-              <h3 class='text-base lg:text-l font-semibold text-dark tracking-[0.4px]'>
+            <div class='flex flex-col gap-1'>
+              <h3 class='text-base lg:text-l font-semibold text-dark'>
                 {question.question}
               </h3>
-              <p class='description text-s lg:text-s font-normal leading-[24px] tracking-[0.32px] mt-1 text-blue-gray'>
+              <p class='description text-s lg:text-s font-normal leading-6 text-dark-gray'>
                 {question.answer}
               </p>
             </div>
           ))
         }
+        <p
+          class='lg:hidden description text-s lg:text-s text-dark-gray font-normal leading-6'
+        >
+          Can’t find the answer you’re looking for? Reach out to our <a
+            href='#'
+            class='text-secondary'>customer support</a
+          > team.
+        </p>
       </div>
-      <p
-        class='lg:hidden description text-xs lg:text-s text-blue-gray font-normal leading-[24px] tracking-[0.32px] mt-4'
-      >
-        Can’t find the answer you’re looking for? Reach out to our <a
-          href='#'
-          class='text-secondary'>customer support</a
-        > team.
-      </p>
     </div>
   </div>
 </div>
