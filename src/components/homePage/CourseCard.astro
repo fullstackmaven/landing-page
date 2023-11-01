@@ -1,0 +1,43 @@
+---
+import classNames from 'classnames';
+import LiveIndicatorPulse from '../LiveIndicatorPulse.astro';
+
+const { course } = Astro.props;
+---
+
+<a
+  href='#'
+  role='button'
+  class='relative flex flex-col items-center p-3 gap-3 self-stretch rounded-[16px] border-[#DEDCD3] bg-white cursor-pointer transition ease-in-out delay-150 hover:bg-dark-gray/10 hover:-translate-y-4'
+>
+  <div
+    class={classNames(
+      'bg-[url("/home-page/live-lecture-image.jpeg")] w-full h-[198px] bg-no-repeat bg-cover bg-center rounded-l',
+    )}
+  >
+    <div class='backdrop-blur-[2px] w-full h-full rounded-l'>
+      <div class='absolute flex justify-between w-full px-3 pt-3'>
+        <div
+          class='flex px-[6px] py-1 border border-[#C0BFB2] backdrop-blur-[2px] rounded-xs items-center gap-3 w-fit'
+        >
+          <LiveIndicatorPulse />
+          <p class='text-xxs tracking-[0.24px] font-normal text-white'>
+            Live Lectures
+          </p>
+        </div>
+        <img
+          src='home-page/live-lecture-tools-image.svg'
+          alt={'live-lecture-tools-image h-full'}
+        />
+      </div>
+    </div>
+  </div>
+  <div class='flex flex-col w-full gap-1'>
+    <h2 class='text-dark text-xs font-bold tracking-[0.28px]'>
+      {course.courseTitle}
+    </h2>
+    <p class='text-dark-gray text-xxs font-medium tracking-[0.24px]'>
+      {course.type} &#183; {course.duration} months
+    </p>
+  </div>
+</a>
