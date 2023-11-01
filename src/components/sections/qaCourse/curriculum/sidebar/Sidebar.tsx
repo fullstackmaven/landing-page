@@ -47,7 +47,7 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
           </li>
         ))}
         <li className='py-8 px-6 flex justify-center items-center'>
-          <Button title='Apply now' className='w-full px-6 py-4' />
+          <Button title='Enroll now' className='w-full px-6 py-4' />
         </li>
       </ul>
       <div className='p-8'>

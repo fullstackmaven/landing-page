@@ -8,18 +8,18 @@ const { title, imageUrl, name, jobTitle, imageCompanyUrl, companyname } =
   style={{ backgroundImage: `url('${imageUrl}')` }}
 >
   <p
-    class='absolute top-4 left-4 px-2 py-1 rounded-xs bg-cultured text-dark text-xxs font-normal'
+    class='absolute top-4 left-4 px-[6px] py-[2px] rounded-xs bg-cultured text-dark text-xxs font-normal'
   >
     {title}
   </p>
   <div class='absolute bottom-4 left-4 w-full'>
-    <p class='text-white text-xxs font-bold md:text-s lg:mb-1'>{name}</p>
-    <p class='text-[#DEDCD3] text-[8px] md:text-xxs font-medium mb-2 lg:mb-5'>
+    <p class='text-white text-s font-bold md:text-s lg:mb-1'>{name}</p>
+    <p class='text-[#DEDCD3] text-xxs font-medium mb-2 lg:mb-5'>
       {jobTitle}
     </p>
     <div class='flex flex-row w-full items-center gap-x-1 lg:gap-x-3'>
       <div
-        class={`h-5 w-5 lg:h-10 lg:w-10 bg-contain bg-no-repeat`}
+        class='h-5 w-5 lg:h-10 lg:w-10 bg-contain bg-no-repeat'
         style={{ backgroundImage: `url('${imageCompanyUrl}')` }}
       >
       </div>

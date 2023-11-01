@@ -1,6 +1,5 @@
 ---
 import Accordion from '../../../Accordion.tsx';
-import { Button } from '../../../Button.tsx';
 import Content from './content/Content.tsx';
 import Sidebar from './sidebar/Sidebar.tsx';
 
@@ -54,21 +53,19 @@ const defaultCurriculum: TCurriculum[] = [
 ];
 ---
 
-<div id='qa-curriculum' class='container'>
-  <p
-    class='text-dark-gray text-xxs lg:text-s font-normal uppercase pb-3 lg:pb-6'
-  >
+<div id='qa-curriculum' class='container grid gap-y-4 lg:gap-y-6'>
+  <p class='text-dark-gray text-xs leading-5 font-normal uppercase'>
     CURRICULUM
   </p>
-  <h1 class='text-dark text-l lg:text-2xl font-bold pb-3 lg:pb-6'>
+  <h1 class='text-dark text-l leading-8 font-bold lg:text-2xl'>
     Mastery-based learning with real world projects
   </h1>
-  <p
-    class='text-s lg:text-base font-normal text-dark-gray pb-4 lg:pb-8 tracking-[0.4px]'
-  >
-    {
-      `Our QA bootcamp follows a mastery-based learning approach that focuses on hands-on experience. Unlike traditional QA courses that rely heavily on theory, our bootcamp immerses you in the latest tools, industry workflows, and best practices, making you proficient in the skills demanded by today's QA professionals.`
-    }
+  <p class='text-s font-normal leading-6 text-dark-gray lg:text-base'>
+    Our QA bootcamp follows a mastery-based learning approach that focuses on
+    hands-on experience. Unlike traditional QA courses that rely heavily on
+    theory, our bootcamp immerses you in the latest tools, industry workflows,
+    and best practices, making you proficient in the skills demanded by today's
+    QA professionals.
   </p>
   <div class='grid gap-y-2 lg:hidden'>
     {
@@ -85,7 +82,6 @@ const defaultCurriculum: TCurriculum[] = [
         </Accordion>
       ))
     }
-    <Button className='w-full' title='Apply now' />
   </div>
 
   <div class='hidden lg:block'>

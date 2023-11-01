@@ -37,23 +37,18 @@ const defaultInstructors: TInstructor[] = [
 ];
 ---
 
-<div id='qa-education-team' class='container'>
-  <p
-    class='text-dark-gray text-xxs font-normal uppercase pb-3 lg:pb-6 lg:text-s tracking-[0.32px]'
-  >
+<div id='qa-education-team' class='container grid gap-y-4 lg:gap-y-6'>
+  <p class='text-dark-gray text-xs font-normal uppercase lg:text-s'>
     BOOTCAMP TEAM
   </p>
-  <h1 class='text-dark text-l font-bold lg:text-2xl pb-3 lg:pb-6'>
+  <h1 class='text-dark text-l leading-8 font-bold lg:text-2xl'>
     Meet our expert instructors
   </h1>
-  <p
-    class='text-s font-normal text-dark-gray pb-4 lg:pb-8 lg:text-base tracking-[0.4px]'
-  >
-    {
-      `During your training, you will be guided step by step from our highly experienced instructors who worked at top companies of various industries.`
-    }
+  <p class='text-s font-normal leading-6 text-dark-gray lg:text-base'>
+    During your training, you will be guided step by step from our highly
+    experienced instructors who worked at top companies of various industries.
   </p>
-  <div class='flex flex-row w-full gap-x-4'>
+  <div class='flex flex-row w-full gap-4'>
     {
       defaultInstructors.map((instructor, index) => (
         <InstructorCard key={`qa-course-instructor-${index}`} {...instructor} />
