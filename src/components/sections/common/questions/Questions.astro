@@ -28,16 +28,16 @@ const { questions = defaultQuestions } = Astro.props;
 
 <div id='faq' class='container flex flex-col md:gap-4 lg:gap-6 xl:gap-4'>
   <div
-    class='grid grid-cols-1 gap-6 bg-white rounded-s p-4 lg:grid-cols-2 lg:p-6'
+    class='grid grid-cols-1 gap-6 bg-white rounded-s md:rounded-[16px] lg:rounded-xl p-4 lg:grid-cols-2 lg:p-6'
   >
     <div>
       <h2 class='text-xl text-dark font-bold lg:text-2xl'>Still not sure?</h2>
       <p
-        class='hidden text-s text-blue-gray font-normal lg:text-base lg:block lg:leading-8'
+        class='hidden lg:block text-s text-dark-gray font-normal lg:text-base lg:leading-8'
       >
         Can’t find the answer you’re looking for? Reach out to our <a
           href='#'
-          class='text-secondary'>customer support</a
+          class='text-secondary font-bold'>customer support</a
         > team.
       </p>
     </div>
