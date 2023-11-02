@@ -36,18 +36,22 @@ const defaultDefinitions: TDefinition[] = [
 
 <div class='container space-y-4'>
   <div class='grid gap-y-4'>
-    <p class='text-dark-gray text-xs leading-5 font-normal uppercase'>
+    <p
+      class='text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6'
+    >
       HERE'S THE DEAL
     </p>
-    <h2 class='text-dark text-l leading-8 font-bold md:leading-2xl lg:text-2xl'>
+    <h2
+      class='text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
+    >
       What is QA?
     </h2>
   </div>
-  <div class='gap-y-3 lg:gap-y-6 lg:gap-x-6 grid grid-cols-1 lg:grid-cols-2'>
+  <div class='grid grid-cols-1 lg:grid-cols-2 gap-y-3 lg:gap-y-6 lg:gap-x-6'>
     {
-      defaultDefinitions.map((definition, index) => (
-        <p class='text-s leading-6 lg:text-base text-dark-gray font-normal'>
-          <span class='text-secondary font-extrabold'>
+      defaultDefinitions.map((definition) => (
+        <p class='text-s text-dark-gray font-normal leading-6 lg:text-l lg:leading-8'>
+          <span class='text-secondary font-extrabold lg:leading-8'>
             {definition.title}:{' '}
           </span>
           {definition.description}

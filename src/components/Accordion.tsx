@@ -24,7 +24,7 @@ const Accordion: FC<
         htmlFor={id}
         className='items-center grow flex justify-between pl-2'
       >
-        <p className='text-[#2D2D2D] text-s font-semibold leading-6'>{title}</p>
+        <p className='text-dark text-s font-semibold leading-6'>{title}</p>
         <p className='text-[#2254B5] bg-success px-2 p-1 text-center text-xxs font-medium rounded-xs'>
           {subtitle}
         </p>

@@ -16,13 +16,13 @@ const Content: FC<TContentProps> = ({ topics, description }) => {
           Watch a brief intro
         </p>
       </div>
-      <p className='py-3 lg:py-6 text-dark-gray text-xxs font-medium tracking-[0.4px] lg:text-base'>
+      <p className='py-3 lg:py-6 text-dark-gray text-xxs font-normal lg:text-base'>
         {description}
       </p>
-      <p className='hidden lg:block text-dark-gray text-base font-semibold tracking-[0.4px]'>
+      <p className='hidden lg:block text-dark-gray text-base font-semibold'>
         What you'll focus on
       </p>
-      <ul className='pl-5 list-disc text-dark-gray text-xxs font-medium lg:text-s tracking-[0.32px]'>
+      <ul className='pl-5 list-disc text-dark-gray text-xxs font-medium lg:text-s '>
         {topics.map((topic, index) => (
           <li key={`topics-${index}`}>{topic}</li>
         ))}

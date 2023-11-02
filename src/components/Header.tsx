@@ -57,7 +57,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
     >
       <div
         className={classNames(
-          'w-full flex items-center px-4 py-6 md:px-8 lg:px-4',
+          'w-full flex items-center justify-between px-4 py-6 md:px-8 lg:px-12',
           {
             'bg-transparent rounded-l md:bg-white md:shadow-md':
               isSticky && !isScrollAtTop,
@@ -105,15 +105,15 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
             ))}
           </ul>
         </nav>
-        <div className='flex justify-between items-center gap-4'>
+        <div className='flex justify-between items-center'>
           <Button
             title='Book a call'
-            className={classNames('!h-[35px] !text-s font-medium', {
+            className={classNames('font-semibold lg:text-xs lg:py-3 lg:px-6', {
               'hidden md:flex': !isScrollAtTop,
             })}
           />
           <button
-            className={classNames('py-2 px-1 h-[35px]', {
+            className={classNames('py-2 h-[35px]', {
               'bg-white md:bg-transparent rounded-xs': !isScrollAtTop,
             })}
           >

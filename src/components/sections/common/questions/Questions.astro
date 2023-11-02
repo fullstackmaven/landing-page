@@ -18,11 +18,13 @@ const { questions = defaultQuestions } = Astro.props;
 ---
 
 <div id='faq' class='container flex flex-col md:gap-4 lg:gap-6 xl:gap-4'>
-  <div class='grid grid-cols-1 gap-6 bg-white rounded-s p-4 lg:grid-cols-2'>
+  <div
+    class='grid grid-cols-1 gap-6 bg-white rounded-s p-4 lg:grid-cols-2 lg:p-6'
+  >
     <div>
       <h2 class='text-xl text-dark font-bold lg:text-2xl'>Still not sure?</h2>
       <p
-        class='hidden lg:block text-s lg:text-s text-blue-gray font-normal leading-tight mt-4'
+        class='hidden text-s text-blue-gray font-normal lg:text-base lg:block lg:leading-8'
       >
         Can’t find the answer you’re looking for? Reach out to our <a
           href='#'
@@ -38,7 +40,7 @@ const { questions = defaultQuestions } = Astro.props;
               <h3 class='text-base lg:text-l font-semibold text-dark'>
                 {question.question}
               </h3>
-              <p class=' text-s lg:text-s font-normal leading-6 text-dark-gray'>
+              <p class=' text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-8'>
                 {question.answer}
               </p>
             </div>

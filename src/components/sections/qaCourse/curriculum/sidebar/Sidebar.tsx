@@ -37,10 +37,10 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
               htmlFor={`curriculum-${index}`}
               className='p-6 w-full h-full items-center cursor-pointer flex justify-between peer-checked:border peer-checked:border-r-0 peer-checked:border-y-0 peer-checked:border-l-dark peer-checked:border-l-4'
             >
-              <p className='text-dark/80 text-base font-semibold tracking-[0.4px]'>
+              <p className='text-dark text-base font-semibold tracking-[0.4px]'>
                 {curr.title}
               </p>
-              <p className='text-primary/75 bg-success px-3 p-1 text-center text-s font-medium leading-5 tracking-[0.32px] rounded-xs'>
+              <p className='text-[#2254B5] bg-success px-3 p-1 text-center text-s font-medium leading-5 tracking-[0.32px] rounded-xs'>
                 {curr.subtitle}
               </p>
             </label>
