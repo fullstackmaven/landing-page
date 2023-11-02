@@ -1,4 +1,7 @@
 ---
+import type { TInstructor } from '../BootcampTeam.astro';
+
+interface Props extends TInstructor {}
 const { title, imageUrl, name, jobTitle, imageCompanyUrl, companyname } =
   Astro.props;
 ---

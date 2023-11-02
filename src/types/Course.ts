@@ -1,4 +1,4 @@
-export type Course = {
+export type TCourse = {
   image: string;
   alt: string;
   courseTitle: string;

@@ -1,11 +1,19 @@
 /** @type {import("eslint").Linter.Config} */
+
 module.exports = {
-  extends: ['plugin:astro/recommended'],
+  plugins: ['@typescript-eslint'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:astro/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,
     sourceType: 'module',
     ecmaVersion: 'latest',
+    project: './tsconfig.json',
   },
   overrides: [
     {

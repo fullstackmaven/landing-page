@@ -12,7 +12,9 @@ export type TMenuItem = {
   label: string;
   id?: string;
   dropdownComponent?: ReactNode;
+  isDropdown?: boolean;
 };
+
 type THeaderProps = {
   menuItems: TMenuItem[];
   isSticky?: boolean;
@@ -49,15 +51,19 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
 
   return (
     <div
-      className={classNames('sticky top-0 z-10', className, {
-        'bg-transparent md:px-2 md:pt-8': isSticky && !isScrollAtTop,
-        '!relative': !isSticky,
-      })}
+      className={classNames(
+        'sticky top-0 z-10 w-full block justify-center',
+        className,
+        {
+          'bg-transparent md:px-2 md:pt-8': isSticky && !isScrollAtTop,
+          '!relative': !isSticky,
+        },
+      )}
       {...otherProps}
     >
       <div
         className={classNames(
-          'w-full flex items-center justify-between px-4 py-6 md:px-8 lg:px-12',
+          'w-full flex items-center justify-between px-4 py-6 md:px-8 xl:px-13 m-auto max-w-[1280px]',
           {
             'bg-transparent rounded-l md:bg-white md:shadow-md':
               isSticky && !isScrollAtTop,
@@ -67,7 +73,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
       >
         <div
           className={classNames(
-            'flex-1 lg:flex-none text-primary text-l font-extrabold',
+            'flex-1 lg:flex-none text-dark text-l font-extrabold',
             {
               'opacity-0 md:opacity-100': !isScrollAtTop,
             },
@@ -83,24 +89,27 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
                 className={classNames(
                   'relativelg:cursor-pointer lg:hover:bg-[#EBEBEB] hover:rounded-s transition duration-150 ease-out hover:ease-in group',
                 )}
-                onMouseOver={() => {}}
               >
                 <a
                   href={`#${menuItem.id}`}
                   className='px-3 py-2 w-full flex justify-between items-center gap-1'
                 >
-                  <p className='text-primary text-s leading-[21px] font-medium'>
+                  <p className='flex gap-x-1 text-dark text-s leading-[21px] font-medium'>
                     {menuItem.label}
+                    {menuItem.isDropdown && <img src='arrow-chevron.svg' />}
                   </p>
                   {/* <img src='home-page/show-more.svg' alt='dropdown-icon' /> */}
                 </a>
-                {menuItem.id && otherProps[menuItem.id] && (
-                  <div className='absolute origin-top-right bg-transparent z-10 px-6 left-0 right-0 mx-auto w-full hidden group-hover:block'>
-                    <div className='flex bg-cultured w-full h-full p-6 mt-6 rounded-xl shadow-lg'>
-                      {menuItem.id && otherProps[menuItem.id]}
+                {menuItem.isDropdown &&
+                  menuItem.id &&
+                  otherProps &&
+                  otherProps?.[menuItem.id] && (
+                    <div className='absolute origin-top-right bg-transparent z-10 px-6 xl:px-13 left-0 right-0 mx-auto max-w-[1280px] hidden group-hover:block'>
+                      <div className='flex bg-cultured w-full h-full p-6 mt-6 rounded-xl shadow-[0px 10px 10px 8px rgba(0, 0, 0, 0.10)] border border-dark-gray'>
+                        {menuItem.id && otherProps && otherProps?.[menuItem.id]}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
               </li>
             ))}
           </ul>
@@ -108,9 +117,12 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
         <div className='flex justify-between items-center'>
           <Button
             title='Book a call'
-            className={classNames('font-semibold lg:text-xs lg:py-3 lg:px-6', {
-              'hidden md:flex': !isScrollAtTop,
-            })}
+            className={classNames(
+              'font-semibold hidden lg:block lg:text-xs lg:py-3 lg:px-6',
+              {
+                'hidden md:flex': !isScrollAtTop,
+              },
+            )}
           />
           <button
             className={classNames('py-2 h-[35px]', {
