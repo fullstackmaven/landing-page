@@ -57,7 +57,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
     >
       <div
         className={classNames(
-          'w-full flex items-center px-2 py-6 md:px-8 lg:px-4',
+          'w-full flex items-center px-4 py-6 md:px-8 lg:px-4',
           {
             'bg-transparent rounded-l md:bg-white md:shadow-md':
               isSticky && !isScrollAtTop,

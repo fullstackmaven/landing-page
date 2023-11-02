@@ -6,7 +6,7 @@ import LiveIndicatorPulse from '../../../LiveIndicatorPulse.astro';
 <div class='container flex flex-col lg:flex-row gap-x-0 lg:gap-x-6 xl:gap-x-8'>
   <div class='grid gap-y-4 lg:w-1/2 lg:gap-y-6'>
     <h1
-      class='text-xl leading-[44px] font-bold text-dark lg:leading-snug lg:text-[48px] self-stretch'
+      class='text-xl text-dark leading-2xl font-bold self-stretch md:text-4xl md:leading-3xl'
     >
       Quality Assurance Bootcamp: Ignite Your Tech Journey!
     </h1>
@@ -26,15 +26,9 @@ import LiveIndicatorPulse from '../../../LiveIndicatorPulse.astro';
       class='bg-[url("/qa-course/live-lecture-image.svg")] w-full h-full bg-no-repeat bg-cover bg-center rounded-s md:rounded-l'
     >
       <div
-        class='flex absolute left-3 top-4 px-2 py-1 border border-live-gray backdrop-blur-[2px] rounded-xs items-center gap-2'
+        class='flex absolute left-3 top-4 px-2 py-1 border border-live-gray backdrop-blur-[2px] rounded-s items-center gap-2'
       >
-        <div class='relative flex h-2 w-2'>
-          <span
-            class='animate-ping absolute inline-flex h-full w-full rounded-full bg-vermilion/90 opacity-75'
-          ></span>
-          <span class='relative inline-flex rounded-full h-2 w-2 bg-vermilion'
-          ></span>
-        </div>
+        <LiveIndicatorPulse />
         <p class='text-dark text-xs font-normal'>Live Lectures</p>
       </div>
       <img

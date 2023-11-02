@@ -32,10 +32,12 @@ const defaultAnswers = [
   <p class='text-dark-gray text-xs leading-5 font-normal uppercase'>
     WHY CYRAM
   </p>
-  <h1 class='text-dark text-l leading-8 font-bold lg:text-2xl'>
+  <h2
+    class='text-dark text-l leading-8 md:text-xl md:leading-8 font-bold lg:text-2xl'
+  >
     A live and immersive learning experience
-  </h1>
-  <p class='text-s lg:text-base font-normal leading-6 text-dark-gray'>
+  </h2>
+  <p class='text-s font-normal leading-6 text-dark-gray lg:text-base'>
     Our live classes are an opportunity to learn-by-doing with other students.
     We take an active learning approach to ensure you retain and practice key
     skills.
@@ -44,13 +46,13 @@ const defaultAnswers = [
     {
       defaultAnswers.map((answer) => (
         <div class='grid gap-y-2'>
-          <p class='flex text-dark text-s lg:text-base font-bold tracking-[0.4px] items-center'>
+          <p class='flex text-dark text-s leading-6 font-bold items-center lg:text-base'>
             <span class='pr-2'>
               <img src='qa-course/star-mobile.svg' alt='fff' />
             </span>
             {answer.title}
           </p>
-          <p class='text-dark-gray text-s lg:text-base tracking-[0.4px] font-normal'>
+          <p class='text-dark-gray text-s font-normal leading-6 lg:text-base'>
             {answer.description}
           </p>
         </div>

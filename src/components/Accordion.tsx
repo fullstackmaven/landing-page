@@ -12,7 +12,7 @@ const Accordion: FC<
   return (
     <div
       className={classNames(
-        'bg-white w-full flex flex-row items-center flex-wrap p-2 rounded-s border border-[#DFDBD1]',
+        'bg-white w-full flex flex-row items-center flex-wrap py-3 px-4 rounded-s border border-[#DFDBD1]',
         className,
       )}
       {...otherProps}
@@ -24,8 +24,8 @@ const Accordion: FC<
         htmlFor={id}
         className='items-center grow flex justify-between pl-2'
       >
-        <p className='text-[#2D2D2D] text-s font-semibold leading-4'>{title}</p>
-        <p className='text-[#2254B5] bg-success px-2 p-1 text-center text-xxs font-medium  rounded-xs'>
+        <p className='text-[#2D2D2D] text-s font-semibold leading-6'>{title}</p>
+        <p className='text-[#2254B5] bg-success px-2 p-1 text-center text-xxs font-medium rounded-xs'>
           {subtitle}
         </p>
       </label>
