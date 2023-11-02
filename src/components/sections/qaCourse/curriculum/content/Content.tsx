@@ -1,9 +1,9 @@
 import type { FC } from 'react';
-import type { TCurriculum } from '../Curriculum.astro';
+import type { TCurriculum } from 'src/types/Curriculum';
 
 type TContentProps = Pick<TCurriculum, 'topics' | 'description'>;
 
-const Content: FC<TContentProps> = ({ topics, description }) => {
+const Content: FC<TContentProps> = ({ description, topics }) => {
   return (
     <div className='w-full h-full'>
       <div className='flex items-center justify-start gap-x-3 lg:gap-x-0 w-full h-10 lg:h-fit rounded-l lg:min-h-[239px]'>

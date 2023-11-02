@@ -1,14 +1,8 @@
 ---
-import Accordion from '../../../Accordion.tsx';
+import Accordion from '@components/Accordion';
+import type { TCurriculum } from 'src/types/Curriculum';
 import Content from './content/Content.tsx';
 import Sidebar from './sidebar/Sidebar.tsx';
-
-export type TCurriculum = {
-  title: string;
-  subtitle: string;
-  description: string;
-  topics: string[];
-};
 
 const sampleDescription = `This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git, and debugging. This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git.`;
 const sampleTopics = ['HTML', 'CSS', 'Javascript'];

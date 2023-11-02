@@ -1,6 +1,11 @@
 ---
+import LiveIndicatorPulse from '@components/LiveIndicatorPulse.astro';
 import classNames from 'classnames';
-import LiveIndicatorPulse from '../LiveIndicatorPulse.astro';
+import type { TCourse } from 'src/types/Course';
+
+type Props = {
+  course: TCourse;
+};
 
 const { course } = Astro.props;
 ---

@@ -1,11 +1,12 @@
 ---
-import CourseCard from './course_card/CourseCard.astro';
+import CourseCard from '@components/homePage/CourseCard.astro';
+import type { TCourse } from 'src/types/Course';
 
 type Props = {
-  courses?: Course[];
+  courses?: TCourse[];
 };
 
-export const defaultCourses: Course[] = [
+const defaultCourses: TCourse[] = [
   {
     image: 'home-page/course-image.svg',
     alt: '#',
@@ -31,17 +32,6 @@ export const defaultCourses: Course[] = [
 ];
 
 const { courses = defaultCourses } = Astro.props;
-
-type Course = {
-  image: string;
-  alt: string;
-  courseTitle: string;
-  skills: string;
-  startingSalary: string;
-  duration: number;
-  price: string;
-  type: string;
-};
 ---
 
 <div class='container flex flex-col lg:items-center'>

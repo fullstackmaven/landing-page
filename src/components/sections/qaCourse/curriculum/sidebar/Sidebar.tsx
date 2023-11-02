@@ -1,6 +1,6 @@
 import { useState, type FC } from 'react';
+import type { TCurriculum } from 'src/types/Curriculum.ts';
 import { Button } from '../../../../Button';
-import type { TCurriculum } from '../Curriculum.astro';
 import Content from '../content/Content.tsx';
 
 type TSidebarProps = {

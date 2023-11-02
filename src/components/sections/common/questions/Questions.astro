@@ -1,5 +1,14 @@
 ---
-const defaultQuestions = [
+type TQuestions = {
+  question: string;
+  answer: string;
+};
+
+interface Props {
+  questions?: TQuestions[];
+}
+
+const defaultQuestions: TQuestions[] = [
   {
     question: 'Can I try Cyram for free?',
     answer: `Yes, you can select a monthly payment plan of $550.00 a month for 10 months and $1,400.00 upfront. Note: You will be required to pay the full duration of the payment plan even if you finish the program before the payment plan ends.`,
