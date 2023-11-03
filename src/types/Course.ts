@@ -1,4 +1,4 @@
-export type TCourse = {
+export interface TCourse {
   image: string;
   alt: string;
   courseTitle: string;
@@ -7,4 +7,4 @@ export type TCourse = {
   duration: number;
   price: string;
   type: string;
-};
+}

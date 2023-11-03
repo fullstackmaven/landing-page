@@ -1,7 +1,7 @@
 ---
-import LiveIndicatorPulse from '@components/LiveIndicatorPulse.astro';
-import classNames from 'classnames';
-import type { TCourse } from 'src/types/Course';
+import LiveIndicatorPulse from "@components/LiveIndicatorPulse.astro";
+import classNames from "classnames";
+import type { TCourse } from "src/types/Course";
 
 interface Props {
   course: TCourse;
@@ -11,36 +11,36 @@ const { course } = Astro.props;
 ---
 
 <a
-  href='#'
-  role='button'
-  class='relative flex flex-col items-center p-3 lg:p-4 gap-6 lg:gap-8 self-stretch rounded-[16px] border border-[#DEDCD3] bg-white cursor-pointer transition ease-in-out delay-50 hover:bg-dark-gray/10 hover:-translate-y-4 focus:bg-dark-gray/10 focus:-translate-y-4'
+  href="#"
+  role="button"
+  class="relative flex flex-col items-center p-3 lg:p-4 gap-6 lg:gap-8 self-stretch rounded-[16px] border border-[#DEDCD3] bg-white cursor-pointer transition ease-in-out delay-50 hover:bg-dark-gray/10 hover:-translate-y-4 focus:bg-dark-gray/10 focus:-translate-y-4"
 >
   <div
     class={classNames(
-      'bg-[url("/home-page/live-lecture-image.jpeg")] w-full h-[314px] lg:h-[431px] xl:h-[504px] bg-no-repeat bg-cover bg-center rounded-l md:rounded-l',
+      'bg-[url("/home-page/live-lecture-image.jpeg")] w-full h-[314px] lg:h-[431px] xl:h-[504px] bg-no-repeat bg-cover bg-center rounded-l md:rounded-l'
     )}
   >
-    <div class='backdrop-blur-[2px] w-full h-full rounded-l'>
-      <div class='absolute flex justify-between left-6 lg:left-6 pt-5'>
+    <div class="backdrop-blur-[2px] w-full h-full rounded-l">
+      <div class="absolute flex justify-between left-6 lg:left-6 pt-5">
         <div
-          class='flex px-2 py-1 border border-[#C0BFB2] backdrop-blur-[2px] rounded-xs items-center gap-3 w-fit'
+          class="flex px-2 py-1 border border-[#C0BFB2] backdrop-blur-[2px] rounded-xs items-center gap-3 w-fit"
         >
           <LiveIndicatorPulse />
-          <p class='text-xs lg:text-l font-normal text-white'>Live Lectures</p>
+          <p class="text-xs lg:text-l font-normal text-white">Live Lectures</p>
         </div>
       </div>
       <img
-        src='home-page/live-lecture-tools-image.svg'
-        alt={'live-lecture-tools-image h-full'}
-        class='absolute right-6 lg:right-6 pt-5'
+        src="home-page/live-lecture-tools-image.svg"
+        alt={"live-lecture-tools-image h-full"}
+        class="absolute right-6 lg:right-6 pt-5"
       />
     </div>
   </div>
-  <div class='flex flex-col w-full gap-1 lg:gap-3'>
-    <h2 class='text-dark text-base lg:text-l font-bold'>
+  <div class="flex flex-col w-full gap-1 lg:gap-3">
+    <h2 class="text-dark text-base lg:text-l font-bold">
       {course.courseTitle}
     </h2>
-    <p class='text-dark-gray text-s lg:text-base font-medium'>
+    <p class="text-dark-gray text-s lg:text-base font-medium">
       {course.type} &#183; {course.duration} months
     </p>
   </div>

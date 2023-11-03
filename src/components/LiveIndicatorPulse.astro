@@ -1,5 +1,5 @@
 ---
-import classNames from 'classnames';
+import classNames from "classnames";
 interface Props {
   className?: string;
 }
@@ -9,12 +9,12 @@ const { className } = Astro.props;
 
 <div
   class={classNames(
-    'relative flex h-4 w-4 items-center justify-center',
-    className,
+    "relative flex h-4 w-4 items-center justify-center",
+    className
   )}
 >
   <span
-    class='animate-ping absolute inline-flex h-full w-full rounded-full bg-vermilion/90 opacity-75'
+    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-vermilion/90 opacity-75"
   ></span>
-  <span class='relative inline-flex rounded-full h-2 w-2 bg-vermilion'></span>
+  <span class="relative inline-flex rounded-full h-2 w-2 bg-vermilion"></span>
 </div>

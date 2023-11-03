@@ -1,50 +1,50 @@
 ---
-import { Button } from '@components/Button';
-import type { TCourse } from 'src/types/Course';
-import CourseCard from './CourseCard.astro';
+import { Button } from "@components/Button";
+import type { TCourse } from "src/types/Course";
+import CourseCard from "./CourseCard.astro";
 
 const defaultCourses: TCourse[] = [
   {
-    image: 'home-page/course-image.svg',
-    alt: '#',
-    courseTitle: 'Software Engineering Bootcamp',
+    image: "home-page/course-image.svg",
+    alt: "#",
+    courseTitle: "Software Engineering Bootcamp",
     skills:
-      'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
-    startingSalary: '$85,000',
+      "Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js",
+    startingSalary: "$85,000",
     duration: 8,
-    price: '$12,700',
-    type: 'Part time',
+    price: "$12,700",
+    type: "Part time",
   },
   {
-    image: 'home-page/course-image.svg',
-    alt: '#',
-    courseTitle: 'Quality Assurance Bootcamp',
+    image: "home-page/course-image.svg",
+    alt: "#",
+    courseTitle: "Quality Assurance Bootcamp",
     skills:
-      'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
-    startingSalary: '$85,000',
+      "Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js",
+    startingSalary: "$85,000",
     duration: 8,
-    price: '$12,700',
-    type: 'Part time',
+    price: "$12,700",
+    type: "Part time",
   },
 ];
 ---
 
-<div class='flex flex-col w-full h-full gap-y-6'>
+<div class="flex flex-col w-full h-full gap-y-6">
   <p>Go from beginner to expert at your own pace</p>
-  <div class='w-full flex gap-x-4'>
+  <div class="w-full flex gap-x-4">
     {
       defaultCourses.map((course) => (
-        <div class='h-full'>
+        <div class="h-full">
           <CourseCard course={course} />
         </div>
       ))
     }
-    <div class='p-6 flex-1'>
-      <h3 class='text-l text-dark font-bold leading-[32px] mb-2'>
+    <div class="p-6 flex-1">
+      <h3 class="text-l text-dark font-bold leading-[32px] mb-2">
         Not sure which is the right bootcamp for you?
       </h3>
-      <p class='mb-6 text-dark-gray'>It just takes 3 minutes</p>
-      <Button title='Take our career quick' />
+      <p class="mb-6 text-dark-gray">It just takes 3 minutes</p>
+      <Button title="Take our career quick" />
     </div>
   </div>
 </div>

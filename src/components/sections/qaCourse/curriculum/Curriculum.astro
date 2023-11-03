@@ -1,65 +1,65 @@
 ---
-import Accordion from '@components/Accordion';
-import type { TCurriculum } from 'src/types/Curriculum';
-import Content from './content/Content.tsx';
-import Sidebar from './sidebar/Sidebar.tsx';
+import Accordion from "@components/Accordion";
+import type { TCurriculum } from "src/types/Curriculum";
+import Content from "./content/Content.tsx";
+import Sidebar from "./sidebar/Sidebar.tsx";
 
 const sampleDescription = `This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git, and debugging. This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git.`;
-const sampleTopics = ['HTML', 'CSS', 'Javascript'];
+const sampleTopics = ["HTML", "CSS", "Javascript"];
 
 const defaultCurriculum: TCurriculum[] = [
   {
-    title: 'Testing Fundamentals',
-    subtitle: 'Module 1',
+    title: "Testing Fundamentals",
+    subtitle: "Module 1",
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'Core Java Programming',
-    subtitle: 'Module 2',
+    title: "Core Java Programming",
+    subtitle: "Module 2",
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'Test Automation',
-    subtitle: 'Module 3',
+    title: "Test Automation",
+    subtitle: "Module 3",
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'API Automation',
-    subtitle: 'Module 4',
+    title: "API Automation",
+    subtitle: "Module 4",
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'Portfolio Projects',
-    subtitle: 'Module 5',
+    title: "Portfolio Projects",
+    subtitle: "Module 5",
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'Prepare for interviews',
-    subtitle: 'Module 6',
+    title: "Prepare for interviews",
+    subtitle: "Module 6",
     description: sampleDescription,
     topics: sampleTopics,
   },
 ];
 ---
 
-<div id='qa-curriculum' class='container grid gap-y-4 lg:gap-y-6'>
+<div id="qa-curriculum" class="container grid gap-y-4 lg:gap-y-6">
   <p
-    class='text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6'
+    class="text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6"
   >
     CURRICULUM
   </p>
   <h2
-    class='text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
+    class="text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl"
   >
     Mastery-based learning with real world projects
   </h2>
   <p
-    class='text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-7'
+    class="text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-7"
   >
     In our QA bootcamp, we take a hands-on approach to mastery-based learning.
     We don't just focus on theory like traditional QA courses. Instead, you'll
@@ -67,7 +67,7 @@ const defaultCurriculum: TCurriculum[] = [
     way, you'll become proficient in the skills needed by today's QA
     professionals.
   </p>
-  <div class='grid gap-y-2 lg:hidden'>
+  <div class="grid gap-y-2 lg:hidden">
     {
       defaultCurriculum.map((curriculum, index) => (
         <Accordion
@@ -81,7 +81,7 @@ const defaultCurriculum: TCurriculum[] = [
     }
   </div>
 
-  <div class='hidden lg:block'>
+  <div class="hidden lg:block">
     <Sidebar client:load curriculum={defaultCurriculum} />
   </div>
 </div>

@@ -1,5 +1,5 @@
 ---
-type TQuestions = {
+interface TQuestions {
   question: string;
   answer: string;
 };
@@ -10,15 +10,15 @@ interface Props {
 
 const defaultQuestions: TQuestions[] = [
   {
-    question: 'Can I try Cyram for free?',
+    question: "Can I try Cyram for free?",
     answer: `Yes, you can select a monthly payment plan of $550.00 a month for 10 months and $1,400.00 upfront. Note: You will be required to pay the full duration of the payment plan even if you finish the program before the payment plan ends.`,
   },
   {
-    question: 'Are there payment plans available?',
+    question: "Are there payment plans available?",
     answer: `Learners progress through the material at their own pace, moving on in the program by demonstrating competency in each sprint. With Cyram’s self-paced format, learners complete the program anywhere between 6 and 10 months.`,
   },
   {
-    question: 'How much does Cyram cost?',
+    question: "How much does Cyram cost?",
     answer: `Total costs range from $11,950 for upfront tuition to $16,000+ for Deferred Tuition. With Deferred tuition, we don’t require any upfront payments. With both options, you’ll owe nothing if you don’t get a job within a year of graduation (terms apply). Discover all the available tuition choices here!`,
   },
 ];
@@ -26,41 +26,41 @@ const defaultQuestions: TQuestions[] = [
 const { questions = defaultQuestions } = Astro.props;
 ---
 
-<div id='faq' class='container flex flex-col md:gap-4 lg:gap-6 xl:gap-4'>
+<div id="faq" class="container flex flex-col md:gap-4 lg:gap-6 xl:gap-4">
   <div
-    class='grid grid-cols-1 gap-6 bg-white rounded-s md:rounded-[16px] lg:rounded-xl p-4 lg:grid-cols-2 lg:p-6'
+    class="grid grid-cols-1 gap-6 bg-white rounded-s md:rounded-[16px] lg:rounded-xl p-4 lg:grid-cols-2 lg:p-6"
   >
     <div>
-      <h2 class='text-xl text-dark font-bold lg:text-2xl'>Still not sure?</h2>
+      <h2 class="text-xl text-dark font-bold lg:text-2xl">Still not sure?</h2>
       <p
-        class='hidden lg:block text-s text-dark-gray font-normal lg:text-base lg:leading-8'
+        class="hidden lg:block text-s text-dark-gray font-normal lg:text-base lg:leading-8"
       >
         Can’t find the answer you’re looking for? Reach out to our <a
-          href='#'
-          class='text-secondary font-bold'>customer support</a
+          href="#"
+          class="text-secondary font-bold">customer support</a
         > team.
       </p>
     </div>
     <div>
-      <div class='flex flex-col gap-4'>
+      <div class="flex flex-col gap-4">
         {
           questions.map((question) => (
-            <div class='flex flex-col gap-1'>
-              <h3 class='text-base lg:text-l font-semibold text-dark'>
+            <div class="flex flex-col gap-1">
+              <h3 class="text-base lg:text-l font-semibold text-dark">
                 {question.question}
               </h3>
-              <p class=' text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-8'>
+              <p class=" text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-8">
                 {question.answer}
               </p>
             </div>
           ))
         }
         <p
-          class='lg:hidden text-s lg:text-s text-dark-gray font-normal leading-6'
+          class="lg:hidden text-s lg:text-s text-dark-gray font-normal leading-6"
         >
           Can’t find the answer you’re looking for? Reach out to our <a
-            href='#'
-            class='text-secondary font-bold'>customer support</a
+            href="#"
+            class="text-secondary font-bold">customer support</a
           > team.
         </p>
       </div>

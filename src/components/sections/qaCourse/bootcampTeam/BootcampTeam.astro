@@ -1,7 +1,7 @@
 ---
-import InstructorCard from './InstructorCard/InstructorCard.astro';
+import InstructorCard from "./InstructorCard/InstructorCard.astro";
 
-export type TInstructor = {
+export interface TInstructor {
   title: string;
   imageUrl: string;
   name: string;
@@ -12,50 +12,50 @@ export type TInstructor = {
 
 const defaultInstructors: TInstructor[] = [
   {
-    title: 'Teacher',
-    imageUrl: 'qa-course/expert-instructor-1.jpeg',
-    name: 'Sara Mustafa',
-    jobTitle: 'Software Engineer',
-    imageCompanyUrl: 'airbnb-icon.svg',
-    companyname: 'Airbnb',
+    title: "Teacher",
+    imageUrl: "qa-course/expert-instructor-1.jpeg",
+    name: "Sara Mustafa",
+    jobTitle: "Software Engineer",
+    imageCompanyUrl: "airbnb-icon.svg",
+    companyname: "Airbnb",
   },
   {
-    title: 'Teacher',
-    imageUrl: 'qa-course/expert-instructor-2.jpeg',
-    name: 'Steven Murphy',
-    jobTitle: 'Software Engineer',
-    imageCompanyUrl: 'airbnb-icon.svg',
-    companyname: 'Airbnb',
+    title: "Teacher",
+    imageUrl: "qa-course/expert-instructor-2.jpeg",
+    name: "Steven Murphy",
+    jobTitle: "Software Engineer",
+    imageCompanyUrl: "airbnb-icon.svg",
+    companyname: "Airbnb",
   },
   {
-    title: 'Teacher',
-    imageUrl: 'qa-course/expert-instructor-3.jpeg',
-    name: 'Lauren Zirbard',
-    jobTitle: 'Software Engineer',
-    imageCompanyUrl: 'airbnb-icon.svg',
-    companyname: 'Airbnb',
+    title: "Teacher",
+    imageUrl: "qa-course/expert-instructor-3.jpeg",
+    name: "Lauren Zirbard",
+    jobTitle: "Software Engineer",
+    imageCompanyUrl: "airbnb-icon.svg",
+    companyname: "Airbnb",
   },
 ];
 ---
 
-<div id='qa-education-team' class='container grid gap-y-4 lg:gap-y-6'>
+<div id="qa-education-team" class="container grid gap-y-4 lg:gap-y-6">
   <p
-    class='text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6'
+    class="text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6"
   >
     BOOTCAMP TEAM
   </p>
   <h2
-    class='text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
+    class="text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl"
   >
     Meet our expert instructors
   </h2>
   <p
-    class='text-s text-dark-gray font-normal leading-6 lg:text-base lg:leading-7'
+    class="text-s text-dark-gray font-normal leading-6 lg:text-base lg:leading-7"
   >
     During your training, you will be guided step by step from our highly
     experienced instructors who worked at top companies of various industries.
   </p>
-  <div class='flex flex-row w-full gap-4'>
+  <div class="flex flex-row w-full gap-4">
     {
       defaultInstructors.map((instructor, index) => (
         <InstructorCard {...instructor} />

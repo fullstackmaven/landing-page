@@ -1,5 +1,5 @@
 ---
-import classNames from 'classnames';
+import classNames from "classnames";
 
 interface Props {
   className: string;
@@ -8,11 +8,11 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<div class={classNames('relative', className)}>
+<div class={classNames("relative", className)}>
   <div
-    class='lg:cursor-pointer absolute inset-0 m-auto bg-primary py-2 px-5 w-fit h-fit'
+    class="lg:cursor-pointer absolute inset-0 m-auto bg-primary py-2 px-5 w-fit h-fit"
   >
-    <img src='qa-course/play-button.svg' />
+    <img src="qa-course/play-button.svg" />
   </div>
   <slot />
 </div>
