@@ -12,7 +12,7 @@ const Accordion: FC<
   return (
     <div
       className={classNames(
-        'bg-white w-full flex flex-row items-center flex-wrap py-3 px-4 rounded-s border border-[#DFDBD1]',
+        'bg-white w-full flex flex-row items-center flex-wrap py-2 px-2 md:py-3 md:px-4 rounded-s border border-[#DFDBD1]',
         className,
       )}
       {...otherProps}
