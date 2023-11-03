@@ -13,7 +13,7 @@ export const Button: React.FC<Props & HTMLAttributes<HTMLButtonElement>> = ({
   return (
     <button
       className={classNames(
-        'flex justify-center items-center text-s px-6 py-3 rounded-s bg-dark text-white md:text-s xl:px-8 xl:py-4',
+        'flex justify-center items-center text-s px-6 py-3 rounded-s bg-dark text-white md:text-s',
         className,
       )}
       {...otherProps}

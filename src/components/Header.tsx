@@ -98,7 +98,6 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
                     {menuItem.label}
                     {menuItem.isDropdown && <img src='arrow-chevron.svg' />}
                   </p>
-                  {/* <img src='home-page/show-more.svg' alt='dropdown-icon' /> */}
                 </a>
                 {menuItem.isDropdown &&
                   menuItem.id &&
@@ -118,7 +117,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
           <Button
             title='Book a call'
             className={classNames(
-              'font-semibold hidden lg:block lg:text-xs lg:py-3 lg:px-6',
+              'font-semibold hidden lg:block lg:text-xs lg:py-3 lg:px-6 xl:text-s ',
               {
                 'hidden md:flex': !isScrollAtTop,
               },
