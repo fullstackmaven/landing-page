@@ -7,12 +7,11 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   extends: [
-    "standard-with-typescript",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:astro/recommended",
-    "plugin:prettier/recommended",
+    // "plugin:astro/jsx-a11y-recommended", //add this when implementing a11y
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
