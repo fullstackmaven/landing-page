@@ -13,9 +13,7 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
     <div className='rounded-l bg-white flex'>
       <ul className='min-w-[409px] border border-y-0 border-l-0 border-r-accent-6'>
         <li className='py-8 px-6 border border-x-0 border-t-0 border-b-accent-6'>
-          <p className='text-dark-gray text-s font-normal tracking-[0.32px]'>
-            CURRICULUM
-          </p>
+          <p className='text-dark-gray text-s font-normal '>CURRICULUM</p>
         </li>
         {curriculum.map((curr, index) => (
           <li
@@ -37,10 +35,8 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
               htmlFor={`curriculum-${index}`}
               className='p-6 w-full h-full items-center cursor-pointer flex justify-between peer-checked:border peer-checked:border-r-0 peer-checked:border-y-0 peer-checked:border-l-dark peer-checked:border-l-4'
             >
-              <p className='text-dark text-base font-semibold tracking-[0.4px]'>
-                {curr.title}
-              </p>
-              <p className='text-[#2254B5] bg-success px-3 p-1 text-center text-s font-medium leading-5 tracking-[0.32px] rounded-xs'>
+              <p className='text-dark text-base font-semibold'>{curr.title}</p>
+              <p className='text-[#2254B5] bg-success px-3 p-1 text-center text-s font-medium leading-5 rounded-xs'>
                 {curr.subtitle}
               </p>
             </label>
