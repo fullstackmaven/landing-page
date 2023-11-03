@@ -12,6 +12,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:astro/recommended",
+    "plugin:prettier/recommended",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
