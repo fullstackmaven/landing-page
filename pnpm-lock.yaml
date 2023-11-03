@@ -73,6 +73,9 @@ devDependencies:
   eslint-plugin-n:
     specifier: '^15.0.0 || ^16.0.0 '
     version: 16.2.0(eslint@8.50.0)
+  eslint-plugin-prettier:
+    specifier: ^5.0.1
+    version: 5.0.1(eslint-config-prettier@9.0.0)(eslint@8.50.0)(prettier@3.0.3)
   eslint-plugin-promise:
     specifier: ^6.0.0
     version: 6.1.1(eslint@8.50.0)
@@ -2490,6 +2493,27 @@ packages:
       semver: 7.5.4
     dev: true
 
+  /eslint-plugin-prettier@5.0.1(eslint-config-prettier@9.0.0)(eslint@8.50.0)(prettier@3.0.3):
+    resolution: {integrity: sha512-m3u5RnR56asrwV/lDC4GHorlW75DsFfmUcjfCYylTUs85dBRnB7VM6xG8eCMJdeDRnppzmxZVf1GEPJvl1JmNg==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      '@types/eslint': '>=8.0.0'
+      eslint: '>=8.0.0'
+      eslint-config-prettier: '*'
+      prettier: '>=3.0.0'
+    peerDependenciesMeta:
+      '@types/eslint':
+        optional: true
+      eslint-config-prettier:
+        optional: true
+    dependencies:
+      eslint: 8.50.0
+      eslint-config-prettier: 9.0.0(eslint@8.50.0)
+      prettier: 3.0.3
+      prettier-linter-helpers: 1.0.0
+      synckit: 0.8.5
+    dev: true
+
   /eslint-plugin-promise@6.1.1(eslint@8.50.0):
     resolution: {integrity: sha512-tjqWDwVZQo7UIPMeDReOpUgHCmCiH+ePnVT+5zVapL0uuHnegBUs2smM13CzOs2Xb5+MHMRFTs9v24yjba4Oig==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -2668,6 +2692,10 @@ packages:
 
   /fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+    dev: true
+
+  /fast-diff@1.3.0:
+    resolution: {integrity: sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==}
     dev: true
 
   /fast-fifo@1.3.2:
@@ -4429,6 +4457,13 @@ packages:
       prettier: ^2.6.0 || ^3.0.0
     dependencies:
       prettier: 3.0.3
+    dev: true
+
+  /prettier-linter-helpers@1.0.0:
+    resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      fast-diff: 1.3.0
     dev: true
 
   /prettier-plugin-astro@0.12.0:
