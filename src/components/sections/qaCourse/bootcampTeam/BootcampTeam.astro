@@ -8,7 +8,7 @@ export interface TInstructor {
   jobTitle: string;
   imageCompanyUrl: string;
   companyname: string;
-};
+}
 
 const defaultInstructors: TInstructor[] = [
   {
@@ -38,7 +38,7 @@ const defaultInstructors: TInstructor[] = [
 ];
 ---
 
-<div id="qa-education-team" class="container grid gap-y-4 lg:gap-y-6">
+<div id="qa-education-team" class="wrapper grid gap-y-4 lg:gap-y-6">
   <p
     class="text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6"
   >
@@ -56,10 +56,6 @@ const defaultInstructors: TInstructor[] = [
     experienced instructors who worked at top companies of various industries.
   </p>
   <div class="flex flex-row w-full gap-4">
-    {
-      defaultInstructors.map((instructor) => (
-        <InstructorCard {...instructor} />
-      ))
-    }
+    {defaultInstructors.map((instructor) => <InstructorCard {...instructor} />)}
   </div>
 </div>

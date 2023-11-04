@@ -1,16 +1,14 @@
-footer {
-  h4 {
-    color: #1d1e22;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  li {
-    color: rgba(29, 30, 34, 0.8);
+@layer components {
+  .line {
+    @apply bg-[#dadada] h-1;
   }
-}
-
-.line {
-  background: #dadada;
-  height: 4px;
+  .wrapper {
+    @apply px-4 md:px-8 lg:px-12 xl:px-13 max-w-7xl mx-auto;
+  }
 }
 
 input,
