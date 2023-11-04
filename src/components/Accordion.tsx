@@ -17,7 +17,12 @@ const Accordion: FC<
       )}
       {...otherProps}
     >
-      <input type="checkbox" id={id} className="peer appearance-none" hidden />
+      <input
+        type="checkbox"
+        id={id}
+        className="peer appearance-none hidden"
+        hidden
+      />
       <i className="fa-solid fa-chevron-right peer-checked:hidden flex items-center justify-center w-6 h-6"></i>
       <i className="fa-solid fa-chevron-down peer-checked:flex items-center hidden justify-center w-6 h-6"></i>
       <label
