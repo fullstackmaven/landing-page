@@ -20,14 +20,14 @@ const Accordion: FC<
       <input
         type="checkbox accordion-input"
         id={id}
-        className="peer !appearance-none !hidden !select-none"
+        className="peer appearance-none"
         hidden
       />
       <i className="fa-solid fa-chevron-right peer-checked:hidden flex items-center justify-center w-6 h-6"></i>
       <i className="fa-solid fa-chevron-down peer-checked:flex items-center hidden justify-center w-6 h-6"></i>
       <label
         htmlFor={id}
-        className="items-center grow flex justify-between pl-2 !select-none"
+        className="items-center grow flex justify-between pl-2"
       >
         <p className="text-dark text-s font-semibold leading-6">{title}</p>
         <p className="text-[#2254B5] bg-success px-2 p-1 text-center text-xxs font-medium rounded-xs">
