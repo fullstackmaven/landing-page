@@ -20,7 +20,7 @@ const Accordion: FC<
       <input
         type="checkbox"
         id={id}
-        className="peer appearance-none hidden"
+        className="peer appearance-none hidden select-none"
         hidden
       />
       <i className="fa-solid fa-chevron-right peer-checked:hidden flex items-center justify-center w-6 h-6"></i>
