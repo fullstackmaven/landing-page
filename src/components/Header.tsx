@@ -7,6 +7,7 @@ import {
   type ReactNode,
 } from 'react';
 import { Button } from './Button.tsx';
+import MenuDrawer from './MenuDrawer.tsx';
 
 export interface TMenuItem {
   label: string;
@@ -28,6 +29,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
   ...otherProps
 }) => {
   const [isScrollAtTop, setIsScrollAtTop] = useState(true);
+  const [isMenuDrawerOpen, setIsMenuDrawerOpen] = useState(false);
 
   const handleScroll = (): void => {
     // Handle the scroll event here
@@ -119,7 +121,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
               ))}
             </ul>
           </nav>
-          <div className='flex items-center justify-between'>
+          <div className='relative flex items-center justify-between'>
             <Button
               title='Book a call'
               className={classNames(
@@ -133,6 +135,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
               className={classNames('h-[35px] py-2', {
                 'rounded-xs bg-white md:bg-transparent': !isScrollAtTop,
               })}
+              onClick={() => setIsMenuDrawerOpen((prev) => !prev)}
             >
               <img
                 src='hamburger.svg'
@@ -143,6 +146,17 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
           </div>
         </div>
       </div>
+
+      <MenuDrawer
+        className={classNames(
+          'absolute top-0 z-10 h-[631px] w-full lg:hidden',
+          {
+            block: isMenuDrawerOpen,
+            hidden: !isMenuDrawerOpen,
+          },
+        )}
+        onClose={() => setIsMenuDrawerOpen(false)}
+      />
     </>
   );
 };
