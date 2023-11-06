@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import ImageStarMobile from "/public/qa-course/star-mobile.svg";
+import { Image } from 'astro:assets';
+import ImageStarMobile from '/public/qa-course/star-mobile.svg';
 
 interface TAnswers {
   title: string;
@@ -31,40 +31,40 @@ const defaultAnswers: TAnswers[] = [
 ];
 ---
 
-<div id="why-cyram" class="wrapper grid gap-y-4 lg:gap-y-6">
+<div id='why-cyram' class='wrapper grid gap-y-4 lg:gap-y-6'>
   <p
-    class="text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6"
+    class='text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6'
   >
     WHY CYRAM
   </p>
   <h2
-    class="text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl"
+    class='text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
   >
     A live and immersive learning experience
   </h2>
   <p
-    class="text-s text-dark-gray font-normal leading-6 lg:text-base lg:leading-7"
+    class='text-s text-dark-gray font-normal leading-6 lg:text-base lg:leading-7'
   >
     Our live classes are an opportunity to learn-by-doing with other students.
     We take an active learning approach to ensure you retain and practice key
     skills.
   </p>
-  <div class="grid gap-y-6">
+  <div class='grid gap-y-6'>
     {
       defaultAnswers.map((answer) => (
-        <div class="grid gap-y-2">
-          <p class="flex text-dark text-s leading-6 font-bold items-center lg:text-base">
-            <span class="pr-2">
+        <div class='grid gap-y-2'>
+          <p class='flex text-dark text-s leading-6 font-bold items-center lg:text-base'>
+            <span class='pr-2'>
               <Image
                 src={ImageStarMobile}
-                alt="star-mobile"
-                loading="lazy"
-                decoding="async"
+                alt='star-mobile'
+                loading='lazy'
+                decoding='async'
               />
             </span>
             {answer.title}
           </p>
-          <p class="text-s text-dark-gray font-normal leading-6 lg:text-base lg:leading-7">
+          <p class='text-s text-dark-gray font-normal leading-6 lg:text-base lg:leading-7'>
             {answer.description}
           </p>
         </div>

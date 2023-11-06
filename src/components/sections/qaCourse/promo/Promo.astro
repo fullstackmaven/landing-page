@@ -1,45 +1,45 @@
 ---
-import { Button } from "@components/Button";
-import LiveIndicatorPulse from "@components/LiveIndicatorPulse.astro";
-import { Image } from "astro:assets";
-import ImageLiveLecture from "/public/qa-course/live-lecture-image.svg";
-import ImageLiveLectureTools from "/public/qa-course/live-lecture-tools-image.svg";
+import { Button } from '@components/Button';
+import LiveIndicatorPulse from '@components/LiveIndicatorPulse.astro';
+import { Image } from 'astro:assets';
+import ImageLiveLecture from '/public/qa-course/live-lecture-image.svg';
+import ImageLiveLectureTools from '/public/qa-course/live-lecture-tools-image.svg';
 ---
 
-<div class="wrapper flex flex-col lg:flex-row gap-x-0 lg:gap-x-6 xl:gap-x-8">
-  <div class="grid gap-y-4 lg:w-1/2 lg:gap-y-6">
+<div class='wrapper flex flex-col lg:flex-row gap-x-0 lg:gap-x-6 xl:gap-x-8'>
+  <div class='grid gap-y-4 lg:w-1/2 lg:gap-y-6'>
     <h1
-      class="text-xl text-dark leading-2xl font-bold self-stretch md:text-3xl md:leading-3xl"
+      class='text-xl text-dark leading-2xl font-bold self-stretch md:text-3xl md:leading-3xl'
     >
       Quality Assurance Bootcamp: Ignite Your Tech Journey!
     </h1>
-    <p class="text-dark text-s leading-6 font-normal xl:text-base">
+    <p class='text-dark text-s leading-6 font-normal xl:text-base'>
       Transform into a QA engineer in just 5 months and gain in-demand skills.
       Join our live online classes and master the art of quality assurance.
     </p>
-    <Button title="Start your adventure" className="font-semibold w-fit" />
+    <Button title='Start your adventure' className='font-semibold w-fit' />
   </div>
   <div
-    class="relative flex flex-col mt-8 lg:mt-0 w-full lg:w-1/2 h-auto flex-1"
+    class='relative flex flex-col mt-8 lg:mt-0 w-full lg:w-1/2 h-auto flex-1'
   >
     <Image
       src={ImageLiveLecture}
-      alt="live-lecture-image"
-      loading="lazy"
-      decoding="async"
-      class="h-full object-cover w-full"
+      alt='live-lecture-image'
+      loading='lazy'
+      decoding='async'
+      class='h-full object-cover w-full'
     />
     <div
-      class="flex absolute left-3 top-4 px-2 py-1 border border-live-gray backdrop-blur-[2px] rounded-s items-center gap-2"
+      class='flex absolute left-3 top-4 px-2 py-1 border border-live-gray backdrop-blur-[2px] rounded-s items-center gap-2'
     >
       <LiveIndicatorPulse />
-      <p class="text-dark text-xs font-normal">Live Lectures</p>
+      <p class='text-dark text-xs font-normal'>Live Lectures</p>
     </div>
     <Image
       src={ImageLiveLectureTools}
-      alt={"live-lecture-tools-image"}
-      loading="lazy"
-      class="absolute bottom-4 left-3 h-10 md:h-12 justify-normal object-contain object-left w-fit"
+      alt={'live-lecture-tools-image'}
+      loading='lazy'
+      class='absolute bottom-4 left-3 h-10 md:h-12 justify-normal object-contain object-left w-fit'
     />
   </div>
 </div>

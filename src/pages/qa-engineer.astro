@@ -1,38 +1,38 @@
 ---
-import Footer from "@components/Footer.astro";
-import { Header } from "@components/Header";
-import Questions from "@components/sections/common/questions/Questions.astro";
-import BootcampAlumni from "@components/sections/qaCourse/bootcampAlumni/BootcampAlumni.astro";
-import BootcampTeam from "@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro";
-import BootcampTuition from "@components/sections/qaCourse/bootcampTuition/BootcampTuition.astro";
-import Curriculum from "@components/sections/qaCourse/curriculum/Curriculum.astro";
-import Overview from "@components/sections/qaCourse/overview/Overview.astro";
-import Promo from "@components/sections/qaCourse/promo/Promo.astro";
-import QADefinition from "@components/sections/qaCourse/qaDefinition/QADefinition.astro";
-import WhyCyram from "@components/sections/qaCourse/whyCyram/WhyCyram.astro";
-import Layout from "@layouts/Layout.astro";
-import "../index.scss";
+import Footer from '@components/Footer.astro';
+import { Header } from '@components/Header';
+import Questions from '@components/sections/common/questions/Questions.astro';
+import BootcampAlumni from '@components/sections/qaCourse/bootcampAlumni/BootcampAlumni.astro';
+import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
+import BootcampTuition from '@components/sections/qaCourse/bootcampTuition/BootcampTuition.astro';
+import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum.astro';
+import Overview from '@components/sections/qaCourse/overview/Overview.astro';
+import Promo from '@components/sections/qaCourse/promo/Promo.astro';
+import QADefinition from '@components/sections/qaCourse/qaDefinition/QADefinition.astro';
+import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
+import Layout from '@layouts/Layout.astro';
+import '../index.scss';
 ---
 
-<Layout title="Quality Assurance Bootcamp">
+<Layout title='Quality Assurance Bootcamp'>
   <Header
     isSticky={false}
     client:load
-    className="bg-light-orange"
+    className='bg-light-orange'
     menuItems={[
-      { label: "Overview", id: "qa-overview" },
-      { label: "Curriculum", id: "qa-curriculum" },
-      { label: "Why Cyram ", id: "why-cyram" },
-      { label: "Tuition", id: "qa-tuition" },
-      { label: "Education Team", id: "qa-education-team" },
-      { label: "FAQ", id: "faq" },
+      { label: 'Overview', id: 'qa-overview' },
+      { label: 'Curriculum', id: 'qa-curriculum' },
+      { label: 'Why Cyram ', id: 'why-cyram' },
+      { label: 'Tuition', id: 'qa-tuition' },
+      { label: 'Education Team', id: 'qa-education-team' },
+      { label: 'FAQ', id: 'faq' },
     ]}
   />
-  <div class="bg-light-orange py-12 md:py-14 xl:py-[128px]">
+  <div class='bg-light-orange py-12 md:py-14 xl:py-[128px]'>
     <Promo />
   </div>
   <div
-    class="flex flex-col gap-y-12 md:py-[80px] lg:pb-[128px] md:gap-y-14 lg:gap-y-15 pt-12 g:pt-15 xl:pt-[128px]"
+    class='flex flex-col gap-y-12 md:py-[80px] lg:pb-[128px] md:gap-y-14 lg:gap-y-15 pt-12 g:pt-15 xl:pt-[128px]'
   >
     <QADefinition />
     <Overview />

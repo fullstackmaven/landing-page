@@ -1,5 +1,5 @@
-import classNames from "classnames";
-import React, { type HTMLAttributes } from "react";
+import classNames from 'classnames';
+import React, { type HTMLAttributes } from 'react';
 
 interface Props {
   title: string;
@@ -13,8 +13,8 @@ export const Button: React.FC<Props & HTMLAttributes<HTMLButtonElement>> = ({
   return (
     <button
       className={classNames(
-        "flex justify-center items-center text-s px-6 py-3 rounded-s bg-dark text-white md:text-s",
-        className
+        'flex items-center justify-center rounded-s bg-dark px-6 py-3 text-s text-white md:text-s',
+        className,
       )}
       {...otherProps}
     >

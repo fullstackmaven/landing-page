@@ -7,7 +7,8 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 npm run check-format ||
 (
     echo '❌💅💄❌ Prettier Check Failed ❌💅💄❌
-            Prettier Check Failed. Run npm run format, add changes and try commit again.';
+            Prettier Check Failed. Running pnpm run format, add changes and try commit again.';
+    pnpm run format;
     false;
 )
 

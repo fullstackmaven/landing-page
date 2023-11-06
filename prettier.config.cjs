@@ -1,25 +1,25 @@
 /** @type {import("prettier").Config} */
 module.exports = {
   // i am just using the standard config, change if you need something else
-  ...require("prettier-config-standard"),
+  ...require('prettier-config-standard'),
   plugins: [
-    require.resolve("prettier-plugin-astro"),
-    "prettier-plugin-tailwindcss",
+    require.resolve('prettier-plugin-astro'),
+    'prettier-plugin-tailwindcss',
   ],
   overrides: [
     {
-      files: "*.astro",
+      files: '*.astro',
       options: {
-        parser: "astro",
+        parser: 'astro',
       },
     },
   ],
   tabWidth: 2,
-  arrowParens: "always",
+  arrowParens: 'always',
   useTabs: false,
   printWidth: 80,
   semi: true,
   singleQuote: true,
-  trailingComma: "all",
+  trailingComma: 'all',
   bracketSpacing: true,
 };
