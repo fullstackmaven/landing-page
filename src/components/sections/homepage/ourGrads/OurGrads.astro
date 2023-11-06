@@ -1,3 +1,20 @@
+---
+import { Image } from "astro:assets";
+import ImageAirbnb from "/public/home-page/airbnb-logo.svg";
+import ImageAmazon from "/public/home-page/amazon-logo.svg";
+import ImageBooking from "/public/home-page/booking-logo.svg";
+import ImageGoogle from "/public/home-page/google-logo.svg";
+import ImageGradWorkVideoDesktop from "/public/home-page/grad-work-video-desktop.svg";
+import ImageGradWorkVideo from "/public/home-page/grad-work-video.svg";
+import ImageLinkedin from "/public/home-page/linkedin-logo.svg";
+import ImageMeta from "/public/home-page/meta-logo.svg";
+import ImageMicrosoft from "/public/home-page/microsoft-logo.svg";
+import ImageNetflix from "/public/home-page/netflix-logo.svg";
+import ImageNotion from "/public/home-page/notion-logo.svg";
+import ImageUber from "/public/home-page/uber-logo.svg";
+import ImageZoom from "/public/home-page/zoom-logo.svg";
+---
+
 <div
   class="wrapper courses flex flex-col gap-4 md:gap-4 lg:gap-6 xl:gap-4 lg:items-center"
 >
@@ -16,120 +33,198 @@
     <div
       class="child:md:w-auto flex flex-wrap gap-y-6 h-[34px] md:h-[31px] lg:h-[46px] child:w-[96px] w-full justify-between"
     >
-      <img
+      <Image
+        src={ImageGoogle}
+        alt="google-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full md:hidden md:appearance-none"
-        src="home-page/google-logo.svg"
       />
-      <img
+      <Image
+        src={ImageAirbnb}
+        alt="airbnb-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full md:hidden md:appearance-none"
-        src="home-page/airbnb-logo.svg"
       />
-      <img
+      <Image
+        src={ImageAmazon}
+        alt="amazon-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full md:hidden md:appearance-none"
-        src="home-page/amazon-logo.svg"
       />
-      <img
+      <Image
+        src={ImageMicrosoft}
+        alt="google-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/microsoft-logo.svg"
       />
-      <img
+      <Image
+        src={ImageAirbnb}
+        alt="airbnb-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/airbnb-logo.svg"
       />
-      <img
+      <Image
+        src={ImageAmazon}
+        alt="amazon-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/amazon-logo.svg"
       />
-      <img
+      <Image
+        src={ImageMeta}
+        alt="meta-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/meta-logo.svg"
       />
-      <img
+      <Image
+        src={ImageGoogle}
+        alt="google-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/google-logo.svg"
       />
     </div>
     <div
       class="child:md:w-auto flex flex-wrap gap-y-6 h-[34px] md:h-[31px] lg:h-[46px] child:w-[96px] w-full justify-between"
     >
-      <img
+      <Image
+        src={ImageMeta}
+        alt="meta-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full md:hidden md:appearance-none"
-        src="home-page/meta-logo.svg"
       />
-      <img
+      <Image
+        src={ImageNetflix}
+        alt="netflix-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full md:hidden md:appearance-none"
-        src="home-page/netflix-logo.svg"
       />
-      <img
+      <Image
+        src={ImageUber}
+        alt="uber-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full md:hidden md:appearance-none"
-        src="home-page/uber-logo.svg"
       />
-      <img
+      <Image
+        src={ImageUber}
+        alt="uber-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/uber-logo.svg"
       />
-      <img
+      <Image
+        src={ImageLinkedin}
+        alt="linkedin-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/linkedin-logo.svg"
       />
-      <img
+      <Image
+        src={ImageBooking}
+        alt="booking-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/booking-logo.svg"
       />
-      <img
+      <Image
+        src={ImageUber}
+        alt="uber-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/uber-logo.svg"
       />
-      <img
+      <Image
+        src={ImageLinkedin}
+        alt="linkedin-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/linkedin-logo.svg"
       />
     </div>
     <div
       class="child:md:w-auto flex flex-wrap gap-y-6 h-[34px] md:h-[31px] lg:h-[46px] child:w-[96px] w-full justify-between"
     >
-      <img
+      <Image
+        src={ImageZoom}
+        alt="zoom-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full md:hidden md:appearance-none"
-        src="home-page/zoom-logo.svg"
       />
-      <img
+      <Image
+        src={ImageMicrosoft}
+        alt="microsoft-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full md:hidden md:appearance-none"
-        src="home-page/microsoft-logo.svg"
       />
-      <img
+      <Image
+        src={ImageLinkedin}
+        alt="linkedin-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full md:hidden md:appearance-none"
-        src="home-page/linkedin-logo.svg"
       />
-      <img
+      <Image
+        src={ImageBooking}
+        alt="booking-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/booking-logo.svg"
       />
-      <img
+      <Image
+        src={ImageNotion}
+        alt="notion-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/notion-logo.svg"
       />
-      <img
+      <Image
+        src={ImageAirbnb}
+        alt="airbnb-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/airbnb-logo.svg"
       />
-      <img
+      <Image
+        src={ImageAirbnb}
+        alt="airbnb-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/airbnb-logo.svg"
       />
-      <img
+      <Image
+        src={ImageAirbnb}
+        alt="airbnb-logo"
+        loading="lazy"
+        decoding="async"
         class="h-full hidden appearance-none md:block"
-        src="home-page/airbnb-logo.svg"
       />
     </div>
   </div>
 
   <div class="flex content-center justify-center my-4 w-full">
-    <img
-      src="home-page/grad-work-video.svg"
+    <Image
+      src={ImageGradWorkVideo}
+      alt="grad-work-video"
+      loading="lazy"
+      decoding="async"
       class="object-contain w-full md:rounded-[16px] lg:rounded-xl md:hidden"
     />
-    <img
-      src="home-page/grad-work-video-desktop.svg"
+    <Image
+      src={ImageGradWorkVideoDesktop}
+      alt="grad-work-video-desktop"
+      loading="lazy"
+      decoding="async"
       class="object-contain w-full md:rounded-[16px] lg:rounded-xl hidden md:block"
     />
   </div>

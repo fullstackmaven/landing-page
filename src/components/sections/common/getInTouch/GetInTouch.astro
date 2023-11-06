@@ -1,5 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import ContactForm from "./contactForm/ContactForm.astro";
+import ImageGetInTouch1 from "/public/qa-course/get-in-touch-1.svg";
+import ImageGetInTouch2 from "/public/qa-course/get-in-touch-2.svg";
+import ImageGetInTouch3 from "/public/qa-course/get-in-touch-3.svg";
 ---
 
 <div
@@ -11,16 +15,25 @@ import ContactForm from "./contactForm/ContactForm.astro";
         class="flex flex-col w-full md:w-1/2 md:justify-start md:items-start md:p-6"
       >
         <div class="flex flex-row justify-center content-center mb-6">
-          <img
-            src="qa-course/get-in-touch-1.svg"
+          <Image
+            src={ImageGetInTouch1}
+            alt="live-lecture-tools-image"
+            loading="lazy"
+            decoding="async"
             class="rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px]"
           />
-          <img
-            src="qa-course/get-in-touch-2.svg"
+          <Image
+            src={ImageGetInTouch2}
+            alt="live-lecture-tools-image"
+            loading="lazy"
+            decoding="async"
             class="rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] -ml-[30px] md:-ml-[15px]"
           />
-          <img
-            src="qa-course/get-in-touch-3.svg"
+          <Image
+            src={ImageGetInTouch3}
+            alt="live-lecture-tools-image"
+            loading="lazy"
+            decoding="async"
             class="rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] -ml-[30px] md:-ml-[15px]"
           />
         </div>

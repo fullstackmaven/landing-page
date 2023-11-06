@@ -2,8 +2,8 @@
 import { Button } from "@components/Button";
 import LiveIndicatorPulse from "@components/LiveIndicatorPulse.astro";
 import { Image } from "astro:assets";
-import liveLectureImage from "/public/qa-course/live-lecture-image.svg";
-import liveLectureToolsImage from "/public/qa-course/live-lecture-tools-image.svg";
+import ImageLiveLecture from "/public/qa-course/live-lecture-image.svg";
+import ImageLiveLectureTools from "/public/qa-course/live-lecture-tools-image.svg";
 ---
 
 <div class="wrapper flex flex-col lg:flex-row gap-x-0 lg:gap-x-6 xl:gap-x-8">
@@ -23,7 +23,7 @@ import liveLectureToolsImage from "/public/qa-course/live-lecture-tools-image.sv
     class="relative flex flex-col mt-8 lg:mt-0 w-full lg:w-1/2 h-auto flex-1"
   >
     <Image
-      src={liveLectureImage}
+      src={ImageLiveLecture}
       alt="live-lecture-image"
       loading="lazy"
       decoding="async"
@@ -36,7 +36,7 @@ import liveLectureToolsImage from "/public/qa-course/live-lecture-tools-image.sv
       <p class="text-dark text-xs font-normal">Live Lectures</p>
     </div>
     <Image
-      src={liveLectureToolsImage}
+      src={ImageLiveLectureTools}
       alt={"live-lecture-tools-image"}
       loading="lazy"
       class="absolute bottom-4 left-3 h-10 md:h-12 justify-normal object-contain object-left w-fit"

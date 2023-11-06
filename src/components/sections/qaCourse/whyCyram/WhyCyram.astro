@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import ImageStarMobile from "/public/qa-course/star-mobile.svg";
+
 interface TAnswers {
   title: string;
   description: string;
@@ -52,7 +55,12 @@ const defaultAnswers: TAnswers[] = [
         <div class="grid gap-y-2">
           <p class="flex text-dark text-s leading-6 font-bold items-center lg:text-base">
             <span class="pr-2">
-              <img src="qa-course/star-mobile.svg" alt="fff" />
+              <Image
+                src={ImageStarMobile}
+                alt="star-mobile"
+                loading="lazy"
+                decoding="async"
+              />
             </span>
             {answer.title}
           </p>
