@@ -13,7 +13,7 @@ const Dropdown: React.FC = () => {
     <div className="relative text-left dropdown">
       <div>
         <button
-          className="inline-flex justify-center w-full dropdown"
+          className="rounded-l border border-[#EBEBEB] py-4 px-5 md:py-2 md:px-3 md:text-xxs inline-flex justify-center w-full dropdown"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
