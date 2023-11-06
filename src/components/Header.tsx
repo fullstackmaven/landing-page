@@ -123,7 +123,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
             <Button
               title='Book a call'
               className={classNames(
-                '!lg:text-xs !lg:py-3 !lg:px-6 !xl:text-s mr-4 !px-3 !py-2 !text-xxs !font-semibold lg:mr-0 ',
+                'mr-4 !px-3 !py-2 !text-xxs !font-semibold lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs xl:text-s ',
                 {
                   'hidden md:flex': !isScrollAtTop,
                 },
