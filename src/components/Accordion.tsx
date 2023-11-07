@@ -18,8 +18,14 @@ const Accordion: FC<
       {...otherProps}
     >
       <input type='checkbox' id={id} className='peer appearance-none' hidden />
-      <i className='fa-solid fa-chevron-right flex h-6 w-6 items-center justify-center peer-checked:hidden'></i>
-      <i className='fa-solid fa-chevron-down hidden h-6 w-6 items-center justify-center peer-checked:flex'></i>
+      <img
+        src='/chevron-right-icon.svg'
+        className='flex h-6 w-6 items-center justify-center peer-checked:hidden'
+      ></img>
+      <img
+        src='/chevron-down-icon.svg'
+        className='hidden h-6 w-6 items-center justify-center peer-checked:flex'
+      ></img>
       <label
         htmlFor={id}
         className='flex grow items-center justify-between pl-2'
