@@ -5,15 +5,15 @@ const Dropdown: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const selectOption = (option: string) => {
+  const selectOption = (option: string): void => {
     setSelectedOption(option);
   };
 
   return (
-    <div className='relative text-left dropdown'>
+    <div className='dropdown relative text-left'>
       <div>
         <button
-          className='inline-flex justify-center w-full dropdown'
+          className='dropdown inline-flex w-full justify-center rounded-l border border-[#EBEBEB] px-5 py-4 md:px-3 md:py-2 md:text-xxs'
           onClick={() => {
             setIsOpen(!isOpen);
           }}
@@ -36,7 +36,7 @@ const Dropdown: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className='origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5'>
+        <div className='w-56 rounded-md ring-black absolute right-0 mt-2 origin-top-right bg-white shadow-lg ring-1 ring-opacity-5'>
           <div
             className='py-1'
             role='menu'
@@ -46,9 +46,11 @@ const Dropdown: React.FC = () => {
             {options.map((option, i) => (
               <span
                 key={i}
-                className='block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900'
+                className='text-sm hover:bg-gray-100 hover:text-gray-900 block px-4 py-2'
                 role='menuitem'
-                onClick={() => selectOption(option)}
+                onClick={() => {
+                  selectOption(option);
+                }}
               >
                 {option}
               </span>

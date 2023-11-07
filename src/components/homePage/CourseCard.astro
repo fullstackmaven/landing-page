@@ -1,11 +1,13 @@
 ---
 import LiveIndicatorPulse from '@components/LiveIndicatorPulse.astro';
+import { Image } from 'astro:assets';
 import classNames from 'classnames';
 import type { TCourse } from 'src/types/Course';
+import ImageLiveLectureTools from '/public/home-page/live-lecture-tools-image.svg';
 
-type Props = {
+interface Props {
   course: TCourse;
-};
+}
 
 const { course } = Astro.props;
 ---
@@ -28,9 +30,11 @@ const { course } = Astro.props;
           <LiveIndicatorPulse />
           <p class='text-xxs font-normal text-white'>Live Lectures</p>
         </div>
-        <img
-          src='home-page/live-lecture-tools-image.svg'
-          alt={'live-lecture-tools-image'}
+        <Image
+          src={ImageLiveLectureTools}
+          alt='live-lecture-tools-image'
+          loading='lazy'
+          decoding='async'
           class='h-6'
         />
       </div>

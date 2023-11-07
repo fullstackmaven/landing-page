@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import classNames from 'classnames';
+import ImagePlayButton from '/public/qa-course/play-button.svg';
 
 interface Props {
-  className: string;
+  className?: string;
 }
 
 const { className } = Astro.props;
@@ -12,7 +14,13 @@ const { className } = Astro.props;
   <div
     class='lg:cursor-pointer absolute inset-0 m-auto bg-primary py-2 px-5 w-fit h-fit'
   >
-    <img src='qa-course/play-button.svg' />
+    <Image
+      src={ImagePlayButton}
+      alt='play-button'
+      loading='lazy'
+      decoding='async'
+      class='w-full'
+    />
   </div>
   <slot />
 </div>

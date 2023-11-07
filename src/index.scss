@@ -1,16 +1,14 @@
-footer {
-  h4 {
-    color: #1d1e22;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  li {
-    color: rgba(29, 30, 34, 0.8);
+@layer components {
+  .line {
+    @apply h-1 bg-[#dadada];
   }
-}
-
-.line {
-  background: #dadada;
-  height: 4px;
+  .wrapper {
+    @apply mx-auto w-full max-w-7xl px-4 md:px-8 lg:px-12 xl:px-13;
+  }
 }
 
 input,
@@ -20,5 +18,5 @@ select,
 a,
 label {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }

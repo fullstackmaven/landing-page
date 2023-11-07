@@ -1,61 +1,73 @@
 ---
-import './sucessStories.scss';
+import { Image } from 'astro:assets';
+import ImageHeartOutlined from '/public/home-page/heart-outlined.svg';
+import ImagePerson from '/public/home-page/mike-rizzo.svg';
+import ImagePlayCircle from '/public/home-page/play-circle.svg';
+import ImageVideoBG from '/public/home-page/video-bg.svg';
 ---
 
-<div class='courses pt-12 flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'>
-  <div class='container'>
-    <div class='flex flex-col justify-center content-center'>
-      <h2 class='text-l font-bold pb-3 section_title'>
-        Student success stories
-      </h2>
-      <div class='description text-xs font-normal leading-tight max-w-3xl'>
-        Discover the inspiring journeys of our students who have transformed
-        their careers through our programs. Hear their experiences, challenges,
-        and successes directly from them.
+<div
+  class='courses wrapper pt-12 flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'
+>
+  <div class='flex flex-col justify-center content-center'>
+    <h2 class='text-l font-bold pb-3 text-vermilion'>
+      Student success stories
+    </h2>
+    <div class='description text-xs font-normal leading-tight max-w-3xl'>
+      Discover the inspiring journeys of our students who have transformed their
+      careers through our programs. Hear their experiences, challenges, and
+      successes directly from them.
+    </div>
+
+    <div
+      class='flex flex-col mt-4 p-3 bg-white gap-4 justify-center content-center rounded-s'
+    >
+      <div class='flex flex-col justify-center content-center relative'>
+        <div class='absolute right-0 top-0 pr-4 pt-4'>
+          <Image
+            src={ImageHeartOutlined}
+            alt='heart-logo'
+            loading='lazy'
+            decoding='async'
+            class='w-5 h-[1.147rem]'
+          />
+        </div>
+        <Image
+          src={ImageVideoBG}
+          alt='video-bg'
+          loading='lazy'
+          decoding='async'
+          class='rounded-xs min-w-[20rem] min-h-[11.375rem] cursor-pointer'
+        />
+        <div
+          class='flex justify-center items-center gap-2 w-full absolute bottom-0 pl-4 pb-4 pr-7'
+        >
+          <Image
+            src={ImagePlayCircle}
+            alt='play-btn'
+            loading='lazy'
+            decoding='async'
+            class='w-8 h-8'
+          />
+          <div class='w-full h-[0.25rem] bg-[#DADADA] rounded-xs'></div>
+        </div>
       </div>
 
-      <div
-        class='flex flex-col mt-4 p-3 bg-white gap-4 justify-center content-center rounded-s'
-      >
-        <div class='flex flex-col justify-center content-center relative'>
-          <div class='absolute right-0 top-0 pr-4 pt-4'>
-            <img
-              src='home-page/heart-outlined.svg'
-              alt='heart logo'
-              class='w-5 h-[1.147rem]'
-            />
-          </div>
-          <img
-            src='home-page/video-bg.svg'
-            alt='placeholder'
-            class='rounded-xs min-w-[20rem] min-h-[11.375rem] cursor-pointer'
+      <div class='flex flex-col justify-center items-start gap-4'>
+        <h3 class='text-base my-2'>
+          From stay-at-home mom to a software engineer
+        </h3>
+        <p class='text-dark-gray'>1 min watch</p>
+
+        <div class='flex flex-row justify-start content-center gap-3'>
+          <Image
+            src={ImagePerson}
+            alt='mike-rizzo'
+            loading='lazy'
+            decoding='async'
+            class='rounded-full w-[1.813rem] h-[1.813rem] cursor-pointer'
           />
-          <div
-            class='flex justify-center items-center gap-2 w-full absolute bottom-0 pl-4 pb-4 pr-7'
-          >
-            <img
-              src='home-page/play-circle.svg'
-              alt='play btn'
-              class='w-8 h-8'
-            />
-            <div class='w-full h-[0.25rem] bg-[#DADADA] rounded-xs'></div>
-          </div>
-        </div>
-
-        <div class='flex flex-col justify-center items-start gap-4'>
-          <h3 class='text-base my-2'>
-            From stay-at-home mom to a software engineer
-          </h3>
-          <p class='sub-text'>1 min watch</p>
-
-          <div class='flex flex-row justify-start content-center gap-3'>
-            <img
-              src='home-page/mike-rizzo.svg'
-              alt='person_photo'
-              class='rounded-full w-[1.813rem] h-[1.813rem] cursor-pointer'
-            />
-            <p class='sub-text'>Mike Rizzo</p>
-          </div>
+          <p class='text-dark-gray'>Mike Rizzo</p>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import Courses from '@components/sections/homepage/courses/Courses.astro';
 import OurGrads from '@components/sections/homepage/ourGrads/OurGrads.astro';
 import Promo from '@components/sections/homepage/promo/Promo.astro';
 import Layout from '@layouts/Layout.astro';
+import '../index.scss';
 ---
 
 <Layout title='Home page'>
@@ -17,26 +18,26 @@ import Layout from '@layouts/Layout.astro';
     menuItems={[
       {
         label: 'Bootcamps',
-        id: 'home-bootcamps',
+        id: 'homebootcamps',
         isDropdown: true,
       },
       {
         label: 'Why Cyram',
-        id: 'home-why-cyram',
+        id: 'homewhycyram',
         isDropdown: true,
       },
       {
         label: 'Resources',
-        id: 'home-resources',
+        id: 'homeresources',
         isDropdown: true,
       },
       {
         label: 'Blog',
-        id: 'home-blog',
+        id: 'homeblog',
       },
     ]}
   >
-    <div slot='home-bootcamps' class='h-full w-full flex flex-col gap-y-6'>
+    <div slot='homebootcamps' class='h-full w-full flex flex-col gap-y-6'>
       <HeaderDropdown />
     </div>
   </Header>
@@ -44,13 +45,13 @@ import Layout from '@layouts/Layout.astro';
     <Promo />
   </div>
   <div
-    class='grid py-13 md:py-[80px] lg:pt-[144px] lg:pb-[128px] gap-13 md:gap-[80px] lg:gap-[128px]'
+    class='grid pt-13 pb-10 md:py-[80px] lg:pt-[144px] lg:pb-[128px] gap-y-13 md:gap-y-[80px] lg:gap-y-[128px]'
   >
     <Courses />
     <!-- <SucessStories /> -->
     <OurGrads />
     <Questions />
     <!-- <GetInTouch /> -->
+    <Footer />
   </div>
-  <Footer />
 </Layout>

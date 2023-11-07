@@ -2,9 +2,9 @@
 import type { TCourse } from 'src/types/Course';
 import CourseCard from './course_card/CourseCard.astro';
 
-type Props = {
+interface Props {
   courses?: TCourse[];
-};
+}
 
 const defaultCourses: TCourse[] = [
   {
@@ -34,7 +34,7 @@ const defaultCourses: TCourse[] = [
 const { courses = defaultCourses } = Astro.props;
 ---
 
-<div class='container flex flex-col lg:items-center'>
+<div class='wrapper flex flex-col lg:items-center'>
   <h2
     class='text-dark text-xl md:text-3xl lg:text-[48px] md:text-center font-bold mb-4'
   >

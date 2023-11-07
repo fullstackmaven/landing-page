@@ -1,8 +1,8 @@
 ---
-type TDefinition = {
+interface TDefinition {
   title: string;
   description: string;
-};
+}
 
 const defaultDefinitions: TDefinition[] = [
   {
@@ -33,7 +33,7 @@ const defaultDefinitions: TDefinition[] = [
 ];
 ---
 
-<div class='container space-y-4'>
+<div class='wrapper flex flex-col gap-y-4 lg:gap-y-6'>
   <div class='grid gap-y-4'>
     <p
       class='text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6'

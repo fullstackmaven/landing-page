@@ -1,10 +1,13 @@
 ---
+import { Image } from 'astro:assets';
 import ContactForm from './contactForm/ContactForm.astro';
-import './getInTouch.scss';
+import ImageGetInTouch1 from '/public/qa-course/get-in-touch-1.svg';
+import ImageGetInTouch2 from '/public/qa-course/get-in-touch-2.svg';
+import ImageGetInTouch3 from '/public/qa-course/get-in-touch-3.svg';
 ---
 
 <div
-  class='courses container pt-12 md:pt-6 flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'
+  class='courses wrapper pt-12 md:pt-6 flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'
 >
   <div class='bg-white rounded-s flex flex-col'>
     <div class='bg-secondary p-6 rounded-s flex'>
@@ -12,17 +15,26 @@ import './getInTouch.scss';
         class='flex flex-col w-full md:w-1/2 md:justify-start md:items-start md:p-6'
       >
         <div class='flex flex-row justify-center content-center mb-6'>
-          <img
-            src='qa-course/get-in-touch-1.svg'
+          <Image
+            src={ImageGetInTouch1}
+            alt='live-lecture-tools-image'
+            loading='lazy'
+            decoding='async'
             class='rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px]'
           />
-          <img
-            src='qa-course/get-in-touch-2.svg'
-            class='rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] overlap-left'
+          <Image
+            src={ImageGetInTouch2}
+            alt='live-lecture-tools-image'
+            loading='lazy'
+            decoding='async'
+            class='rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] -ml-[30px] md:-ml-[15px]'
           />
-          <img
-            src='qa-course/get-in-touch-3.svg'
-            class='rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] overlap-left'
+          <Image
+            src={ImageGetInTouch3}
+            alt='live-lecture-tools-image'
+            loading='lazy'
+            decoding='async'
+            class='rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] -ml-[30px] md:-ml-[15px]'
           />
         </div>
         <h1

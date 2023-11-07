@@ -1,4 +1,9 @@
-<div id='qa-overview' class='container grid gap-y-4 lg:gap-y-6'>
+---
+import { Image } from 'astro:assets';
+import ImageOverview from '/public/qa-course/overview-image.svg';
+---
+
+<div id='qa-overview' class='wrapper grid gap-y-4 lg:gap-y-6'>
   <p
     class='text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6'
   >
@@ -17,9 +22,12 @@
     and so much more — we’ve packed everything in this program to prepare you
     for a successful career as a QA engineer.
   </p>
-  <img
-    src='qa-course/overview-image.svg'
-    alt='overview-placeholder-image'
+
+  <Image
+    src={ImageOverview}
+    alt='overview-image'
+    loading='lazy'
+    decoding='async'
     class='w-full'
   />
 </div>

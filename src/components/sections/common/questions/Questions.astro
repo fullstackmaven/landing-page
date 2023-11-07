@@ -1,8 +1,8 @@
 ---
-type TQuestions = {
+interface TQuestions {
   question: string;
   answer: string;
-};
+}
 
 interface Props {
   questions?: TQuestions[];
@@ -26,7 +26,7 @@ const defaultQuestions: TQuestions[] = [
 const { questions = defaultQuestions } = Astro.props;
 ---
 
-<div id='faq' class='container flex flex-col md:gap-4 lg:gap-6 xl:gap-4'>
+<div id='faq' class='wrapper flex flex-col md:gap-4 lg:gap-6 xl:gap-4'>
   <div
     class='grid grid-cols-1 gap-6 bg-white rounded-s md:rounded-[16px] lg:rounded-xl p-4 lg:grid-cols-2 lg:p-6'
   >

@@ -1,8 +1,29 @@
 {
   "extends": "astro/tsconfigs/strict",
+  //Google's standards on tsconfig
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "allowJs": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "pretty": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2018",
     "jsxImportSource": "react",
+    "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
@@ -13,5 +34,7 @@
         "name": "@astrojs/ts-plugin"
       }
     ]
-  }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.astro"],
+  "exclude": ["node_modules"]
 }
