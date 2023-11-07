@@ -13,19 +13,19 @@ const { course } = Astro.props;
 ---
 
 <a
-  href='#'
+  href='/'
   role='button'
-  class='relative w-[240px] flex flex-col items-center p-3 gap-3 rounded-[16px] border border-[#DEDCD3] bg-white cursor-pointer transition ease-in-out delay-150 hover:bg-dark-gray/10 hover:-translate-y-4'
+  class='relative flex w-[240px] cursor-pointer flex-col items-center gap-3 rounded-[16px] border border-[#DEDCD3] bg-white p-3 transition delay-150 ease-in-out hover:-translate-y-4 hover:bg-dark-gray/10'
 >
   <div
     class={classNames(
       'bg-[url("/home-page/live-lecture-image.jpeg")] w-full h-[198px] bg-no-repeat bg-cover bg-center rounded-l',
     )}
   >
-    <div class='backdrop-blur-[2px] w-full h-full rounded-l'>
-      <div class='absolute flex justify-between w-full px-3 pt-3'>
+    <div class='h-full w-full rounded-l backdrop-blur-[2px]'>
+      <div class='absolute flex w-full justify-between px-3 pt-3'>
         <div
-          class='h-[22px] flex px-[6px] py-1 border border-[#C0BFB2] backdrop-blur-[2px] rounded-xs items-center gap-1'
+          class='flex h-[22px] items-center gap-1 rounded-xs border border-[#C0BFB2] px-[6px] py-1 backdrop-blur-[2px]'
         >
           <LiveIndicatorPulse />
           <p class='text-xxs font-normal text-white'>Live Lectures</p>
@@ -40,11 +40,11 @@ const { course } = Astro.props;
       </div>
     </div>
   </div>
-  <div class='flex flex-col w-full gap-1'>
-    <h2 class='text-dark text-xs font-bold'>
+  <div class='flex w-full flex-col gap-1'>
+    <h2 class='text-xs font-bold text-dark'>
       {course.courseTitle}
     </h2>
-    <p class='text-dark-gray text-xxs font-medium'>
+    <p class='text-xxs font-medium text-dark-gray'>
       {course.type} &#183; {course.duration} months
     </p>
   </div>

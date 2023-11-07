@@ -6,6 +6,7 @@ import {
   type HTMLAttributes,
   type ReactNode,
 } from 'react';
+import BurgerMenu from './BurgerMenu.tsx';
 import { Button } from './Button.tsx';
 import MenuDrawer from './MenuDrawer.tsx';
 
@@ -22,7 +23,7 @@ interface THeaderProps {
   [key: string]: string | TMenuItem[] | ReactNode | undefined;
 }
 
-export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
+export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
   menuItems = [],
   isSticky = true,
   className,
@@ -54,7 +55,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
 
   return (
     <>
-      <div
+      <header
         className={classNames(
           'sticky top-0 z-10 block w-full justify-center',
           className,
@@ -75,7 +76,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
             },
           )}
         >
-          <div
+          <h1
             className={classNames(
               'flex-1 text-l font-extrabold text-dark lg:flex-none',
               {
@@ -84,7 +85,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
             )}
           >
             Cyram
-          </div>
+          </h1>
           <nav className='hidden md:justify-center lg:flex lg:flex-1'>
             <ul className='flex items-center justify-between lg:gap-3'>
               {menuItems.map((menuItem, index) => (
@@ -121,31 +122,23 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLDivElement>> = ({
               ))}
             </ul>
           </nav>
-          <div className='relative flex items-center justify-between'>
-            <Button
-              title='Book a call'
-              className={classNames(
-                'mr-4 !px-3 !py-2 !text-xxs !font-semibold lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs xl:text-s ',
-                {
-                  'hidden md:flex': !isScrollAtTop,
-                },
-              )}
-            />
-            <button
-              className={classNames('h-[35px] py-2', {
-                'rounded-xs bg-white md:bg-transparent': !isScrollAtTop,
-              })}
-              onClick={() => setIsMenuDrawerOpen((prev) => !prev)}
-            >
-              <img
-                src='hamburger.svg'
-                alt='mobile-menu-icon'
-                className='h-4 w-6 lg:hidden'
-              />
-            </button>
-          </div>
+          <Button
+            title='Book a call'
+            className={classNames(
+              'mr-4 !px-3 !py-2 !text-xxs !font-semibold lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs xl:text-s ',
+              {
+                'hidden md:flex': !isScrollAtTop,
+              },
+            )}
+          />
+          <BurgerMenu
+            className={classNames('h-[35px] py-2', {
+              'rounded-xs bg-white md:bg-transparent': !isScrollAtTop,
+            })}
+            onClick={() => setIsMenuDrawerOpen((prev) => !prev)}
+          />
         </div>
-      </div>
+      </header>
 
       <MenuDrawer
         className={classNames(

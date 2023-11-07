@@ -11,7 +11,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:astro/recommended',
-    // "plugin:astro/jsx-a11y-recommended", //add this when implementing a11y
+    'plugin:astro/jsx-a11y-recommended', //add this when implementing a11y
     'prettier',
   ],
   parser: '@typescript-eslint/parser',

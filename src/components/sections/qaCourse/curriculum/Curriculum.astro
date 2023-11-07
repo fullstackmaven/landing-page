@@ -47,17 +47,17 @@ const defaultCurriculum: TCurriculum[] = [
 ];
 ---
 
-<div id='qa-curriculum' class='wrapper grid gap-y-4 lg:gap-y-6'>
+<section id='qa-curriculum' class='wrapper grid gap-y-4 lg:gap-y-6'>
   <p
-    class='text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6'
+    class='text-xs font-normal uppercase leading-5 text-dark-gray lg:text-s lg:leading-6'
   >
     CURRICULUM
   </p>
-  <h2
-    class='text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
+  <h1
+    class='text-l font-bold leading-8 text-dark md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
   >
     Mastery-based learning with real world projects
-  </h2>
+  </h1>
   <p
     class='text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-7'
   >
@@ -67,21 +67,23 @@ const defaultCurriculum: TCurriculum[] = [
     way, you'll become proficient in the skills needed by today's QA
     professionals.
   </p>
-  <div class='grid gap-y-2 lg:hidden'>
+  <ul class='grid gap-y-2 lg:hidden'>
     {
       defaultCurriculum.map((curriculum, index) => (
-        <Accordion
-          id={`accordion-${index}`}
-          title={curriculum.title}
-          subtitle={curriculum.subtitle}
-        >
-          <Content {...curriculum} />
-        </Accordion>
+        <li>
+          <Accordion
+            id={`accordion-${index}`}
+            title={curriculum.title}
+            subtitle={curriculum.subtitle}
+          >
+            <Content {...curriculum} />
+          </Accordion>
+        </li>
       ))
     }
-  </div>
+  </ul>
 
   <div class='hidden lg:block'>
     <Sidebar client:load curriculum={defaultCurriculum} />
   </div>
-</div>
+</section>

@@ -11,41 +11,45 @@ interface Props {
 const { course } = Astro.props;
 ---
 
-<a
-  href='#'
-  role='button'
-  class='relative flex flex-col items-center p-3 lg:p-4 gap-6 lg:gap-8 self-stretch rounded-[16px] border border-[#DEDCD3] bg-white cursor-pointer transition ease-in-out delay-50 hover:bg-dark-gray/10 hover:-translate-y-4 focus:bg-dark-gray/10 focus:-translate-y-4'
->
-  <div
-    class={classNames(
-      'bg-[url("/home-page/live-lecture-image.jpeg")] w-full min-h-[314px] lg:min-h-[431px] xl:min-h-[504px] bg-no-repeat bg-cover bg-center rounded-l md:rounded-l',
-    )}
+<article>
+  <a
+    href='/'
+    role='button'
+    class='delay-50 relative flex cursor-pointer flex-col items-center self-stretch rounded-[16px] border border-[#DEDCD3] bg-white p-3 transition ease-in-out hover:-translate-y-4 hover:bg-dark-gray/10 focus:-translate-y-4 focus:bg-dark-gray/10 lg:p-4'
   >
-    <div class='backdrop-blur-[2px] w-full h-full rounded-l'>
-      <div class='absolute flex justify-between left-6 lg:left-6 pt-5'>
-        <div
-          class='flex px-2 py-1 border border-[#C0BFB2] backdrop-blur-[2px] rounded-xs items-center gap-3 w-fit'
-        >
-          <LiveIndicatorPulse />
-          <p class='text-xs lg:text-l font-normal text-white'>Live Lectures</p>
+    <div
+      class={classNames(
+        'bg-[url("/home-page/live-lecture-image.jpeg")] mb-6 lg:mb-8 w-full min-h-[314px] lg:min-h-[431px] xl:min-h-[504px] bg-no-repeat bg-cover bg-center rounded-l md:rounded-l',
+      )}
+    >
+      <div class='h-full w-full rounded-l backdrop-blur-[2px]'>
+        <div class='absolute left-6 flex justify-between pt-5 lg:left-6'>
+          <div
+            class='flex w-fit items-center gap-3 rounded-xs border border-[#C0BFB2] px-2 py-1 backdrop-blur-[2px]'
+          >
+            <LiveIndicatorPulse />
+            <p class='text-xs font-normal text-white lg:text-l'>
+              Live Lectures
+            </p>
+          </div>
         </div>
-      </div>
 
-      <Image
-        src={ImageLiveLectureTools}
-        alt='live-lecture-tools-image'
-        loading='lazy'
-        decoding='async'
-        class='absolute right-6 lg:right-6 pt-5'
-      />
+        <Image
+          src={ImageLiveLectureTools}
+          alt='live-lecture-tools-image'
+          loading='lazy'
+          decoding='async'
+          class='absolute right-6 pt-5 lg:right-6'
+        />
+      </div>
     </div>
-  </div>
-  <div class='flex flex-col w-full gap-1 lg:gap-3'>
-    <h2 class='text-dark text-base lg:text-l font-bold'>
+    <h1
+      class='mb-1 place-self-start text-base font-bold text-dark lg:mb-3 lg:text-l'
+    >
       {course.courseTitle}
-    </h2>
-    <p class='text-dark-gray text-s lg:text-base font-medium'>
+    </h1>
+    <p class='place-self-start text-s font-medium text-dark-gray lg:text-base'>
       {course.type} &#183; {course.duration} months
     </p>
-  </div>
-</a>
+  </a>
+</article>

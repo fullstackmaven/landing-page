@@ -8,25 +8,25 @@ import ImageAlumni4 from '/public/qa-course/alumni-4.svg';
 import ImageAlumni5 from '/public/qa-course/alumni-5.svg';
 ---
 
-<div class='wrapper grid gap-y-4 lg:gap-y-6'>
+<section class='wrapper grid gap-y-4 lg:gap-y-6'>
   <p
-    class='text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6'
+    class='text-xs font-normal uppercase leading-5 text-dark-gray lg:text-s lg:leading-6'
   >
     BOOTCAMP ALUMNI
   </p>
-  <h2
-    class='text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
+  <h1
+    class='text-l font-bold leading-8 text-dark md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
   >
     Meet our alumni who work at companies like Meta, Google, and Nike!
-  </h2>
-  <div class='gap-x-4 w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
+  </h1>
+  <div class='grid w-full grid-cols-2 gap-x-4 md:grid-cols-3 lg:grid-cols-5'>
     <VideoImage>
       <Image src={ImageAlumni1} alt='alumni-1' loading='lazy' class='w-full' />
     </VideoImage>
     <VideoImage>
       <Image src={ImageAlumni2} alt='alumni-2' loading='lazy' class='w-full' />
     </VideoImage>
-    <VideoImage className='hidden md:block md:visible'>
+    <VideoImage className='hidden md:visible md:block'>
       <Image src={ImageAlumni3} alt='alumni-3' loading='lazy' class='w-full' />
     </VideoImage>
     <VideoImage className='hidden lg:block'>
@@ -36,4 +36,4 @@ import ImageAlumni5 from '/public/qa-course/alumni-5.svg';
       <Image src={ImageAlumni5} alt='alumni-5' loading='lazy' class='w-full' />
     </VideoImage>
   </div>
-</div>
+</section>

@@ -15,23 +15,23 @@ import ImageUber from '/public/home-page/uber-logo.svg';
 import ImageZoom from '/public/home-page/zoom-logo.svg';
 ---
 
-<div
-  class='wrapper courses flex flex-col gap-4 md:gap-4 lg:gap-6 xl:gap-4 lg:items-center'
+<section
+  class='wrapper courses flex flex-col gap-4 md:gap-4 lg:items-center lg:gap-6 xl:gap-4'
 >
-  <h2
-    class='text-dark text-xl md:text-3xl lg:text-[48px] md:text-center font-bold'
+  <h1
+    class='text-xl font-bold text-dark md:text-center md:text-3xl lg:text-[48px]'
   >
     Our grads work here
-  </h2>
+  </h1>
   <p
-    class='text-dark-gray text-s leading-[22px] pb-4 md:text-center md:text-base lg:w-[837px]'
+    class='pb-4 text-s leading-[22px] text-dark-gray md:text-center md:text-base lg:w-[837px]'
   >
     We're grateful to have educated 500,000 folks in 150+ countries and we're
     trusted by industry leading teams like Google, Figma, Revolut, and Shopify
   </p>
-  <div class='w-full flex flex-col gap-y-6'>
+  <div class='flex w-full flex-col gap-y-6'>
     <div
-      class='child:md:w-auto flex flex-wrap gap-y-6 h-[34px] md:h-[31px] lg:h-[46px] child:w-[96px] w-full justify-between'
+      class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] md:h-[31px] child:md:w-auto lg:h-[46px]'
     >
       <Image
         src={ImageGoogle}
@@ -59,39 +59,39 @@ import ImageZoom from '/public/home-page/zoom-logo.svg';
         alt='google-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageAirbnb}
         alt='airbnb-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageAmazon}
         alt='amazon-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageMeta}
         alt='meta-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageGoogle}
         alt='google-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
     </div>
     <div
-      class='child:md:w-auto flex flex-wrap gap-y-6 h-[34px] md:h-[31px] lg:h-[46px] child:w-[96px] w-full justify-between'
+      class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] md:h-[31px] child:md:w-auto lg:h-[46px]'
     >
       <Image
         src={ImageMeta}
@@ -119,39 +119,39 @@ import ImageZoom from '/public/home-page/zoom-logo.svg';
         alt='uber-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageLinkedin}
         alt='linkedin-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageBooking}
         alt='booking-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageUber}
         alt='uber-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageLinkedin}
         alt='linkedin-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
     </div>
     <div
-      class='child:md:w-auto flex flex-wrap gap-y-6 h-[34px] md:h-[31px] lg:h-[46px] child:w-[96px] w-full justify-between'
+      class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] md:h-[31px] child:md:w-auto lg:h-[46px]'
     >
       <Image
         src={ImageZoom}
@@ -179,53 +179,53 @@ import ImageZoom from '/public/home-page/zoom-logo.svg';
         alt='booking-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageNotion}
         alt='notion-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageAirbnb}
         alt='airbnb-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageAirbnb}
         alt='airbnb-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
       <Image
         src={ImageAirbnb}
         alt='airbnb-logo'
         loading='lazy'
         decoding='async'
-        class='h-full hidden appearance-none md:block'
+        class='hidden h-full appearance-none md:block'
       />
     </div>
   </div>
 
-  <div class='flex content-center justify-center my-4 w-full'>
+  <div class='my-4 flex w-full content-center justify-center'>
     <Image
       src={ImageGradWorkVideo}
       alt='grad-work-video'
       loading='lazy'
       decoding='async'
-      class='object-contain w-full md:rounded-[16px] lg:rounded-xl md:hidden'
+      class='w-full object-contain md:hidden md:rounded-[16px] lg:rounded-xl'
     />
     <Image
       src={ImageGradWorkVideoDesktop}
       alt='grad-work-video-desktop'
       loading='lazy'
       decoding='async'
-      class='object-contain w-full md:rounded-[16px] lg:rounded-xl hidden md:block'
+      class='hidden w-full object-contain md:block md:rounded-[16px] lg:rounded-xl'
     />
   </div>
-</div>
+</section>
