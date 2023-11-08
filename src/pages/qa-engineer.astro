@@ -5,7 +5,7 @@ import Questions from '@components/sections/common/questions/Questions.astro';
 import BootcampAlumni from '@components/sections/qaCourse/bootcampAlumni/BootcampAlumni.astro';
 import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
 import BootcampTuition from '@components/sections/qaCourse/bootcampTuition/BootcampTuition.astro';
-import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum.astro';
+import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum.tsx';
 import Overview from '@components/sections/qaCourse/overview/Overview.astro';
 import Promo from '@components/sections/qaCourse/promo/Promo.astro';
 import QADefinition from '@components/sections/qaCourse/qaDefinition/QADefinition.astro';
@@ -32,11 +32,11 @@ import '../index.scss';
     <Promo />
   </div>
   <div
-    class='flex flex-col gap-y-12 md:py-[80px] lg:pb-[128px] md:gap-y-14 lg:gap-y-15 pt-12 g:pt-15 xl:pt-[128px]'
+    class='g:pt-15 flex flex-col gap-y-12 pt-12 md:gap-y-14 md:py-[80px] lg:gap-y-15 lg:pb-[128px] xl:pt-[128px]'
   >
     <QADefinition />
     <Overview />
-    <Curriculum />
+    <Curriculum client:load />
     <BootcampAlumni />
     <WhyCyram />
     <BootcampTeam />

@@ -16,7 +16,12 @@ textarea,
 button,
 select,
 a,
-label {
+label,
+details {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }
