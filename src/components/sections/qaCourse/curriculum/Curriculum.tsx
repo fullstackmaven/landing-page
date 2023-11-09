@@ -47,6 +47,7 @@ const defaultCurriculum: TCurriculum[] = [
   },
 ];
 
+const BOOK_CALL_HEIGHT = 96;
 const Curriculum = () => {
   const containerRef = useRef<HTMLElement>(null);
   const bookCallRef = useRef<HTMLDivElement>(null);
@@ -62,11 +63,15 @@ const Curriculum = () => {
     if (window.scrollY >= threshold) {
       setShowBookCall(true);
       const translateY =
-        Math.floor(threshold + 96 - window.scrollY) < 0
+        Math.floor(threshold + BOOK_CALL_HEIGHT - window.scrollY) < 0
           ? 0
-          : Math.floor(threshold + 96 - window.scrollY);
+          : Math.floor(threshold + BOOK_CALL_HEIGHT - window.scrollY);
 
-      if (bookCallRef.current && translateY <= 96 && translateY >= 0) {
+      if (
+        bookCallRef.current &&
+        translateY <= BOOK_CALL_HEIGHT &&
+        translateY >= 0
+      ) {
         bookCallRef.current.style.transform = `translate3d(0,${translateY}px,0)`;
       }
     } else {
@@ -125,6 +130,7 @@ const Curriculum = () => {
       {showBookCall && (
         <BookCall
           ref={bookCallRef}
+          className='lg:hidden'
           style={{
             willChange: 'trasform',
             transform: 'translate3d(0,96px,0)',
