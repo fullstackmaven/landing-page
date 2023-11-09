@@ -34,20 +34,28 @@ const defaultCourses: TCourse[] = [
 const { courses = defaultCourses } = Astro.props;
 ---
 
-<div class='wrapper flex flex-col lg:items-center'>
-  <h2
-    class='text-dark text-xl md:text-3xl lg:text-[48px] md:text-center font-bold mb-4'
-  >
-    Our Courses
-  </h2>
-  <div
-    class='w-full text-dark-gray text-s md:text-base lg:text-l font-normal leading-[22px] lg:w-[840px] lg:text-center lg:leading-8 mb-4 lg:mb-8'
+<section class='wrapper flex flex-col lg:items-center'>
+  <header>
+    <h1
+      class='mb-4 text-xl font-bold text-dark md:text-center md:text-3xl lg:text-[48px]'
+    >
+      Our Courses
+    </h1>
+  </header>
+  <p
+    class='mb-4 w-full text-s font-normal leading-[22px] text-dark-gray md:text-base lg:mb-8 lg:w-[840px] lg:text-center lg:text-l lg:leading-8'
   >
     Start a life-changing journey with our fully online courses. Keep your
     current job while gaining expertise in a new profession, all at your own
     pace.
-  </div>
-  <div class='grid md:grid-cols-2 gap-3 md:gap-6 lg:gap-8 w-full'>
-    {courses.map((course) => <CourseCard course={course} />)}
-  </div>
-</div>
+  </p>
+  <ul class='grid w-full gap-3 md:grid-cols-2 md:gap-6 lg:gap-8'>
+    {
+      courses.map((course) => (
+        <li>
+          <CourseCard course={course} />
+        </li>
+      ))
+    }
+  </ul>
+</section>

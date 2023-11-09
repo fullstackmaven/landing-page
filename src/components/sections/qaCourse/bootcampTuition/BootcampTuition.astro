@@ -3,36 +3,36 @@ import { Button } from '@components/Button';
 import GetPaidOrRefundCard from './Cards/GetPaidOrRefundCard.astro';
 ---
 
-<div id='qa-tuition' class='wrapper grid gap-y-4 lg:gap-y-6'>
-  <p class='text-dark-gray text-xs leading-5 font-normal uppercase'>
+<section id='qa-tuition' class='wrapper grid gap-y-4 lg:gap-y-6'>
+  <p class='text-xs font-normal uppercase leading-5 text-dark-gray'>
     Bootcamp tuition
   </p>
-  <h2
-    class='text-dark text-l leading-8 md:text-xl md:leading-2xl font-bold lg:text-2xl'
+  <h1
+    class='text-l font-bold leading-8 text-dark md:text-xl md:leading-2xl lg:text-2xl'
   >
     Tuition made simple and affordable
-  </h2>
-  <div class='flex flex-col gap-4 md:gap-6 md:grid md:grid-cols-2'>
+  </h1>
+  <div class='flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-6'>
     <ul
-      class='bg-white p-4 flex flex-col gap-y-4 rounded-l md:p-6 md:gap-y-6 md:col-span-1 lg:p-8 lg:gap-y-8 w-full order-1'
+      class='order-1 flex w-full flex-col gap-y-4 rounded-l bg-white p-4 md:col-span-1 md:gap-y-6 md:p-6 lg:gap-y-8 lg:p-8'
     >
-      <li class='h-[70px] flex justify-between items-center'>
-        <h3 class='text-dark text-base font-bold lg:text-l'>Upfront</h3>
-        <h3 class='flex flex-col gap-2 text-dark text-base font-bold lg:text-l'>
+      <li class='flex h-[70px] items-center justify-between'>
+        <h3 class='text-base font-bold text-dark lg:text-l'>Upfront</h3>
+        <h3 class='flex flex-col gap-2 text-base font-bold text-dark lg:text-l'>
           $8,700
           <span
-            class='text-dark bg-[#DDF7C7] rounded-xs px-[6px] py-1 text-xxs font-normal text-center'
+            class='rounded-xs bg-[#DDF7C7] px-[6px] py-1 text-center text-xxs font-normal text-dark'
             >Pay total • save $800</span
           >
         </h3>
       </li>
       <li class='h-[1px] bg-[#DADADA]'></li>
-      <li class='h-[70px] flex justify-between items-center'>
-        <h3 class='text-dark text-base font-bold lg:text-l'>Installments</h3>
-        <h3 class='flex flex-col gap-2 text-dark text-base font-bold lg:text-l'>
+      <li class='flex h-[70px] items-center justify-between'>
+        <h3 class='text-base font-bold text-dark lg:text-l'>Installments</h3>
+        <h3 class='flex flex-col gap-2 text-base font-bold text-dark lg:text-l'>
           $1,180 / month
           <span
-            class='text-dark bg-[#DDF7C7] rounded-xs px-[6px] py-1 text-xxs font-normal text-center'
+            class='rounded-xs bg-[#DDF7C7] px-[6px] py-1 text-center text-xxs font-normal text-dark'
             >$9,440 in total</span
           >
         </h3>
@@ -40,7 +40,7 @@ import GetPaidOrRefundCard from './Cards/GetPaidOrRefundCard.astro';
       <li class='h-[1px] bg-[#DADADA]'></li>
       <li>
         <Button
-          className='w-full py-3 px-6 h-12 lg:h-[70px]'
+          className='h-12 w-full px-6 py-3 lg:h-[70px]'
           title='Enroll now'
         />
       </li>
@@ -51,4 +51,4 @@ import GetPaidOrRefundCard from './Cards/GetPaidOrRefundCard.astro';
       <GetPaidOrRefundCard />
     </div>
   </div>
-</div>
+</section>

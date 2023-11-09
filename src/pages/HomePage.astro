@@ -37,21 +37,24 @@ import '../index.scss';
       },
     ]}
   >
-    <div slot='homebootcamps' class='h-full w-full flex flex-col gap-y-6'>
+    <div slot='homebootcamps' class='flex h-full w-full flex-col gap-y-6'>
       <HeaderDropdown />
     </div>
   </Header>
-  <div class='bg-secondary pt-6 lg:pt-13 xl:pt-[88px]'>
-    <Promo />
-  </div>
-  <div
-    class='grid pt-13 pb-10 md:py-[80px] lg:pt-[144px] lg:pb-[128px] gap-y-13 md:gap-y-[80px] lg:gap-y-[128px]'
-  >
-    <Courses />
-    <!-- <SucessStories /> -->
-    <OurGrads />
-    <Questions />
-    <!-- <GetInTouch /> -->
-    <Footer />
-  </div>
+
+  <main>
+    <div class='bg-secondary pt-6 lg:pt-13 xl:pt-[88px]'>
+      <Promo />
+    </div>
+    <div
+      class='grid gap-y-13 pb-10 pt-13 md:gap-y-[80px] md:py-[80px] lg:gap-y-[128px] lg:pb-[128px] lg:pt-[144px]'
+    >
+      <Courses />
+      <!-- <SucessStories /> -->
+      <OurGrads />
+      <Questions />
+      <!-- <GetInTouch /> -->
+      <Footer />
+    </div>
+  </main>
 </Layout>

@@ -26,44 +26,43 @@ const defaultQuestions: TQuestions[] = [
 const { questions = defaultQuestions } = Astro.props;
 ---
 
-<div id='faq' class='wrapper flex flex-col md:gap-4 lg:gap-6 xl:gap-4'>
+<section id='faq' class='wrapper'>
   <div
-    class='grid grid-cols-1 gap-6 bg-white rounded-s md:rounded-[16px] lg:rounded-xl p-4 lg:grid-cols-2 lg:p-6'
+    class='grid grid-cols-1 gap-6 rounded-s bg-white p-4 md:rounded-[16px] lg:grid-cols-2 lg:rounded-xl lg:p-6'
   >
     <div>
-      <h2 class='text-xl text-dark font-bold lg:text-2xl'>Still not sure?</h2>
+      <h1 class='text-xl font-bold text-dark lg:text-2xl'>Still not sure?</h1>
       <p
-        class='hidden lg:block text-s text-dark-gray font-normal lg:text-base lg:leading-8'
+        class='hidden text-s font-normal text-dark-gray lg:block lg:text-base lg:leading-8'
       >
         Can’t find the answer you’re looking for? Reach out to our <a
-          href='#'
-          class='text-secondary font-bold'>customer support</a
+          href='/'
+          class='font-bold text-secondary'>customer support</a
         > team.
       </p>
     </div>
-    <div>
-      <div class='flex flex-col gap-4'>
-        {
-          questions.map((question) => (
-            <div class='flex flex-col gap-1'>
-              <h3 class='text-base lg:text-l font-semibold text-dark'>
-                {question.question}
-              </h3>
-              <p class=' text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-8'>
-                {question.answer}
-              </p>
-            </div>
-          ))
-        }
+    <ul class='flex flex-col gap-4'>
+      {
+        questions.map((question) => (
+          <li class='flex flex-col gap-1'>
+            <h2 class='text-base font-semibold text-dark lg:text-l'>
+              {question.question}
+            </h2>
+            <p class=' text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-8'>
+              {question.answer}
+            </p>
+          </li>
+        ))
+      }
+      <li>
         <p
-          class='lg:hidden text-s lg:text-s text-dark-gray font-normal leading-6'
+          class='text-s font-normal leading-6 text-dark-gray lg:hidden lg:text-s'
         >
-          Can’t find the answer you’re looking for? Reach out to our <a
-            href='#'
-            class='text-secondary font-bold'>customer support</a
-          > team.
+          Can’t find the answer you’re looking for? Reach out to our <span
+            ><a href='/' class='font-bold text-secondary'>customer support</a>
+          </span> team.
         </p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
-</div>
+</section>

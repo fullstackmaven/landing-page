@@ -38,24 +38,30 @@ const defaultInstructors: TInstructor[] = [
 ];
 ---
 
-<div id='qa-education-team' class='wrapper grid gap-y-4 lg:gap-y-6'>
+<section id='qa-education-team' class='wrapper grid gap-y-4 lg:gap-y-6'>
   <p
-    class='text-dark-gray text-xs leading-5 font-normal uppercase lg:text-s lg:leading-6'
+    class='text-xs font-normal uppercase leading-5 text-dark-gray lg:text-s lg:leading-6'
   >
     BOOTCAMP TEAM
   </p>
-  <h2
-    class='text-dark text-l leading-8 font-bold md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
+  <h1
+    class='text-l font-bold leading-8 text-dark md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
   >
     Meet our expert instructors
-  </h2>
+  </h1>
   <p
-    class='text-s text-dark-gray font-normal leading-6 lg:text-base lg:leading-7'
+    class='text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-7'
   >
     During your training, you will be guided step by step from our highly
     experienced instructors who worked at top companies of various industries.
   </p>
-  <div class='flex flex-row w-full gap-4'>
-    {defaultInstructors.map((instructor) => <InstructorCard {...instructor} />)}
-  </div>
-</div>
+  <ul class='flex w-full flex-row gap-4'>
+    {
+      defaultInstructors.map((instructor) => (
+        <li class='min-h-[259px] w-1/2 last:hidden md:min-h-[321px] lg:min-h-[364px] lg:last:block'>
+          <InstructorCard {...instructor} />
+        </li>
+      ))
+    }
+  </ul>
+</section>
