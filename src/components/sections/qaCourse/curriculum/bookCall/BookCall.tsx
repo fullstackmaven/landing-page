@@ -16,7 +16,7 @@ const BookCall = forwardRef(
           props.className,
         )}
       >
-        <Button title='Book a call' className='h-8 w-full text-xs' />
+        <Button title='Book a call' className='w-full text-xs !py-2' />
       </div>,
       document?.getElementById('book-call') as Element,
     );
