@@ -93,7 +93,7 @@ const Curriculum = () => {
     <>
       <section
         ref={containerRef}
-        id='qa-curriculum'
+        id='qacurriculum'
         className='wrapper grid gap-y-4 lg:gap-y-6'
       >
         <p className='text-xs font-normal uppercase leading-5 text-dark-gray lg:text-s lg:leading-6'>
