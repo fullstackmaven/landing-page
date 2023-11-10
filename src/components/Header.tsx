@@ -162,7 +162,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                       },
                     )}
                   >
-                    <p className='flex gap-x-1 text-s font-medium leading-[21px] text-dark'>
+                    <p className='flex gap-x-1 font-medium text-dark lg:text-xs xl:text-s'>
                       {menuItem.label}
                       {(menuItem.isDropdown ?? false) && (
                         <img src='arrow-chevron.svg' />
