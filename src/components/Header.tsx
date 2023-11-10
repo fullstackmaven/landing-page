@@ -194,7 +194,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                           },
                         )}
                       >
-                        <p className='flex gap-x-1 text-s font-medium leading-[21px] text-dark'>
+                        <p className='flex gap-x-1 font-medium text-dark lg:text-xs xl:text-s'>
                           {menuItem.label}
                           {(menuItem.isDropdown ?? false) && (
                             <img src='arrow-chevron.svg' />
@@ -208,7 +208,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
             <Button
               title='Book a call'
               className={classNames(
-                'mr-4 !px-3 !py-2 !text-xxs !font-semibold lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs xl:text-s ',
+                'mr-4 !px-3 !py-2 !font-semibold lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs xl:text-s ',
                 {
                   'hidden lg:flex': !isScrollAtTop,
                 },
