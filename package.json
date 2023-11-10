@@ -10,7 +10,7 @@
     "astro": "astro",
     "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\" && astro build",
     "check-types": "tsc --pretty --noEmit",
-    "check-format": "prettier --check .",
+    "check-format": "prettier --check . --log-level warn",
     "check-lint": "eslint . --ext ts --ext tsx --ext js --ext astro",
     "format": "prettier --write . --plugin=prettier-plugin-astro .",
     "test-all": "pnpm run check-format && pnpm run check-lint && pnpm run check-types && pnpm run build",

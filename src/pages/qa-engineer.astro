@@ -1,6 +1,7 @@
 ---
 import Footer from '@components/Footer.astro';
 import { Header } from '@components/Header';
+import HeaderDropdown from '@components/homePage/HeaderDropdown.astro';
 import Questions from '@components/sections/common/questions/Questions.astro';
 import BootcampAlumni from '@components/sections/qaCourse/bootcampAlumni/BootcampAlumni.astro';
 import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
@@ -19,19 +20,24 @@ import '../index.scss';
     client:load
     className='bg-light-orange'
     menuItems={[
-      { label: 'Overview', id: 'qa-overview' },
-      { label: 'Curriculum', id: 'qa-curriculum' },
-      { label: 'Why Cyram ', id: 'why-cyram' },
-      { label: 'Tuition', id: 'qa-tuition' },
-      { label: 'Education Team', id: 'qa-education-team' },
+      { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
+      { label: 'Overview', id: 'qaoverview' },
+      { label: 'Curriculum', id: 'qacurriculum' },
+      { label: 'Why Cyram ', id: 'whycyram' },
+      { label: 'Tuition', id: 'qatuition' },
+      { label: 'Education Team', id: 'qaeducationteam' },
       { label: 'FAQ', id: 'faq' },
     ]}
-  />
+  >
+    <div slot='qabootcamp' class='flex h-full w-full flex-col gap-y-6'>
+      <HeaderDropdown />
+    </div>
+  </Header>
   <div class='bg-light-orange py-12 md:py-14 xl:py-[128px]'>
     <Promo />
   </div>
   <div
-    class='g:pt-15 flex flex-col gap-y-12 pt-12 md:gap-y-14 md:py-[80px] lg:gap-y-15 lg:pb-[128px] xl:pt-[128px]'
+    class='flex flex-grow flex-col gap-y-12 pt-12 md:gap-y-14 md:py-[80px] lg:gap-y-15 lg:pb-[128px] lg:pt-15 xl:pt-[128px]'
   >
     <QADefinition />
     <Overview />

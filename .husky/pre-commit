@@ -4,24 +4,26 @@
 echo '🏗️👷 Styling, testing and building your project before committing'
 
 # Check Prettier standards
-npm run check-format ||
+pnpm run check-format ||
 (
     echo '❌💅💄❌ Prettier Check Failed ❌💅💄❌
-            Prettier Check Failed. Running pnpm run format, add changes and try commit again.';
+            Running pnpm run format, add changes and try commit again.';
     pnpm run format;
+    
     false;
+
 )
 
 # Check ESLint Standards
-npm run check-lint ||
+pnpm run check-lint ||
 (
         echo '😤🏀👋😤 ESLint Check Failed 😤🏀👋😤 
                 ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false; 
+        false;
 )
 
 # Check tsconfig standards
-npm run check-types ||
+pnpm run check-types ||
 (
     echo '🤡😂❌🤡 Failed Type check. 🤡😂❌🤡
         Make the changes required above.'
@@ -31,7 +33,7 @@ npm run check-types ||
 # If everything passes... Now we can commit
 echo '🤔🤔🤔🤔... Alright... Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
 
-npm run build ||
+pnpm run build ||
 (
     echo '❌👷🔨❌ Build failed ❌👷🔨❌
             Next build failed: View the errors above to see why. 

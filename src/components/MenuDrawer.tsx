@@ -10,7 +10,7 @@ const MenuDrawer: FC<TMenuDrawerProps> = ({ onClose, ...otherProps }) => {
     <div
       {...otherProps}
       className={classNames(
-        'h-full w-full border bg-cultured px-6 py-4 lg:p-8',
+        'h-screen w-screen overflow-y-hidden bg-cultured px-6 py-4 lg:p-8',
         otherProps.className,
       )}
     >
