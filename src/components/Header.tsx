@@ -141,42 +141,68 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
               Cyram
             </h1>
 
+            {menuItems
+              .filter((menuItem) => menuItem.isLeft)
+              .map((menuItem, index) => (
+                <div
+                  key={`header-left-${index}`}
+                  className='ml-4 hidden lg:block'
+                  onMouseOver={(e) => {
+                    e.stopPropagation();
+                    setActive(menuItem.id);
+                  }}
+                >
+                  <a
+                    href={`#${menuItem.id}`}
+                    className={classNames(
+                      'relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in lg:cursor-pointer lg:hover:bg-[#EBEBEB]',
+                      {
+                        'lg:bg-[#EBEBEB]': menuItem.id === active,
+                        'lg:bg-transparent': menuItem.id !== active,
+                      },
+                    )}
+                  >
+                    <p className='flex gap-x-1 text-s font-medium leading-[21px] text-dark'>
+                      {menuItem.label}
+                      {(menuItem.isDropdown ?? false) && (
+                        <img src='arrow-chevron.svg' />
+                      )}
+                    </p>
+                  </a>
+                </div>
+              ))}
+
             <nav className='hidden md:justify-center lg:flex lg:flex-1'>
               <ul className='relative flex w-full items-center justify-center'>
-                {menuItems.map((menuItem, index) => (
-                  <li
-                    key={`header-${index}`}
-                    className={classNames({
-                      'absolute left-4': menuItem.isLeft,
-                    })}
-                    onMouseOver={(e) => {
-                      e.stopPropagation();
-                      setActive(menuItem.id);
-                    }}
-                    // onMouseLeave={(e) => {
-                    //   e.stopPropagation();
-                    //   setActive(undefined);
-                    // }}
-                  >
-                    <a
-                      href={`#${menuItem.id}`}
-                      className={classNames(
-                        'relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in lg:cursor-pointer lg:hover:bg-[#EBEBEB]',
-                        {
-                          'lg:bg-[#EBEBEB]': menuItem.id === active,
-                          'lg:bg-transparent': menuItem.id !== active,
-                        },
-                      )}
+                {menuItems
+                  .filter((menuItem) => !menuItem.isLeft)
+                  .map((menuItem, index) => (
+                    <li
+                      key={`header-${index}`}
+                      onMouseOver={(e) => {
+                        e.stopPropagation();
+                        setActive(menuItem.id);
+                      }}
                     >
-                      <p className='flex gap-x-1 text-s font-medium leading-[21px] text-dark'>
-                        {menuItem.label}
-                        {(menuItem.isDropdown ?? false) && (
-                          <img src='arrow-chevron.svg' />
+                      <a
+                        href={`#${menuItem.id}`}
+                        className={classNames(
+                          'relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in lg:cursor-pointer lg:hover:bg-[#EBEBEB]',
+                          {
+                            'lg:bg-[#EBEBEB]': menuItem.id === active,
+                            'lg:bg-transparent': menuItem.id !== active,
+                          },
                         )}
-                      </p>
-                    </a>
-                  </li>
-                ))}
+                      >
+                        <p className='flex gap-x-1 text-s font-medium leading-[21px] text-dark'>
+                          {menuItem.label}
+                          {(menuItem.isDropdown ?? false) && (
+                            <img src='arrow-chevron.svg' />
+                          )}
+                        </p>
+                      </a>
+                    </li>
+                  ))}
               </ul>
             </nav>
             <Button
