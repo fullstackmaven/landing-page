@@ -20,47 +20,43 @@ const MenuDrawer: FC<TMenuDrawerProps> = ({ onClose, ...otherProps }) => {
           <img src='/close-icon.svg' className='h-5 w-5' onClick={onClose} />
         </li>
         <li className='border border-x-0 border-t-0 border-b-[#CBCBCB] py-4'>
-          <p className='pb-4 text-l font-bold text-dark'>Bootcamps</p>
+          <p className='pb-4 text-l font-semibold text-dark'>Bootcamps</p>
 
-          <ul className='gap-y-4 pl-6'>
+          <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-base font-semibold text-dark'>
-                Software Engineering
-              </p>
+              <p className='text-base text-dark'>Software Engineering</p>
             </li>
             <li>
-              <p className='text-base font-semibold text-dark'>
-                Quality Assurance
-              </p>
+              <p className='text-base text-dark'>Quality Assurance</p>
             </li>
             <li>
-              <p className='text-base font-semibold text-dark'>UX/UI Design</p>
+              <p className='text-base text-dark'>UX/UI Design</p>
             </li>
           </ul>
         </li>
         <li className='border border-x-0 border-t-0 border-b-[#CBCBCB] py-4'>
-          <p className='pb-4 text-l font-bold text-dark'>Free Video Courses</p>
-          <ul className='gap-y-4 pl-6'>
+          <p className='pb-4 text-l font-semibold text-dark'>
+            Free Video Courses
+          </p>
+          <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-base font-semibold text-dark'>
-                HTML and CSS video courses
-              </p>
+              <p className='text-base text-dark'>HTML and CSS video courses</p>
             </li>
             <li>
-              <p className='text-base font-semibold text-dark'>
+              <p className='text-base text-dark'>
                 Javascript Programming Courses
               </p>
             </li>
           </ul>
         </li>
         <li>
-          <p className='py-4 pb-4 text-l font-bold text-dark'>Resources</p>
-          <ul className='gap-y-4 pl-6'>
+          <p className='py-4 pb-4 text-l font-semibold text-dark'>Resources</p>
+          <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-base font-semibold text-dark'>FAQ</p>
+              <p className='text-base text-dark'>FAQ</p>
             </li>
             <li>
-              <p className='text-base font-semibold text-dark'>Blog</p>
+              <p className='text-base text-dark'>Blog</p>
             </li>
           </ul>
         </li>
