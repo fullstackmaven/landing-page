@@ -96,7 +96,7 @@ const Curriculum = () => {
         id='qacurriculum'
         className='wrapper grid gap-y-4 lg:gap-y-6'
       >
-        <p className='text-xs font-normal uppercase leading-5 text-dark-gray lg:text-s lg:leading-6'>
+        <p className='text-xxs font-normal uppercase leading-4 text-dark-gray lg:text-s lg:leading-6'>
           CURRICULUM
         </p>
         <h1 className='text-l font-bold leading-8 text-dark md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'>
