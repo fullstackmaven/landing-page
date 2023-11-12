@@ -122,7 +122,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
         <div className='mx-auto max-w-[1280px] px-4 md:px-8 lg:px-12 xl:px-13'>
           <div
             className={classNames(
-              'flex w-full items-center justify-between py-6 transition-all duration-300 ease-in',
+              'flex w-full items-center justify-between py-6 transition-all duration-100 ease-in',
               {
                 'rounded-l bg-transparent lg:bg-white lg:!px-2 lg:!py-3 lg:shadow-md':
                   isSticky && !isScrollAtTop,
