@@ -103,11 +103,11 @@ const Curriculum = () => {
           Mastery-based learning with real world projects
         </h1>
         <p className='text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-7'>
-          In our QA bootcamp, we take a hands-on approach to mastery-based
-          learning. We don't just focus on theory like traditional QA courses.
-          Instead, you'll dive into the latest tools, industry workflows, and
-          best practices. This way, you'll become proficient in the skills
-          needed by today's QA professionals.
+          Our QA bootcamp follows a mastery-based learning approach that focuses
+          on hands-on experience. Unlike traditional QA courses that rely
+          heavily on theory, our bootcamp immerses you in the latest tools,
+          industry workflows, and best practices, making you proficient in the
+          skills demanded by today's QA professionals.
         </p>
         <ul className='grid gap-y-2 lg:hidden'>
           {defaultCurriculum.map((curriculum, index) => (
