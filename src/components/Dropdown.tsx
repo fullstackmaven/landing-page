@@ -46,7 +46,7 @@ const Dropdown: React.FC = () => {
             {options.map((option, i) => (
               <span
                 key={i}
-                className='text-sm hover:bg-gray-100 hover:text-gray-900 block px-4 py-2'
+                className='text-sm block px-4 py-2 hover:bg-gray-100 hover:text-gray-900'
                 role='menuitem'
                 onClick={() => {
                   selectOption(option);

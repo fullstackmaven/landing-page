@@ -3,12 +3,22 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     screens: {
-      sm: '376px', // mobile
-      md: '768px', // tablet
-      lg: '1024px', // desktop
-      xl: '1280px', // desktop
+      sm: '376px',
+      md: '768px',
+      lg: '1024px',
     },
     colors: {
+      gray: {
+        100: '#f7fafc',
+        200: '#edf2f7',
+        300: '#e2e8f0',
+        400: '#cbd5e0',
+        500: '#a0aec0',
+        600: '#718096',
+        700: '#4a5568',
+        800: '#2d3748',
+        900: '#1a202c',
+      },
       primary: '#000000', // TODO: we don't use pure black, `dark` should be our primary black color.
       dark: '#1D1E22',
       cultured: '#F6F4F2',
@@ -55,7 +65,6 @@ module.exports = {
       xs: '4px',
       s: '8px',
       l: '12px',
-      xl: '20px',
       full: '50%',
     },
     fontSize: {
@@ -64,7 +73,6 @@ module.exports = {
       s: '16px',
       base: '20px',
       l: '24px',
-      xl: '32px',
       '2xl': '40px',
       '3xl': '44px',
       '4xl': '56px',
@@ -77,18 +85,14 @@ module.exports = {
         sm: '16px',
         md: '32px',
         lg: '48px',
-        xl: '64px',
       },
     },
     extend: {
       lineHeight: {
-        // xxs: '14px',
-        //  xs: '19px',
         xs: '16px',
         s: '20px',
         base: '20px',
         l: '24px',
-        xl: '32px',
         '2xl': '44px',
         '3xl': '56px',
       },

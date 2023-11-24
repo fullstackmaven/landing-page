@@ -7,43 +7,43 @@ import ImageGetInTouch3 from '/public/qa-course/get-in-touch-3.svg';
 ---
 
 <div
-  class='courses wrapper pt-12 md:pt-6 flex flex-col gap-6 md:gap-4 lg:gap-6 xl:gap-4'
+  class='courses wrapper flex flex-col gap-6 pt-12 md:gap-4 md:pt-6 lg:gap-6'
 >
-  <div class='bg-white rounded-s flex flex-col'>
-    <div class='bg-secondary p-6 rounded-s flex'>
+  <div class='flex flex-col rounded-s bg-white'>
+    <div class='flex rounded-s bg-secondary p-6'>
       <div
-        class='flex flex-col w-full md:w-1/2 md:justify-start md:items-start md:p-6'
+        class='flex w-full flex-col md:w-1/2 md:items-start md:justify-start md:p-6'
       >
-        <div class='flex flex-row justify-center content-center mb-6'>
+        <div class='mb-6 flex flex-row content-center justify-center'>
           <Image
             src={ImageGetInTouch1}
             alt='live-lecture-tools-image'
             loading='lazy'
             decoding='async'
-            class='rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px]'
+            class='h-[100px] w-[100px] rounded-full md:h-12 md:w-12 lg:h-[70px] lg:w-[70px]'
           />
           <Image
             src={ImageGetInTouch2}
             alt='live-lecture-tools-image'
             loading='lazy'
             decoding='async'
-            class='rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] -ml-[30px] md:-ml-[15px]'
+            class='-ml-[30px] h-[100px] w-[100px] rounded-full md:-ml-[15px] md:h-12 md:w-12 lg:h-[70px] lg:w-[70px]'
           />
           <Image
             src={ImageGetInTouch3}
             alt='live-lecture-tools-image'
             loading='lazy'
             decoding='async'
-            class='rounded-full w-[100px] h-[100px] md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] -ml-[30px] md:-ml-[15px]'
+            class='-ml-[30px] h-[100px] w-[100px] rounded-full md:-ml-[15px] md:h-12 md:w-12 lg:h-[70px] lg:w-[70px]'
           />
         </div>
         <h1
-          class='text-l text-center md:text-left md:font-extrabold md:text-xl lg:text-2xl leading-tight'
+          class='text-center text-l leading-tight md:text-left md:text-xl md:font-extrabold lg:text-2xl'
         >
           Get in touch with our program advisor to learn more!
         </h1>
       </div>
-      <div class='hidden md:visible md:flex w-full md:w-1/2'>
+      <div class='hidden w-full md:visible md:flex md:w-1/2'>
         <ContactForm />
       </div>
     </div>

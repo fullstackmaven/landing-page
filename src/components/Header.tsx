@@ -80,7 +80,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           <div
             key={`header-dropdown-${menuItem.id}-${index}`}
             className={classNames(
-              'absolute left-0 right-0 z-0 mx-auto max-w-[1280px] bg-transparent px-4 transition-all delay-300 ease-in md:px-8 lg:px-12 xl:px-13',
+              'absolute left-0 right-0 z-0 mx-auto max-w-[1280px] bg-transparent px-4 transition-all delay-300 ease-in md:px-8 lg:px-12',
               {
                 'z-20 block': menuItem.id === active && isScrollAtTop,
                 'z-0 hidden': menuItem.id !== active && isScrollAtTop,
@@ -95,7 +95,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
               setActive(undefined);
             }}
           >
-            <div className='flex h-full w-full rounded-xl border border-[#DEDCD3] bg-cultured p-6 shadow-2xl'>
+            <div className='flex h-full w-full border border-[#DEDCD3] bg-cultured p-6 shadow-2xl'>
               {otherProps?.[menuItem.id] as ReactNode}
             </div>
           </div>
@@ -119,7 +119,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
         )}
         {...otherProps}
       >
-        <div className='mx-auto max-w-[1280px] px-4 md:px-8 lg:px-12 xl:px-13'>
+        <div className='mx-auto max-w-[1280px] px-4 md:px-8 lg:px-12'>
           <div
             className={classNames(
               'flex w-full items-center justify-between py-6 transition-all duration-100 ease-in',
@@ -162,7 +162,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                       },
                     )}
                   >
-                    <p className='flex gap-x-1 font-medium text-dark lg:text-xs xl:text-s'>
+                    <p className='flex gap-x-1 font-medium text-dark lg:text-xs'>
                       {menuItem.label}
                       {(menuItem.isDropdown ?? false) && (
                         <img src='arrow-chevron.svg' />
@@ -194,7 +194,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                           },
                         )}
                       >
-                        <p className='flex gap-x-1 font-medium text-dark lg:text-xs xl:text-s'>
+                        <p className='flex gap-x-1 font-medium text-dark lg:text-xs'>
                           {menuItem.label}
                           {(menuItem.isDropdown ?? false) && (
                             <img src='arrow-chevron.svg' />
@@ -208,7 +208,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
             <Button
               title='Book a call'
               className={classNames(
-                'mr-4 !px-3 !py-2 !font-semibold lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs xl:text-s ',
+                'mr-4 !px-3 !py-2 !font-semibold lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs',
                 {
                   'hidden lg:flex': !isScrollAtTop,
                 },
