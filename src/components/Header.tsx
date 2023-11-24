@@ -95,7 +95,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
               setActive(undefined);
             }}
           >
-            <div className='flex h-full w-full border border-[#DEDCD3] bg-cultured p-6 shadow-2xl'>
+            <div className='flex h-full w-full border border-[#DEDCD3] p-6 shadow-2xl'>
               {otherProps?.[menuItem.id] as ReactNode}
             </div>
           </div>

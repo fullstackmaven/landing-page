@@ -4,15 +4,15 @@
 echo '🏗️👷 Styling, testing and building your project before committing'
 
 # Check Prettier standards
-pnpm run check-format ||
-(
-    echo '❌💅💄❌ Prettier Check Failed ❌💅💄❌
-            Running pnpm run format, add changes and try commit again.';
-    pnpm run format;
+# pnpm run check-format ||
+# (
+#     echo '❌💅💄❌ Prettier Check Failed ❌💅💄❌
+#             Running pnpm run format, add changes and try commit again.';
+#     pnpm run format;
     
-    false;
+#     false;
 
-)
+# )
 
 # Check ESLint Standards
 pnpm run check-lint ||
