@@ -80,7 +80,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           <div
             key={`header-dropdown-${menuItem.id}-${index}`}
             className={classNames(
-              'absolute left-0 right-0 z-0 mx-auto max-w-[1280px] bg-transparent px-4 transition-all delay-300 ease-in md:px-8 lg:px-12',
+              'bg-transparent md:px-8 lg:px-12 absolute left-0 right-0 z-0 mx-auto max-w-[1280px] px-4 transition-all delay-300 ease-in',
               {
                 'z-20 block': menuItem.id === active && isScrollAtTop,
                 'z-0 hidden': menuItem.id !== active && isScrollAtTop,
@@ -119,115 +119,113 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
         )}
         {...otherProps}
       >
-        <div className='mx-auto max-w-[1280px] px-4 md:px-8 lg:px-12'>
-          <div
+        <div
+          className={classNames(
+            'flex w-full items-center justify-between py-6 transition-all duration-100 ease-in',
+            {
+              'bg-transparent lg:bg-white lg:!px-2 lg:!py-3 lg:shadow-md rounded-l':
+                isSticky && !isScrollAtTop,
+              'transition-all duration-150 ease-in': !isSticky,
+            },
+          )}
+        >
+          <h1
             className={classNames(
-              'flex w-full items-center justify-between py-6 transition-all duration-100 ease-in',
+              'text-dark lg:flex-none flex-1 text-l font-extrabold',
               {
-                'rounded-l bg-transparent lg:bg-white lg:!px-2 lg:!py-3 lg:shadow-md':
-                  isSticky && !isScrollAtTop,
-                'transition-all duration-150 ease-in': !isSticky,
+                'lg:opacity-100 opacity-0': !isScrollAtTop,
               },
             )}
           >
-            <h1
-              className={classNames(
-                'flex-1 text-l font-extrabold text-dark lg:flex-none',
-                {
-                  'opacity-0 lg:opacity-100': !isScrollAtTop,
-                },
-              )}
-            >
-              Cyram
-            </h1>
+            Cyram
+          </h1>
 
-            {menuItems
-              .filter((menuItem) => menuItem.isLeft)
-              .map((menuItem, index) => (
-                <div
-                  key={`header-left-${index}`}
-                  className='ml-4 hidden lg:block'
-                  onMouseOver={(e) => {
-                    e.stopPropagation();
-                    setActive(menuItem.id);
-                  }}
+          {menuItems
+            .filter((menuItem) => menuItem.isLeft)
+            .map((menuItem, index) => (
+              <div
+                key={`header-left-${index}`}
+                className='lg:block ml-4 hidden'
+                onMouseOver={(e) => {
+                  e.stopPropagation();
+                  setActive(menuItem.id);
+                }}
+              >
+                <a
+                  href={`#${menuItem.id}`}
+                  className={classNames(
+                    'lg:cursor-pointer lg:hover:bg-[#EBEBEB] relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in',
+                    {
+                      'lg:bg-[#EBEBEB]': menuItem.id === active,
+                      'lg:bg-transparent': menuItem.id !== active,
+                    },
+                  )}
                 >
-                  <a
-                    href={`#${menuItem.id}`}
-                    className={classNames(
-                      'relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in lg:cursor-pointer lg:hover:bg-[#EBEBEB]',
-                      {
-                        'lg:bg-[#EBEBEB]': menuItem.id === active,
-                        'lg:bg-transparent': menuItem.id !== active,
-                      },
+                  <p className='text-dark lg:text-xs flex gap-x-1 font-medium'>
+                    {menuItem.label}
+                    {(menuItem.isDropdown ?? false) && (
+                      <img src='arrow-chevron.svg' />
                     )}
-                  >
-                    <p className='flex gap-x-1 font-medium text-dark lg:text-xs'>
-                      {menuItem.label}
-                      {(menuItem.isDropdown ?? false) && (
-                        <img src='arrow-chevron.svg' />
-                      )}
-                    </p>
-                  </a>
-                </div>
-              ))}
+                  </p>
+                </a>
+              </div>
+            ))}
 
-            <nav className='hidden md:justify-center lg:flex lg:flex-1'>
-              <ul className='relative flex w-full items-center justify-center'>
-                {menuItems
-                  .filter((menuItem) => !menuItem.isLeft)
-                  .map((menuItem, index) => (
-                    <li
-                      key={`header-${index}`}
-                      onMouseOver={(e) => {
-                        e.stopPropagation();
-                        setActive(menuItem.id);
-                      }}
+          <nav className='md:justify-center lg:flex lg:flex-1 hidden'>
+            <ul className='relative flex w-full items-center justify-center'>
+              {menuItems
+                .filter((menuItem) => !menuItem.isLeft)
+                .map((menuItem, index) => (
+                  <li
+                    key={`header-${index}`}
+                    onMouseOver={(e) => {
+                      e.stopPropagation();
+                      setActive(menuItem.id);
+                    }}
+                  >
+                    <a
+                      href={`#${menuItem.id}`}
+                      className={classNames(
+                        'lg:cursor-pointer lg:hover:bg-[#EBEBEB] relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in',
+                        {
+                          'lg:bg-[#EBEBEB]': menuItem.id === active,
+                          'lg:bg-transparent': menuItem.id !== active,
+                        },
+                      )}
                     >
-                      <a
-                        href={`#${menuItem.id}`}
-                        className={classNames(
-                          'relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in lg:cursor-pointer lg:hover:bg-[#EBEBEB]',
-                          {
-                            'lg:bg-[#EBEBEB]': menuItem.id === active,
-                            'lg:bg-transparent': menuItem.id !== active,
-                          },
+                      <p className='text-dark lg:text-xs flex gap-x-1 font-medium'>
+                        {menuItem.label}
+                        {(menuItem.isDropdown ?? false) && (
+                          <img src='arrow-chevron.svg' />
                         )}
-                      >
-                        <p className='flex gap-x-1 font-medium text-dark lg:text-xs'>
-                          {menuItem.label}
-                          {(menuItem.isDropdown ?? false) && (
-                            <img src='arrow-chevron.svg' />
-                          )}
-                        </p>
-                      </a>
-                    </li>
-                  ))}
-              </ul>
-            </nav>
-            <Button
-              title='Book a call'
-              className={classNames(
-                'mr-4 !px-3 !py-2 !font-semibold lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs',
-                {
-                  'hidden lg:flex': !isScrollAtTop,
-                },
-              )}
-            />
-            <BurgerMenu
-              className={classNames('bg-transparent shadow-md lg:hidden', {
-                'rounded-xs bg-white p-2 transition-colors duration-300 ease-in':
-                  !isScrollAtTop && isSticky,
-              })}
-              onClick={() => setIsMenuDrawerOpen((prev) => !prev)}
-            />
-          </div>
+                      </p>
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </nav>
+          <Button
+            title='Book a call'
+            className={classNames(
+              'lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs mr-4 !px-3 !py-2 !font-semibold',
+              {
+                'lg:flex hidden': !isScrollAtTop,
+              },
+            )}
+          />
+          <BurgerMenu
+            className={classNames('bg-transparent lg:hidden shadow-md', {
+              'bg-white rounded-xs p-2 transition-colors duration-300 ease-in':
+                !isScrollAtTop && isSticky,
+            })}
+            onClick={() => setIsMenuDrawerOpen((prev) => !prev)}
+          />
         </div>
         {renderHeaderItems()}
       </header>
 
       <MenuDrawer
-        className={classNames('fixed top-0 z-[50] !overflow-hidden lg:hidden', {
+        className={classNames('lg:hidden fixed top-0 z-[50] !overflow-hidden', {
           block: isMenuDrawerOpen,
           hidden: !isMenuDrawerOpen,
           // '!sticky': !isScrollAtTop && isMenuDrawerOpen,

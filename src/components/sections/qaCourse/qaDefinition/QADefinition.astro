@@ -33,25 +33,25 @@ const defaultDefinitions: TDefinition[] = [
 ];
 ---
 
-<section class='wrapper flex flex-col gap-y-4 lg:gap-y-6'>
-  <header class='grid gap-y-4 lg:gap-y-6'>
+<section class='lg:gap-y-6 flex flex-col gap-y-4'>
+  <header class='lg:gap-y-6 grid gap-y-4'>
     <p
-      class='text-xxs font-normal uppercase leading-4 text-dark-gray lg:text-s lg:leading-6'
+      class='text-dark-gray lg:text-s lg:leading-6 text-xxs font-normal uppercase leading-4'
     >
       HERE'S THE DEAL
     </p>
     <h1
-      class='text-l font-bold leading-8 text-dark md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl'
+      class='text-dark md:text-xl md:leading-2xl lg:text-2xl lg:leading-3xl text-l font-bold leading-8'
     >
       What is Quality Assurance?
     </h1>
   </header>
-  <ul class='grid grid-cols-1 gap-y-3 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-6'>
+  <ul class='lg:grid-cols-2 lg:gap-x-6 lg:gap-y-6 grid grid-cols-1 gap-y-3'>
     {
       defaultDefinitions.map((definition) => (
         <li>
-          <p class='text-s font-normal leading-6 text-dark-gray lg:text-l lg:leading-8'>
-            <span class='font-extrabold text-secondary lg:leading-8'>
+          <p class='text-dark-gray lg:text-l lg:leading-8 text-s font-normal leading-6'>
+            <span class='lg:leading-8 font-extrabold text-secondary'>
               {definition.title}:{' '}
             </span>
             {definition.description}

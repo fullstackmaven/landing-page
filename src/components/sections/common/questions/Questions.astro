@@ -26,14 +26,14 @@ const defaultQuestions: TQuestions[] = [
 const { questions = defaultQuestions } = Astro.props;
 ---
 
-<section id='faq' class='wrapper'>
+<section id='faq' class=''>
   <div
-    class='grid grid-cols-1 gap-6 rounded-l bg-white p-4 md:rounded-[16px] lg:grid-cols-2 lg:p-6'
+    class='bg-white md:rounded-[16px] lg:grid-cols-2 lg:p-6 grid grid-cols-1 gap-6 rounded-l p-4'
   >
     <div>
-      <h1 class='text-xl font-bold text-dark lg:text-2xl'>Still not sure?</h1>
+      <h1 class='text-xl text-dark lg:text-2xl font-bold'>Still not sure?</h1>
       <p
-        class='hidden text-s font-normal text-dark-gray lg:block lg:text-base lg:leading-8'
+        class='text-dark-gray lg:block lg:text-base lg:leading-8 hidden text-s font-normal'
       >
         Can’t find the answer you’re looking for? Reach out to our <a
           href='/'
@@ -45,10 +45,10 @@ const { questions = defaultQuestions } = Astro.props;
       {
         questions.map((question) => (
           <li class='flex flex-col gap-1'>
-            <h2 class='text-base font-semibold text-dark lg:text-l'>
+            <h2 class='text-dark lg:text-l text-base font-semibold'>
               {question.question}
             </h2>
-            <p class=' text-s font-normal leading-6 text-dark-gray lg:text-base lg:leading-8'>
+            <p class=' text-dark-gray lg:text-base lg:leading-8 text-s font-normal leading-6'>
               {question.answer}
             </p>
           </li>
@@ -56,7 +56,7 @@ const { questions = defaultQuestions } = Astro.props;
       }
       <li>
         <p
-          class='text-s font-normal leading-6 text-dark-gray lg:hidden lg:text-s'
+          class='text-dark-gray lg:hidden lg:text-s text-s font-normal leading-6'
         >
           Can’t find the answer you’re looking for? Reach out to our <span
             ><a href='/' class='font-bold text-secondary'>customer support</a>

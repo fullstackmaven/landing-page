@@ -4,23 +4,27 @@ import { Image } from 'astro:assets';
 import ImagePlayCircle from '/public/home-page/play-circle.svg';
 ---
 
+<!-- <section
+  class=' flex flex-col gap-y-6 pb-12 md:gap-y-8 md:pt-6 lg:items-center lg:gap-y-8 lg:py-13'
+> -->
 <section
-  class='wrapper flex flex-col gap-y-6 pb-12 md:gap-y-8 md:pt-6 lg:items-center lg:gap-y-8 lg:py-13'
+  class='md:gap-y-8 md:pt-6 lg:items-center lg:gap-y-8 lg:py-13 flex flex-col gap-y-6 pb-12'
 >
-  <header class='lg:w-[638px] lg:items-center'>
+  <header class='lg:items-center'>
     <h1
-      class='self-stretch text-2xl font-extrabold leading-tight text-dark md:text-[64px] md:font-extrabold md:leading-snug lg:text-center'
+      class='md:text-[64px] md:font-extrabold md:leading-snug lg:text-center self-stretch text-2xl font-extrabold leading-tight text-black'
     >
-      Change your life, learn coding
+      Change your life,
+      <span class='text-accent'>learn coding</span>
     </h1>
   </header>
   <p
-    class='mb-0 self-stretch text-s font-medium leading-6 text-dark md:text-base md:leading-base lg:mx-auto lg:w-[638px] lg:items-center lg:text-center'
+    class='text-dark md:text-base md:leading-base lg:mx-auto lg:w-[638px] lg:items-center lg:text-center mb-0 self-stretch text-s font-medium leading-6'
   >
     Accelerate Your Tech Career with Mastery-Based Learning
   </p>
   <Button
-    className='hidden w-fit font-semibold md:block'
+    className='md:block hidden w-fit font-semibold'
     title='Choose your career'
   />
   <div class='relative'>
@@ -29,15 +33,15 @@ import ImagePlayCircle from '/public/home-page/play-circle.svg';
       alt='play-circle'
       loading='lazy'
       decoding='async'
-      class='absolute bottom-0 left-0 right-0 top-0 m-auto h-12 w-12 cursor-pointer md:h-13 md:w-13 lg:h-[75px] lg:w-[75px]'
+      class='md:h-13 md:w-13 lg:h-[75px] lg:w-[75px] absolute bottom-0 left-0 right-0 top-0 m-auto h-12 w-12 cursor-pointer'
     />
     <video
       src='/'
-      class='flex min-h-[192px] w-full flex-col items-center justify-center self-stretch rounded-[16px] bg-[#6d6a6a] md:min-h-[388px] md:rounded-[16px] lg:mx-13 lg:w-[832px]'
+      class='md:min-h-[388px] md:rounded-[16px] lg:mx-13 lg:w-[832px] flex min-h-[192px] w-full flex-col items-center justify-center self-stretch rounded-[16px] bg-[#6d6a6a]'
       muted></video>
   </div>
   <Button
-    className='mx-auto text-s font-semibold md:hidden'
+    className='md:hidden mx-auto text-s font-semibold'
     title='Choose your career'
   />
 </section>

@@ -3,9 +3,9 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     screens: {
-      sm: '376px',
-      md: '768px',
-      lg: '1024px',
+      tablet: '768px',
+      laptop: '1024px',
+    },
     },
     colors: {
       primary: '#1D1E22',

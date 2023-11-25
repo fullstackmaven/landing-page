@@ -6,43 +6,43 @@ import ImageLiveLecture from '/public/qa-course/live-lecture-image.svg';
 import ImageLiveLectureTools from '/public/qa-course/live-lecture-tools-image.svg';
 ---
 
-<section class='wrapper flex flex-col gap-x-0 lg:flex-row lg:gap-x-6'>
-  <div class='grid gap-y-4 lg:w-1/2 lg:gap-y-6'>
+<section class='lg:flex-row lg:gap-x-6 flex flex-col gap-x-0'>
+  <div class='lg:w-1/2 lg:gap-y-6 grid gap-y-4'>
     <h1
-      class='self-stretch text-xl font-bold leading-2xl text-dark md:text-3xl md:leading-3xl'
+      class='text-xl text-dark md:text-3xl md:leading-3xl self-stretch font-bold leading-2xl'
     >
       Quality Assurance Bootcamp: Ignite Your Tech Journey!
     </h1>
-    <p class='text-s font-normal leading-6 text-dark'>
+    <p class='text-dark text-s font-normal leading-6'>
       Transform into a QA engineer in just 5 months and gain in-demand skills.
       Join our live online classes and master the art of quality assurance.
     </p>
     <Button
       title='Start your adventure'
-      className='h-fit w-fit !px-4 !py-2 !text-s font-semibold md:!px-6 md:!py-3'
+      className='md:!px-6 md:!py-3 h-fit w-fit !px-4 !py-2 !text-s font-semibold'
     />
   </div>
   <figure
-    class='relative mt-8 flex h-auto w-full flex-1 flex-col lg:mt-0 lg:w-1/2'
+    class='lg:mt-0 lg:w-1/2 relative mt-8 flex h-auto w-full flex-1 flex-col'
   >
     <Image
       src={ImageLiveLecture}
       alt='live-lecture-image'
       loading='lazy'
       decoding='async'
-      class='h-full w-full rounded-s object-cover md:rounded-l'
+      class='md:rounded-l h-full w-full rounded-s object-cover'
     />
     <div
-      class='absolute left-3 top-4 flex items-center gap-2 rounded-s border border-live-gray bg-[#bebebe66] px-2 py-1 backdrop-blur-[2px]'
+      class='border-live-gray absolute left-3 top-4 flex items-center gap-2 rounded-s border bg-[#bebebe66] px-2 py-1 backdrop-blur-[2px]'
     >
       <LiveIndicatorPulse />
-      <p class='text-xs font-normal text-dark'>Live Lectures</p>
+      <p class='text-dark text-xs font-normal'>Live Lectures</p>
     </div>
     <Image
       src={ImageLiveLectureTools}
       alt={'live-lecture-tools-image'}
       loading='lazy'
-      class='absolute bottom-4 left-3 h-10 w-fit justify-normal object-contain object-left md:h-12'
+      class='md:h-12 absolute bottom-4 left-3 h-10 w-fit justify-normal object-contain object-left'
     />
   </figure>
 </section>

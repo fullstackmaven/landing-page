@@ -6,13 +6,11 @@ import ImageGetInTouch2 from '/public/qa-course/get-in-touch-2.svg';
 import ImageGetInTouch3 from '/public/qa-course/get-in-touch-3.svg';
 ---
 
-<div
-  class='courses wrapper flex flex-col gap-6 pt-12 md:gap-4 md:pt-6 lg:gap-6'
->
-  <div class='flex flex-col rounded-s bg-white'>
-    <div class='flex rounded-s bg-secondary p-6'>
+<div class='courses md:gap-4 md:pt-6 lg:gap-6 flex flex-col gap-6 pt-12'>
+  <div class='bg-white flex flex-col rounded-s'>
+    <div class='bg-secondary flex rounded-s p-6'>
       <div
-        class='flex w-full flex-col md:w-1/2 md:items-start md:justify-start md:p-6'
+        class='md:w-1/2 md:items-start md:justify-start md:p-6 flex w-full flex-col'
       >
         <div class='mb-6 flex flex-row content-center justify-center'>
           <Image
@@ -20,30 +18,30 @@ import ImageGetInTouch3 from '/public/qa-course/get-in-touch-3.svg';
             alt='live-lecture-tools-image'
             loading='lazy'
             decoding='async'
-            class='h-[100px] w-[100px] rounded-full md:h-12 md:w-12 lg:h-[70px] lg:w-[70px]'
+            class='md:h-12 md:w-12 lg:h-[70px] lg:w-[70px] h-[100px] w-[100px] rounded-full'
           />
           <Image
             src={ImageGetInTouch2}
             alt='live-lecture-tools-image'
             loading='lazy'
             decoding='async'
-            class='-ml-[30px] h-[100px] w-[100px] rounded-full md:-ml-[15px] md:h-12 md:w-12 lg:h-[70px] lg:w-[70px]'
+            class='md:-ml-[15px] md:h-12 md:w-12 lg:h-[70px] lg:w-[70px] -ml-[30px] h-[100px] w-[100px] rounded-full'
           />
           <Image
             src={ImageGetInTouch3}
             alt='live-lecture-tools-image'
             loading='lazy'
             decoding='async'
-            class='-ml-[30px] h-[100px] w-[100px] rounded-full md:-ml-[15px] md:h-12 md:w-12 lg:h-[70px] lg:w-[70px]'
+            class='md:-ml-[15px] md:h-12 md:w-12 lg:h-[70px] lg:w-[70px] -ml-[30px] h-[100px] w-[100px] rounded-full'
           />
         </div>
         <h1
-          class='text-center text-l leading-tight md:text-left md:text-xl md:font-extrabold lg:text-2xl'
+          class='md:text-xl md:text-left md:font-extrabold lg:text-2xl text-center text-l leading-tight'
         >
           Get in touch with our program advisor to learn more!
         </h1>
       </div>
-      <div class='hidden w-full md:visible md:flex md:w-1/2'>
+      <div class='md:visible md:flex md:w-1/2 hidden w-full'>
         <ContactForm />
       </div>
     </div>
