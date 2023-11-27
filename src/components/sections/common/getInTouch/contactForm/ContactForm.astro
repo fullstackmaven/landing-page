@@ -3,55 +3,55 @@ import { Button } from '@components/Button';
 import Dropdown from '@components/Dropdown';
 ---
 
-<div class='bg-white w-full h-full p-4 md:p-6 rounded-s'>
-  <div class='flex justify-around content-center mb-4'>
-    <div class='flex flex-col justify-center content-center'>
+<div class='md:p-6 h-full w-full rounded-s bg-white p-4'>
+  <div class='mb-4 flex content-center justify-around'>
+    <div class='flex flex-col content-center justify-center'>
       <div
-        class='flex justify-center self-center w-8 h-8 rounded-xl bg-[#EBEBEB]'
+        class='rounded-xl flex h-8 w-8 justify-center self-center bg-[#EBEBEB]'
       >
-        <p class='text-xs self-center'>1</p>
+        <p class='self-center text-xs'>1</p>
       </div>
       <p class='m-2'>Contact info</p>
     </div>
-    <div class='flex flex-col justify-center content-center'>
+    <div class='flex flex-col content-center justify-center'>
       <div
-        class='flex justify-center self-center w-8 h-8 rounded-xl bg-[#EBEBEB]'
+        class='rounded-xl flex h-8 w-8 justify-center self-center bg-[#EBEBEB]'
       >
-        <p class='text-xs self-center'>2</p>
+        <p class='self-center text-xs'>2</p>
       </div>
       <p class='m-2'>Q&A</p>
     </div>
-    <div class='flex flex-col justify-center content-center'>
+    <div class='flex flex-col content-center justify-center'>
       <div
-        class='flex justify-center self-center w-8 h-8 rounded-xl bg-[#EBEBEB]'
+        class='rounded-xl flex h-8 w-8 justify-center self-center bg-[#EBEBEB]'
       >
-        <p class='text-xs self-center'>3</p>
+        <p class='self-center text-xs'>3</p>
       </div>
       <p class='m-2'>Book a Call</p>
     </div>
   </div>
-  <form class='flex flex-col px-4 mt-6'>
+  <form class='mt-6 flex flex-col px-4'>
     <input
-      class='rounded-s border border-[#EBEBEB] py-4 md:py-2 md:px-3 md:text-xxs px-5 mb-4'
+      class='md:py-2 md:px-3 md:text-xxs mb-4 rounded-s border border-[#EBEBEB] px-5 py-4'
       type='text'
       placeholder='Name'
     />
     <input
-      class='rounded-s border border-[#EBEBEB] py-4 md:py-2 md:px-3 md:text-xxs px-5 mb-4'
+      class='md:py-2 md:px-3 md:text-xxs mb-4 rounded-s border border-[#EBEBEB] px-5 py-4'
       type='email'
       placeholder='Email'
     />
-    <div class='flex flex-row justify-between gap-x-2 md:gap-x-1 mb-4'>
+    <div class='md:gap-x-1 mb-4 flex flex-row justify-between gap-x-2'>
       <Dropdown client:load />
       <input
-        class='rounded-s border border-[#EBEBEB] py-4 md:py-2 md:px-3 md:text-xxs px-5 w-8/12'
+        class='md:py-2 md:px-3 md:text-xxs w-8/12 rounded-s border border-[#EBEBEB] px-5 py-4'
         type='number'
         placeholder='Phone Number'
       />
     </div>
     <Button
       title={'Continue'}
-      className={'w-full bg-dark/90 py-4 text-dark mt-6'}
+      className={'bg-dark/90 text-dark mt-6 w-full py-4'}
     />
   </form>
 </div>
