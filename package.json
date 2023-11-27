@@ -12,7 +12,7 @@
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check . --log-level warn",
     "check-lint": "eslint . --ext ts --ext tsx --ext js --ext astro",
-    "format": "prettier --write . --plugin=prettier-plugin-astro .",
+    "format": "prettier --write .",
     "test-all": "pnpm run check-format && pnpm run check-lint && pnpm run check-types && pnpm run build",
     "prepare": "husky install"
   },

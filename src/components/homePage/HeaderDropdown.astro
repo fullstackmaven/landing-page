@@ -1,12 +1,12 @@
 ---
 import { Button } from '@components/Button';
-import type { TCourse } from 'src/types/Course';
+import type { BootcampCourse } from 'src/types/Course';
 import CourseCard from './CourseCard.astro';
 
-const defaultCourses: TCourse[] = [
+const defaultCourses: BootcampCourse[] = [
   {
     image: 'home-page/course-image.svg',
-    alt: '#',
+    courseLink: '#',
     title: 'Software Engineering',
     courseTitle: 'Software Engineering Bootcamp',
     skills:
@@ -18,7 +18,7 @@ const defaultCourses: TCourse[] = [
   },
   {
     image: 'home-page/course-image.svg',
-    alt: '#',
+    courseLink: '#',
     title: 'Quality Assurance',
     courseTitle: 'Quality Assurance Bootcamp',
     skills:
@@ -31,11 +31,11 @@ const defaultCourses: TCourse[] = [
 ];
 ---
 
-<div class='flex h-full w-full flex-col gap-y-6 bg-cultured'>
+<div class='bg-cultured flex h-full w-full flex-col gap-y-6'>
   <p>Go from beginner to expert at your own pace</p>
   <div class='flex w-full gap-x-4'>
     {
-      defaultCourses.map((course) => (
+      defaultCourses.map((course: BootcampCourse) => (
         <div class='h-full'>
           <CourseCard course={course} />
         </div>

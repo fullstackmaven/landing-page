@@ -1,15 +1,11 @@
 ---
-import type { TCourse } from 'src/types/Course';
+import type { BootcampCourse } from 'src/types/Course';
 import CourseCard from './course_card/CourseCard.astro';
 
-interface Props {
-  courses?: TCourse[];
-}
-
-const defaultCourses: TCourse[] = [
+const courses: BootcampCourse[] = [
   {
     image: 'home-page/course-image.svg',
-    alt: '#',
+    courseLink: '/software-engineer-bootcamp',
     title: 'Software Engineering',
     courseTitle: 'Software Engineering Bootcamp',
     skills:
@@ -21,7 +17,7 @@ const defaultCourses: TCourse[] = [
   },
   {
     image: 'home-page/course-image.svg',
-    alt: '#',
+    courseLink: '/qa-bootcamp',
     title: 'Quality Assurance',
     courseTitle: 'Quality Assurance Bootcamp',
     skills:
@@ -33,7 +29,7 @@ const defaultCourses: TCourse[] = [
   },
   {
     image: 'home-page/course-image.svg',
-    alt: '#',
+    courseLink: '/data-science-bootcamp',
     title: 'Data Science',
     courseTitle: 'Data Science Bootcamp',
     skills:
@@ -44,8 +40,6 @@ const defaultCourses: TCourse[] = [
     type: 'Part time',
   },
 ];
-
-const { courses = defaultCourses } = Astro.props;
 ---
 
 <section

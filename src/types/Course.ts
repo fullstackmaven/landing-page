@@ -1,6 +1,6 @@
-export interface TCourse {
+export interface BootcampCourse {
   image: string;
-  alt: string;
+  courseLink: string;
   title: string;
   courseTitle: string;
   skills: string;

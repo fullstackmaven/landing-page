@@ -7,9 +7,7 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 pnpm run check-format ||
 (
     echo '❌💅💄❌ Prettier Check Failed ❌💅💄❌
-            Run pnpm run format, add changes and try commit again.';
-    pnpm run format
-
+            Run pnpm run format, add changes and try commit again.'
     false;
 
 )
@@ -25,7 +23,7 @@ pnpm run check-lint ||
 # Check tsconfig standards
 pnpm run check-types ||
 (
-    echo '🤡😂❌🤡 Failed Type check. 🤡😂❌🤡
+    echo '🤡😂❌🤡 Failed Type Check. 🤡😂❌🤡
         Make the changes required above.'
     false;
 )
