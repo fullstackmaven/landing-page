@@ -5,26 +5,26 @@ import ImagePlayCircle from '/public/home-page/play-circle.svg';
 ---
 
 <!-- <section
-  class=' flex flex-col gap-y-6 pb-12 md:gap-y-8 md:pt-6 lg:items-center lg:gap-y-8 lg:py-13'
+  class=' flex flex-col gap-y-6 pb-12 tablet:gap-y-8 tablet:pt-6 laptop:items-center laptop:gap-y-8 laptop:py-13'
 > -->
 <section
-  class='md:gap-y-8 md:pt-6 lg:items-center lg:gap-y-8 lg:py-13 flex flex-col gap-y-6 pb-12'
+  class='flex flex-col gap-y-6 pb-12 tablet:gap-y-8 tablet:pt-6 laptop:items-center laptop:gap-y-8 laptop:py-13'
 >
-  <header class='lg:items-center'>
+  <header class='laptop:items-center'>
     <h1
-      class='md:text-[64px] md:font-extrabold md:leading-snug lg:text-center self-stretch text-2xl font-extrabold leading-tight text-black'
+      class='self-stretch text-2xl font-extrabold leading-tight text-black tablet:text-[64px] tablet:font-extrabold tablet:leading-snug laptop:text-center'
     >
       Change your life,
       <span class='text-accent'>learn coding</span>
     </h1>
   </header>
   <p
-    class='text-dark md:text-base md:leading-base lg:mx-auto lg:w-[638px] lg:items-center lg:text-center mb-0 self-stretch text-s font-medium leading-6'
+    class='text-dark mb-0 self-stretch text-s font-medium leading-6 tablet:text-base tablet:leading-base laptop:mx-auto laptop:w-[638px] laptop:items-center laptop:text-center'
   >
     Accelerate Your Tech Career with Mastery-Based Learning
   </p>
   <Button
-    className='md:block hidden w-fit font-semibold'
+    className='hidden w-fit font-semibold tablet:block'
     title='Choose your career'
   />
   <div class='relative'>
@@ -33,15 +33,15 @@ import ImagePlayCircle from '/public/home-page/play-circle.svg';
       alt='play-circle'
       loading='lazy'
       decoding='async'
-      class='md:h-13 md:w-13 lg:h-[75px] lg:w-[75px] absolute bottom-0 left-0 right-0 top-0 m-auto h-12 w-12 cursor-pointer'
+      class='absolute bottom-0 left-0 right-0 top-0 m-auto h-12 w-12 cursor-pointer tablet:h-13 tablet:w-13 laptop:h-[75px] laptop:w-[75px]'
     />
     <video
       src='/'
-      class='md:min-h-[388px] md:rounded-[16px] lg:mx-13 lg:w-[832px] flex min-h-[192px] w-full flex-col items-center justify-center self-stretch rounded-[16px] bg-[#6d6a6a]'
+      class='bg-gray-800 flex min-h-[192px] w-full flex-col items-center justify-center self-stretch rounded-[16px] tablet:min-h-[388px] tablet:rounded-[16px] laptop:mx-13 laptop:w-[832px]'
       muted></video>
   </div>
   <Button
-    className='md:hidden mx-auto text-s font-semibold'
+    className='mx-auto text-s font-semibold tablet:hidden'
     title='Choose your career'
   />
 </section>

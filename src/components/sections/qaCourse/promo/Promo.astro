@@ -6,10 +6,10 @@ import ImageLiveLecture from '/public/qa-course/live-lecture-image.svg';
 import ImageLiveLectureTools from '/public/qa-course/live-lecture-tools-image.svg';
 ---
 
-<section class='lg:flex-row lg:gap-x-6 flex flex-col gap-x-0'>
-  <div class='lg:w-1/2 lg:gap-y-6 grid gap-y-4'>
+<section class='flex flex-col gap-x-0 laptop:flex-row laptop:gap-x-6'>
+  <div class='grid gap-y-4 laptop:w-1/2 laptop:gap-y-6'>
     <h1
-      class='text-xl text-dark md:text-3xl md:leading-3xl self-stretch font-bold leading-2xl'
+      class='text-xl text-dark self-stretch font-bold leading-2xl tablet:text-3xl tablet:leading-3xl'
     >
       Quality Assurance Bootcamp: Ignite Your Tech Journey!
     </h1>
@@ -19,21 +19,21 @@ import ImageLiveLectureTools from '/public/qa-course/live-lecture-tools-image.sv
     </p>
     <Button
       title='Start your adventure'
-      className='md:!px-6 md:!py-3 h-fit w-fit !px-4 !py-2 !text-s font-semibold'
+      className='h-fit w-fit !px-4 !py-2 !text-s font-semibold tablet:!px-6 tablet:!py-3'
     />
   </div>
   <figure
-    class='lg:mt-0 lg:w-1/2 relative mt-8 flex h-auto w-full flex-1 flex-col'
+    class='relative mt-8 flex h-auto w-full flex-1 flex-col laptop:mt-0 laptop:w-1/2'
   >
     <Image
       src={ImageLiveLecture}
       alt='live-lecture-image'
       loading='lazy'
       decoding='async'
-      class='md:rounded-l h-full w-full rounded-s object-cover'
+      class='h-full w-full rounded-s object-cover tablet:rounded-l'
     />
     <div
-      class='border-live-gray absolute left-3 top-4 flex items-center gap-2 rounded-s border bg-[#bebebe66] px-2 py-1 backdrop-blur-[2px]'
+      class='border-live-gray absolute left-3 top-4 flex items-center gap-2 rounded-s border bg-gray-100 px-2 py-1 backdrop-blur-[2px]'
     >
       <LiveIndicatorPulse />
       <p class='text-dark text-xs font-normal'>Live Lectures</p>
@@ -42,7 +42,7 @@ import ImageLiveLectureTools from '/public/qa-course/live-lecture-tools-image.sv
       src={ImageLiveLectureTools}
       alt={'live-lecture-tools-image'}
       loading='lazy'
-      class='md:h-12 absolute bottom-4 left-3 h-10 w-fit justify-normal object-contain object-left'
+      class='absolute bottom-4 left-3 h-10 w-fit justify-normal object-contain object-left tablet:h-12'
     />
   </figure>
 </section>

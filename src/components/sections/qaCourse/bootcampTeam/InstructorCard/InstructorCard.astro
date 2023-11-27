@@ -7,27 +7,34 @@ const { title, imageUrl, name, jobTitle, imageCompanyUrl, companyname } =
 ---
 
 <div
-  class={`relative w-full h-full bg-cover bg-no-repeat bg-center rounded-l md:rounded-[16px]`}
+  class={`relative w-full h-full bg-cover bg-no-repeat bg-center rounded-l tablet:rounded-[16px]`}
   style={{ backgroundImage: `url('${imageUrl}')` }}
 >
   <p
-    class='bg-cultured text-dark lg:px-4 lg:py-1 lg:text-s absolute left-4 top-4 rounded-xs px-[6px] py-[2px] text-xxs font-normal'
+    class='bg-cultured text-dark absolute left-4 top-4 rounded-xs px-[6px] py-[2px] text-xxs font-normal laptop:px-4 laptop:py-1 laptop:text-s'
   >
     {title}
   </p>
   <div class='absolute bottom-4 left-4 flex w-full flex-col gap-y-2'>
     <div>
-      <p class='md:text-s lg:text-l text-s font-bold text-white'>{name}</p>
-      <p class='lg:text-s text-xxs font-medium text-[#DEDCD3]'>{jobTitle}</p>
+      <p class='text-s font-bold text-white tablet:text-s laptop:text-l'>
+        {name}
+      </p>
+      <p class='text-xxs font-medium text-gray-200 laptop:text-s'>{jobTitle}</p>
     </div>
-    <div class='lg:gap-x-3 flex w-full flex-row items-center gap-x-1'>
+    <div class='flex w-full flex-row items-center gap-x-1 laptop:gap-x-3'>
       <div
-        class='md:h-8 md:w-8 lg:h-10 lg:w-10 h-5 w-5 bg-contain bg-no-repeat'
+        class='h-5 w-5 bg-contain bg-no-repeat tablet:h-8 tablet:w-8 laptop:h-10 laptop:w-10'
         style={{ backgroundImage: `url('${imageCompanyUrl}')` }}
       >
       </div>
-      <div class='md:w-6 lg:h-[2px] lg:w-[54px] h-[1px] w-4 bg-white'></div>
-      <p class='md:text-xxs lg:text-s text-xxs font-medium text-[#DEDCD3]'>
+      <div
+        class='h-[1px] w-4 bg-white tablet:w-6 laptop:h-[2px] laptop:w-[54px]'
+      >
+      </div>
+      <p
+        class='text-xxs font-medium text-gray-200 tablet:text-xxs laptop:text-s'
+      >
         {companyname}
       </p>
     </div>

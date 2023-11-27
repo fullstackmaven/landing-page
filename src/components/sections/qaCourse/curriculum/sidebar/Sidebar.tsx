@@ -36,7 +36,7 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
               className='peer-checked:border-l-dark flex h-full w-full cursor-pointer items-center justify-between p-6 peer-checked:border peer-checked:border-y-0 peer-checked:border-l-4 peer-checked:border-r-0'
             >
               <p className='text-dark text-base font-semibold'>{curr.title}</p>
-              <p className='bg-success rounded-xs p-1 px-3 text-center text-s font-medium leading-5 text-[#2254B5]'>
+              <p className='rounded-xs bg-secondary p-1 px-3 text-center text-s font-medium leading-5 text-blue-500'>
                 {curr.subtitle}
               </p>
             </label>

@@ -94,22 +94,22 @@ const Curriculum = () => {
       <section
         ref={containerRef}
         id='qacurriculum'
-        className=' lg:gap-y-6 grid gap-y-4'
+        className=' grid gap-y-4 laptop:gap-y-6'
       >
-        <p className='text-dark-gray lg:text-s lg:leading-6 text-xxs font-normal uppercase leading-4'>
+        <p className='text-dark-gray text-xxs font-normal uppercase leading-4 laptop:text-s laptop:leading-6'>
           CURRICULUM
         </p>
-        <h1 className='md:text-xl text-dark md:leading-2xl lg:text-2xl lg:leading-3xl text-l font-bold leading-8'>
+        <h1 className='tablet:text-xl text-dark text-l font-bold leading-8 tablet:leading-2xl laptop:text-2xl laptop:leading-3xl'>
           Mastery-based learning with real world projects
         </h1>
-        <p className='text-dark-gray lg:text-base lg:leading-7 text-s font-normal leading-6'>
+        <p className='text-dark-gray text-s font-normal leading-6 laptop:text-base laptop:leading-7'>
           Our QA bootcamp follows a mastery-based learning approach that focuses
           on hands-on experience. Unlike traditional QA courses that rely
           heavily on theory, our bootcamp immerses you in the latest tools,
           industry workflows, and best practices, making you proficient in the
           skills demanded by today's QA professionals.
         </p>
-        <ul className='lg:hidden grid gap-y-2'>
+        <ul className='grid gap-y-2 laptop:hidden'>
           {defaultCurriculum.map((curriculum, index) => (
             <li key={index}>
               <Accordion
@@ -123,14 +123,14 @@ const Curriculum = () => {
           ))}
         </ul>
 
-        <div className='lg:block hidden'>
+        <div className='hidden laptop:block'>
           <Sidebar curriculum={defaultCurriculum} />
         </div>
       </section>
       {showBookCall && (
         <BookCall
           ref={bookCallRef}
-          className='lg:hidden'
+          className='laptop:hidden'
           style={{
             willChange: 'trasform',
             transform: 'translate3d(0,96px,0)',

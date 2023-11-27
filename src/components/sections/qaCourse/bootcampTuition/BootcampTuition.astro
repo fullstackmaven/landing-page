@@ -3,50 +3,56 @@ import { Button } from '@components/Button';
 import GetPaidOrRefundCard from './Cards/GetPaidOrRefundCard.astro';
 ---
 
-<section id='qatuition' class='lg:gap-y-6 grid gap-y-4'>
+<section id='qatuition' class='grid gap-y-4 laptop:gap-y-6'>
   <p class='text-dark-gray text-xxs font-normal uppercase leading-4'>
     Bootcamp tuition
   </p>
   <h1
-    class='text-dark md:text-xl md:leading-2xl lg:text-2xl text-l font-bold leading-8'
+    class='text-dark tablet:text-xl text-l font-bold leading-8 tablet:leading-2xl laptop:text-2xl'
   >
     Simple, affordable pricing
   </h1>
-  <div class='md:grid md:grid-cols-2 md:gap-6 flex flex-col gap-4'>
+  <div class='flex flex-col gap-4 tablet:grid tablet:grid-cols-2 tablet:gap-6'>
     <ul
-      class='md:col-span-1 md:gap-y-6 md:rounded-[16px] md:p-6 lg:gap-y-8 lg:p-8 order-1 flex w-full flex-col gap-y-4 rounded-l bg-white p-4'
+      class='order-1 flex w-full flex-col gap-y-4 rounded-l bg-white p-4 tablet:col-span-1 tablet:gap-y-6 tablet:rounded-[16px] tablet:p-6 laptop:gap-y-8 laptop:p-8'
     >
       <li class='flex h-[70px] items-center justify-between'>
-        <h3 class='text-dark lg:text-l text-base font-bold'>Upfront</h3>
-        <h3 class='text-dark lg:text-l flex flex-col gap-2 text-base font-bold'>
+        <h3 class='text-dark text-base font-bold laptop:text-l'>Upfront</h3>
+        <h3
+          class='text-dark flex flex-col gap-2 text-base font-bold laptop:text-l'
+        >
           $8,700
           <span
-            class='text-dark rounded-xs bg-[#DDF7C7] px-[6px] py-1 text-center text-xxs font-normal'
+            class='text-dark bg-green-100 rounded-xs px-[6px] py-1 text-center text-xxs font-normal'
             >Pay total • save $800</span
           >
         </h3>
       </li>
-      <li class='h-[1px] bg-[#DADADA]'></li>
+      <li class='bg-gray-900 h-[1px]'></li>
       <li class='flex h-[70px] items-center justify-between'>
-        <h3 class='text-dark lg:text-l text-base font-bold'>Installments</h3>
-        <h3 class='text-dark lg:text-l flex flex-col gap-2 text-base font-bold'>
+        <h3 class='text-dark text-base font-bold laptop:text-l'>
+          Installments
+        </h3>
+        <h3
+          class='text-dark flex flex-col gap-2 text-base font-bold laptop:text-l'
+        >
           $1,180 / month
           <span
-            class='text-dark rounded-xs bg-[#DDF7C7] px-[6px] py-1 text-center text-xxs font-normal'
+            class='text-dark bg-green-100 rounded-xs px-[6px] py-1 text-center text-xxs font-normal'
             >$9,440 in total</span
           >
         </h3>
       </li>
-      <li class='h-[1px] bg-[#DADADA]'></li>
+      <li class='bg-gray-900 h-[1px]'></li>
       <li>
         <Button
-          className='lg:rounded-l lg:px-8 lg:py-4 w-full px-6 py-3'
+          className='w-full px-6 py-3 laptop:rounded-l laptop:px-8 laptop:py-4'
           title='Enroll now'
         />
       </li>
     </ul>
     <div
-      class='md:order-2 md:col-span-1 lg:order-3 lg:col-span-1 lg:row-span-1 order-3'
+      class='order-3 tablet:order-2 tablet:col-span-1 laptop:order-3 laptop:col-span-1 laptop:row-span-1'
     >
       <GetPaidOrRefundCard />
     </div>

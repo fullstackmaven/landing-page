@@ -3,11 +3,11 @@ import { Button } from '@components/Button';
 import Dropdown from '@components/Dropdown';
 ---
 
-<div class='md:p-6 h-full w-full rounded-s bg-white p-4'>
+<div class='h-full w-full rounded-s bg-white p-4 tablet:p-6'>
   <div class='mb-4 flex content-center justify-around'>
     <div class='flex flex-col content-center justify-center'>
       <div
-        class='rounded-xl flex h-8 w-8 justify-center self-center bg-[#EBEBEB]'
+        class='flex h-8 w-8 justify-center self-center rounded-xl bg-gray-50'
       >
         <p class='self-center text-xs'>1</p>
       </div>
@@ -15,7 +15,7 @@ import Dropdown from '@components/Dropdown';
     </div>
     <div class='flex flex-col content-center justify-center'>
       <div
-        class='rounded-xl flex h-8 w-8 justify-center self-center bg-[#EBEBEB]'
+        class='flex h-8 w-8 justify-center self-center rounded-xl bg-gray-50'
       >
         <p class='self-center text-xs'>2</p>
       </div>
@@ -23,7 +23,7 @@ import Dropdown from '@components/Dropdown';
     </div>
     <div class='flex flex-col content-center justify-center'>
       <div
-        class='rounded-xl flex h-8 w-8 justify-center self-center bg-[#EBEBEB]'
+        class='flex h-8 w-8 justify-center self-center rounded-xl bg-gray-50'
       >
         <p class='self-center text-xs'>3</p>
       </div>
@@ -32,19 +32,19 @@ import Dropdown from '@components/Dropdown';
   </div>
   <form class='mt-6 flex flex-col px-4'>
     <input
-      class='md:py-2 md:px-3 md:text-xxs mb-4 rounded-s border border-[#EBEBEB] px-5 py-4'
+      class='mb-4 rounded-s border border-gray-50 px-5 py-4 tablet:px-3 tablet:py-2 tablet:text-xxs'
       type='text'
       placeholder='Name'
     />
     <input
-      class='md:py-2 md:px-3 md:text-xxs mb-4 rounded-s border border-[#EBEBEB] px-5 py-4'
+      class='mb-4 rounded-s border border-gray-50 px-5 py-4 tablet:px-3 tablet:py-2 tablet:text-xxs'
       type='email'
       placeholder='Email'
     />
-    <div class='md:gap-x-1 mb-4 flex flex-row justify-between gap-x-2'>
+    <div class='mb-4 flex flex-row justify-between gap-x-2 tablet:gap-x-1'>
       <Dropdown client:load />
       <input
-        class='md:py-2 md:px-3 md:text-xxs w-8/12 rounded-s border border-[#EBEBEB] px-5 py-4'
+        class='w-8/12 rounded-s border border-gray-50 px-5 py-4 tablet:px-3 tablet:py-2 tablet:text-xxs'
         type='number'
         placeholder='Phone Number'
       />

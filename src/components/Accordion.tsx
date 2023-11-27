@@ -12,7 +12,7 @@ const Accordion: FC<
   return (
     <details
       className={classNames(
-        'md:px-4 md:py-3 group flex w-full flex-row flex-wrap items-center rounded-s border border-[#DFDBD1] bg-white px-2 py-2',
+        'group flex w-full flex-row flex-wrap items-center rounded-s border border-gray-300 bg-white px-2 py-2 tablet:px-4 tablet:py-3',
         className,
       )}
       {...otherProps}
@@ -31,7 +31,7 @@ const Accordion: FC<
             {title}
           </p>
         </div>
-        <p className='bg-success rounded-xs p-1 px-2 text-center text-xxs font-medium text-[#2254B5]'>
+        <p className='bg-success rounded-xs p-1 px-2 text-center text-xxs font-medium text-blue-500'>
           {subtitle}
         </p>
       </summary>
@@ -53,7 +53,7 @@ const Accordion: FC<
         className='flex grow items-center justify-between pl-2'
       >
         <p className='text-s font-semibold leading-6 text-dark'>{title}</p>
-        <p className='rounded-xs bg-success p-1 px-2 text-center text-xxs font-medium text-[#2254B5]'>
+        <p className='rounded-xs bg-success p-1 px-2 text-center text-xxs font-medium text-blue-500'>
           {subtitle}
         </p>
       </label>

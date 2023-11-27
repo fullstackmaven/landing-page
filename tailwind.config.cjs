@@ -7,6 +7,7 @@ module.exports = {
       laptop: '1024px',
     },
     colors: {
+      cultured: '#F6F4F2',
       primary: '#1D1E22',
       black: '#000000',
       accent: '#F95D05',
@@ -16,12 +17,16 @@ module.exports = {
       neon: '#DCFF50',
       orange: '#FF8551',
       gray: {
+        50: '#EBEBEB',
+        75: '#CBCBCB',
         100: '#BEBEBE66',
         200: '#DEDCD3',
         300: '#DFDBD1',
         400: '#C0BFB2',
         500: '#2C303399',
         700: '#505050',
+        800: '#6D6A6A',
+        900: '#DADADA',
       },
       red: {
         300: '#CB9390',
@@ -30,6 +35,12 @@ module.exports = {
       blue: {
         100: '#D6F3F5',
         500: '#2254B5',
+      },
+      green: {
+        100: '#DDF7C7',
+      },
+      yellow: {
+        100: '#F2F0E9',
       },
       transparent: 'transparent',
     },
@@ -62,6 +73,7 @@ module.exports = {
       xs: '0.25rem', //4px
       s: '0.5rem', //8px
       l: '0.75rem', //12px
+      xl: '1.25rem', //20px
       full: '50%',
     },
     fontSize: {
@@ -80,11 +92,14 @@ module.exports = {
       padding: {
         DEFAULT: '1rem', //16px
         sm: '1rem', //16px
-        md: '2rem', //32px
-        lg: '3', //48px
+        tablet: '2rem', //32px
+        laptop: '3rem', //48px
       },
     },
     extend: {
+      backgroundImage: {
+        'hero-image': "url('/home-page/hero-image.svg')",
+      },
       lineHeight: {
         xs: '1rem', //16px
         s: '1.25rem', //20px

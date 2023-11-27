@@ -80,7 +80,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           <div
             key={`header-dropdown-${menuItem.id}-${index}`}
             className={classNames(
-              'md:px-8 lg:px-12 absolute left-0 right-0 z-0 mx-auto max-w-[1280px] bg-transparent px-4 transition-all delay-300 ease-in',
+              'absolute left-0 right-0 z-0 mx-auto max-w-[1280px] bg-transparent px-4 transition-all delay-300 ease-in tablet:px-8 laptop:px-12',
               {
                 'z-20 block': menuItem.id === active && isScrollAtTop,
                 'z-0 hidden': menuItem.id !== active && isScrollAtTop,
@@ -95,7 +95,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
               setActive(undefined);
             }}
           >
-            <div className='flex h-full w-full border border-[#DEDCD3] p-6 shadow-2xl'>
+            <div className='flex h-full w-full border border-gray-200 p-6 shadow-2xl'>
               {otherProps?.[menuItem.id] as ReactNode}
             </div>
           </div>
@@ -113,7 +113,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           'sticky top-0 z-10 block w-full justify-center',
           className,
           {
-            'lg:pt-6 bg-transparent': isSticky && !isScrollAtTop,
+            'bg-transparent laptop:pt-6': isSticky && !isScrollAtTop,
             '!relative': !isSticky,
           },
         )}
@@ -123,7 +123,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           className={classNames(
             'flex w-full items-center justify-between py-6 transition-all duration-100 ease-in',
             {
-              'lg:bg-white lg:!px-2 lg:!py-3 lg:shadow-md rounded-l bg-transparent':
+              'rounded-l bg-transparent laptop:bg-white laptop:!px-2 laptop:!py-3 laptop:shadow-md':
                 isSticky && !isScrollAtTop,
               'transition-all duration-150 ease-in': !isSticky,
             },
@@ -131,9 +131,9 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
         >
           <h1
             className={classNames(
-              'text-dark lg:flex-none flex-1 text-l font-extrabold',
+              'text-dark flex-1 text-l font-extrabold laptop:flex-none',
               {
-                'lg:opacity-100 opacity-0': !isScrollAtTop,
+                'opacity-0 laptop:opacity-100': !isScrollAtTop,
               },
             )}
           >
@@ -145,7 +145,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
             .map((menuItem, index) => (
               <div
                 key={`header-left-${index}`}
-                className='lg:block ml-4 hidden'
+                className='ml-4 hidden laptop:block'
                 onMouseOver={(e) => {
                   e.stopPropagation();
                   setActive(menuItem.id);
@@ -154,14 +154,14 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                 <a
                   href={`#${menuItem.id}`}
                   className={classNames(
-                    'lg:cursor-pointer lg:hover:bg-[#EBEBEB] relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in',
+                    'relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in laptop:cursor-pointer laptop:hover:bg-gray-50 ',
                     {
-                      'lg:bg-[#EBEBEB]': menuItem.id === active,
-                      'lg:bg-transparent': menuItem.id !== active,
+                      'laptop:bg-gray-50': menuItem.id === active,
+                      'laptop:bg-transparent': menuItem.id !== active,
                     },
                   )}
                 >
-                  <p className='text-dark lg:text-xs flex gap-x-1 font-medium'>
+                  <p className='text-dark flex gap-x-1 font-medium laptop:text-xs'>
                     {menuItem.label}
                     {(menuItem.isDropdown ?? false) && (
                       <img src='arrow-chevron.svg' />
@@ -171,7 +171,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
               </div>
             ))}
 
-          <nav className='md:justify-center lg:flex lg:flex-1 hidden'>
+          <nav className='hidden tablet:justify-center laptop:flex laptop:flex-1'>
             <ul className='relative flex w-full items-center justify-center'>
               {menuItems
                 .filter((menuItem) => !menuItem.isLeft)
@@ -186,14 +186,14 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                     <a
                       href={`#${menuItem.id}`}
                       className={classNames(
-                        'lg:cursor-pointer lg:hover:bg-[#EBEBEB] relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in',
+                        'relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in laptop:cursor-pointer laptop:hover:bg-gray-50',
                         {
-                          'lg:bg-[#EBEBEB]': menuItem.id === active,
-                          'lg:bg-transparent': menuItem.id !== active,
+                          'laptop:bg-gray-50': menuItem.id === active,
+                          'laptop:bg-transparent': menuItem.id !== active,
                         },
                       )}
                     >
-                      <p className='text-dark lg:text-xs flex gap-x-1 font-medium'>
+                      <p className='text-dark flex gap-x-1 font-medium laptop:text-xs'>
                         {menuItem.label}
                         {(menuItem.isDropdown ?? false) && (
                           <img src='arrow-chevron.svg' />
@@ -207,14 +207,14 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           <Button
             title='Book a call'
             className={classNames(
-              'lg:mr-0 lg:!px-6 lg:!py-3 lg:text-xs mr-4 !px-3 !py-2 !font-semibold',
+              'mr-4 !px-3 !py-2 !font-semibold laptop:mr-0 laptop:!px-6 laptop:!py-3 laptop:text-xs',
               {
-                'lg:flex hidden': !isScrollAtTop,
+                'hidden laptop:flex': !isScrollAtTop,
               },
             )}
           />
           <BurgerMenu
-            className={classNames('lg:hidden bg-transparent shadow-md', {
+            className={classNames('bg-transparent shadow-md laptop:hidden', {
               'rounded-xs bg-white p-2 transition-colors duration-300 ease-in':
                 !isScrollAtTop && isSticky,
             })}
@@ -225,11 +225,14 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
       </header>
 
       <MenuDrawer
-        className={classNames('lg:hidden fixed top-0 z-[50] !overflow-hidden', {
-          block: isMenuDrawerOpen,
-          hidden: !isMenuDrawerOpen,
-          // '!sticky': !isScrollAtTop && isMenuDrawerOpen,
-        })}
+        className={classNames(
+          'fixed top-0 z-[50] !overflow-hidden laptop:hidden',
+          {
+            block: isMenuDrawerOpen,
+            hidden: !isMenuDrawerOpen,
+            // '!sticky': !isScrollAtTop && isMenuDrawerOpen,
+          },
+        )}
         onClose={() => setIsMenuDrawerOpen(false)}
       />
     </>

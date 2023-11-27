@@ -12,7 +12,7 @@ const BookCall = forwardRef(
         ref={ref}
         {...props}
         className={classNames(
-          'sticky bottom-0 flex h-[96px] w-full items-start justify-center border border-x-0 border-b-0 border-t-[#DEDCD3] bg-[#F2F0E9] p-4',
+          'sticky bottom-0 flex h-[96px] w-full items-start justify-center border border-x-0 border-b-0 border-t-gray-200 bg-yellow-100 p-4',
           props.className,
         )}
       >

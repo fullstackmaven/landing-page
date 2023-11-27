@@ -6,23 +6,23 @@ type TContentProps = Pick<TCurriculum, 'topics' | 'description'>;
 const Content: FC<TContentProps> = ({ description, topics }) => {
   return (
     <div className='h-full w-full'>
-      <div className='lg:h-fit lg:min-h-[239px] lg:gap-x-0 flex h-10 w-full items-center justify-start gap-x-3 rounded-l'>
-        <img src='https://placehold.co/41x39' className='lg:hidden block' />
+      <div className='flex h-10 w-full items-center justify-start gap-x-3 rounded-l laptop:h-fit laptop:min-h-[239px] laptop:gap-x-0'>
+        <img src='https://placehold.co/41x39' className='block laptop:hidden' />
         <img
           src='/qa-course/video-intro.svg'
-          className='lg:block hidden h-full w-full'
+          className='hidden h-full w-full laptop:block'
         />
-        <p className='lg:hidden text-xxs font-semibold text-primary/80'>
+        <p className='text-xxs font-semibold text-primary/80 laptop:hidden'>
           Watch a brief intro
         </p>
       </div>
-      <p className='text-dark-gray lg:py-6 lg:text-base py-3 text-xxs font-normal'>
+      <p className='text-dark-gray py-3 text-xxs font-normal laptop:py-6 laptop:text-base'>
         {description}
       </p>
-      <p className='text-dark-gray lg:block hidden text-base font-semibold'>
+      <p className='text-dark-gray hidden text-base font-semibold laptop:block'>
         What you'll focus on
       </p>
-      <ul className='text-dark-gray lg:text-s list-disc pl-5 text-xxs font-medium '>
+      <ul className='text-dark-gray list-disc pl-5 text-xxs font-medium laptop:text-s '>
         {topics.map((topic, index) => (
           <li key={`topics-${index}`}>{topic}</li>
         ))}
