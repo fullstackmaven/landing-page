@@ -10,6 +10,7 @@ const defaultCourses: TCourse[] = [
   {
     image: 'home-page/course-image.svg',
     alt: '#',
+    title: 'Software Engineering',
     courseTitle: 'Software Engineering Bootcamp',
     skills:
       'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
@@ -21,6 +22,7 @@ const defaultCourses: TCourse[] = [
   {
     image: 'home-page/course-image.svg',
     alt: '#',
+    title: 'Quality Assurance',
     courseTitle: 'Quality Assurance Bootcamp',
     skills:
       'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
@@ -29,27 +31,33 @@ const defaultCourses: TCourse[] = [
     price: '$12,700',
     type: 'Part time',
   },
+  {
+    image: 'home-page/course-image.svg',
+    alt: '#',
+    title: 'Data Science',
+    courseTitle: 'Data Science Bootcamp',
+    skills:
+      'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
+    startingSalary: '$85,000',
+    duration: 4,
+    price: '$12,700',
+    type: 'Part time',
+  },
 ];
 
 const { courses = defaultCourses } = Astro.props;
 ---
 
-<section class='flex flex-col laptop:items-center'>
-  <header>
-    <h1
-      class='text-xl text-dark mb-4 font-bold tablet:text-center tablet:text-3xl laptop:text-[48px]'
-    >
-      Our Courses
-    </h1>
+<section class='container flex flex-col py-12 laptop:items-center'>
+  <header class='pb-4'>
+    <h1 class='text-xl font-bold text-black'>Your pathways into tech</h1>
   </header>
-  <p
-    class='text-dark-gray mb-4 w-full text-s font-normal leading-[22px] tablet:text-base laptop:mb-8 laptop:w-[840px] laptop:text-center laptop:text-l laptop:leading-8'
-  >
+  <p class='pb-4 text-s -tracking-tight text-gray-700'>
     Start a life-changing journey with our fully online courses. Keep your
     current job while gaining expertise in a new profession, all at your own
     pace.
   </p>
-  <ul class='grid w-full gap-3 tablet:grid-cols-2 tablet:gap-6 laptop:gap-8'>
+  <ul class='grid w-full gap-y-4 tablet:grid-cols-2'>
     {
       courses.map((course) => (
         <li>

@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import CourseAccessImage from '/public/home-page/course-access-image.svg';
+---
+
+<section class='container bg-black py-13'>
+  <h1 class='mb-10 text-center text-2xl font-extrabold text-white'>
+    Learn Anytime, Anywhere
+  </h1>
+  <Image alt='course-access-image' src={CourseAccessImage} class='mb-10' />
+  <p class='text-base font-medium text-white'>
+    Access all the course videos, code and collaborate from any editor or
+    device: <span class='text-neon'>browser, VS Code or iOS.</span><br /><br />
+     Share a link to your code to get feedback, either async or with a <span
+      class='text-neon'>live coding session.</span
+    >
+  </p>
+</section>

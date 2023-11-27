@@ -121,7 +121,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
       >
         <div
           className={classNames(
-            'flex w-full items-center justify-between py-6 transition-all duration-100 ease-in',
+            'container mt-8 flex w-full items-center justify-between transition-all duration-100 ease-in',
             {
               'rounded-l bg-transparent laptop:bg-white laptop:!px-2 laptop:!py-3 laptop:shadow-md':
                 isSticky && !isScrollAtTop,
@@ -131,7 +131,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
         >
           <h1
             className={classNames(
-              'text-dark flex-1 text-l font-extrabold laptop:flex-none',
+              'flex-1 text-l font-extrabold text-primary laptop:flex-none',
               {
                 'opacity-0 laptop:opacity-100': !isScrollAtTop,
               },
@@ -207,7 +207,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           <Button
             title='Book a call'
             className={classNames(
-              'mr-4 !px-3 !py-2 !font-semibold laptop:mr-0 laptop:!px-6 laptop:!py-3 laptop:text-xs',
+              'mr-4 !rounded-s !px-3 !py-2 !text-xs !font-semibold',
               {
                 'hidden laptop:flex': !isScrollAtTop,
               },

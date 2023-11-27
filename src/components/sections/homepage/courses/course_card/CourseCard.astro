@@ -15,11 +15,11 @@ const { course } = Astro.props;
   <a
     href='/'
     role='button'
-    class='hover:bg-dark-gray/10 focus:bg-dark-gray/10 flex cursor-pointer flex-col items-center self-stretch rounded-[16px] border border-gray-200 bg-white p-3 transition ease-in-out hover:-translate-y-4 focus:-translate-y-4 laptop:p-4'
+    class='flex cursor-pointer flex-col items-center self-stretch rounded-2xl border border-gray-200 bg-white px-3 pb-6 pt-3 transition ease-in-out hover:-translate-y-4 hover:bg-gray-700/10 focus:-translate-y-4 focus:bg-gray-700/10'
   >
     <div
       class={classNames(
-        'relative flex bg-[url("/home-page/live-lecture-image.jpeg")] mb-6 laptop:mb-8 w-full min-h-[314px] laptop:min-h-[431px] bg-no-repeat bg-cover bg-center rounded-l tablet:rounded-l',
+        'relative mb-3 flex bg-live-lecture-image w-full min-h-[268px] laptop:min-h-[431px] bg-no-repeat bg-cover bg-center rounded-xl tablet:rounded-l',
       )}
     >
       <div class='flex h-auto w-full rounded-l backdrop-blur-[2px]'></div>
@@ -27,15 +27,12 @@ const { course } = Astro.props;
         class='absolute left-4 top-5 flex justify-between laptop:left-6 laptop:top-6'
       >
         <div
-          class='flex w-fit items-center gap-3 rounded-s border border-gray-400 bg-gray-100 px-2 py-1 backdrop-blur-[2px]'
+          class='flex w-fit items-center gap-x-3 rounded-xs border border-gray-400 bg-gray-100 px-2 py-1 backdrop-blur-[2px]'
         >
           <LiveIndicatorPulse />
-          <p class='text-xs font-normal text-white laptop:text-base'>
-            Live Lectures
-          </p>
+          <p class='text-xxs text-white laptop:text-base'>Live Bootcamp</p>
         </div>
       </div>
-
       <Image
         src={ImageLiveLectureTools}
         alt='live-lecture-tools-image'
@@ -43,15 +40,16 @@ const { course } = Astro.props;
         decoding='async'
         class='absolute right-4 top-5 laptop:right-6 laptop:top-6'
       />
+      <h2
+        class='absolute bottom-0 left-0 right-0 top-0 m-auto h-fit w-fit text-center text-base font-bold text-cultured'
+      >
+        {course.title}
+      </h2>
     </div>
-    <h1
-      class='text-dark mb-1 place-self-start text-base font-bold laptop:mb-3 laptop:text-l'
-    >
+    <h1 class='w-full text-left text-base font-bold text-primary'>
       {course.courseTitle}
     </h1>
-    <p
-      class='text-dark-gray place-self-start text-s font-medium laptop:text-base'
-    >
+    <p class='w-full text-left text-s font-medium text-gray-700'>
       {course.type} &#183; {course.duration} months
     </p>
   </a>

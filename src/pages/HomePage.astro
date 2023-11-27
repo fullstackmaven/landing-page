@@ -3,6 +3,8 @@ import Footer from '@components/Footer.astro';
 import { Header } from '@components/Header';
 import HeaderDropdown from '@components/homePage/HeaderDropdown.astro';
 import Questions from '@components/sections/common/questions/Questions.astro';
+import StudentFeedback from '@components/sections/common/studentFeedback/StudentFeedback.astro';
+import CourseAccess from '@components/sections/homepage/courseAccess/CourseAccess.astro';
 import Courses from '@components/sections/homepage/courses/Courses.astro';
 import OurGrads from '@components/sections/homepage/ourGrads/OurGrads.astro';
 import Promo from '@components/sections/homepage/promo/Promo.astro';
@@ -33,7 +35,7 @@ const menuItems = [
 ---
 
 <Layout title='Cyram Online Coding Bootcamp'>
-  <main class='container px-4 tablet:px-8 laptop:px-12'>
+  <main>
     <Header client:load menuItems={menuItems}>
       <div slot='homebootcamps' class='flex h-full w-full flex-col gap-y-6'>
         <HeaderDropdown />
@@ -41,11 +43,10 @@ const menuItems = [
     </Header>
     <Promo />
     <Courses />
+    <CourseAccess />
+    <StudentFeedback />
     <OurGrads />
     <Questions />
     <Footer />
   </main>
 </Layout>
-
-<!-- <SucessStories /> -->
-<!-- <GetInTouch /> -->

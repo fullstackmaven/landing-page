@@ -13,7 +13,7 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
     <div className='flex rounded-l bg-white'>
       <ul className='border-r-accent-6 min-w-[409px] border border-y-0 border-l-0'>
         <li className='border-b-accent-6 border border-x-0 border-t-0 px-6 py-8'>
-          <p className='text-dark-gray text-s font-normal '>CURRICULUM</p>
+          <p className='text-s font-normal text-gray-700 '>CURRICULUM</p>
         </li>
         {curriculum.map((curr, index) => (
           <li

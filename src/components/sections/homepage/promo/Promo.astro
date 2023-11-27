@@ -1,21 +1,18 @@
 ---
 import { Button } from '@components/Button';
 import { Image } from 'astro:assets';
-import ImagePlayCircle from '/public/home-page/play-circle.svg';
+
+import HeroImage from '/public/home-page/hero-image.svg';
+import PlayIconLight from '/public/play-icon-light.svg';
 ---
 
-<!-- <section
-  class=' flex flex-col gap-y-6 pb-12 tablet:gap-y-8 tablet:pt-6 laptop:items-center laptop:gap-y-8 laptop:py-13'
-> -->
-<section
-  class='flex flex-col gap-y-6 pb-12 tablet:gap-y-8 tablet:pt-6 laptop:items-center laptop:gap-y-8 laptop:py-13'
->
-  <header class='laptop:items-center'>
+<section class='container pb-8 pt-13'>
+  <header class='laptop:w-[638px] laptop:items-center'>
     <h1
-      class='self-stretch text-2xl font-extrabold leading-tight text-black tablet:text-[64px] tablet:font-extrabold tablet:leading-snug laptop:text-center'
+      class='text-dark mb-3 self-stretch text-2xl font-extrabold leading-tight tablet:text-[64px] tablet:font-extrabold tablet:leading-snug laptop:text-center'
     >
-      Change your life,
-      <span class='text-accent'>learn coding</span>
+      Change your life.
+      <span class='text-accent'>Learn coding.</span>
     </h1>
   </header>
   <p
@@ -24,24 +21,15 @@ import ImagePlayCircle from '/public/home-page/play-circle.svg';
     Accelerate Your Tech Career with Mastery-Based Learning
   </p>
   <Button
-    className='hidden w-fit font-semibold tablet:block'
-    title='Choose your career'
+    className='mx-auto my-6 w-fit !px-3 !py-2 !text-xs font-semibold'
+    title='Live Bootcamps'
   />
-  <div class='relative'>
-    <Image
-      src={ImagePlayCircle}
-      alt='play-circle'
-      loading='lazy'
-      decoding='async'
-      class='absolute bottom-0 left-0 right-0 top-0 m-auto h-12 w-12 cursor-pointer tablet:h-13 tablet:w-13 laptop:h-[75px] laptop:w-[75px]'
-    />
-    <video
-      src='/'
-      class='bg-gray-800 flex min-h-[192px] w-full flex-col items-center justify-center self-stretch rounded-[16px] tablet:min-h-[388px] tablet:rounded-[16px] laptop:mx-13 laptop:w-[832px]'
-      muted></video>
+  <div class='relative h-fit'>
+    <Image alt='' src={HeroImage} class='' />
+    <div
+      class='absolute inset-0 z-10 m-auto h-full w-full rounded-2xl border bg-black/75'
+    >
+    </div>
+    <Image alt='' src={PlayIconLight} class='absolute inset-0 z-20 m-auto' />
   </div>
-  <Button
-    className='mx-auto text-s font-semibold tablet:hidden'
-    title='Choose your career'
-  />
 </section>

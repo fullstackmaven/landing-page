@@ -15,21 +15,13 @@ import ImageUber from '/public/home-page/uber-logo.svg';
 import ImageZoom from '/public/home-page/zoom-logo.svg';
 ---
 
-<section
-  class='courses flex flex-col gap-4 tablet:gap-4 laptop:items-center laptop:gap-6'
->
-  <h1
-    class='text-xl text-dark font-bold tablet:text-center tablet:text-3xl laptop:text-[48px]'
-  >
-    Our grads work here
-  </h1>
-  <p
-    class='text-dark-gray pb-4 text-s leading-[22px] tablet:text-center tablet:text-base laptop:w-[837px]'
-  >
+<section class='container flex flex-col pt-13'>
+  <h1 class='pb-4 text-xl font-bold text-black'>Our grads work here</h1>
+  <p class='pb-6 text-s font-normal tracking-wide text-gray-700'>
     We're grateful to have educated 500,000 folks in 150+ countries and we're
     trusted by industry leading teams like Google, Figma, Revolut, and Shopify
   </p>
-  <div class='flex w-full flex-col gap-y-6'>
+  <div class='flex w-full flex-col gap-y-6 pb-4'>
     <div
       class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] tablet:h-[31px] child:tablet:w-auto laptop:h-[46px]'
     >
@@ -218,14 +210,14 @@ import ImageZoom from '/public/home-page/zoom-logo.svg';
       alt='grad-work-video'
       loading='lazy'
       decoding='async'
-      class='w-full object-contain tablet:hidden tablet:rounded-[16px] laptop:rounded-xl'
+      class='w-full rounded-l object-contain tablet:hidden'
     />
     <Image
       src={ImageGradWorkVideoDesktop}
       alt='grad-work-video-desktop'
       loading='lazy'
       decoding='async'
-      class='hidden w-full object-contain tablet:block tablet:rounded-[16px] laptop:rounded-xl'
+      class='hidden w-full object-contain tablet:block tablet:rounded-[16px] laptop:rounded-2xl'
     />
   </div>
 </section>

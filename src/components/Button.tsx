@@ -1,19 +1,27 @@
 import classNames from 'classnames';
 import React, { type HTMLAttributes } from 'react';
 
+type TButtonCategory = 'ghost';
+
 interface Props {
   title: string;
+  category?: TButtonCategory;
 }
 
 export const Button: React.FC<Props & HTMLAttributes<HTMLButtonElement>> = ({
   title,
+  category,
   className,
   ...otherProps
 }) => {
   return (
     <button
       className={classNames(
-        'bg-dark flex items-center justify-center rounded-s px-6 py-3 text-s text-white tablet:text-s',
+        'flex items-center justify-center rounded-s bg-primary px-6 py-3 text-s text-white tablet:text-s',
+        {
+          'border-2 !border-primary !bg-transparent !text-primary':
+            category === 'ghost',
+        },
         className,
       )}
       {...otherProps}

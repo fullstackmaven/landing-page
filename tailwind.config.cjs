@@ -50,6 +50,7 @@ module.exports = {
     spacing: {
       px: '0.063rem', //1px
       0: '0',
+      0.5: '0.125rem', //2px
       1: '0.25rem', //4px
       2: '0.5rem', //8px
       3: '0.75rem', //12px
@@ -73,7 +74,8 @@ module.exports = {
       xs: '0.25rem', //4px
       s: '0.5rem', //8px
       l: '0.75rem', //12px
-      xl: '1.25rem', //20px
+      xl: '1rem', //16px
+      '2xl': '1.25rem', //20px
       full: '50%',
     },
     fontSize: {
@@ -82,6 +84,7 @@ module.exports = {
       s: '1rem', //16px
       base: '1.25rem', //20px
       l: '1.5rem', //24px
+      xl: '2rem', //32px
       '2xl': '2.5rem', //40px
       '3xl': '2.75rem', //44px
       '4xl': '3.5rem', //56px
@@ -99,6 +102,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-image': "url('/home-page/hero-image.svg')",
+        'live-lecture-image': "url('/home-page/live-lecture-image.jpeg')",
       },
       lineHeight: {
         xs: '1rem', //16px
@@ -107,6 +111,9 @@ module.exports = {
         l: '1.5rem', //24px
         '2xl': '2.75rem', //44px
         '3xl': '3.5rem', //56px
+      },
+      animation: {
+        'ping-slow': 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
     },
   },

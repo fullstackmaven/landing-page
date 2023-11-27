@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import Student1 from '/public/student-1.svg';
+---
+
+<div class='gap-y-2'>
+  <div class='flex gap-x-3'>
+    <Image alt='student-1' src={Student1} />
+    <div class=''>
+      <p class='text-s font-semibold text-primary'>Caleb</p>
+      <p class='text-xs font-normal text-gray-700'>United States 🇺🇸</p>
+    </div>
+  </div>
+  <p class='text-gray-700'>
+    Cyram is beyond educational platform, it's also a community that cares for
+    us as a person and our dream in software engineering.
+  </p>
+</div>
