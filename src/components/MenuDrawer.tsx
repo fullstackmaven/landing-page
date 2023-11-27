@@ -10,7 +10,7 @@ const MenuDrawer: FC<TMenuDrawerProps> = ({ onClose, ...otherProps }) => {
     <div
       {...otherProps}
       className={classNames(
-        'h-screen w-screen overflow-y-hidden bg-cultured px-6 py-4 lg:p-8',
+        'bg-cultured lg:p-8 h-screen w-screen overflow-y-hidden px-6 py-4',
         otherProps.className,
       )}
     >
@@ -20,43 +20,43 @@ const MenuDrawer: FC<TMenuDrawerProps> = ({ onClose, ...otherProps }) => {
           <img src='/close-icon.svg' className='h-5 w-5' onClick={onClose} />
         </li>
         <li className='border border-x-0 border-t-0 border-b-[#CBCBCB] py-4'>
-          <p className='pb-4 text-l font-semibold text-dark'>Bootcamps</p>
+          <p className='text-dark pb-4 text-l font-semibold'>Bootcamps</p>
 
           <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-base text-dark'>Software Engineering</p>
+              <p className='text-dark text-base'>Software Engineering</p>
             </li>
             <li>
-              <p className='text-base text-dark'>Quality Assurance</p>
+              <p className='text-dark text-base'>Quality Assurance</p>
             </li>
             <li>
-              <p className='text-base text-dark'>UX/UI Design</p>
+              <p className='text-dark text-base'>UX/UI Design</p>
             </li>
           </ul>
         </li>
         <li className='border border-x-0 border-t-0 border-b-[#CBCBCB] py-4'>
-          <p className='pb-4 text-l font-semibold text-dark'>
+          <p className='text-dark pb-4 text-l font-semibold'>
             Free Video Courses
           </p>
           <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-base text-dark'>HTML and CSS video courses</p>
+              <p className='text-dark text-base'>HTML and CSS video courses</p>
             </li>
             <li>
-              <p className='text-base text-dark'>
+              <p className='text-dark text-base'>
                 Javascript Programming Courses
               </p>
             </li>
           </ul>
         </li>
         <li>
-          <p className='py-4 pb-4 text-l font-semibold text-dark'>Resources</p>
+          <p className='text-dark py-4 pb-4 text-l font-semibold'>Resources</p>
           <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-base text-dark'>FAQ</p>
+              <p className='text-dark text-base'>FAQ</p>
             </li>
             <li>
-              <p className='text-base text-dark'>Blog</p>
+              <p className='text-dark text-base'>Blog</p>
             </li>
           </ul>
         </li>

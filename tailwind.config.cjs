@@ -6,7 +6,6 @@ module.exports = {
       tablet: '768px',
       laptop: '1024px',
     },
-    },
     colors: {
       primary: '#1D1E22',
       black: '#000000',

@@ -11,14 +11,14 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
   const [activeCurriculum, setActiveCurriculum] = useState(0);
   return (
     <div className='flex rounded-l bg-white'>
-      <ul className='min-w-[409px] border border-y-0 border-l-0 border-r-accent-6'>
-        <li className='border border-x-0 border-t-0 border-b-accent-6 px-6 py-8'>
-          <p className='text-s font-normal text-dark-gray '>CURRICULUM</p>
+      <ul className='border-r-accent-6 min-w-[409px] border border-y-0 border-l-0'>
+        <li className='border-b-accent-6 border border-x-0 border-t-0 px-6 py-8'>
+          <p className='text-dark-gray text-s font-normal '>CURRICULUM</p>
         </li>
         {curriculum.map((curr, index) => (
           <li
             key={`list-curriculum-${index}`}
-            className='box-border flex cursor-pointer border border-x-0 border-t-0 border-b-accent-6'
+            className='border-b-accent-6 box-border flex cursor-pointer border border-x-0 border-t-0'
           >
             <input
               type='radio'
@@ -33,10 +33,10 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
             />
             <label
               htmlFor={`curriculum-${index}`}
-              className='flex h-full w-full cursor-pointer items-center justify-between p-6 peer-checked:border peer-checked:border-y-0 peer-checked:border-l-4 peer-checked:border-r-0 peer-checked:border-l-dark'
+              className='peer-checked:border-l-dark flex h-full w-full cursor-pointer items-center justify-between p-6 peer-checked:border peer-checked:border-y-0 peer-checked:border-l-4 peer-checked:border-r-0'
             >
-              <p className='text-base font-semibold text-dark'>{curr.title}</p>
-              <p className='rounded-xs bg-success p-1 px-3 text-center text-s font-medium leading-5 text-[#2254B5]'>
+              <p className='text-dark text-base font-semibold'>{curr.title}</p>
+              <p className='bg-success rounded-xs p-1 px-3 text-center text-s font-medium leading-5 text-[#2254B5]'>
                 {curr.subtitle}
               </p>
             </label>

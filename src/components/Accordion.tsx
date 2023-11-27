@@ -12,7 +12,7 @@ const Accordion: FC<
   return (
     <details
       className={classNames(
-        'group flex w-full flex-row flex-wrap items-center rounded-s border border-[#DFDBD1] bg-white px-2 py-2 md:px-4 md:py-3',
+        'md:px-4 md:py-3 group flex w-full flex-row flex-wrap items-center rounded-s border border-[#DFDBD1] bg-white px-2 py-2',
         className,
       )}
       {...otherProps}
@@ -27,11 +27,11 @@ const Accordion: FC<
             src='/chevron-down-icon.svg'
             className='hidden h-6 w-6 items-center justify-center group-open:flex'
           ></img>
-          <p className='pl-2 text-s font-semibold leading-6  text-dark'>
+          <p className='text-dark pl-2 text-s font-semibold  leading-6'>
             {title}
           </p>
         </div>
-        <p className='rounded-xs bg-success p-1 px-2 text-center text-xxs font-medium text-[#2254B5]'>
+        <p className='bg-success rounded-xs p-1 px-2 text-center text-xxs font-medium text-[#2254B5]'>
           {subtitle}
         </p>
       </summary>

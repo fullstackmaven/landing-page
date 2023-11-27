@@ -4,22 +4,22 @@
 echo '🏗️👷 Styling, testing and building your project before committing'
 
 # Check Prettier standards
-# pnpm run check-format ||
-# (
-#     echo '❌💅💄❌ Prettier Check Failed ❌💅💄❌
-#             Running pnpm run format, add changes and try commit again.';
-#     pnpm run format;
+pnpm run check-format ||
+(
+    echo '❌💅💄❌ Prettier Check Failed ❌💅💄❌
+            Run pnpm run format, add changes and try commit again.';
+    pnpm run format
 
-#     false;
+    false;
 
-# )
+)
 
 # Check ESLint Standards
 pnpm run check-lint ||
 (
-        echo '😤🏀👋😤 ESLint Check Failed 😤🏀👋😤
-                ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false;
+    echo '😤🏀👋😤 ESLint Check Failed 😤🏀👋😤
+            ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+    false;
 )
 
 # Check tsconfig standards
@@ -33,13 +33,13 @@ pnpm run check-types ||
 # If everything passes... Now we can commit
 echo '🤔🤔🤔🤔... Alright... Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
 
-# pnpm run build ||
-# (
-#     echo '❌👷🔨❌ Build failed ❌👷🔨❌
-#             Next build failed: View the errors above to see why.
-#     '
-#     false;
-# )
+pnpm run build ||
+(
+    echo '❌👷🔨❌ Build failed ❌👷🔨❌
+            Next build failed: View the errors above to see why.
+    '
+    false;
+)
 
 # If everything passes... Now we can commit
 echo '✅✅✅✅ Everything passed. Committing this now. ✅✅✅✅'

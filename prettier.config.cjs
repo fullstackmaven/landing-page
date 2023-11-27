@@ -2,10 +2,7 @@
 module.exports = {
   // i am just using the standard config, change if you need something else
   ...require('prettier-config-standard'),
-  plugins: [
-    require.resolve('prettier-plugin-astro'),
-    'prettier-plugin-tailwindcss',
-  ],
+  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
   overrides: [
     {
       files: '*.astro',

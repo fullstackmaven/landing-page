@@ -80,7 +80,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           <div
             key={`header-dropdown-${menuItem.id}-${index}`}
             className={classNames(
-              'bg-transparent md:px-8 lg:px-12 absolute left-0 right-0 z-0 mx-auto max-w-[1280px] px-4 transition-all delay-300 ease-in',
+              'md:px-8 lg:px-12 absolute left-0 right-0 z-0 mx-auto max-w-[1280px] bg-transparent px-4 transition-all delay-300 ease-in',
               {
                 'z-20 block': menuItem.id === active && isScrollAtTop,
                 'z-0 hidden': menuItem.id !== active && isScrollAtTop,
@@ -113,7 +113,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           'sticky top-0 z-10 block w-full justify-center',
           className,
           {
-            'bg-transparent lg:pt-6': isSticky && !isScrollAtTop,
+            'lg:pt-6 bg-transparent': isSticky && !isScrollAtTop,
             '!relative': !isSticky,
           },
         )}
@@ -123,7 +123,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           className={classNames(
             'flex w-full items-center justify-between py-6 transition-all duration-100 ease-in',
             {
-              'bg-transparent lg:bg-white lg:!px-2 lg:!py-3 lg:shadow-md rounded-l':
+              'lg:bg-white lg:!px-2 lg:!py-3 lg:shadow-md rounded-l bg-transparent':
                 isSticky && !isScrollAtTop,
               'transition-all duration-150 ease-in': !isSticky,
             },
@@ -214,8 +214,8 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
             )}
           />
           <BurgerMenu
-            className={classNames('bg-transparent lg:hidden shadow-md', {
-              'bg-white rounded-xs p-2 transition-colors duration-300 ease-in':
+            className={classNames('lg:hidden bg-transparent shadow-md', {
+              'rounded-xs bg-white p-2 transition-colors duration-300 ease-in':
                 !isScrollAtTop && isSticky,
             })}
             onClick={() => setIsMenuDrawerOpen((prev) => !prev)}

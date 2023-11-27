@@ -1,6 +1,6 @@
 package.json
 pnpm-lock.yaml
 dist
-node_modules
+node_modules/**
 public
 src/env.d.ts

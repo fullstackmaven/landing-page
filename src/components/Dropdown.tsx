@@ -13,7 +13,7 @@ const Dropdown: React.FC = () => {
     <div className='dropdown relative text-left'>
       <div>
         <button
-          className='dropdown inline-flex w-full justify-center rounded-l border border-[#EBEBEB] px-5 py-4 md:px-3 md:py-2 md:text-xxs'
+          className='dropdown md:px-3 md:py-2 md:text-xxs inline-flex w-full justify-center rounded-l border border-[#EBEBEB] px-5 py-4'
           onClick={() => {
             setIsOpen(!isOpen);
           }}
@@ -36,7 +36,7 @@ const Dropdown: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className='w-56 rounded-md ring-black absolute right-0 mt-2 origin-top-right bg-white shadow-lg ring-1 ring-opacity-5'>
+        <div className='w-56 rounded-md absolute right-0 mt-2 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5'>
           <div
             className='py-1'
             role='menu'
@@ -46,7 +46,7 @@ const Dropdown: React.FC = () => {
             {options.map((option, i) => (
               <span
                 key={i}
-                className='text-sm block px-4 py-2 hover:bg-gray-100 hover:text-gray-900'
+                className='text-sm hover:text-gray-900 block px-4 py-2 hover:bg-gray-100'
                 role='menuitem'
                 onClick={() => {
                   selectOption(option);
