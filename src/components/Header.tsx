@@ -80,12 +80,12 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           <div
             key={`header-dropdown-${menuItem.id}-${index}`}
             className={classNames(
-              'absolute left-0 right-0 z-0 mx-auto max-w-[1280px] bg-transparent px-4 transition-all delay-300 ease-in tablet:px-8 laptop:px-12',
+              'absolute left-0 right-0 mx-auto max-w-[1280px] bg-transparent px-4 transition-all delay-300 ease-in tablet:px-8 laptop:px-12',
               {
                 'z-20 block': menuItem.id === active && isScrollAtTop,
                 'z-0 hidden': menuItem.id !== active && isScrollAtTop,
                 'z-20': !isScrollAtTop,
-                '!top-[96px] !block': menuItem.id === active && !isScrollAtTop,
+                '!top-16 !block': menuItem.id === active && !isScrollAtTop,
                 '!z-0 hidden !opacity-0':
                   menuItem.id !== active && !isScrollAtTop,
               },
@@ -95,7 +95,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
               setActive(undefined);
             }}
           >
-            <div className='flex h-full w-full border border-gray-200 p-6 shadow-2xl'>
+            <div className='z-50 flex h-full w-full rounded-2xl border border-gray-200 bg-cultured p-6 shadow-2xl'>
               {otherProps?.[menuItem.id] as ReactNode}
             </div>
           </div>
@@ -110,7 +110,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
     <>
       <header
         className={classNames(
-          'sticky top-0 z-10 block w-full justify-center',
+          'sticky top-0 z-50 block w-full justify-center',
           className,
           {
             'bg-transparent laptop:pt-6': isSticky && !isScrollAtTop,
@@ -121,7 +121,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
       >
         <div
           className={classNames(
-            'container mt-8 flex w-full items-center justify-between transition-all duration-100 ease-in',
+            'container mt-8 flex w-full min-w-full items-center justify-between transition-all duration-100 ease-in tablet:my-6',
             {
               'rounded-l bg-transparent laptop:bg-white laptop:!px-2 laptop:!py-3 laptop:shadow-md':
                 isSticky && !isScrollAtTop,
@@ -161,7 +161,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                     },
                   )}
                 >
-                  <p className='text-dark flex gap-x-1 font-medium laptop:text-xs'>
+                  <p className='flex gap-x-1 font-medium text-primary laptop:text-xs'>
                     {menuItem.label}
                     {(menuItem.isDropdown ?? false) && (
                       <img src='arrow-chevron.svg' />
@@ -193,7 +193,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                         },
                       )}
                     >
-                      <p className='text-dark flex gap-x-1 font-medium laptop:text-xs'>
+                      <p className='flex gap-x-1 font-medium text-primary laptop:text-xs'>
                         {menuItem.label}
                         {(menuItem.isDropdown ?? false) && (
                           <img src='arrow-chevron.svg' />
@@ -207,7 +207,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           <Button
             title='Book a call'
             className={classNames(
-              'mr-4 !rounded-s !px-3 !py-2 !text-xs !font-semibold',
+              'mr-4 !rounded-s !px-3 !py-2 !text-xs !font-semibold tablet:!px-6 tablet:!py-3 laptop:mr-0',
               {
                 'hidden laptop:flex': !isScrollAtTop,
               },

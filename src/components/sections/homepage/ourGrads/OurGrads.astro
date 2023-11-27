@@ -15,192 +15,200 @@ import ImageUber from '/public/home-page/uber-logo.svg';
 import ImageZoom from '/public/home-page/zoom-logo.svg';
 ---
 
-<section class='container flex flex-col pt-13'>
-  <h1 class='pb-4 text-xl font-bold text-black'>Our grads work here</h1>
-  <p class='pb-6 text-s font-normal tracking-wide text-gray-700'>
-    We're grateful to have educated 500,000 folks in 150+ countries and we're
-    trusted by industry leading teams like Google, Figma, Revolut, and Shopify
-  </p>
-  <div class='flex w-full flex-col gap-y-6 pb-4'>
-    <div
-      class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] tablet:h-[31px] child:tablet:w-auto laptop:h-[46px]'
+<section class='container mx-auto flex min-w-full flex-col pt-13 tablet:pt-15'>
+  <div class='laptop:px-15'>
+    <h1
+      class='pb-4 text-xl font-bold text-black tablet:text-center tablet:text-3xl laptop:text-4xl'
     >
-      <Image
-        src={ImageGoogle}
-        alt='google-logo'
-        loading='lazy'
-        decoding='async'
-        class='h-full tablet:hidden tablet:appearance-none'
-      />
-      <Image
-        src={ImageAirbnb}
-        alt='airbnb-logo'
-        loading='lazy'
-        decoding='async'
-        class='h-full tablet:hidden tablet:appearance-none'
-      />
-      <Image
-        src={ImageAmazon}
-        alt='amazon-logo'
-        loading='lazy'
-        decoding='async'
-        class='h-full tablet:hidden tablet:appearance-none'
-      />
-      <Image
-        src={ImageMicrosoft}
-        alt='google-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageAirbnb}
-        alt='airbnb-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageAmazon}
-        alt='amazon-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageMeta}
-        alt='meta-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageGoogle}
-        alt='google-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-    </div>
-    <div
-      class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] tablet:h-[31px] child:tablet:w-auto laptop:h-[46px]'
+      Our grads work here
+    </h1>
+    <p
+      class='pb-6 text-s font-normal tracking-wider text-gray-700 tablet:text-center'
     >
-      <Image
-        src={ImageMeta}
-        alt='meta-logo'
-        loading='lazy'
-        decoding='async'
-        class='h-full tablet:hidden tablet:appearance-none'
-      />
-      <Image
-        src={ImageNetflix}
-        alt='netflix-logo'
-        loading='lazy'
-        decoding='async'
-        class='h-full tablet:hidden tablet:appearance-none'
-      />
-      <Image
-        src={ImageUber}
-        alt='uber-logo'
-        loading='lazy'
-        decoding='async'
-        class='h-full tablet:hidden tablet:appearance-none'
-      />
-      <Image
-        src={ImageUber}
-        alt='uber-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageLinkedin}
-        alt='linkedin-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageBooking}
-        alt='booking-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageUber}
-        alt='uber-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageLinkedin}
-        alt='linkedin-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-    </div>
-    <div
-      class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] tablet:h-[31px] child:tablet:w-auto laptop:h-[46px]'
-    >
-      <Image
-        src={ImageZoom}
-        alt='zoom-logo'
-        loading='lazy'
-        decoding='async'
-        class='h-full tablet:hidden tablet:appearance-none'
-      />
-      <Image
-        src={ImageMicrosoft}
-        alt='microsoft-logo'
-        loading='lazy'
-        decoding='async'
-        class='h-full tablet:hidden tablet:appearance-none'
-      />
-      <Image
-        src={ImageLinkedin}
-        alt='linkedin-logo'
-        loading='lazy'
-        decoding='async'
-        class='h-full tablet:hidden tablet:appearance-none'
-      />
-      <Image
-        src={ImageBooking}
-        alt='booking-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageNotion}
-        alt='notion-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageAirbnb}
-        alt='airbnb-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageAirbnb}
-        alt='airbnb-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
-      <Image
-        src={ImageAirbnb}
-        alt='airbnb-logo'
-        loading='lazy'
-        decoding='async'
-        class='hidden h-full appearance-none tablet:block'
-      />
+      We're grateful to have educated 500,000 folks in 150+ countries and we're
+      trusted by industry leading teams like Google, Figma, Revolut, and Shopify
+    </p>
+    <div class='flex w-full flex-col gap-y-6 pb-4 tablet:pb-8'>
+      <div
+        class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] tablet:h-[31px] child:tablet:w-auto laptop:h-[46px]'
+      >
+        <Image
+          src={ImageGoogle}
+          alt='google-logo'
+          loading='lazy'
+          decoding='async'
+          class='h-full tablet:hidden tablet:appearance-none'
+        />
+        <Image
+          src={ImageAirbnb}
+          alt='airbnb-logo'
+          loading='lazy'
+          decoding='async'
+          class='h-full tablet:hidden tablet:appearance-none'
+        />
+        <Image
+          src={ImageAmazon}
+          alt='amazon-logo'
+          loading='lazy'
+          decoding='async'
+          class='h-full tablet:hidden tablet:appearance-none'
+        />
+        <Image
+          src={ImageMicrosoft}
+          alt='google-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageAirbnb}
+          alt='airbnb-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageAmazon}
+          alt='amazon-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageMeta}
+          alt='meta-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageGoogle}
+          alt='google-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+      </div>
+      <div
+        class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] tablet:h-[31px] child:tablet:w-auto laptop:h-[46px]'
+      >
+        <Image
+          src={ImageMeta}
+          alt='meta-logo'
+          loading='lazy'
+          decoding='async'
+          class='h-full tablet:hidden tablet:appearance-none'
+        />
+        <Image
+          src={ImageNetflix}
+          alt='netflix-logo'
+          loading='lazy'
+          decoding='async'
+          class='h-full tablet:hidden tablet:appearance-none'
+        />
+        <Image
+          src={ImageUber}
+          alt='uber-logo'
+          loading='lazy'
+          decoding='async'
+          class='h-full tablet:hidden tablet:appearance-none'
+        />
+        <Image
+          src={ImageUber}
+          alt='uber-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageLinkedin}
+          alt='linkedin-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageBooking}
+          alt='booking-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageUber}
+          alt='uber-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageLinkedin}
+          alt='linkedin-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+      </div>
+      <div
+        class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] tablet:h-[31px] child:tablet:w-auto laptop:h-[46px]'
+      >
+        <Image
+          src={ImageZoom}
+          alt='zoom-logo'
+          loading='lazy'
+          decoding='async'
+          class='h-full tablet:hidden tablet:appearance-none'
+        />
+        <Image
+          src={ImageMicrosoft}
+          alt='microsoft-logo'
+          loading='lazy'
+          decoding='async'
+          class='h-full tablet:hidden tablet:appearance-none'
+        />
+        <Image
+          src={ImageLinkedin}
+          alt='linkedin-logo'
+          loading='lazy'
+          decoding='async'
+          class='h-full tablet:hidden tablet:appearance-none'
+        />
+        <Image
+          src={ImageBooking}
+          alt='booking-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageNotion}
+          alt='notion-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageAirbnb}
+          alt='airbnb-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageAirbnb}
+          alt='airbnb-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+        <Image
+          src={ImageAirbnb}
+          alt='airbnb-logo'
+          loading='lazy'
+          decoding='async'
+          class='hidden h-full appearance-none tablet:block'
+        />
+      </div>
     </div>
   </div>
 

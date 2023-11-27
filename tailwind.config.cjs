@@ -65,9 +65,11 @@ module.exports = {
       12: '3rem', //48px
       13: '4rem', //64px
       14: '5.25rem', //84px
-      15: '10rem', //160px
-      16: '15rem', //240px
-      17: '18.75rem', //300px
+      15: '6rem', //96px
+      16: '8rem', //128px
+      17: '10rem', //160px
+      18: '15rem', //240px
+      19: '18.75rem', //300px
     },
     borderRadius: {
       none: '0',
@@ -87,8 +89,10 @@ module.exports = {
       xl: '2rem', //32px
       '2xl': '2.5rem', //40px
       '3xl': '2.75rem', //44px
-      '4xl': '3.5rem', //56px
-      '5xl': '4.5rem', //72px
+      '4xl': '3rem', //48px
+      '5xl': '3.5rem', //56px
+      '6xl': '4rem', //64px
+      '7xl': '4.5rem', //72px
     },
     container: {
       center: true,
@@ -99,9 +103,13 @@ module.exports = {
         laptop: '3rem', //48px
       },
     },
+    letterSpacing: {
+      wide: '0.28px',
+      wider: '0.32px',
+    },
     extend: {
       backgroundImage: {
-        'hero-image': "url('/home-page/hero-image.svg')",
+        'hero-image': "url('/home-page/hero-image.jpeg')",
         'live-lecture-image': "url('/home-page/live-lecture-image.jpeg')",
       },
       lineHeight: {

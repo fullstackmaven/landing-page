@@ -11,26 +11,26 @@ interface Props {
 const { course } = Astro.props;
 ---
 
-<article>
+<article class='h-full'>
   <a
     href='/'
     role='button'
-    class='flex cursor-pointer flex-col items-center self-stretch rounded-2xl border border-gray-200 bg-white px-3 pb-6 pt-3 transition ease-in-out hover:-translate-y-4 hover:bg-gray-700/10 focus:-translate-y-4 focus:bg-gray-700/10'
+    class='flex h-full cursor-pointer flex-col items-center self-stretch rounded-2xl border border-gray-200 bg-white px-3 pb-6 pt-3 transition ease-in-out hover:-translate-y-4 hover:bg-gray-700/10 focus:-translate-y-4 focus:bg-gray-700/10'
   >
     <div
       class={classNames(
-        'relative mb-3 flex bg-live-lecture-image w-full min-h-[268px] laptop:min-h-[431px] bg-no-repeat bg-cover bg-center rounded-xl tablet:rounded-l',
+        'relative mb-3 flex bg-live-lecture-image w-full min-h-[268px] bg-no-repeat bg-cover bg-center rounded-xl tablet:rounded-l',
       )}
     >
       <div class='flex h-auto w-full rounded-l backdrop-blur-[2px]'></div>
       <div
-        class='absolute left-4 top-5 flex justify-between laptop:left-6 laptop:top-6'
+        class='absolute left-4 top-5 flex justify-between tablet:left-3 tablet:top-3'
       >
         <div
           class='flex w-fit items-center gap-x-3 rounded-xs border border-gray-400 bg-gray-100 px-2 py-1 backdrop-blur-[2px]'
         >
           <LiveIndicatorPulse />
-          <p class='text-xxs text-white laptop:text-base'>Live Bootcamp</p>
+          <p class='text-xxs text-white laptop:text-xxs'>Live Bootcamp</p>
         </div>
       </div>
       <Image
@@ -38,7 +38,7 @@ const { course } = Astro.props;
         alt='live-lecture-tools-image'
         loading='lazy'
         decoding='async'
-        class='absolute right-4 top-5 laptop:right-6 laptop:top-6'
+        class='absolute right-4 top-5 tablet:right-3 tablet:top-3 tablet:h-6 tablet:w-fit'
       />
       <h2
         class='absolute bottom-0 left-0 right-0 top-0 m-auto h-fit w-fit text-center text-base font-bold text-cultured'

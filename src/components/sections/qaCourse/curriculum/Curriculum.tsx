@@ -99,7 +99,7 @@ const Curriculum = () => {
         <p className='text- text-xxs font-normal uppercase leading-4 laptop:text-s laptop:leading-6'>
           CURRICULUM
         </p>
-        <h1 className='text-dark text-l font-bold leading-8 tablet:text-xl tablet:leading-2xl laptop:text-2xl laptop:leading-3xl'>
+        <h1 className='text-l font-bold leading-8 text-primary tablet:text-xl tablet:leading-2xl laptop:text-2xl laptop:leading-3xl'>
           Mastery-based learning with real world projects
         </h1>
         <p className='text-s font-normal leading-6 text-gray-700 laptop:text-base laptop:leading-7'>

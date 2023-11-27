@@ -1,10 +1,11 @@
-<svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="play-icon 1" clip-path="url(#clip0_1654_4854)">
-<path id="Vector" d="M1.63563 20C2.11049 20 2.52204 19.8445 3.06021 19.5111L15.6282 11.8444C16.5674 11.2667 17 10.7778 17 10C17 9.22223 16.5674 8.73334 15.6282 8.15555L3.06021 0.488889C2.52204 0.166666 2.11049 0 1.63563 0C0.707014 0 0 0.744445 0 1.96666V18.0445C0 19.2555 0.707014 20 1.63563 20Z" fill="white"/>
+<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="58" height="58" rx="29" fill="#505050"/>
+<g clip-path="url(#clip0_1654_4853)">
+<path d="M24.6356 39C25.1105 39 25.522 38.8445 26.0602 38.5111L38.6282 30.8444C39.5674 30.2667 40 29.7778 40 29C40 28.2222 39.5674 27.7333 38.6282 27.1556L26.0602 19.4889C25.522 19.1667 25.1105 19 24.6356 19C23.707 19 23 19.7444 23 20.9667V37.0445C23 38.2555 23.707 39 24.6356 39Z" fill="white"/>
 </g>
 <defs>
-<clipPath id="clip0_1654_4854">
-<rect width="17" height="20" fill="white"/>
+<clipPath id="clip0_1654_4853">
+<rect width="17" height="20" fill="white" transform="translate(23 19)"/>
 </clipPath>
 </defs>
 </svg>

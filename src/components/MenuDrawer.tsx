@@ -20,43 +20,47 @@ const MenuDrawer: FC<TMenuDrawerProps> = ({ onClose, ...otherProps }) => {
           <img src='/close-icon.svg' className='h-5 w-5' onClick={onClose} />
         </li>
         <li className='border border-x-0 border-t-0 border-b-gray-75 py-4'>
-          <p className='text-dark pb-4 text-l font-semibold'>Bootcamps</p>
+          <p className='pb-4 text-l font-semibold text-primary'>Bootcamps</p>
 
           <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-dark text-base'>Software Engineering</p>
+              <p className='text-base text-primary'>Software Engineering</p>
             </li>
             <li>
-              <p className='text-dark text-base'>Quality Assurance</p>
+              <p className='text-base text-primary'>Quality Assurance</p>
             </li>
             <li>
-              <p className='text-dark text-base'>UX/UI Design</p>
+              <p className='text-base text-primary'>UX/UI Design</p>
             </li>
           </ul>
         </li>
         <li className='border border-x-0 border-t-0 border-b-gray-75 py-4'>
-          <p className='text-dark pb-4 text-l font-semibold'>
+          <p className='pb-4 text-l font-semibold text-primary'>
             Free Video Courses
           </p>
           <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-dark text-base'>HTML and CSS video courses</p>
+              <p className='text-base text-primary'>
+                HTML and CSS video courses
+              </p>
             </li>
             <li>
-              <p className='text-dark text-base'>
+              <p className='text-base text-primary'>
                 Javascript Programming Courses
               </p>
             </li>
           </ul>
         </li>
         <li>
-          <p className='text-dark py-4 pb-4 text-l font-semibold'>Resources</p>
+          <p className='py-4 pb-4 text-l font-semibold text-primary'>
+            Resources
+          </p>
           <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-dark text-base'>FAQ</p>
+              <p className='text-base text-primary'>FAQ</p>
             </li>
             <li>
-              <p className='text-dark text-base'>Blog</p>
+              <p className='text-base text-primary'>Blog</p>
             </li>
           </ul>
         </li>

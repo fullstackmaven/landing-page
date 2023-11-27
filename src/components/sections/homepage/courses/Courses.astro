@@ -48,19 +48,29 @@ const defaultCourses: TCourse[] = [
 const { courses = defaultCourses } = Astro.props;
 ---
 
-<section class='container flex flex-col py-12 laptop:items-center'>
+<section
+  class='container flex min-w-full flex-col py-12 tablet:pb-15 tablet:pt-0 laptop:pb-16'
+>
   <header class='pb-4'>
-    <h1 class='text-xl font-bold text-black'>Your pathways into tech</h1>
+    <h1
+      class='text-xl font-bold text-black tablet:text-center tablet:text-3xl laptop:text-4xl'
+    >
+      Your pathways into tech
+    </h1>
   </header>
-  <p class='pb-4 text-s -tracking-tight text-gray-700'>
+  <p
+    class='pb-4 text-s tracking-wider text-gray-700 tablet:text-center laptop:px-12'
+  >
     Start a life-changing journey with our fully online courses. Keep your
     current job while gaining expertise in a new profession, all at your own
     pace.
   </p>
-  <ul class='grid w-full gap-y-4 tablet:grid-cols-2'>
+  <ul
+    class='grid w-full gap-y-4 tablet:grid-cols-2 tablet:gap-x-6 laptop:grid-cols-3 laptop:gap-x-4'
+  >
     {
       courses.map((course) => (
-        <li>
+        <li class='flex-1'>
           <CourseCard course={course} />
         </li>
       ))

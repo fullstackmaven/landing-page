@@ -28,11 +28,13 @@ const defaultQuestions: TQuestions[] = [
 const { questions = defaultQuestions } = Astro.props;
 ---
 
-<section id='faq' class='container py-13'>
-  <h1 class='pb-4 text-xl font-bold text-black'>
+<section id='faq' class='container min-w-full py-13 tablet:py-15 laptop:py-16'>
+  <h1
+    class='pb-4 text-xl font-bold text-black tablet:text-3xl tablet:font-extrabold laptop:text-4xl'
+  >
     Got a question about our bootcamp?
   </h1>
-  <p class='pb-4 text-s font-normal tracking-wide text-gray-700'>
+  <p class='mb-4 text-s font-normal tracking-wider text-gray-700'>
     If you've got any questions about our Bootcamp you can join an intro session
     to meet our team and others
   </p>
@@ -46,7 +48,7 @@ const { questions = defaultQuestions } = Astro.props;
       questions.map((question, index) => (
         <li class='flex flex-col'>
           <Accordion id={`accordion-${index}`} title={question.question}>
-            <p class='text-dark pl-8 text-s font-normal tracking-wide'>
+            <p class='pl-8 text-s font-normal tracking-wider text-primary'>
               {question.answer}
             </p>
           </Accordion>

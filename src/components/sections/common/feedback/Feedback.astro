@@ -1,18 +1,26 @@
 ---
-import { Image } from 'astro:assets';
-import Student1 from '/public/student-1.svg';
+import type { TFeedback } from 'src/types/Feedback';
+
+interface Props {
+  data: TFeedback;
+}
+
+const { data } = Astro.props;
+const { country, feedback, imagePath, name } = data;
 ---
 
 <div class='gap-y-2'>
   <div class='flex gap-x-3'>
-    <Image alt='student-1' src={Student1} />
+    <!-- eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -->
+    <img alt='' src={imagePath} />
     <div class=''>
-      <p class='text-s font-semibold text-primary'>Caleb</p>
-      <p class='text-xs font-normal text-gray-700'>United States 🇺🇸</p>
+      <p class='text-s font-semibold text-primary tablet:text-xs'>
+        {name}
+      </p>
+      <p class='text-xs font-normal text-gray-700'>{country}</p>
     </div>
   </div>
-  <p class='text-gray-700'>
-    Cyram is beyond educational platform, it's also a community that cares for
-    us as a person and our dream in software engineering.
+  <p class='text-s text-gray-700'>
+    {feedback}
   </p>
 </div>
