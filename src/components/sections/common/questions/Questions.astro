@@ -28,7 +28,10 @@ const defaultQuestions: TQuestions[] = [
 const { questions = defaultQuestions } = Astro.props;
 ---
 
-<section id='faq' class='container min-w-full py-13 tablet:py-15 laptop:py-16'>
+<section
+  id='faq'
+  class='container max-w-screen-desktop py-13 tablet:py-15 laptop:py-16'
+>
   <h1
     class='text-xl pb-4 font-bold text-black tablet:text-3xl tablet:font-extrabold laptop:text-4xl'
   >

@@ -7,13 +7,12 @@ import PlayIconDark from '/public/play-icon-dark.svg';
 import PlayIconLight from '/public/play-icon-light.svg';
 ---
 
-<section class='container min-w-full pb-8 pt-13 tablet:pb-16'>
+<section class='container max-w-screen-desktop pb-8 pt-13 tablet:pb-16'>
   <header class='mb-3 tablet:mb-4'>
     <h1
-      class='tablet:text-7xl self-stretch text-2xl font-extrabold text-primary tablet:text-center'
+      class='tablet:text-6xl self-stretch text-2xl font-extrabold text-primary tablet:text-center'
     >
-      Change your life.<br />
-      <span class='text-accent'>Learn coding.</span>
+      Change your life. <span class='text-accent'>Learn coding.</span>
     </h1>
   </header>
   <p
@@ -26,9 +25,9 @@ import PlayIconLight from '/public/play-icon-light.svg';
     title='Live Bootcamps'
   />
   <div class='relative h-fit'>
-    <Image alt='hero-image' src={HeroImage} class='h-full w-full rounded-2xl' />
+    <Image alt='hero-image' src={HeroImage} class='rounded-2xl h-full w-full' />
     <div
-      class='absolute inset-0 z-10 m-auto h-full w-full rounded-2xl border bg-black/75 tablet:bg-black/25 laptop:bg-transparent'
+      class='rounded-2xl bg-black/75 tablet:bg-black/25 laptop:bg-transparent absolute inset-0 z-10 m-auto h-full w-full border'
     >
     </div>
     <Image

@@ -15,10 +15,12 @@ import ImageUber from '/public/home-page/uber-logo.svg';
 import ImageZoom from '/public/home-page/zoom-logo.svg';
 ---
 
-<section class='container mx-auto flex min-w-full flex-col pt-13 tablet:pt-15'>
+<section
+  class='container flex max-w-screen-desktop flex-col pt-13 tablet:pt-15'
+>
   <div class='laptop:px-15'>
     <h1
-      class='pb-4 text-xl font-bold text-black tablet:text-center tablet:text-3xl laptop:text-4xl'
+      class='text-xl pb-4 font-bold text-black tablet:text-center tablet:text-3xl laptop:text-4xl'
     >
       Our grads work here
     </h1>
@@ -225,7 +227,7 @@ import ImageZoom from '/public/home-page/zoom-logo.svg';
       alt='grad-work-video-desktop'
       loading='lazy'
       decoding='async'
-      class='hidden w-full object-contain tablet:block tablet:rounded-[16px] laptop:rounded-2xl'
+      class='laptop:rounded-2xl hidden w-full object-contain tablet:block tablet:rounded-[16px]'
     />
   </div>
 </section>
