@@ -110,7 +110,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
     <>
       <header
         className={classNames(
-          'sticky top-0 z-50 block w-full justify-center',
+          'relative top-0 z-50 block w-full justify-center laptop:sticky',
           className,
           {
             'bg-transparent laptop:pt-6': isSticky && !isScrollAtTop,
