@@ -21,7 +21,7 @@ const Accordion: FC<
         <div className='flex'>
           <img
             src='/chevron-right-icon.svg'
-            className='flex h-5 w-5 items-center justify-center self-center group-open:hidden'
+            className='flex h-5 w-5 items-center justify-center self-center text-gray-500 group-open:hidden'
           ></img>
           <img
             src='/chevron-down-icon.svg'
