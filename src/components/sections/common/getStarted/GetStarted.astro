@@ -4,11 +4,13 @@ import { Image } from 'astro:assets';
 ---
 
 <section class='container max-w-screen-desktop'>
-  <Image
-    src={import(`./../../../../assets/get-started.svg`)}
-    alt='get-started-image'
-    class='mb-12'
-  />
+  <div class='mb-12'>
+    <Image
+      src={import(`./../../../../assets/get-started.svg`)}
+      alt='get-started-image'
+      class='mx-auto w-full'
+    />
+  </div>
   <h1 class='mb-3 text-center text-2xl font-extrabold'>Get started for free</h1>
   <p class='mb-5 text-center text-s tracking-wider text-gray-700'>
     Check out some of our courses first. Join the bootcamp later.
