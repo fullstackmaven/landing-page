@@ -49,10 +49,10 @@ const props = Astro.props;
         {props.currentPrice}
       </p>
     </div>
-    <ul class='flex flex-col gap-3'>
+    <ul class=''>
       {
         props?.priceList?.map((data) => (
-          <li class='border border-x-0 border-t-0 border-b-gray-1000 last:border-b-0'>
+          <li class='border-b-[0.5px] border-gray-1000'>
             <p
               class={classNames(' flex justify-between py-3 text-xs', {
                 '!text-white': props.dark,
