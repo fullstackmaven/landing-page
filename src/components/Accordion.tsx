@@ -12,7 +12,7 @@ const Accordion: FC<
   return (
     <details
       className={classNames(
-        'group flex w-full flex-row flex-wrap items-center rounded-s border border-gray-300 bg-white p-2',
+        'group flex w-full flex-row flex-wrap items-center rounded-s border border-gray-300 bg-white px-4 py-2 tablet:py-3',
         className,
       )}
       {...otherProps}

@@ -137,9 +137,8 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
               },
             )}
           >
-            Cyram
+            <a href='/'>Cyram</a>
           </h1>
-
           {menuItems
             .filter((menuItem) => menuItem.isLeft)
             .map((menuItem, index) => (

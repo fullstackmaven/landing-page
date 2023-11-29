@@ -5,11 +5,11 @@ type TContentProps = Pick<TCurriculum, 'topics' | 'description'>;
 
 const Content: FC<TContentProps> = ({ description, topics }) => {
   return (
-    <div className='h-full w-full space-y-4 pb-3 pl-8'>
-      <p className='text-xxs font-normal text-gray-700 tablet:text-s laptop:py-6 laptop:text-base'>
+    <div className='h-full w-full space-y-4 pb-3 pl-1 text-primary'>
+      <p className='text-xs font-normal tablet:text-s laptop:py-6 laptop:text-base'>
         {description}
       </p>
-      <ul className='list-disc pl-5 text-xxs font-medium text-gray-700 tablet:text-s laptop:text-s '>
+      <ul className='list-disc text-xs font-normal text-primary tablet:text-s laptop:text-s'>
         {topics.map((topic, index) => (
           <li key={`topics-${index}`}>{topic}</li>
         ))}

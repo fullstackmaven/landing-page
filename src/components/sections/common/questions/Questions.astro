@@ -57,7 +57,7 @@ const { questions = defaultQuestions, ...attrs } = Astro.props;
       questions.map((question, index) => (
         <li class='flex flex-col'>
           <Accordion id={`accordion-${index}`} title={question.question}>
-            <p class='pl-8 text-s font-normal tracking-wider text-primary'>
+            <p class='text-s font-normal tracking-wider text-primary tablet:pb-5'>
               {question.answer}
             </p>
           </Accordion>
