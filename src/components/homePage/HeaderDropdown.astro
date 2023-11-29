@@ -1,12 +1,12 @@
 ---
 import { Button } from '@components/Button';
+import CourseCard from '@components/sections/homepage/courses/course_card/CourseCard.astro';
 import type { BootcampCourse } from 'src/types/Course';
-import CourseCard from './CourseCard.astro';
 
-const defaultCourses: BootcampCourse[] = [
+const courses: BootcampCourse[] = [
   {
     image: 'home-page/course-image.svg',
-    courseLink: '#',
+    courseLink: '/software-engineer-bootcamp',
     title: 'Software Engineering',
     courseTitle: 'Software Engineering Bootcamp',
     skills:
@@ -18,9 +18,9 @@ const defaultCourses: BootcampCourse[] = [
   },
   {
     image: 'home-page/course-image.svg',
-    courseLink: '#',
+    courseLink: '/qa-bootcamp',
     title: 'Quality Assurance',
-    courseTitle: 'Quality Assurance Bootcamp',
+    courseTitle: 'Manual QA Testing Bootcamp',
     skills:
       'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
     startingSalary: '$85,000',
@@ -28,25 +28,44 @@ const defaultCourses: BootcampCourse[] = [
     price: '$12,700',
     type: 'Part time',
   },
+  {
+    image: 'home-page/course-image.svg',
+    courseLink: '/data-science-bootcamp',
+    title: 'QA Test Automation',
+    courseTitle: 'QA Test Automation Bootcamp',
+    skills:
+      'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
+    startingSalary: '$85,000',
+    duration: 4,
+    price: '$12,700',
+    type: 'Part time',
+  },
 ];
 ---
 
-<div class='bg-cultured flex h-full w-full flex-col gap-y-6'>
-  <p>Go from beginner to expert at your own pace</p>
-  <div class='flex w-full gap-x-4'>
+<div class='flex h-full w-full flex-col gap-y-6 bg-cultured'>
+  <p class='text-s tracking-wider'>
+    Go from beginner to expert at your own pace
+  </p>
+  <div class='grid w-full grid-cols-4 gap-x-6'>
     {
-      defaultCourses.map((course: BootcampCourse) => (
-        <div class='h-full'>
-          <CourseCard course={course} />
-        </div>
+      courses.map((course: BootcampCourse) => (
+        <CourseCard course={course} withBlur={false} isHeader />
       ))
     }
-    <div class='flex-1 p-6'>
-      <h3 class='mb-2 text-l font-bold leading-[32px] text-primary'>
-        Not sure which is the right bootcamp for you?
+    <div
+      class='flex flex-col justify-end rounded-2xl border border-gray-200 bg-gray-50 p-4'
+    >
+      <h3 class='mb-2 text-s font-bold text-primary'>
+        Not sure which is the right career path for you?
       </h3>
-      <p class='mb-6 text-gray-700'>It just takes 3 minutes</p>
-      <Button title='Take our career quick' />
+      <p class='mb-6 text-xs text-primary'>
+        Take our career quiz. It just takes 3 minutes.
+      </p>
+      <Button
+        title='Take a quiz'
+        className='w-full !bg-accent !py-3 !text-xs !font-bold !text-primary'
+      />
     </div>
   </div>
 </div>
