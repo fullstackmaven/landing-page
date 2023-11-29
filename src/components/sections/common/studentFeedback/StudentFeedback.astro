@@ -1,6 +1,8 @@
 ---
 import VideoImage from '@components/sections/qaCourse/bootcampAlumni/VideoImage/VideoImage.astro';
+import type { HTMLAttributes } from 'astro/types';
 import { Image } from 'astro:assets';
+import classNames from 'classnames';
 import type { TFeedback } from 'src/types/Feedback';
 import Feedback from '../feedback/Feedback.astro';
 import ImageAlumni1 from '/public/qa-course/alumni-2.svg';
@@ -49,16 +51,22 @@ const feedbackList: TFeedback[] = [
   },
 ];
 
-interface Props {
+interface Props extends HTMLAttributes<'section'> {
   headerTitle?: string;
   title?: string;
   description?: string;
 }
 
-const { headerTitle, description, title } = Astro.props;
+const { headerTitle, description, title, ...attrs } = Astro.props;
 ---
 
-<section class='container max-w-screen-desktop pt-12 tablet:pt-15 laptop:pt-16'>
+<section
+  class={classNames(
+    'container max-w-screen-desktop pt-12 tablet:pt-15 laptop:pt-16',
+    attrs.class,
+  )}
+  {...attrs}
+>
   <header class='pb-4'>
     {headerTitle && <p class='text-xxs text-gray-700'>{headerTitle}</p>}
     {

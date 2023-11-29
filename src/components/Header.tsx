@@ -110,7 +110,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
     <>
       <header
         className={classNames(
-          'container relative top-0 z-50 block w-full justify-center bg-transparent',
+          'container relative top-0 z-50 block w-full min-w-full max-w-screen-desktop justify-center bg-transparent',
           className,
           {
             // 'bg-transparent': isSticky && !isScrollAtTop,
@@ -121,7 +121,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
       >
         <div
           className={classNames(
-            'mt-8 flex w-full items-center justify-between transition-all duration-100 ease-in tablet:my-6',
+            'flex w-full items-center justify-between pt-8 transition-all duration-100 ease-in tablet:my-6',
             {
               'border border-x-0 border-t-0 border-b-gray-200 bg-cultured laptop:py-6':
                 isSticky && !isScrollAtTop,
