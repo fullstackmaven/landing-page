@@ -23,7 +23,7 @@ const props = Astro.props;
 
 <section
   class={classNames(
-    'isolate grid max-w-md grid-cols-1 gap-8 laptop:mx-0 laptop:max-w-none laptop:grid-cols-3',
+    'border rounded-l border-gray-300 isolate grid max-w-md grid-cols-1 gap-8 laptop:mx-0 laptop:max-w-none laptop:grid-cols-3',
   )}
 >
   <div
@@ -52,7 +52,7 @@ const props = Astro.props;
     <ul class='flex flex-col gap-3'>
       {
         props?.priceList?.map((data) => (
-          <li class='border-b-gray-1000 border border-x-0 border-t-0 last:border-b-0'>
+          <li class='border border-x-0 border-t-0 border-b-gray-1000 last:border-b-0'>
             <p
               class={classNames(' flex justify-between py-3 text-xs', {
                 '!text-white': props.dark,
