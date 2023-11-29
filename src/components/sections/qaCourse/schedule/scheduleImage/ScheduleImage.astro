@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+// import BootcampScheduleImage2 from "/public/qa-course/bootcamp-schedule-image-2.svg";
+// import BootcampScheduleImage3 from "/public/qa-course/bootcamp-schedule-image-3.svg";
+
+interface Props {
+  imagePath: string;
+  altText: string;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+}
+
+const { imagePath, altText, description, subtitle, title } = Astro.props;
+const src = import(`./../../../../../assets/qa/${imagePath}.svg`);
+---
+
+<figure class='relative'>
+  <Image
+    src={src}
+    alt={altText}
+    loading='lazy'
+    decoding='async'
+    class='w-full rounded-l'
+  />
+  <div
+    class='absolute bottom-0 flex h-full flex-col justify-end py-3 pl-3 pr-6'
+  >
+    <h2 class='mb-2 text-s text-white'>{title}</h2>
+    <p class='mb-5 text-xxs text-white'>{subtitle}</p>
+    <p class='text-xxs text-white'>
+      {description}
+    </p>
+  </div>
+</figure>

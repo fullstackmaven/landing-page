@@ -11,14 +11,14 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
   const [activeCurriculum, setActiveCurriculum] = useState(0);
   return (
     <div className='flex rounded-l bg-white'>
-      <ul className='border-r-accent-6 min-w-[409px] border border-y-0 border-l-0'>
-        <li className='border-b-accent-6 border border-x-0 border-t-0 px-6 py-8'>
+      <ul className='border-r-orange-800-6 min-w-[409px] border border-y-0 border-l-0'>
+        <li className='border-b-orange-800-6 border border-x-0 border-t-0 px-6 py-8'>
           <p className='text-s font-normal text-gray-700 '>CURRICULUM</p>
         </li>
         {curriculum.map((curr, index) => (
           <li
             key={`list-curriculum-${index}`}
-            className='border-b-accent-6 box-border flex cursor-pointer border border-x-0 border-t-0'
+            className='border-b-orange-800-6 box-border flex cursor-pointer border border-x-0 border-t-0'
           >
             <input
               type='radio'

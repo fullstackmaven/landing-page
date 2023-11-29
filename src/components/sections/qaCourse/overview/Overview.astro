@@ -3,27 +3,20 @@ import { Image } from 'astro:assets';
 import ImageOverview from '/public/qa-course/overview-image.svg';
 ---
 
-<section id='qaoverview' class='grid gap-y-4 laptop:gap-y-6'>
-  <p
-    class='text-xxs font-normal uppercase leading-4 text-gray-700 laptop:text-s laptop:leading-6'
-  >
-    OVERVIEW
-  </p>
-  <h1
-    class='text-l font-bold leading-8 text-primary tablet:text-xl tablet:leading-2xl laptop:text-2xl laptop:leading-3xl'
-  >
-    Learn by doing in 5 months
-  </h1>
-  <p
-    class='text-s font-normal leading-6 text-gray-700 laptop:text-base laptop:leading-7'
-  >
-    Our mastery-based QA program is an immersive learning experience. Manual
-    testing, the art of test automation using Java and Selenium, API testing,
-    and so much more — we’ve packed everything in this program to prepare you
-    for a successful career as a QA engineer.
+<section id='qaoverview' class='container max-w-screen-desktop'>
+  <header class='mb-3 grid gap-y-3'>
+    <p class='text-xxs text-gray-700'>OVERVIEW</p>
+    <h1 class='text-l font-bold tracking-widest text-black'>Learn by doing</h1>
+  </header>
+  <p class='text-s text-gray-700'>
+    Through our bootcamp, you'll actively participate in coding exercises,
+    project-based assignments, and simulated real-world scenarios. This hands-on
+    approach not only solidifies your understanding but also cultivates
+    problem-solving abilities, critical thinking, and confidence in applying
+    learned concepts to your future jobs.
   </p>
 
-  <figure>
+  <figure class='mt-4'>
     <Image
       src={ImageOverview}
       alt='overview-image'

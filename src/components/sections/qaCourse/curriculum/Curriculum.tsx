@@ -1,47 +1,81 @@
 import Accordion from '@components/Accordion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import type { TCurriculum } from 'src/types/Curriculum';
-import BookCall from './bookCall/BookCall.tsx';
 import Content from './content/Content.tsx';
-import Sidebar from './sidebar/Sidebar.tsx';
 
 const sampleDescription = `This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git, and debugging. This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git.`;
 const sampleTopics = ['HTML', 'CSS', 'Javascript'];
 
 const defaultCurriculum: TCurriculum[] = [
   {
-    title: 'Testing Fundamentals',
+    title: 'Prep work & Pairing',
     subtitle: 'Module 1',
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'Core Java Programming',
+    title: 'Intro to SDLC & Testing',
     subtitle: 'Module 2',
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'Test Automation',
+    title: 'Testing Fundamentals',
     subtitle: 'Module 3',
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'API Automation',
+    title: 'Core Java Foundations',
     subtitle: 'Module 4',
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'Portfolio Projects',
+    title: 'WebDriver',
     subtitle: 'Module 5',
     description: sampleDescription,
     topics: sampleTopics,
   },
   {
-    title: 'Prepare for interviews',
+    title: 'TestNG & JUnit Libraries',
     subtitle: 'Module 6',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'Intermediate Java',
+    subtitle: 'Module 7',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'BDD Automation Framework',
+    subtitle: 'Module 8',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'SQL - Database',
+    subtitle: 'Module 9',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'Backend API  Testing',
+    subtitle: 'Module 10',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'CICD Workflow',
+    subtitle: 'Module 11',
+    description: sampleDescription,
+    topics: sampleTopics,
+  },
+  {
+    title: 'Career Prep',
+    subtitle: 'Module 12',
     description: sampleDescription,
     topics: sampleTopics,
   },
@@ -51,7 +85,7 @@ const BOOK_CALL_HEIGHT = 96;
 const Curriculum = () => {
   const containerRef = useRef<HTMLElement>(null);
   const bookCallRef = useRef<HTMLDivElement>(null);
-  const [showBookCall, setShowBookCall] = useState(false);
+  // const [showBookCall, setShowBookCall] = useState(false);
 
   const handleScroll = () => {
     const pageHeight = containerRef?.current?.clientHeight || 0;
@@ -61,7 +95,7 @@ const Curriculum = () => {
     const threshold = window.scrollY + bottomHeight - pageHeight - 170;
 
     if (window.scrollY >= threshold) {
-      setShowBookCall(true);
+      // setShowBookCall(true);
       const translateY =
         Math.floor(threshold + BOOK_CALL_HEIGHT - window.scrollY) < 0
           ? 0
@@ -75,7 +109,7 @@ const Curriculum = () => {
         bookCallRef.current.style.transform = `translate3d(0,${translateY}px,0)`;
       }
     } else {
-      setShowBookCall(false);
+      // setShowBookCall(false);
     }
   };
   useEffect(() => {
@@ -94,20 +128,19 @@ const Curriculum = () => {
       <section
         ref={containerRef}
         id='qacurriculum'
-        className='grid gap-y-4 laptop:gap-y-6'
+        className='container grid max-w-screen-desktop gap-y-4'
       >
-        <p className='text- text-xxs font-normal uppercase leading-4 laptop:text-s laptop:leading-6'>
-          CURRICULUM
-        </p>
-        <h1 className='text-l font-bold leading-8 text-primary tablet:text-xl tablet:leading-2xl laptop:text-2xl laptop:leading-3xl'>
-          Mastery-based learning with real world projects
-        </h1>
-        <p className='text-s font-normal leading-6 text-gray-700 laptop:text-base laptop:leading-7'>
-          Our QA bootcamp follows a mastery-based learning approach that focuses
-          on hands-on experience. Unlike traditional QA courses that rely
-          heavily on theory, our bootcamp immerses you in the latest tools,
-          industry workflows, and best practices, making you proficient in the
-          skills demanded by today's QA professionals.
+        <header className='grid gap-y-3'>
+          <p className='text-xxs text-gray-700'>CURRICULUM</p>
+          <h1 className='text-l font-bold tracking-widest text-black'>
+            Mastery-based learning with real world projects
+          </h1>
+        </header>
+        <p className='text-s tracking-wider text-gray-700'>
+          At Cyram, we believe in learning at your own pace. No rush or
+          pressure. Master topics step by step with hands-on projects. Got it?
+          Move on. Need more time? No problem. We're here to help. Graduate with
+          solid QA engineering skills for a successful career.
         </p>
         <ul className='grid gap-y-2 laptop:hidden'>
           {defaultCurriculum.map((curriculum, index) => (
@@ -123,11 +156,41 @@ const Curriculum = () => {
           ))}
         </ul>
 
-        <div className='hidden laptop:block'>
-          <Sidebar curriculum={defaultCurriculum} />
+        <div className='flex flex-col justify-around rounded-l border border-gray-300 p-6'>
+          <ul className='mb-3 flex justify-between'>
+            <li className='w-fit rounded-4xl bg-orange-900/10 px-2 py-1'>
+              <p className='text-xxs text-orange-900'>Coaching</p>
+            </li>
+            <li className='w-fit rounded-4xl bg-purple/10 px-2 py-1'>
+              <p className='text-xxs text-purple'>Workshops</p>
+            </li>
+            <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
+              <p className='text-xxs text-green-300'>Interview prep</p>
+            </li>
+          </ul>
+          <ul className='mb-4 flex justify-between'>
+            <li className='w-fit rounded-4xl bg-orange-800/10 px-2 py-1'>
+              <p className='text-xxs text-orange-800'>Portfolio</p>
+            </li>
+            <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
+              <p className='text-xxs text-green-300'>Networking</p>
+            </li>
+            <li className='w-fit rounded-4xl bg-blue-200/10 px-2 py-1'>
+              <p className='text-xxs text-blue-200'>Resume</p>
+            </li>
+          </ul>
+          <p className='text-s tracking-wider text-primary'>
+            Cyram is the only bootstrapped Bootcamp. We've grown organically
+            with no funding and care passionately about every single one of our
+            students.
+          </p>
         </div>
+
+        {/* <div className='hidden laptop:block'>
+          <Sidebar curriculum={defaultCurriculum} />
+        </div> */}
       </section>
-      {showBookCall && (
+      {/* {showBookCall && (
         <BookCall
           ref={bookCallRef}
           className='laptop:hidden'
@@ -137,7 +200,7 @@ const Curriculum = () => {
             transformStyle: 'preserve-3d',
           }}
         />
-      )}
+      )} */}
     </>
   );
 };

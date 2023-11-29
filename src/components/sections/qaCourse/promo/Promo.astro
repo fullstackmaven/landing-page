@@ -6,43 +6,43 @@ import ImageLiveLecture from '/public/qa-course/live-lecture-image.svg';
 import ImageLiveLectureTools from '/public/qa-course/live-lecture-tools-image.svg';
 ---
 
-<section class='flex flex-col gap-x-0 laptop:flex-row laptop:gap-x-6'>
-  <div class='grid gap-y-4 laptop:w-1/2 laptop:gap-y-6'>
-    <h1
-      class='self-stretch text-xl font-bold leading-2xl text-primary tablet:text-3xl tablet:leading-3xl'
-    >
+<section class='container flex max-w-screen-desktop flex-col gap-y-12 py-12'>
+  <div class='grid gap-y-6'>
+    <h1 class='text-xl font-bold text-black'>
       Quality Assurance Bootcamp: Ignite Your Tech Journey!
     </h1>
-    <p class='text-s font-normal leading-6 text-primary'>
+    <p class='text-s text-primary'>
       Transform into a QA engineer in just 5 months and gain in-demand skills.
       Join our live online classes and master the art of quality assurance.
     </p>
     <Button
-      title='Start your adventure'
-      className='h-fit w-fit !px-4 !py-2 !text-s font-semibold tablet:!px-6 tablet:!py-3'
+      title='Enroll now'
+      className='h-fit w-fit rounded-s !bg-primary !px-4 !py-2 !text-s !leading-none !tracking-wider !text-white'
     />
   </div>
-  <figure
-    class='relative mt-8 flex h-auto w-full flex-1 flex-col laptop:mt-0 laptop:w-1/2'
-  >
+  <figure class='relative flex h-auto w-full flex-1 flex-col'>
     <Image
       src={ImageLiveLecture}
       alt='live-lecture-image'
       loading='lazy'
       decoding='async'
-      class='h-full w-full rounded-s object-cover tablet:rounded-l'
+      class='h-full w-full rounded-l object-cover'
     />
-    <div
-      class='border-live-gray absolute left-3 top-4 flex items-center gap-2 rounded-s border bg-gray-100 px-2 py-1 backdrop-blur-[2px]'
-    >
-      <LiveIndicatorPulse />
-      <p class='text-xs font-normal text-primary'>Live Lectures</p>
+    <div class='absolute flex h-full w-full flex-col justify-between p-4'>
+      <div
+        class='flex w-fit items-center gap-x-3 rounded-s border border-gray-400 bg-gray-100 px-2 py-1 backdrop-blur-[2px]'
+      >
+        <div class='ml-2'>
+          <LiveIndicatorPulse />
+        </div>
+        <p class='text-xs text-primary'>Live Lectures</p>
+      </div>
+      <Image
+        src={ImageLiveLectureTools}
+        alt={'live-lecture-tools-image'}
+        loading='lazy'
+        class='h-10 w-fit justify-normal object-contain object-left'
+      />
     </div>
-    <Image
-      src={ImageLiveLectureTools}
-      alt={'live-lecture-tools-image'}
-      loading='lazy'
-      class='absolute bottom-4 left-3 h-10 w-fit justify-normal object-contain object-left tablet:h-12'
-    />
   </figure>
 </section>

@@ -11,49 +11,26 @@ const defaultDefinitions: TDefinition[] = [
       "QA Engineers test software to find those pesky bugs and glitches. It's a bit like a treasure hunt, but instead of gold, you discover issues in software.",
   },
   {
-    title: 'Tech team players',
+    title: 'Fast-track to tech:',
     description:
-      "They team up with software experts to supercharge software quality. It's a bit like being the strategist behind the team, making sure they achieve victory!",
-  },
-  {
-    title: 'Embrace automation',
-    description:
-      "In our QA course, we introduce you to the world of programming with a focus on test automation! You won't need to be a full-blown developer, but you'll grasp the essential skills to automate testing processes. It's like learning a new superpower in the tech world!",
-  },
-  {
-    title: 'Fast-track to tech',
-    description:
-      "Start as a QA enthusiast and, as you dive into the tech universe, you'll discover endless possibilities. Whether you want to explore further in automation or explore other tech roles, the path is yours to chart.",
-  },
-  {
-    title: 'Rewards await',
-    description:
-      'Junior QA roles pay well, averaging around $88,000 per year. And as you level up in the tech world, your income potential soars higher',
+      "Start your career as a QA engineer and, as you dive into the tech universe, you'll discover endless possibilities. Whether you want to explore further in automation or explore other tech roles like a software developer or a devops engineer, the path is yours to chart.",
   },
 ];
 ---
 
-<section class='flex flex-col gap-y-4 laptop:gap-y-6'>
-  <header class='grid gap-y-4 laptop:gap-y-6'>
-    <p
-      class='text-xxs font-normal uppercase leading-4 text-gray-700 laptop:text-s laptop:leading-6'
-    >
-      HERE'S THE DEAL
-    </p>
-    <h1
-      class='text-l font-bold leading-8 text-primary tablet:text-xl tablet:leading-2xl laptop:text-2xl laptop:leading-3xl'
-    >
+<section class='container max-w-screen-desktop'>
+  <header class='mb-3 grid gap-y-3'>
+    <p class='text-xxs text-gray-700'>HERE'S THE DEAL</p>
+    <h1 class='text-l font-bold tracking-widest text-black'>
       What is Quality Assurance?
     </h1>
   </header>
-  <ul
-    class='grid grid-cols-1 gap-y-3 laptop:grid-cols-2 laptop:gap-x-6 laptop:gap-y-6'
-  >
+  <ul class='grid gap-y-3'>
     {
       defaultDefinitions.map((definition) => (
         <li>
-          <p class='text-s font-normal leading-6 text-gray-700 laptop:text-l laptop:leading-8'>
-            <span class='font-extrabold text-secondary laptop:leading-8'>
+          <p class='text-s tracking-wider text-gray-700'>
+            <span class='font-extrabold tracking-wider text-orange-700'>
               {definition.title}:{' '}
             </span>
             {definition.description}

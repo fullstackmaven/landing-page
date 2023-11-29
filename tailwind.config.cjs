@@ -11,12 +11,16 @@ module.exports = {
       cultured: '#F6F4F2',
       primary: '#1D1E22',
       black: '#000000',
-      accent: '#F95D05',
       playful: '#F11A7B',
       secondary: '#CCF095',
       white: '#FFFFFF',
       neon: '#DCFF50',
-      orange: '#FF8551',
+      purple: '#7835CD',
+      orange: {
+        700: '#FF8551',
+        800: '#F95D05',
+        900: '#D17724',
+      },
       gray: {
         50: '#EBEBEB',
         75: '#CBCBCB',
@@ -28,6 +32,7 @@ module.exports = {
         700: '#505050',
         800: '#6D6A6A',
         900: '#DADADA',
+        1000: '#888',
       },
       red: {
         300: '#CB9390',
@@ -35,10 +40,12 @@ module.exports = {
       },
       blue: {
         100: '#D6F3F5',
+        200: '#3B88E9',
         500: '#2254B5',
       },
       green: {
         100: '#DDF7C7',
+        300: '#449D5D',
       },
       yellow: {
         100: '#F2F0E9',
@@ -79,6 +86,7 @@ module.exports = {
       l: '0.75rem', //12px
       xl: '1rem', //16px
       '2xl': '1.25rem', //20px
+      '4xl': '3.125rem', //50px
       full: '50%',
     },
     fontSize: {
@@ -107,6 +115,7 @@ module.exports = {
     letterSpacing: {
       wide: '0.28px',
       wider: '0.32px',
+      widest: '0.48px',
     },
     extend: {
       backgroundImage: {

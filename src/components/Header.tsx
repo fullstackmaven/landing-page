@@ -110,10 +110,10 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
     <>
       <header
         className={classNames(
-          'sticky top-0 z-50 block w-full justify-center',
+          'container relative top-0 z-50 block w-full min-w-full max-w-screen-desktop justify-center bg-transparent',
           className,
           {
-            'bg-transparent laptop:pt-6': isSticky && !isScrollAtTop,
+            // 'bg-transparent': isSticky && !isScrollAtTop,
             '!relative': !isSticky,
           },
         )}
@@ -121,9 +121,9 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
       >
         <div
           className={classNames(
-            'container mt-8 flex w-full min-w-full items-center justify-between transition-all duration-100 ease-in tablet:my-6',
+            'flex w-full items-center justify-between pt-8 transition-all duration-100 ease-in tablet:my-6',
             {
-              'rounded-l bg-transparent laptop:bg-white laptop:!px-2 laptop:!py-3 laptop:shadow-md':
+              'border border-x-0 border-t-0 border-b-gray-200 bg-cultured laptop:py-6':
                 isSticky && !isScrollAtTop,
               'transition-all duration-150 ease-in': !isSticky,
             },
@@ -186,7 +186,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                     <a
                       href={`#${menuItem.id}`}
                       className={classNames(
-                        'relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in laptop:cursor-pointer laptop:hover:bg-gray-50',
+                        'relative flex w-full items-center justify-between gap-1 rounded-s px-3 py-2 transition duration-150 ease-out hover:ease-in laptop:cursor-pointer laptop:hover:bg-gray-300',
                         {
                           'laptop:bg-gray-50': menuItem.id === active,
                           'laptop:bg-transparent': menuItem.id !== active,
