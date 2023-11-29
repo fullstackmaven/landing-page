@@ -1,0 +1,57 @@
+---
+import ScheduleImage from './scheduleImage/ScheduleImage.astro';
+
+const schedule = [
+  {
+    imagePath: 'bootcamp-schedule-image-1',
+    altText: 'bootcamp-schedule-image-1',
+    title: 'Live Coding and Coaching',
+    subtitle: 'Monday & Wednesday · 90m',
+    description: `Join live classes and collaborate with your classmates in the tools you'll be using everyday in the industry.`,
+  },
+  {
+    imagePath: 'bootcamp-schedule-image-2',
+    altText: 'bootcamp-schedule-image-2',
+    title: 'Feedback Friday',
+    subtitle: 'Friday · Async',
+    description: `Every Friday you'll receive personal feedback on your projects, portfolio, or resume.`,
+  },
+  {
+    imagePath: 'bootcamp-schedule-image-3',
+    altText: 'bootcamp-schedule-image-3',
+    title: 'Coding Challenges',
+    subtitle: '10hrs',
+    description: `Every week we recommend spending 10hrs completing  your coding tasks.`,
+  },
+];
+---
+
+<section id='qaoverview' class='container min-w-full max-w-screen-desktop'>
+  <header class='mb-3 grid gap-y-3'>
+    <p class='text-xxs text-gray-700'>SCHEDULE</p>
+    <h1 class='text-l font-bold tracking-widest text-black'>
+      Live classes and career mentorship
+    </h1>
+  </header>
+  <p class='mb-6 text-s tracking-wider text-gray-700'>
+    Every week, you'll participate in two live classes on a Monday and
+    Wednesday. In addition, you'll receive asynchronous career mentorship,
+    access to our on-demand workshops, and personal feedback on your projects
+    and portfolio from teachers and mentors every day of the week when you don't
+    have a live session. Outside of our live class schedule, we recommend
+    dedicating 5 hours a week to completing any tasks from class.
+  </p>
+
+  <div class='w-full'>
+    <h2 class='mb-4 text-s font-bold'>Weekly Bootcamp Schedule</h2>
+    <ul class='relative flex gap-x-4 overflow-x-scroll'>
+      {
+        schedule.map((data) => (
+          <li class='inline-block h-max min-w-max'>
+            <ScheduleImage {...data} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

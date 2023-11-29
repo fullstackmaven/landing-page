@@ -1,35 +1,33 @@
 ---
 import Footer from '@components/Footer.astro';
 import { Header } from '@components/Header';
+import PricingCard from '@components/PricingCard.astro';
 import HeaderDropdown from '@components/homePage/HeaderDropdown.astro';
 import Questions from '@components/sections/common/questions/Questions.astro';
 import BootcampAlumni from '@components/sections/qaCourse/bootcampAlumni/BootcampAlumni.astro';
 import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
 import BootcampTuition from '@components/sections/qaCourse/bootcampTuition/BootcampTuition.astro';
-import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum.tsx';
+import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum';
 import Overview from '@components/sections/qaCourse/overview/Overview.astro';
 import Promo from '@components/sections/qaCourse/promo/Promo.astro';
 import QADefinition from '@components/sections/qaCourse/qaDefinition/QADefinition.astro';
 import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
-import PricingCard from '@components/PricingCard.astro';
+
+const menuItems = [
+  { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
+  { label: 'Overview', id: 'qaoverview' },
+  { label: 'Curriculum', id: 'qacurriculum' },
+  { label: 'Why Cyram ', id: 'whycyram' },
+  { label: 'Tuition', id: 'qatuition' },
+  { label: 'Education Team', id: 'qaeducationteam' },
+  { label: 'FAQ', id: 'faq' },
+];
 ---
 
 <Layout title='Quality Assurance Bootcamp'>
-  <Header
-    client:load
-    className='bg-light-orange'
-    menuItems={[
-      { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
-      { label: 'Overview', id: 'qaoverview' },
-      { label: 'Curriculum', id: 'qacurriculum' },
-      { label: 'Why Cyram ', id: 'whycyram' },
-      { label: 'Tuition', id: 'qatuition' },
-      { label: 'Education Team', id: 'qaeducationteam' },
-      { label: 'FAQ', id: 'faq' },
-    ]}
-  >
+  <Header client:load className='bg-light-orange' menuItems={menuItems}>
     <div slot='qabootcamp' class='flex h-full w-full flex-col gap-y-6'>
       <HeaderDropdown />
     </div>
@@ -38,7 +36,7 @@ import PricingCard from '@components/PricingCard.astro';
     <Promo />
   </div>
   <div
-    class='laptop:gap-y8 laptop:pt-19 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-[80px] laptop:pb-[128px]'
+    class='laptop:gap-y8 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-[80px] laptop:pb-[128px] laptop:pt-19'
   >
     <QADefinition />
     <Overview />
@@ -49,7 +47,6 @@ import PricingCard from '@components/PricingCard.astro';
     <BootcampTuition />
     <Questions />
     <PricingCard />
-    <!-- <GetInTouch /> -->
     <Footer />
   </div>
 </Layout>

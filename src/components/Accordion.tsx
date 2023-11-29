@@ -12,7 +12,7 @@ const Accordion: FC<
   return (
     <details
       className={classNames(
-        'group flex w-full flex-row flex-wrap items-center rounded-s border border-gray-300 bg-white px-4 py-3',
+        'group flex w-full flex-row flex-wrap items-center rounded-s border border-gray-300 bg-white p-2',
         className,
       )}
       {...otherProps}
@@ -34,7 +34,7 @@ const Accordion: FC<
           )}
         </div>
         {typeof subtitle !== 'undefined' && (
-          <p className='rounded-xs bg-secondary p-1 px-2 text-center text-xxs font-medium text-blue-500'>
+          <p className='rounded-xs bg-blue-100 px-2 py-0.5 text-center text-xxs font-medium text-blue-500'>
             {subtitle}
           </p>
         )}
