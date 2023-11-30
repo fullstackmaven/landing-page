@@ -1,4 +1,5 @@
 ---
+import Header from './sections/qaCourse/header/Header.astro';
 interface Props {
   name: 'se' | 'qa';
 }
@@ -61,17 +62,12 @@ const { headerTitle, definitions } = getHeaderTitleAndDefinition(name);
 ---
 
 <section class='container max-w-screen-desktop'>
-  <header class='mb-3 grid gap-y-3'>
-    <p class='text-xxs text-gray-700'>HERE'S THE DEAL</p>
-    <h1 class='text-l font-bold tracking-widest text-black'>
-      {headerTitle}
-    </h1>
-  </header>
+  <Header headerTitle={`HERE'S THE DEAL`} title={headerTitle} />
   <ul class='grid gap-y-3'>
     {
       definitions.map((definition) => (
         <li>
-          <p class='text-s tracking-wider text-gray-700'>
+          <p class='text-s tracking-wider text-gray-700 laptop:text-base'>
             {definition.title && (
               <span class='font-extrabold tracking-wider text-orange-700'>
                 {definition.title}

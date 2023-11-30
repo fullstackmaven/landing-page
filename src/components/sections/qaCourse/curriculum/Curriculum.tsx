@@ -2,13 +2,10 @@ import Accordion from '@components/Accordion';
 import { useEffect, useRef } from 'react';
 import type { TCurriculum } from 'src/types/Curriculum';
 import Content from './content/Content.tsx';
+import Sidebar from './sidebar/Sidebar.tsx';
 
-const sampleDescription = `As well as meeting your QA classmates we've got a range of practical tasks and resources for you to be ready to nail the Bootcamp form day one. Ahead of kick-off you'll have completed Figma tasks and paired up with another member of your cohort to complete your case study in a design team.`;
-const sampleTopics = [
-  'Complete practical prep tasks like installing required softwares',
-  'Connect with classmates around the world',
-  'Form a design team to tackle the first case study of Bootcamp',
-];
+const sampleDescription = `This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git, and debugging.`;
+const sampleTopics = ['CSS3', 'Javascript', 'HTML5'];
 
 const defaultCurriculum: TCurriculum[] = [
   {
@@ -142,7 +139,7 @@ const Curriculum = () => {
             Mastery-based learning with real world projects
           </h1>
         </header>
-        <p className='text-s tracking-wider text-gray-700 laptop:text-2xl'>
+        <p className='text-s tracking-wider text-gray-700 laptop:text-base'>
           At Cyram, we believe in learning at your own pace. No rush or
           pressure. Master topics step by step with hands-on projects. Got it?
           Move on. Need more time? No problem. We're here to help. Graduate with
@@ -163,43 +160,47 @@ const Curriculum = () => {
           ))}
         </ul>
 
-        <div className='flex flex-col justify-around rounded-l border border-gray-300 p-6'>
-          <ul className='mb-3 flex flex-wrap justify-between gap-y-3'>
-            <li className='w-fit rounded-4xl bg-orange-900/10 px-2 py-1'>
-              <p className='text-xxs text-orange-900 tablet:text-s'>Coaching</p>
-            </li>
-            <li className='w-fit rounded-4xl bg-purple/10 px-2 py-1'>
-              <p className='text-xxs text-purple tablet:text-s'>Workshops</p>
-            </li>
-            <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
-              <p className='text-xxs text-green-300 tablet:text-s'>
-                Interview prep
-              </p>
-            </li>
-            <li className='w-fit rounded-4xl bg-orange-800/10 px-2 py-1'>
-              <p className='text-xxs text-orange-800 tablet:text-s'>
-                Portfolio
-              </p>
-            </li>
-            <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
-              <p className='text-xxs text-green-300 tablet:text-s'>
-                Networking
-              </p>
-            </li>
-            <li className='w-fit rounded-4xl bg-blue-200/10 px-2 py-1'>
-              <p className='text-xxs text-blue-200 tablet:text-s'>Resume</p>
-            </li>
-          </ul>
-          <p className='text-s tracking-wider text-primary tablet:text-base tablet:tracking-widest'>
-            Cyram is the only bootstrapped Bootcamp. We've grown organically
-            with no funding and care passionately about every single one of our
-            students.
-          </p>
-        </div>
+        <div className='flex flex-col gap-y-4 laptop:flex-col-reverse'>
+          <div className='flex flex-col justify-around rounded-l border border-gray-300 p-6'>
+            <ul className='mb-3 flex flex-wrap justify-between gap-y-3'>
+              <li className='w-fit rounded-4xl bg-orange-900/10 px-2 py-1'>
+                <p className='text-xxs text-orange-900 tablet:text-s'>
+                  Coaching
+                </p>
+              </li>
+              <li className='w-fit rounded-4xl bg-purple/10 px-2 py-1'>
+                <p className='text-xxs text-purple tablet:text-s'>Workshops</p>
+              </li>
+              <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
+                <p className='text-xxs text-green-300 tablet:text-s'>
+                  Interview prep
+                </p>
+              </li>
+              <li className='w-fit rounded-4xl bg-orange-800/10 px-2 py-1'>
+                <p className='text-xxs text-orange-800 tablet:text-s'>
+                  Portfolio
+                </p>
+              </li>
+              <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
+                <p className='text-xxs text-green-300 tablet:text-s'>
+                  Networking
+                </p>
+              </li>
+              <li className='w-fit rounded-4xl bg-blue-200/10 px-2 py-1'>
+                <p className='text-xxs text-blue-200 tablet:text-s'>Resume</p>
+              </li>
+            </ul>
+            <p className='text-s tracking-wider text-primary tablet:text-base tablet:tracking-widest'>
+              Cyram is the only bootstrapped Bootcamp. We've grown organically
+              with no funding and care passionately about every single one of
+              our students.
+            </p>
+          </div>
 
-        {/* <div className='hidden laptop:block'>
-          <Sidebar curriculum={defaultCurriculum} />
-        </div> */}
+          <div className='hidden laptop:block'>
+            <Sidebar curriculum={defaultCurriculum} />
+          </div>
+        </div>
       </section>
       {/* {showBookCall && (
         <BookCall
