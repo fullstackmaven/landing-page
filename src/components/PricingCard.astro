@@ -52,7 +52,11 @@ const props = Astro.props;
     <ul>
       {
         props?.priceList?.map((data) => (
-          <li class='border-b-[0.5px] border-gray-1000'>
+          <li
+            class={classNames('border-b-[0.5px] border-gray-300', {
+              '!border-gray-1000': props.dark,
+            })}
+          >
             <p
               class={classNames(' flex justify-between py-3 text-xs', {
                 '!text-white': props.dark,
