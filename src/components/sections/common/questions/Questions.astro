@@ -32,10 +32,7 @@ const { questions = defaultQuestions, ...attrs } = Astro.props;
 
 <section
   id='faq'
-  class={classNames(
-    'container max-w-screen-desktop py-13 tablet:py-15 laptop:py-16',
-    attrs.class,
-  )}
+  class={classNames('container max-w-screen-desktop', attrs.class)}
   {...attrs}
 >
   <h1
