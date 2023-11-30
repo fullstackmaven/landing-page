@@ -28,7 +28,10 @@ const { course, isHeader = false, withBlur = true } = Astro.props;
     >
       {
         withBlur && (
-          <div class='flex h-auto w-full rounded-l backdrop-blur-[2px]' />
+          <>
+            <div class='flex h-auto w-full rounded-l backdrop-blur-[2px] ' />
+            <div class='absolute inset-0 bg-black opacity-10' />
+          </>
         )
       }
       <div
