@@ -27,29 +27,31 @@ const schedule = [
 ];
 ---
 
-<section id='qaoverview' class='container max-w-screen-desktop'>
-  <Header
-    title='Live classes and career mentorship'
-    headerTitle='SCHEDULE'
-    description={`Every week, you'll participate in two live classes on a Monday and
+<section id='qaoverview' class='min-w-full'>
+  <div class='container max-w-screen-desktop'>
+    <Header
+      title='Live classes and career mentorship'
+      headerTitle='SCHEDULE'
+      description={`Every week, you'll participate in two live classes on a Monday and
     Wednesday. In addition, you'll receive asynchronous career mentorship,
     access to our on-demand workshops, and personal feedback on your projects
     and portfolio from teachers and mentors every day of the week when you don't
     have a live session. Outside of our live class schedule, we recommend
     dedicating 5 hours a week to completing any tasks from class.`}
-  />
-  <div class='w-full'>
-    <h2 class='mb-4 text-s font-bold'>Weekly Bootcamp Schedule</h2>
-    <ul
-      class='relative flex snap-x gap-x-4 overflow-x-scroll laptop:overflow-hidden'
-    >
-      {
-        schedule.map((data) => (
-          <li class='inline-block h-max min-w-max snap-center'>
-            <ScheduleImage {...data} />
-          </li>
-        ))
-      }
-    </ul>
+    />
+    <div class='w-full'>
+      <h2 class='mb-4 text-s font-bold'>Weekly Bootcamp Schedule</h2>
+      <ul
+        class='relative flex snap-x gap-x-4 overflow-x-scroll laptop:overflow-hidden'
+      >
+        {
+          schedule.map((data) => (
+            <li class='inline-block h-max min-w-max snap-center'>
+              <ScheduleImage {...data} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 </section>
