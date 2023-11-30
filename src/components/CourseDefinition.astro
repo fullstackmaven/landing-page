@@ -1,0 +1,86 @@
+---
+interface Props {
+  name: 'se' | 'qa';
+}
+
+interface Definition {
+  title: string;
+  description: string;
+}
+
+const { name } = Astro.props;
+
+const qaDefinitions: Definition[] = [
+  {
+    title: 'Bug busters:',
+    description:
+      "QA Engineers test software to find those pesky bugs and glitches. It's a bit like a treasure hunt, but instead of gold, you discover issues in software.",
+  },
+  {
+    title: 'Fast-track to tech:',
+    description:
+      "Start your career as a QA engineer and, as you dive into the tech universe, you'll discover endless possibilities. Whether you want to explore further in automation or explore other tech roles like a software developer or a devops engineer, the path is yours to chart.",
+  },
+];
+
+const seDefinitions: Definition[] = [
+  {
+    title: '',
+    description:
+      'Think of software engineering as the art of creating digital magic. Software engineers are the modern-day wizards who build the cool stuff you see on your devices—like websites, apps, and games. They turn ideas into reality!',
+  },
+];
+
+const getHeaderTitleAndDefinition = (
+  name: Props['name'],
+): { headerTitle: string; definitions: Definition[] } => {
+  let headerTitle = null;
+  let definitions = [] as Definition[];
+
+  switch (name) {
+    case 'se':
+      definitions = seDefinitions;
+      headerTitle = 'What’s Software Engineering?';
+      break;
+    case 'qa':
+      definitions = qaDefinitions;
+      headerTitle = 'What is Quality Assurance?';
+      break;
+    default: {
+      throw new Error('course type is missing');
+    }
+  }
+
+  return {
+    headerTitle,
+    definitions,
+  };
+};
+
+const { headerTitle, definitions } = getHeaderTitleAndDefinition(name);
+---
+
+<section class='container max-w-screen-desktop'>
+  <header class='mb-3 grid gap-y-3'>
+    <p class='text-xxs text-gray-700'>HERE'S THE DEAL</p>
+    <h1 class='text-l font-bold tracking-widest text-black'>
+      {headerTitle}
+    </h1>
+  </header>
+  <ul class='grid gap-y-3'>
+    {
+      definitions.map((definition) => (
+        <li>
+          <p class='text-s tracking-wider text-gray-700'>
+            {definition.title && (
+              <span class='font-extrabold tracking-wider text-orange-700'>
+                {definition.title}
+              </span>
+            )}
+            {definition.description}
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</section>

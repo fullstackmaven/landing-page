@@ -10,11 +10,11 @@ import BootcampTuition from '@components/sections/qaCourse/bootcampTuition/Bootc
 import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum';
 import Overview from '@components/sections/qaCourse/overview/Overview.astro';
 import Promo from '@components/sections/qaCourse/promo/Promo.astro';
-import QADefinition from '@components/sections/qaCourse/qaDefinition/QADefinition.astro';
 import Schedule from '@components/sections/qaCourse/schedule/Schedule.astro';
 import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
+import CourseDefinition from '@components/CourseDefinition.astro';
 
 const menuItems = [
   { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
@@ -40,7 +40,7 @@ const menuItems = [
     <div
       class='laptop:gap-y8 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-[80px] laptop:pb-[128px] laptop:pt-19'
     >
-      <QADefinition />
+      <CourseDefinition name='qa' />
       <Overview />
       <Curriculum client:load />
       <Schedule />
