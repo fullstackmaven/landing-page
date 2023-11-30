@@ -39,7 +39,7 @@ const Accordion: FC<
           </p>
         )}
       </summary>
-      <p className='max-h-max basis-full select-text overflow-hidden pt-3 transition-all'>
+      <p className='max-h-max basis-full select-text pt-3 transition-all'>
         {children}
       </p>
     </details>
