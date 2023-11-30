@@ -156,29 +156,25 @@ const Curriculum = () => {
           ))}
         </ul>
 
-        <div className='flex flex-col justify-around rounded-l border border-gray-300 p-6'>
-          <ul className='mb-3 flex justify-between'>
-            <li className='w-fit rounded-4xl bg-orange-900/10 px-2 py-1'>
-              <p className='text-xxs text-orange-900'>Coaching</p>
-            </li>
-            <li className='w-fit rounded-4xl bg-purple/10 px-2 py-1'>
-              <p className='text-xxs text-purple'>Workshops</p>
-            </li>
-            <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
-              <p className='text-xxs text-green-300'>Interview prep</p>
-            </li>
-          </ul>
-          <ul className='mb-4 flex justify-between'>
-            <li className='w-fit rounded-4xl bg-orange-800/10 px-2 py-1'>
-              <p className='text-xxs text-orange-800'>Portfolio</p>
-            </li>
-            <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
-              <p className='text-xxs text-green-300'>Networking</p>
-            </li>
-            <li className='w-fit rounded-4xl bg-blue-200/10 px-2 py-1'>
-              <p className='text-xxs text-blue-200'>Resume</p>
-            </li>
-          </ul>
+        <div className='flex flex-wrap justify-between gap-3 rounded-l border border-gray-300 p-4'>
+          <div className='w-fit rounded-4xl bg-orange-900/10 px-2 py-1'>
+            <p className='text-xs text-orange-900'>Coaching</p>
+          </div>
+          <div className='w-fit rounded-4xl bg-purple/10 px-2 py-1'>
+            <p className='text-xs text-purple'>Workshops</p>
+          </div>
+          <div className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
+            <p className='text-xs text-green-300'>Interview prep</p>
+          </div>
+          <div className='w-fit rounded-4xl bg-orange-800/10 px-2 py-1'>
+            <p className='text-xs text-orange-800'>Portfolio</p>
+          </div>
+          <div className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
+            <p className='text-xs text-green-300'>Networking</p>
+          </div>
+          <div className='w-fit rounded-4xl bg-blue-200/10 px-2 py-1'>
+            <p className='text-xs text-blue-200'>Resume</p>
+          </div>
           <p className='text-s tracking-wider text-primary'>
             Cyram is the only bootstrapped Bootcamp. We've grown organically
             with no funding and care passionately about every single one of our
