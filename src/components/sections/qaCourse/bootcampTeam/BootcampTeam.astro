@@ -46,10 +46,10 @@ const defaultInstructors: TInstructor[] = [
     title='Learn live with industry experts'
     headerTitle='BOOTCAMP TEAM'
   />
-  <ul class='grid grid-cols-2 gap-4'>
+  <ul class='grid grid-cols-2 gap-4 tablet:grid-cols-3'>
     {
       defaultInstructors.map((instructor) => (
-        <li class='min-h-[216px]'>
+        <li class='min-h-[216px] tablet:min-h-[364px]'>
           <InstructorCard {...instructor} />
         </li>
       ))

@@ -2,7 +2,6 @@
 import VideoImage from '@components/sections/qaCourse/bootcampAlumni/VideoImage/VideoImage.astro';
 import type { HTMLAttributes } from 'astro/types';
 import { Image } from 'astro:assets';
-import classNames from 'classnames';
 import type { TFeedback } from 'src/types/Feedback';
 import Feedback from '../feedback/Feedback.astro';
 import ImageAlumni1 from '/public/qa-course/alumni-2.svg';
@@ -51,34 +50,12 @@ const feedbackList: TFeedback[] = [
   },
 ];
 
-interface Props extends HTMLAttributes<'section'> {
-  headerTitle?: string;
-  title: string;
-  description?: string;
-}
+interface Props extends HTMLAttributes<'div'> {}
 
-const { headerTitle, description, title, ...attrs } = Astro.props;
+const attrs = Astro.props;
 ---
 
-<section
-  class={classNames('container max-w-screen-desktop', attrs.class)}
-  {...attrs}
->
-  <header class='grid gap-y-3 pb-4'>
-    <p class='text-xxs text-gray-700'>{headerTitle}</p>
-    <h1
-      class='text-l font-bold text-black tablet:text-center tablet:text-3xl laptop:text-4xl'
-    >
-      {title}
-    </h1>
-  </header>
-  {
-    description && (
-      <p class='pb-4 text-s tracking-wider text-gray-700 tablet:text-center laptop:px-15'>
-        {description}
-      </p>
-    )
-  }
+<div {...attrs}>
   <div
     class='mb-12 grid grid-cols-2 justify-center gap-x-2 tablet:grid-cols-3 tablet:gap-x-4'
   >
@@ -95,4 +72,4 @@ const { headerTitle, description, title, ...attrs } = Astro.props;
   <div class='grid grid-cols-1 gap-y-10 tablet:grid-cols-2 tablet:gap-x-6'>
     {feedbackList.map((data) => <Feedback data={data} />)}
   </div>
-</section>
+</div>

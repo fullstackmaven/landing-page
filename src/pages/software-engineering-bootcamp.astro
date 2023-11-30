@@ -1,20 +1,20 @@
 ---
-import { Header } from '@components/Header';
-import HeaderDropdown from '@components/homePage/HeaderDropdown.astro';
-import Overview from '@components/sections/qaCourse/overview/Overview.astro';
-import '../index.scss';
-import Layout from '@layouts/Layout.astro';
 import CourseDefinition from '@components/CourseDefinition.astro';
-import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum';
-import Schedule from '@components/sections/qaCourse/schedule/Schedule.astro';
-import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
 import Footer from '@components/Footer.astro';
+import { Header } from '@components/Header';
 import GetStarted from '@components/sections/common/getStarted/GetStarted.astro';
 import Questions from '@components/sections/common/questions/Questions.astro';
 import StudentFeedback from '@components/sections/common/studentFeedback/StudentFeedback.astro';
+import HeaderDropdown from '@components/sections/homepage/headerDropdown/HeaderDropdown.astro';
 import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
 import BootcampTuition from '@components/sections/qaCourse/bootcampTuition/BootcampTuition.astro';
+import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum';
 import Hero from '@components/sections/qaCourse/hero/Hero.astro';
+import Overview from '@components/sections/qaCourse/overview/Overview.astro';
+import Schedule from '@components/sections/qaCourse/schedule/Schedule.astro';
+import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
+import Layout from '@layouts/Layout.astro';
+import '../index.scss';
 
 const menuItems = [
   { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },

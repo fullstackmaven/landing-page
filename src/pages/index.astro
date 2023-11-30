@@ -1,13 +1,13 @@
 ---
 import Footer from '@components/Footer.astro';
 import { Header } from '@components/Header';
-import Questions from '@components/sections/common/questions/Questions.astro';
-import StudentFeedback from '@components/sections/common/studentFeedback/StudentFeedback.astro';
 import CourseAccess from '@components/sections/homepage/courseAccess/CourseAccess.astro';
 import Courses from '@components/sections/homepage/courses/Courses.astro';
+import GotAQuestion from '@components/sections/homepage/gotAQuestion/GotAQuestion.astro';
 import HeaderDropdown from '@components/sections/homepage/headerDropdown/HeaderDropdown.astro';
 import OurGrads from '@components/sections/homepage/ourGrads/OurGrads.astro';
 import Promo from '@components/sections/homepage/promo/Promo.astro';
+import Students from '@components/sections/homepage/students/Students.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
 
@@ -44,13 +44,9 @@ const menuItems = [
     <Promo />
     <Courses />
     <CourseAccess />
-    <StudentFeedback
-      class='pt-12 tablet:pt-15 laptop:pt-16'
-      title='Our students are all over the universe'
-      description='Start a life-changing journey with our fully online courses. Keep your current job while gaining expertise in a new profession, all at your own pace'
-    />
+    <Students />
     <OurGrads />
-    <Questions class='py-13 tablet:py-15 laptop:py-16' />
+    <GotAQuestion />
     <Footer />
   </main>
 </Layout>

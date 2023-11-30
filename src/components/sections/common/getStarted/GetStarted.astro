@@ -1,26 +1,24 @@
 ---
-import GetStartedImage from '@assets/get-started.webp';
 import { Button } from '@components/Button';
-import { Image } from 'astro:assets';
 ---
 
 <section class='container max-w-screen-desktop'>
-  <div class='mb-12'>
-    <Image
-      src={GetStartedImage}
-      alt='get-started-image'
-      class='h-full w-full rounded-l object-cover'
-    />
-  </div>
-  <h1 class='mb-3 text-center text-2xl font-extrabold'>Get started for free</h1>
-  <p class='mb-5 text-center text-s tracking-wider text-gray-700'>
-    Check out some of our courses first. Join the bootcamp later.
-  </p>
-  <div class='flex gap-x-3'>
-    <Button className='w-1/2 font-semibold' title='Try for free' />
-    <Button
-      className='w-1/2 border-2 border-primary !bg-transparent !px-4 !py-3 !text-s font-semibold tracking-wider !text-primary'
-      title='Join intro session'
-    />
+  <h1 class='mb-3 text-center text-2xl font-extrabold tablet:text-4xl'>
+    Get started for free
+  </h1>
+  <div class='mx-auto tablet:w-fit'>
+    <p class='mb-5 text-center text-s tracking-wider text-gray-700'>
+      Check out some of our courses first. Join the bootcamp later.
+    </p>
+    <div class='flex justify-center gap-x-3 tablet:gap-x-6'>
+      <Button
+        className='w-1/2 font-semibold tablet:w-full'
+        title='Try for free'
+      />
+      <Button
+        className='w-1/2 border-2 border-primary !bg-transparent !px-4 !py-3 !text-s font-semibold tracking-wider !text-primary tablet:w-full'
+        title='Join intro session'
+      />
+    </div>
   </div>
 </section>

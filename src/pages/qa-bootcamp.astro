@@ -1,20 +1,20 @@
 ---
+import CourseDefinition from '@components/CourseDefinition.astro';
 import Footer from '@components/Footer.astro';
 import { Header } from '@components/Header';
 import GetStarted from '@components/sections/common/getStarted/GetStarted.astro';
-import Questions from '@components/sections/common/questions/Questions.astro';
-import StudentFeedback from '@components/sections/common/studentFeedback/StudentFeedback.astro';
 import HeaderDropdown from '@components/sections/homepage/headerDropdown/HeaderDropdown.astro';
 import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
 import BootcampTuition from '@components/sections/qaCourse/bootcampTuition/BootcampTuition.astro';
 import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum';
-import Overview from '@components/sections/qaCourse/overview/Overview.astro';
+import GotAQuestion from '@components/sections/qaCourse/gotAQuestion/GotAQuestion.astro';
 import Hero from '@components/sections/qaCourse/hero/Hero.astro';
+import Overview from '@components/sections/qaCourse/overview/Overview.astro';
 import Schedule from '@components/sections/qaCourse/schedule/Schedule.astro';
+import Students from '@components/sections/qaCourse/students/Students.astro';
 import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
-import CourseDefinition from '@components/CourseDefinition.astro';
 
 const menuItems = [
   { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
@@ -28,32 +28,27 @@ const menuItems = [
 ---
 
 <Layout title='Quality Assurance Bootcamp'>
-  <>
-    <div class='h-fit bg-secondary'>
-      <Header client:load menuItems={menuItems}>
-        <div slot='qabootcamp' class='flex h-full w-full flex-col gap-y-6'>
-          <HeaderDropdown />
-        </div>
-      </Header>
-      <Hero />
-    </div>
-    <div
-      class='flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-15 tablet:pt-16 laptop:gap-y-8 laptop:pb-[128px] laptop:pt-19'
-    >
-      <CourseDefinition name='qa' />
-      <Overview />
-      <Curriculum client:load />
-      <Schedule />
-      <WhyCyram />
-      <BootcampTeam />
-      <StudentFeedback
-        headerTitle='BOOTCAMP ALUMNI'
-        title='Meet our alumni who work at companies like Amazon and Microsoft!'
-      />
-      <BootcampTuition />
-      <Questions />
-      <GetStarted />
-      <Footer />
-    </div>
-  </>
+  <div class='h-fit bg-secondary'>
+    <Header client:load menuItems={menuItems}>
+      <div slot='qabootcamp' class='flex h-full w-full flex-col gap-y-6'>
+        <HeaderDropdown />
+      </div>
+    </Header>
+    <Hero courseName='qa' />
+  </div>
+  <div
+    class='flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-15 tablet:pt-16 laptop:gap-y-8 laptop:pb-[128px] laptop:pt-19'
+  >
+    <CourseDefinition name='qa' />
+    <Overview />
+    <Curriculum client:load />
+    <Schedule />
+    <WhyCyram />
+    <BootcampTeam />
+    <Students />
+    <BootcampTuition />
+    <GotAQuestion />
+    <GetStarted />
+    <Footer />
+  </div>
 </Layout>

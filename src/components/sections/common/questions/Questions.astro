@@ -1,7 +1,9 @@
 ---
+import GetStartedImage from '@assets/get-started.webp';
 import Accordion from '@components/Accordion';
 import { Button } from '@components/Button';
 import type { HTMLAttributes } from 'astro/types';
+import { Image } from 'astro:assets';
 import classNames from 'classnames';
 interface TQuestions {
   question: string;
@@ -10,6 +12,7 @@ interface TQuestions {
 
 interface Props extends HTMLAttributes<'section'> {
   questions?: TQuestions[];
+  unsure?: boolean;
 }
 
 const defaultQuestions: TQuestions[] = [
@@ -27,29 +30,18 @@ const defaultQuestions: TQuestions[] = [
   },
 ];
 
-const { questions = defaultQuestions, ...attrs } = Astro.props;
+const { questions = defaultQuestions, unsure, ...attrs } = Astro.props;
 ---
 
-<section
-  id='faq'
-  class={classNames('container max-w-screen-desktop', attrs.class)}
-  {...attrs}
->
-  <h1
-    class='pb-4 text-xl font-bold text-black tablet:text-3xl tablet:font-extrabold laptop:text-4xl'
-  >
-    Got a question about our bootcamp?
-  </h1>
-  <p class='mb-4 text-s font-normal tracking-wider text-gray-700'>
-    If you've got any questions about our Bootcamp you can join an intro session
-    to meet our team and others
-  </p>
+<div {...attrs}>
   <Button
     title='Join intro session'
     category='ghost'
-    className='mb-6 !px-4 !py-2 !text-s font-semibold'
+    className={classNames('mb-6 !px-4 !py-2 !text-s font-semibold', {
+      hidden: unsure,
+    })}
   />
-  <ul class='flex flex-col gap-y-2'>
+  <ul class='mb-3 flex flex-col gap-y-2'>
     {
       questions.map((question, index) => (
         <li class='flex flex-col'>
@@ -62,4 +54,28 @@ const { questions = defaultQuestions, ...attrs } = Astro.props;
       ))
     }
   </ul>
-</section>
+  <div
+    class={classNames('rounded-s border border-gray-300 p-6', {
+      hidden: !unsure,
+    })}
+  >
+    <h2 class='text-s font-bold text-primary'>Still not sure?</h2>
+    <p class='text-s tracking-wider text-gray-700'>
+      if you still have any other questions, feel free to schedule an intro
+      session with our team
+    </p>
+    <Button
+      title='Join intro session'
+      category='ghost'
+      className='mt-4 !px-4 !py-2 !text-s font-semibold'
+    />
+  </div>
+
+  <Image
+    src={GetStartedImage}
+    alt='get-started-image'
+    class={classNames('mt-6 h-full w-full rounded-l object-cover', {
+      hidden: !unsure,
+    })}
+  />
+</div>
