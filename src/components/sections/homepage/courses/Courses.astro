@@ -1,5 +1,6 @@
 ---
 import type { BootcampCourse } from 'src/types/Course';
+import Header from '../header/Header.astro';
 import CourseCard from './course_card/CourseCard.astro';
 
 export const courses: BootcampCourse[] = [
@@ -33,20 +34,13 @@ export const courses: BootcampCourse[] = [
 <section
   class='container flex max-w-screen-desktop flex-col py-12 tablet:pb-15 tablet:pt-0 laptop:pb-16'
 >
-  <header class='pb-4'>
-    <h1
-      class='text-xl font-bold text-black tablet:text-center tablet:text-3xl laptop:text-4xl'
-    >
-      Your pathways into tech
-    </h1>
-  </header>
-  <p
-    class='pb-4 text-s tracking-wider text-gray-700 tablet:text-center laptop:px-12'
-  >
+  <Header
+    title='Your pathways into tech'
+    description={`
     Start a life-changing journey with our fully online courses. Keep your
     current job while gaining expertise in a new profession, all at your own
-    pace.
-  </p>
+    pace.`}
+  />
   <ul
     class='grid w-full gap-y-4 tablet:grid-cols-2 tablet:gap-x-6 laptop:grid-cols-3 laptop:gap-x-4'
   >

@@ -1,5 +1,6 @@
 ---
 import ImageStarPricingDark from '@assets/qa/star-pricing-dark.svg';
+import type { HTMLAttributes } from 'astro/types';
 import { Image } from 'astro:assets';
 import classNames from 'classnames';
 import type { ReactNode } from 'react';
@@ -9,7 +10,7 @@ interface TPriceList {
   label: string | ReactNode;
   price: string;
 }
-interface Props {
+interface Props extends HTMLAttributes<'section'> {
   dark?: boolean;
   title?: string;
   prevPrice?: string;
@@ -18,48 +19,50 @@ interface Props {
   list?: string[];
 }
 
-const props = Astro.props;
+const { dark, currentPrice, list, prevPrice, priceList, title, ...attrs } =
+  Astro.props;
 ---
 
 <section
   class={classNames(
     'border rounded-l border-gray-300 isolate grid max-w-md grid-cols-1 gap-8 laptop:mx-0 laptop:max-w-none laptop:grid-cols-3',
   )}
+  {...attrs}
 >
   <div
     class={classNames('flex flex-col gap-3 rounded-l bg-white p-6', {
-      '!bg-primary': props.dark,
+      '!bg-primary': dark,
     })}
   >
     <div class='flex flex-col gap-3'>
       <h3
         id='tier-startup'
         class={classNames('text-base font-bold', {
-          '!text-white': props.dark,
+          '!text-white': dark,
         })}
       >
-        {props.title}
+        {title}
       </h3>
       <p
         class={classNames('text-gray-600 text-base', {
-          '!text-white': props.dark,
+          '!text-white': dark,
         })}
       >
-        <span class='line-through'>{props.prevPrice}</span>
-        {props.currentPrice}
+        <span class='line-through'>{prevPrice}</span>
+        {currentPrice}
       </p>
     </div>
     <ul>
       {
-        props?.priceList?.map((data) => (
+        priceList?.map((data) => (
           <li
             class={classNames('border-b-[0.5px] border-gray-300', {
-              '!border-gray-1000': props.dark,
+              '!border-gray-1000': dark,
             })}
           >
             <p
               class={classNames(' flex justify-between py-3 text-xs', {
-                '!text-white': props.dark,
+                '!text-white': dark,
               })}
             >
               {data.label === 'Save today' ? (
@@ -78,9 +81,9 @@ const props = Astro.props;
     </ul>
     <ul class='text-sm xl:mt-10 text-gray-600 space-y-3 leading-6'>
       {
-        props?.list?.map((data) => (
+        list?.map((data) => (
           <li class='flex gap-x-3'>
-            {props.dark ? (
+            {dark ? (
               <Image
                 src={ImageStarPricing}
                 alt='star-mobile'
@@ -96,9 +99,7 @@ const props = Astro.props;
               />
             )}
 
-            <p class={classNames('text-s', { '!text-white': props.dark })}>
-              {data}
-            </p>
+            <p class={classNames('text-s', { '!text-white': dark })}>{data}</p>
           </li>
         ))
       }
@@ -109,7 +110,7 @@ const props = Astro.props;
       class={classNames(
         'hover:bg-indigo-500 focus-visible:outline-indigo-600 block rounded-s bg-primary px-3 py-2 text-center text-s font-semibold leading-6 tracking-wider text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
         {
-          '!text-primary !bg-white': props.dark,
+          '!text-primary !bg-white': dark,
         },
       )}>Enroll now</a
     >

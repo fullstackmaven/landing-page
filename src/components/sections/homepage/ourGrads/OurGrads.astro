@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import Header from '../header/Header.astro';
 import ImageAirbnb from '/public/home-page/airbnb-logo.svg';
 import ImageAmazon from '/public/home-page/amazon-logo.svg';
 import ImageBooking from '/public/home-page/booking-logo.svg';
@@ -19,17 +20,11 @@ import ImageZoom from '/public/home-page/zoom-logo.svg';
   class='container flex max-w-screen-desktop flex-col pt-13 tablet:pt-15'
 >
   <div class='laptop:px-15'>
-    <h1
-      class='text-xl pb-4 font-bold text-black tablet:text-center tablet:text-3xl laptop:text-4xl'
-    >
-      Our grads work here
-    </h1>
-    <p
-      class='pb-6 text-s font-normal tracking-wider text-gray-700 tablet:text-center'
-    >
-      We're grateful to have educated 500,000 folks in 150+ countries and we're
-      trusted by industry leading teams like Google, Figma, Revolut, and Shopify
-    </p>
+    <Header
+      title='Our grads work here'
+      description={`We're grateful to have educated 500,000 folks in 150+ countries and we're
+      trusted by industry leading teams like Google, Figma, Revolut, and Shopify`}
+    />
     <div class='flex w-full flex-col gap-y-6 pb-4 tablet:pb-8'>
       <div
         class='flex h-[34px] w-full flex-wrap justify-between gap-y-6 child:w-[96px] tablet:h-[31px] child:tablet:w-auto laptop:h-[46px]'
@@ -227,7 +222,7 @@ import ImageZoom from '/public/home-page/zoom-logo.svg';
       alt='grad-work-video-desktop'
       loading='lazy'
       decoding='async'
-      class='laptop:rounded-2xl hidden w-full object-contain tablet:block tablet:rounded-[16px]'
+      class='hidden w-full object-contain tablet:block tablet:rounded-[16px] laptop:rounded-2xl'
     />
   </div>
 </section>

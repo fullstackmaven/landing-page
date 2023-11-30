@@ -61,10 +61,7 @@ const { headerTitle, description, title, ...attrs } = Astro.props;
 ---
 
 <section
-  class={classNames(
-    'container max-w-screen-desktop pt-12 tablet:pt-15 laptop:pt-16',
-    attrs.class,
-  )}
+  class={classNames('container max-w-screen-desktop', attrs.class)}
   {...attrs}
 >
   <header class='grid gap-y-3 pb-4'>
