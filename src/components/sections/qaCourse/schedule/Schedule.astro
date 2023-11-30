@@ -44,10 +44,10 @@ const schedule = [
 
   <div class='w-full'>
     <h2 class='mb-4 text-s font-bold'>Weekly Bootcamp Schedule</h2>
-    <ul class='relative flex gap-x-4 overflow-x-scroll'>
+    <ul class='relative flex snap-x gap-x-4 overflow-x-scroll'>
       {
         schedule.map((data) => (
-          <li class='inline-block h-max min-w-max'>
+          <li class='inline-block h-max min-w-max snap-center'>
             <ScheduleImage {...data} />
           </li>
         ))
