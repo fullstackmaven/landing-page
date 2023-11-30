@@ -1,6 +1,7 @@
 ---
 import ImageStarMobile from '@assets/qa/star-mobile.svg';
 import { Image } from 'astro:assets';
+import Header from '../header/Header.astro';
 
 interface TAnswers {
   title: string;
@@ -36,18 +37,12 @@ const defaultAnswers: TAnswers[] = [
 ---
 
 <section id='whycyram' class='container max-w-screen-desktop'>
-  <header class='mb-3 grid gap-y-3'>
-    <p class='text-xxs text-gray-700'>WHY CYRAM</p>
-    <h1 class='text-l font-bold tracking-widest text-black'>
-      A live and immersive learning experience
-    </h1>
-  </header>
-  <p class='mb-4 text-s text-gray-700'>
-    Our live classes are an opportunity to learn-by-doing with other students.
-    We take an active learning approach to ensure you retain and practice key
-    skills.
-  </p>
-  <ul class='grid gap-y-6'>
+  <Header
+    title='A live and immersive learning experience'
+    headerTitle='WHY CYRAM'
+    description={`Our live classes are an opportunity to learn-by-doing with other students. We take an active learning approach to ensure you retain and practice key skills.`}
+  />
+  <ul class='grid gap-y-6 tablet:grid-cols-3 tablet:gap-x-6 tablet:gap-y-12'>
     {
       defaultAnswers.map((answer) => (
         <li class=''>
@@ -61,7 +56,7 @@ const defaultAnswers: TAnswers[] = [
           <h2 class='mb-1 text-s font-semibold tracking-wider text-primary'>
             {answer.title}
           </h2>
-          <p class='text-s tracking-wider text-gray-700'>
+          <p class='text-s tracking-wider text-gray-700 tablet:text-xs tablet:tracking-wide'>
             {answer.description}
           </p>
         </li>

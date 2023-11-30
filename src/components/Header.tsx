@@ -33,7 +33,6 @@ interface THeaderProps {
 
 export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
   menuItems = [],
-  isSticky = true,
   onClickMenu,
   className,
   ...otherProps
@@ -110,31 +109,31 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
     <>
       <header
         className={classNames(
-          'container relative top-0 z-50 block w-full min-w-full max-w-screen-desktop justify-center bg-transparent',
+          'container relative top-0 z-50 h-full w-full min-w-full max-w-screen-desktop justify-center bg-transparent',
           className,
           {
             // 'bg-transparent': isSticky && !isScrollAtTop,
-            '!relative': !isSticky,
+            // '!relative': !isSticky,
           },
         )}
         {...otherProps}
       >
         <div
           className={classNames(
-            'flex w-full items-center justify-between pt-8 transition-all duration-100 ease-in tablet:my-6',
-            {
-              'border border-x-0 border-t-0 border-b-gray-200 bg-cultured laptop:py-6':
-                isSticky && !isScrollAtTop,
-              'transition-all duration-150 ease-in': !isSticky,
-            },
+            'flex w-full items-center justify-between pt-8 transition-all duration-100 ease-in tablet:py-6',
+            // {
+            //   'border border-x-0 border-t-0 border-b-gray-200 bg-cultured laptop:py-6':
+            //     isSticky && !isScrollAtTop,
+            //   'transition-all duration-150 ease-in': !isSticky,
+            // },
           )}
         >
           <h1
             className={classNames(
               'flex-1 text-l font-extrabold text-primary laptop:flex-none',
-              {
-                'opacity-0 laptop:opacity-100': !isScrollAtTop,
-              },
+              // {
+              //   'opacity-0 laptop:opacity-100': !isScrollAtTop,
+              // },
             )}
           >
             <a href='/'>Cyram</a>
@@ -207,16 +206,19 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
             title='Book a call'
             className={classNames(
               'mr-4 !rounded-s !px-3 !py-2 !text-xs !font-semibold tablet:!px-6 tablet:!py-3 laptop:mr-0',
-              {
-                'hidden laptop:flex': !isScrollAtTop,
-              },
+              // {
+              //   'hidden laptop:flex': !isScrollAtTop,
+              // },
             )}
           />
           <BurgerMenu
-            className={classNames('bg-transparent shadow-md laptop:hidden', {
-              'rounded-xs bg-white p-2 transition-colors duration-300 ease-in':
-                !isScrollAtTop && isSticky,
-            })}
+            className={classNames(
+              'bg-transparent shadow-md laptop:hidden',
+              // {
+              //   'rounded-xs bg-white p-2 transition-colors duration-300 ease-in':
+              //     !isScrollAtTop && isSticky,
+              // }
+            )}
             onClick={() => setIsMenuDrawerOpen((prev) => !prev)}
           />
         </div>

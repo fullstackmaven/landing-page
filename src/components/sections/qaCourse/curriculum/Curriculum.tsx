@@ -2,9 +2,10 @@ import Accordion from '@components/Accordion';
 import { useEffect, useRef } from 'react';
 import type { TCurriculum } from 'src/types/Curriculum';
 import Content from './content/Content.tsx';
+import Sidebar from './sidebar/Sidebar.tsx';
 
-const sampleDescription = `This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git, and debugging. This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git.`;
-const sampleTopics = ['HTML', 'CSS', 'Javascript'];
+const sampleDescription = `This module explores different page layout techniques using flexbox, positioning elements, and grid layout. It also introduces BEM, Git, and debugging.`;
+const sampleTopics = ['CSS3', 'Javascript', 'HTML5'];
 
 const defaultCurriculum: TCurriculum[] = [
   {
@@ -130,18 +131,21 @@ const Curriculum = () => {
         id='qacurriculum'
         className='container grid max-w-screen-desktop gap-y-4'
       >
-        <header className='grid gap-y-3'>
-          <p className='text-xxs text-gray-700'>CURRICULUM</p>
-          <h1 className='text-l font-bold tracking-widest text-black'>
+        <header className='mb-3 grid gap-y-3'>
+          <p className='text-xxs text-gray-700 tablet:text-xs laptop:text-s'>
+            CURRICULUM
+          </p>
+          <h1 className='text-l font-bold tracking-widest text-black tablet:text-xl laptop:text-2xl'>
             Mastery-based learning with real world projects
           </h1>
         </header>
-        <p className='text-s tracking-wider text-gray-700'>
+        <p className='text-s tracking-wider text-gray-700 laptop:text-base'>
           At Cyram, we believe in learning at your own pace. No rush or
           pressure. Master topics step by step with hands-on projects. Got it?
           Move on. Need more time? No problem. We're here to help. Graduate with
           solid QA engineering skills for a successful career.
         </p>
+        <p className='text-s tracking-wider text-gray-700'></p>
         <ul className='grid gap-y-2 laptop:hidden'>
           {defaultCurriculum.map((curriculum, index) => (
             <li key={index}>
@@ -156,35 +160,47 @@ const Curriculum = () => {
           ))}
         </ul>
 
-        <div className='flex flex-wrap justify-between gap-3 rounded-l border border-gray-300 p-4'>
-          <div className='w-fit rounded-4xl bg-orange-900/10 px-2 py-1'>
-            <p className='text-xs text-orange-900'>Coaching</p>
+        <div className='flex flex-col gap-y-4 laptop:flex-col-reverse'>
+          <div className='flex flex-col rounded-l border border-gray-300 p-6'>
+            <ul className='mb-3 flex flex-wrap justify-around gap-y-3 '>
+              <li className='w-fit rounded-4xl bg-orange-900/10 px-2 py-1'>
+                <p className='text-xxs text-orange-900 tablet:text-s'>
+                  Coaching
+                </p>
+              </li>
+              <li className='w-fit rounded-4xl bg-purple/10 px-2 py-1'>
+                <p className='text-xxs text-purple tablet:text-s'>Workshops</p>
+              </li>
+              <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
+                <p className='text-xxs text-green-300 tablet:text-s'>
+                  Interview prep
+                </p>
+              </li>
+              <li className='w-fit rounded-4xl bg-orange-800/10 px-2 py-1'>
+                <p className='text-xxs text-orange-800 tablet:text-s'>
+                  Portfolio
+                </p>
+              </li>
+              <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
+                <p className='text-xxs text-green-300 tablet:text-s'>
+                  Networking
+                </p>
+              </li>
+              <li className='w-fit rounded-4xl bg-blue-200/10 px-2 py-1'>
+                <p className='text-xxs text-blue-200 tablet:text-s'>Resume</p>
+              </li>
+            </ul>
+            <p className='text-s tracking-wider text-primary tablet:text-base tablet:tracking-widest'>
+              Cyram is the only bootstrapped Bootcamp. We've grown organically
+              with no funding and care passionately about every single one of
+              our students.
+            </p>
           </div>
-          <div className='w-fit rounded-4xl bg-purple/10 px-2 py-1'>
-            <p className='text-xs text-purple'>Workshops</p>
-          </div>
-          <div className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
-            <p className='text-xs text-green-300'>Interview prep</p>
-          </div>
-          <div className='w-fit rounded-4xl bg-orange-800/10 px-2 py-1'>
-            <p className='text-xs text-orange-800'>Portfolio</p>
-          </div>
-          <div className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
-            <p className='text-xs text-green-300'>Networking</p>
-          </div>
-          <div className='w-fit rounded-4xl bg-blue-200/10 px-2 py-1'>
-            <p className='text-xs text-blue-200'>Resume</p>
-          </div>
-          <p className='text-s tracking-wider text-primary'>
-            Cyram is the only bootstrapped Bootcamp. We've grown organically
-            with no funding and care passionately about every single one of our
-            students.
-          </p>
-        </div>
 
-        {/* <div className='hidden laptop:block'>
-          <Sidebar curriculum={defaultCurriculum} />
-        </div> */}
+          <div className='hidden laptop:block'>
+            <Sidebar curriculum={defaultCurriculum} />
+          </div>
+        </div>
       </section>
       {/* {showBookCall && (
         <BookCall

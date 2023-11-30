@@ -1,21 +1,19 @@
 ---
 import { Image } from 'astro:assets';
+import Header from '../header/Header.astro';
 import ImageOverview from '/public/qa-course/overview-image.svg';
 ---
 
 <section id='qaoverview' class='container max-w-screen-desktop'>
-  <header class='mb-3 grid gap-y-3'>
-    <p class='text-xxs text-gray-700'>OVERVIEW</p>
-    <h1 class='text-l font-bold tracking-widest text-black'>Learn by doing</h1>
-  </header>
-  <p class='text-s text-gray-700'>
-    Through our bootcamp, you'll actively participate in coding exercises,
+  <Header
+    title='Learn by doing'
+    headerTitle='OVERVIEW'
+    description={`Through our bootcamp, you'll actively participate in coding exercises,
     project-based assignments, and simulated real-world scenarios. This hands-on
     approach not only solidifies your understanding but also cultivates
     problem-solving abilities, critical thinking, and confidence in applying
-    learned concepts to your future jobs.
-  </p>
-
+    learned concepts to your future jobs.`}
+  />
   <figure class='mt-4'>
     <Image
       src={ImageOverview}
