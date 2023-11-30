@@ -2,17 +2,13 @@
 import type { BootcampCourse } from 'src/types/Course';
 import CourseCard from './course_card/CourseCard.astro';
 
-const courses: BootcampCourse[] = [
+export const courses: BootcampCourse[] = [
   {
     image: 'home-page/course-image.svg',
     courseLink: '/software-engineering-bootcamp',
     title: 'Software Engineering',
     courseTitle: 'Software Engineering Bootcamp',
-    skills:
-      'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
-    startingSalary: '$85,000',
     duration: 8,
-    price: '$12,700',
     type: 'Part time',
   },
   {
@@ -20,11 +16,7 @@ const courses: BootcampCourse[] = [
     courseLink: '/qa-bootcamp',
     title: 'Quality Assurance',
     courseTitle: 'Quality Assurance Bootcamp',
-    skills:
-      'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
-    startingSalary: '$85,000',
     duration: 8,
-    price: '$12,700',
     type: 'Part time',
   },
   {
@@ -32,11 +24,7 @@ const courses: BootcampCourse[] = [
     courseLink: '/data-science-bootcamp',
     title: 'Data Science',
     courseTitle: 'Data Science Bootcamp',
-    skills:
-      'Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git, Rest API, Google Cloud, MongoDB, Node.js',
-    startingSalary: '$85,000',
     duration: 4,
-    price: '$12,700',
     type: 'Part time',
   },
 ];
