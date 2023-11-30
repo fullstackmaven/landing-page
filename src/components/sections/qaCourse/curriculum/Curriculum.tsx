@@ -161,8 +161,8 @@ const Curriculum = () => {
         </ul>
 
         <div className='flex flex-col gap-y-4 laptop:flex-col-reverse'>
-          <div className='flex flex-col justify-around rounded-l border border-gray-300 p-6'>
-            <ul className='mb-3 flex flex-wrap justify-between gap-y-3'>
+          <div className='flex flex-col rounded-l border border-gray-300 p-6'>
+            <ul className='mb-3 flex flex-wrap justify-around gap-y-3 '>
               <li className='w-fit rounded-4xl bg-orange-900/10 px-2 py-1'>
                 <p className='text-xxs text-orange-900 tablet:text-s'>
                   Coaching
