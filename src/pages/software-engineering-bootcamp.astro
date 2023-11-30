@@ -1,20 +1,20 @@
 ---
-import Footer from '@components/Footer.astro';
 import { Header } from '@components/Header';
 import HeaderDropdown from '@components/homePage/HeaderDropdown.astro';
+import Overview from '@components/sections/qaCourse/overview/Overview.astro';
+import '../index.scss';
+import Layout from '@layouts/Layout.astro';
+import CourseDefinition from '@components/CourseDefinition.astro';
+import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum';
+import Schedule from '@components/sections/qaCourse/schedule/Schedule.astro';
+import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
+import Footer from '@components/Footer.astro';
 import GetStarted from '@components/sections/common/getStarted/GetStarted.astro';
 import Questions from '@components/sections/common/questions/Questions.astro';
 import StudentFeedback from '@components/sections/common/studentFeedback/StudentFeedback.astro';
 import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
 import BootcampTuition from '@components/sections/qaCourse/bootcampTuition/BootcampTuition.astro';
-import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum';
-import Overview from '@components/sections/qaCourse/overview/Overview.astro';
 import Hero from '@components/sections/qaCourse/hero/Hero.astro';
-import Schedule from '@components/sections/qaCourse/schedule/Schedule.astro';
-import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
-import Layout from '@layouts/Layout.astro';
-import '../index.scss';
-import CourseDefinition from '@components/CourseDefinition.astro';
 
 const menuItems = [
   { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
@@ -29,18 +29,18 @@ const menuItems = [
 
 <Layout title='Quality Assurance Bootcamp'>
   <>
-    <div class='h-fit bg-secondary'>
+    <div class='h-fit'>
       <Header client:load menuItems={menuItems}>
         <div slot='qabootcamp' class='flex h-full w-full flex-col gap-y-6'>
           <HeaderDropdown />
         </div>
       </Header>
-      <Hero />
+      <Hero courseName='se' />
     </div>
     <div
       class='laptop:gap-y8 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-[80px] laptop:pb-[128px] laptop:pt-19'
     >
-      <CourseDefinition name='qa' />
+      <CourseDefinition name='se' />
       <Overview />
       <Curriculum client:load />
       <Schedule />

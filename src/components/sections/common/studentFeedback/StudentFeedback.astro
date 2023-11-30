@@ -53,7 +53,7 @@ const feedbackList: TFeedback[] = [
 
 interface Props extends HTMLAttributes<'section'> {
   headerTitle?: string;
-  title?: string;
+  title: string;
   description?: string;
 }
 
@@ -67,15 +67,13 @@ const { headerTitle, description, title, ...attrs } = Astro.props;
   )}
   {...attrs}
 >
-  <header class='pb-4'>
-    {headerTitle && <p class='text-xxs text-gray-700'>{headerTitle}</p>}
-    {
-      title && (
-        <h1 class='text-xl font-bold text-black tablet:text-center tablet:text-3xl laptop:text-4xl'>
-          {title}
-        </h1>
-      )
-    }
+  <header class='grid gap-y-3 pb-4'>
+    <p class='text-xxs text-gray-700'>{headerTitle}</p>
+    <h1
+      class='text-l font-bold text-black tablet:text-center tablet:text-3xl laptop:text-4xl'
+    >
+      {title}
+    </h1>
   </header>
   {
     description && (
