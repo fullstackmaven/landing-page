@@ -161,35 +161,27 @@ const Curriculum = () => {
         </ul>
 
         <div className='flex flex-col gap-y-4 laptop:flex-col-reverse'>
-          <div className='flex flex-col rounded-l border border-gray-300 p-6'>
-            <ul className='mb-3 flex flex-wrap justify-around gap-y-3 '>
-              <li className='w-fit rounded-4xl bg-orange-900/10 px-2 py-1'>
-                <p className='text-xxs text-orange-900 tablet:text-s'>
-                  Coaching
-                </p>
-              </li>
-              <li className='w-fit rounded-4xl bg-purple/10 px-2 py-1'>
-                <p className='text-xxs text-purple tablet:text-s'>Workshops</p>
-              </li>
-              <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
-                <p className='text-xxs text-green-300 tablet:text-s'>
-                  Interview prep
-                </p>
-              </li>
-              <li className='w-fit rounded-4xl bg-orange-800/10 px-2 py-1'>
-                <p className='text-xxs text-orange-800 tablet:text-s'>
-                  Portfolio
-                </p>
-              </li>
-              <li className='w-fit rounded-4xl bg-green-300/10 px-2 py-1'>
-                <p className='text-xxs text-green-300 tablet:text-s'>
-                  Networking
-                </p>
-              </li>
-              <li className='w-fit rounded-4xl bg-blue-200/10 px-2 py-1'>
-                <p className='text-xxs text-blue-200 tablet:text-s'>Resume</p>
-              </li>
-            </ul>
+          <div className='flex flex-col rounded-l border border-gray-300 p-4 tablet:p-6'>
+            <div className='mb-3 grid grid-flow-col grid-rows-2 justify-around gap-y-3 tablet:grid-rows-1'>
+              <span className='w-fit rounded-4xl bg-orange-900/[0.0825] px-2 py-1 text-xs text-orange-900 tablet:px-4 tablet:py-2 tablet:text-s'>
+                Coaching
+              </span>
+              <span className='w-fit rounded-4xl bg-purple/[0.0825] px-2 py-1 text-xs text-purple tablet:px-4 tablet:py-2 tablet:text-s'>
+                Workshops
+              </span>
+              <span className='w-fit rounded-4xl bg-green-300/[0.0825] px-2 py-1 text-xs text-green-300 tablet:px-4 tablet:py-2 tablet:text-s'>
+                Interview prep
+              </span>
+              <span className='w-fit rounded-4xl bg-orange-800/[0.0825] px-2 py-1 text-xs text-orange-800 tablet:px-4 tablet:py-2 tablet:text-s'>
+                Portfolio
+              </span>
+              <span className='w-fit rounded-4xl bg-green-300/[0.0825] px-2 py-1 text-xs text-green-300 tablet:px-4 tablet:py-2 tablet:text-s'>
+                Networking
+              </span>
+              <span className='w-fit rounded-4xl bg-blue-200/[0.0825] px-2 py-1 text-xs text-blue-200 tablet:px-4 tablet:py-2 tablet:text-s'>
+                Resume
+              </span>
+            </div>
             <p className='text-s tracking-wider text-primary tablet:text-base tablet:tracking-widest'>
               Cyram is the only bootstrapped Bootcamp. We've grown organically
               with no funding and care passionately about every single one of

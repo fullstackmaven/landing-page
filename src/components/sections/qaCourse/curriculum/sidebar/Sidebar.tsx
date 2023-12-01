@@ -14,11 +14,11 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
         Curriculum
       </h1>
       <div className='flex gap-x-6'>
-        <ul className='min-w-[409px] border-b-[0.5px] border-b-gray-300'>
+        <ul className='min-w-[409px] divide-y-[0.5px] divide-gray-300'>
           {curriculum.map((curr, index) => (
             <li
               key={`list-curriculum-${index}`}
-              className='box-border flex cursor-pointer border-b-[0.5px] border-r-[0.5px] border-b-gray-300'
+              className='box-border flex cursor-pointer border-r-[0.5px] border-b-gray-300'
             >
               <input
                 type='radio'
@@ -44,9 +44,6 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
               </label>
             </li>
           ))}
-          {/* <li className='flex items-center justify-center px-6 py-8'>
-            <Button title='Enroll now' className='w-full px-6 py-4' />
-          </li> */}
         </ul>
         <div className='flex gap-y-10 py-10 pr-6'>
           <Content
