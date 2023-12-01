@@ -1,4 +1,10 @@
 ---
+import ImageLiveLecture from '@assets/se/people/hero-person.jpg';
+import awsIcon from '@assets/se/techIcons/aws.svg';
+import JavascriptIcon from '@assets/se/techIcons/javascript.svg';
+import NodejsIcon from '@assets/se/techIcons/nodejs.svg';
+import ReactIcon from '@assets/se/techIcons/react.svg';
+import TypescriptIcon from '@assets/se/techIcons/typescript.svg';
 import { Button } from '@components/Button';
 import LiveIndicatorPulse from '@components/LiveIndicatorPulse.astro';
 import { Image } from 'astro:assets';
@@ -47,7 +53,7 @@ const heroImage =
       alt=`${courseName}-course-image`
       class='h-[26rem] w-full rounded-l object-cover'
     />
-    <div class='absolute flex h-full w-full flex-col justify-between p-4'>
+    <div class='absolute border flex h-full w-full flex-col justify-between p-4'>
       <div
         class='flex w-fit items-center gap-x-3 rounded-s border border-gray-400 bg-gray-100 px-2 py-1 backdrop-blur-[2px]'
       >
@@ -56,7 +62,7 @@ const heroImage =
         </div>
         <p class='text-xs text-primary'>Live Lectures</p>
       </div>
-      <div class='flex w-fit'>
+      <div class='flex child:-ml-3'>
         {
           [ReactIcon, JavascriptIcon, TypescriptIcon, NodejsIcon, AwsIcon].map(
             (icon, index) => (
@@ -65,9 +71,8 @@ const heroImage =
                   src={icon}
                   alt={'tech-stack-image'}
                   loading='lazy'
-                  class='h-12'
+                  class='h-12 first:ml-0'
                 />
-              </div>
             ),
           )
         }
