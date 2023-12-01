@@ -109,7 +109,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
     <>
       <header
         className={classNames(
-          'container relative top-0 z-50 h-full w-full min-w-full max-w-screen-desktop justify-center bg-transparent',
+          'relative top-0 z-50 h-full w-full min-w-full justify-center bg-transparent',
           className,
           {
             // 'bg-transparent': isSticky && !isScrollAtTop,
@@ -120,7 +120,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
       >
         <div
           className={classNames(
-            'flex w-full items-center justify-between pt-8 transition-all duration-100 ease-in tablet:py-6',
+            'container flex w-full max-w-screen-desktop items-center justify-between pt-8 transition-all duration-100 ease-in tablet:py-6',
             // {
             //   'border border-x-0 border-t-0 border-b-gray-200 bg-cultured laptop:py-6':
             //     isSticky && !isScrollAtTop,
@@ -159,7 +159,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                     },
                   )}
                 >
-                  <p className='flex gap-x-1 font-medium text-primary laptop:text-xs'>
+                  <p className='flex gap-x-1 font-semibold text-primary laptop:text-xs'>
                     {menuItem.label}
                     {(menuItem.isDropdown ?? false) && (
                       <img src='arrow-chevron.svg' />
@@ -191,7 +191,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                         },
                       )}
                     >
-                      <p className='flex gap-x-1 font-medium text-primary laptop:text-xs'>
+                      <p className='flex gap-x-1 font-semibold text-primary laptop:text-xs'>
                         {menuItem.label}
                         {(menuItem.isDropdown ?? false) && (
                           <img src='arrow-chevron.svg' />
@@ -206,19 +206,10 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
             title='Book a call'
             className={classNames(
               'mr-4 !rounded-s !px-3 !py-2 !text-xs !font-semibold tablet:!px-6 tablet:!py-3 laptop:mr-0',
-              // {
-              //   'hidden laptop:flex': !isScrollAtTop,
-              // },
             )}
           />
           <BurgerMenu
-            className={classNames(
-              'bg-transparent shadow-md laptop:hidden',
-              // {
-              //   'rounded-xs bg-white p-2 transition-colors duration-300 ease-in':
-              //     !isScrollAtTop && isSticky,
-              // }
-            )}
+            className={classNames('bg-transparent shadow-md laptop:hidden')}
             onClick={() => setIsMenuDrawerOpen((prev) => !prev)}
           />
         </div>
@@ -231,7 +222,6 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
           {
             block: isMenuDrawerOpen,
             hidden: !isMenuDrawerOpen,
-            // '!sticky': !isScrollAtTop && isMenuDrawerOpen,
           },
         )}
         onClose={() => setIsMenuDrawerOpen(false)}
