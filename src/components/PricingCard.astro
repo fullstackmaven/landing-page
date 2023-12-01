@@ -1,7 +1,6 @@
 ---
 import ImageStarPricingDark from '@assets/qa/star-pricing-dark.svg';
 import { Image } from 'astro:assets';
-import classNames from 'classnames';
 import type { ReactNode } from 'react';
 import ImageStarPricing from '/public/star-pricing.svg';
 
@@ -21,25 +20,37 @@ interface Props {
 const { dark, currentPrice, list, prevPrice, priceList, title } = Astro.props;
 ---
 
-<section class={'flex border rounded-l border-gray-300 min-w-[350px]'}>
+<section
+  class='isolate grid max-w-md grid-cols-1 gap-8 rounded-l border border-gray-300 laptop:mx-0 laptop:w-fit'
+  {...attrs}
+>
   <div
-    class={classNames('flex flex-col gap-4 rounded-l bg-white p-6 w-full', {
-      '!bg-primary': dark,
-    })}
+    class:list={[
+      'flex flex-col gap-3 rounded-l bg-white p-6',
+      {
+        '!bg-primary': dark,
+      },
+    ]}
   >
     <div class='flex flex-col gap-3'>
       <h3
         id='tier-startup'
-        class={classNames('text-base font-bold', {
-          '!text-white': dark,
-        })}
+        class:list={[
+          'text-base font-bold',
+          {
+            '!text-white': dark,
+          },
+        ]}
       >
         {title}
       </h3>
       <p
-        class={classNames('text-gray-600 text-base', {
-          '!text-white': dark,
-        })}
+        class:list={[
+          'text-gray-600 text-base',
+          {
+            '!text-white': dark,
+          },
+        ]}
       >
         <span class='line-through'>{prevPrice}</span>
         {currentPrice}
@@ -49,14 +60,20 @@ const { dark, currentPrice, list, prevPrice, priceList, title } = Astro.props;
       {
         priceList?.map((data) => (
           <li
-            class={classNames('border-b-[0.5px] border-gray-300', {
-              '!border-gray-1000': dark,
-            })}
+            class:list={[
+              'border-b-[0.5px] border-gray-300',
+              {
+                '!border-gray-1000': dark,
+              },
+            ]}
           >
             <p
-              class={classNames(' flex justify-between py-3 text-xs', {
-                '!text-white': dark,
-              })}
+              class:list={[
+                ' flex justify-between py-3 text-xs',
+                {
+                  '!text-white': dark,
+                },
+              ]}
             >
               {data.label === 'Save today' ? (
                 <span class='rounded-xs bg-neon px-[6px] py-[2px] text-primary'>
@@ -92,7 +109,7 @@ const { dark, currentPrice, list, prevPrice, priceList, title } = Astro.props;
               />
             )}
 
-            <p class={classNames('text-s', { '!text-white': dark })}>{data}</p>
+            <p class:list={['text-s', { '!text-white': dark }]}>{data}</p>
           </li>
         ))
       }
@@ -100,12 +117,12 @@ const { dark, currentPrice, list, prevPrice, priceList, title } = Astro.props;
     <a
       href='/'
       aria-describedby='tier-upfront'
-      class={classNames(
+      class:list={[
         'hover:bg-indigo-500 focus-visible:outline-indigo-600 block rounded-s bg-primary px-3 py-2 text-center text-s font-semibold leading-6 tracking-wider text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
         {
-          '!text-primary !bg-white': dark,
+          '!bg-white !text-primary': dark,
         },
-      )}>Enroll now</a
+      ]}>Enroll now</a
     >
   </div>
 </section>
