@@ -146,7 +146,6 @@ const Curriculum = () => {
           Move on. Need more time? No problem. We're here to help. Graduate with
           solid QA engineering skills for a successful career.
         </p>
-        <p className='text-s tracking-wider text-gray-700'></p>
         <ul className='grid gap-y-2 laptop:hidden'>
           {defaultCurriculum.map((curriculum, index) => (
             <li key={index} className='cursor-pointer'>

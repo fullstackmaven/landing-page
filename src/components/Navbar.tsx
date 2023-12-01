@@ -31,7 +31,7 @@ interface THeaderProps {
   onClickMenu?: TOnClickMenuHandler;
 }
 
-export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
+const Navbar: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
   menuItems = [],
   onClickMenu,
   className,
@@ -224,3 +224,5 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
     </>
   );
 };
+
+export default Navbar;

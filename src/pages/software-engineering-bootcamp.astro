@@ -2,8 +2,7 @@
 import CourseDefinition from '@components/CourseDefinition.astro';
 import Faq from '@components/Faq.astro';
 import Footer from '@components/Footer.astro';
-import { Header } from '@components/Header';
-import Hero from '@components/Hero.astro';
+import Navbar from '@components/Navbar';
 import GetStarted from '@components/sections/common/getStarted/GetStarted.astro';
 import HeaderDropdown from '@components/sections/homepage/headerDropdown/HeaderDropdown.astro';
 import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
@@ -14,7 +13,6 @@ import Schedule from '@components/sections/qaCourse/schedule/Schedule.astro';
 import Students from '@components/sections/qaCourse/students/Students.astro';
 import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
 import Layout from '@layouts/Layout.astro';
-import ViewTransitions from 'astro/components/ViewTransitions.astro';
 import '../index.scss';
 
 const menuItems = [
@@ -30,12 +28,11 @@ const menuItems = [
 
 <Layout title='Quality Assurance Bootcamp'>
   <>
-    <Header client:load menuItems={menuItems}>
+    <Navbar client:load menuItems={menuItems}>
       <div slot='qabootcamp' class='flex h-full w-full flex-col gap-y-6'>
         <HeaderDropdown />
       </div>
-    </Header>
-    <ViewTransitions />
+    </Navbar>
     <Hero courseName='se' />
     <div
       class='laptop:gap-y8 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-13'

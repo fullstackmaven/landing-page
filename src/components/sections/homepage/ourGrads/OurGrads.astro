@@ -12,7 +12,6 @@ import ImageUber from '@assets/home/uber-logo.svg';
 import ImageZoom from '@assets/home/zoom-logo.svg';
 import ImageOverview from '@assets/qa/overview-image.svg';
 import { Image } from 'astro:assets';
-import Header from '../header/Header.astro';
 ---
 
 <section class='container flex max-w-screen-desktop flex-col'>
@@ -21,6 +20,7 @@ import Header from '../header/Header.astro';
       title='Our grads work here'
       description={`We're grateful to have educated 500,000 folks in 150+ countries and we're
       trusted by industry leading teams like Google, Figma, Revolut, and Shopify`}
+      isCentered
     />
     <div class='flex w-full flex-col gap-y-6 pb-4 tablet:pb-8'>
       <div
