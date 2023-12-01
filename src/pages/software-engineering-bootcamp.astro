@@ -29,16 +29,14 @@ const menuItems = [
 
 <Layout title='Quality Assurance Bootcamp'>
   <>
-    <div class='h-fit'>
-      <Header client:load menuItems={menuItems}>
-        <div slot='qabootcamp' class='flex h-full w-full flex-col gap-y-6'>
-          <HeaderDropdown />
-        </div>
-      </Header>
-      <Hero courseName='se' />
-    </div>
+    <Header client:load menuItems={menuItems}>
+      <div slot='qabootcamp' class='flex h-full w-full flex-col gap-y-6'>
+        <HeaderDropdown />
+      </div>
+    </Header>
+    <Hero courseName='se' />
     <div
-      class='laptop:gap-y8 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-[80px] laptop:pb-[128px] laptop:pt-19'
+      class='laptop:gap-y8 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-[80px] laptop:pb-[128px]'
     >
       <CourseDefinition name='se' />
       <Overview />
