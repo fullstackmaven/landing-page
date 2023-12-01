@@ -5,7 +5,7 @@ const BurgerMenu: FC<TBurgerMenuProps> = ({ ...otherProps }) => {
   return (
     <button {...otherProps}>
       <img
-        src='hamburger.svg'
+        src='src/assets/hamburger.svg'
         alt='mobile-menu-icon'
         className='laptop:hidden'
       />

@@ -1,14 +1,15 @@
 ---
 import ImageStarPricingDark from '@assets/qa/star-pricing-dark.svg';
+import ImageStarPricing from '@assets/qa/star-pricing.svg';
+import type { HTMLAttributes } from 'astro/types';
 import { Image } from 'astro:assets';
 import type { ReactNode } from 'react';
-import ImageStarPricing from '/public/star-pricing.svg';
 
 interface TPriceList {
   label: string | ReactNode;
   price: string;
 }
-interface Props {
+interface Props extends HTMLAttributes<'section'> {
   dark?: boolean;
   title?: string;
   prevPrice?: string;
@@ -17,7 +18,8 @@ interface Props {
   list?: string[];
 }
 
-const { dark, currentPrice, list, prevPrice, priceList, title } = Astro.props;
+const { dark, currentPrice, list, prevPrice, priceList, title, ...attrs } =
+  Astro.props;
 ---
 
 <section

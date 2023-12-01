@@ -162,7 +162,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                   <p className='flex gap-x-1 font-semibold text-primary laptop:text-xs'>
                     {menuItem.label}
                     {(menuItem.isDropdown ?? false) && (
-                      <img src='arrow-chevron.svg' />
+                      <img src='src/assets/arrow-chevron.svg' />
                     )}
                   </p>
                 </a>
@@ -194,7 +194,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                       <p className='flex gap-x-1 font-semibold text-primary laptop:text-xs'>
                         {menuItem.label}
                         {(menuItem.isDropdown ?? false) && (
-                          <img src='arrow-chevron.svg' />
+                          <img src='src/assets/arrow-chevron.svg' />
                         )}
                       </p>
                     </a>

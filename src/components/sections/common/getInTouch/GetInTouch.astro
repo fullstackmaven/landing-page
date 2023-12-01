@@ -1,9 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import ContactForm from './contactForm/ContactForm.astro';
-import ImageGetInTouch1 from '/public/qa-course/get-in-touch-1.svg';
-import ImageGetInTouch2 from '/public/qa-course/get-in-touch-2.svg';
-import ImageGetInTouch3 from '/public/qa-course/get-in-touch-3.svg';
+
+import ImageGetInTouch1 from '@assets/qa/get-in-touch-1.svg';
+import ImageGetInTouch2 from '@assets/qa/get-in-touch-2.svg';
+import ImageGetInTouch3 from '@assets/qa/get-in-touch-3.svg';
 ---
 
 <div
@@ -38,7 +39,7 @@ import ImageGetInTouch3 from '/public/qa-course/get-in-touch-3.svg';
           />
         </div>
         <h1
-          class='tablet:text-xl text-center text-l leading-tight tablet:text-left tablet:font-extrabold laptop:text-2xl'
+          class='text-center text-l leading-tight tablet:text-left tablet:text-xl tablet:font-extrabold laptop:text-2xl'
         >
           Get in touch with our program advisor to learn more!
         </h1>
