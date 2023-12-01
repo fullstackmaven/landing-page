@@ -30,17 +30,14 @@ const subTitle =
 <section
   class='container flex max-w-screen-desktop flex-col gap-y-12 py-12 laptop:flex-row laptop:gap-x-6 laptop:py-14'
 >
-  <div class='flex flex-col gap-6 laptop:w-1/2'>
+  <div class='flex flex-1 flex-col items-start gap-6'>
     <h1 class='text-xl font-bold leading-tight text-black tablet:text-3xl'>
       {heroTitle}
     </h1>
     <p class='text-s leading-6 tracking-wider text-primary'>{subTitle}</p>
-    <Button
-      title='Enroll now'
-      className='h-fit w-fit rounded-s !bg-primary !px-3 !py-2 !text-xs font-semibold !text-white tablet:!px-6'
-    />
+    <Button title='Enroll now' className='tablet:px-6 tablet:py-3' />
   </div>
-  <figure class='relative flex h-auto w-full flex-1 flex-col laptop:w-1/2'>
+  <figure class='relative flex h-auto w-full flex-1 flex-col'>
     <Image
       src={ImageLiveLecture}
       alt='live-lecture-image'

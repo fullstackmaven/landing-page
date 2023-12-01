@@ -17,7 +17,7 @@ export const Button: React.FC<Props & HTMLAttributes<HTMLButtonElement>> = ({
   return (
     <button
       className={classNames(
-        'flex items-center justify-center rounded-s bg-primary px-6 py-3 text-s text-white tablet:text-s',
+        'flex items-center justify-center rounded-s bg-primary px-3 py-2 text-xs font-semibold text-white tablet:text-s',
         {
           'border-2 !border-primary !bg-transparent !text-primary':
             category === 'ghost',

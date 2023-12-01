@@ -202,12 +202,7 @@ export const Header: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                 ))}
             </ul>
           </nav>
-          <Button
-            title='Book a call'
-            className={classNames(
-              'mr-4 !rounded-s !px-3 !py-2 !text-xs !font-semibold tablet:!px-6 tablet:!py-3 laptop:mr-0',
-            )}
-          />
+          <Button title='Book a call' className='mr-4 laptop:mr-0' />
           <BurgerMenu
             className={classNames('bg-transparent shadow-md laptop:hidden')}
             onClick={() => setIsMenuDrawerOpen((prev) => !prev)}
