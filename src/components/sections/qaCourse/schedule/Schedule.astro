@@ -1,24 +1,36 @@
 ---
 import Header from '../header/Header.astro';
 import ScheduleImage from './scheduleImage/ScheduleImage.astro';
+import BootcampScheduleImage1 from '@assets/bootcamp-schedule-image-1.svg';
+import BootcampScheduleImage2 from '@assets/bootcamp-schedule-image-2.svg';
+import BootcampScheduleImage3 from '@assets/bootcamp-schedule-image-3.svg';
+import type { ImageMetadata } from 'astro';
 
-const schedules = [
+export type BootcampSchedule = {
+  image: ImageMetadata;
+  altText: string;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+};
+
+const schedules: BootcampSchedule[] = [
   {
-    imagePath: '/src/assets/bootcamp-schedule-image-1.jpg',
+    image: BootcampScheduleImage1,
     altText: 'bootcamp-schedule-image-1',
     title: 'Live Coding and Coaching',
     subtitle: 'Monday & Wednesday · 90m',
     description: `Join live classes and collaborate with your classmates in the tools you'll be using everyday in the industry.`,
   },
   {
-    imagePath: '/src/assets/bootcamp-schedule-image-2.jpg',
+    image: BootcampScheduleImage2,
     altText: 'bootcamp-schedule-image-3',
     title: 'Feedback Friday',
     subtitle: 'Friday · Async',
     description: `Every Friday you'll receive personal feedback on your projects, portfolio, or resume.`,
   },
   {
-    imagePath: '/src/assets/bootcamp-schedule-image-3.jpg',
+    image: BootcampScheduleImage3,
     altText: 'bootcamp-schedule-image-3',
     title: 'Coding Challenges',
     subtitle: '10hrs',

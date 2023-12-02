@@ -1,33 +1,21 @@
 ---
 import { Image } from 'astro:assets';
+import type { BootcampSchedule } from '../Schedule.astro';
+import type { ImageMetadata } from 'astro';
 
-interface Props {
-  imagePath: string;
-  altText: string;
-  title?: string;
-  subtitle?: string;
-  description?: string;
-}
+interface Props extends BootcampSchedule {}
 
-const { imagePath, altText, description, subtitle, title } = Astro.props;
-const images = import.meta.glob('/src/assets/*.{jpeg,jpg,png,gif}');
+const { image, altText, description, subtitle, title } = Astro.props;
 ---
 
 <figure class='relative'>
   <Image
-    src={images[imagePath]()}
-    alt={altText}
+    src={image as ImageMetadata}
+    alt={altText as string}
     loading='lazy'
     decoding='async'
     class='max-h-[358px] w-full max-w-sm rounded-l tablet:max-h-[384px]'
   />
-  <!-- <Image
-    src={import(`${imagePath}.jpg`)}
-    alt={altText}
-    loading='lazy'
-    decoding='async'
-    class='max-h-[358px] w-full max-w-sm rounded-l tablet:max-h-[384px]'
-  /> -->
   <div
     class='image-shadow-inner absolute bottom-0 flex h-full flex-col justify-end px-4 py-4'
   >
