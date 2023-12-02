@@ -1,14 +1,21 @@
 ---
+import { getImage } from 'astro:assets';
 import type { TInstructor } from '../BootcampTeam.astro';
 
 interface Props extends TInstructor {}
-const { title, imagePath, name, jobTitle, imageCompanyUrl, companyname } =
+const { title, image, name, jobTitle, imageCompanyUrl, companyname } =
   Astro.props;
+
+const optimizedBackground = await getImage({
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  src: image,
+  format: 'webp',
+});
 ---
 
 <div
   class='flex h-full w-full flex-col justify-between rounded-l bg-cover bg-center tablet:rounded-[16px]'
-  style={{ backgroundImage: `url('${imagePath}')` }}
+  style={{ backgroundImage: `url(${optimizedBackground.src})` }}
 >
   <p
     class='mx-2 my-2 w-fit rounded-xs bg-cultured px-[6px] py-[2px] text-xxs font-normal text-primary tablet:mx-4 tablet:my-4 tablet:px-4 tablet:py-1 laptop:text-s'
