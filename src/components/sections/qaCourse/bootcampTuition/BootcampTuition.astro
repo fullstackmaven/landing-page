@@ -2,7 +2,7 @@
 import PricingCard from '@components/PricingCard.astro';
 import Header from '../header/Header.astro';
 
-const firstPricing = {
+const upfrontPricing = {
   title: 'Pay upfront · save $800 🎉',
   prevPrice: '$9,800',
   currentPrice: '$9,000',
@@ -33,7 +33,7 @@ const firstPricing = {
   dark: true,
 };
 
-const secondPricing = {
+const monthlyPricing = {
   title: 'Pay monthly',
   prevPrice: '',
   currentPrice: '800 / month',
@@ -72,8 +72,8 @@ const secondPricing = {
     you factor in the price/month. Other similar programs charge $1,000 to
     $1,800/month.`}
   />
-  <div class='grid w-full gap-4 tablet:grid-cols-2 laptop:flex'>
-    <PricingCard {...firstPricing} />
-    <PricingCard {...secondPricing} />
+  <div class='flex flex-col gap-4 tablet:flex-row'>
+    <PricingCard {...upfrontPricing} />
+    <PricingCard {...monthlyPricing} />
   </div>
 </section>

@@ -2,23 +2,23 @@
 import Header from '../header/Header.astro';
 import ScheduleImage from './scheduleImage/ScheduleImage.astro';
 
-const schedule = [
+const schedules = [
   {
-    imagePath: 'bootcamp-schedule-image-1',
+    imagePath: '/src/assets/bootcamp-schedule-image-1.jpg',
     altText: 'bootcamp-schedule-image-1',
     title: 'Live Coding and Coaching',
     subtitle: 'Monday & Wednesday · 90m',
     description: `Join live classes and collaborate with your classmates in the tools you'll be using everyday in the industry.`,
   },
   {
-    imagePath: 'bootcamp-schedule-image-2',
-    altText: 'bootcamp-schedule-image-2',
+    imagePath: '/src/assets/bootcamp-schedule-image-2.jpg',
+    altText: 'bootcamp-schedule-image-3',
     title: 'Feedback Friday',
     subtitle: 'Friday · Async',
     description: `Every Friday you'll receive personal feedback on your projects, portfolio, or resume.`,
   },
   {
-    imagePath: 'bootcamp-schedule-image-3',
+    imagePath: '/src/assets/bootcamp-schedule-image-3.jpg',
     altText: 'bootcamp-schedule-image-3',
     title: 'Coding Challenges',
     subtitle: '10hrs',
@@ -45,7 +45,7 @@ const schedule = [
         class='relative flex snap-x gap-x-4 overflow-x-scroll laptop:overflow-hidden'
       >
         {
-          schedule.map((data) => (
+          schedules.map((data) => (
             <li class='inline-block h-max min-w-max snap-center'>
               <ScheduleImage {...data} />
             </li>

@@ -4,7 +4,7 @@ import InstructorCard from './InstructorCard/InstructorCard.astro';
 
 export interface TInstructor {
   title: string;
-  imageUrl: string;
+  imagePath: string;
   name: string;
   jobTitle: string;
   imageCompanyUrl: string;
@@ -14,7 +14,7 @@ export interface TInstructor {
 const defaultInstructors: TInstructor[] = [
   {
     title: 'Teacher',
-    imageUrl: 'qa-course/expert-instructor-1.jpeg',
+    imagePath: '/src/assets/instructor-image-1.jpg',
     name: 'Sara Mustafa',
     jobTitle: 'Software Engineer',
     imageCompanyUrl: 'airbnb-icon.svg',
@@ -22,7 +22,7 @@ const defaultInstructors: TInstructor[] = [
   },
   {
     title: 'Teacher',
-    imageUrl: 'qa-course/expert-instructor-2.jpeg',
+    imagePath: '/src/assets/instructor-image-2.jpg',
     name: 'Steven Murphy',
     jobTitle: 'Software Engineer',
     imageCompanyUrl: 'airbnb-icon.svg',
@@ -30,7 +30,23 @@ const defaultInstructors: TInstructor[] = [
   },
   {
     title: 'Teacher',
-    imageUrl: 'qa-course/expert-instructor-3.jpeg',
+    imagePath: '/src/assets/instructor-image-3.jpg',
+    name: 'Lauren Zirbard',
+    jobTitle: 'Software Engineer',
+    imageCompanyUrl: 'airbnb-icon.svg',
+    companyname: 'Airbnb',
+  },
+  {
+    title: 'Teacher',
+    imagePath: '/src/assets/instructor-image-4.jpg',
+    name: 'Lauren Zirbard',
+    jobTitle: 'Software Engineer',
+    imageCompanyUrl: 'airbnb-icon.svg',
+    companyname: 'Airbnb',
+  },
+  {
+    title: 'Teacher',
+    imagePath: '/src/assets/instructor-image-5.jpg',
     name: 'Lauren Zirbard',
     jobTitle: 'Software Engineer',
     imageCompanyUrl: 'airbnb-icon.svg',

@@ -2,25 +2,29 @@
 import type { TInstructor } from '../BootcampTeam.astro';
 
 interface Props extends TInstructor {}
-const { title, imageUrl, name, jobTitle, imageCompanyUrl, companyname } =
+const { title, imagePath, name, jobTitle, imageCompanyUrl, companyname } =
   Astro.props;
 ---
 
 <div
-  class={`relative w-full h-full bg-cover bg-no-repeat bg-center rounded-l tablet:rounded-[16px]`}
-  style={{ backgroundImage: `url('${imageUrl}')` }}
+  class='flex h-full w-full flex-col justify-between rounded-l bg-cover bg-center tablet:rounded-[16px]'
+  style={{ backgroundImage: `url('${imagePath}')` }}
 >
   <p
-    class='absolute left-3 top-3 rounded-xs bg-cultured px-[6px] py-[2px] text-xxs font-normal text-primary laptop:px-4 laptop:py-1 laptop:text-s'
+    class='mx-2 my-2 w-fit rounded-xs bg-cultured px-[6px] py-[2px] text-xxs font-normal text-primary tablet:mx-4 tablet:my-4 tablet:px-4 tablet:py-1 laptop:text-s'
   >
     {title}
   </p>
-  <div class='absolute bottom-3 left-3 flex w-full flex-col gap-y-2'>
+  <div
+    class='image-shadow-inner flex w-full flex-col gap-y-2 rounded-l px-2 py-2 tablet:rounded-[16px] tablet:px-4 tablet:py-4'
+  >
     <div>
       <p class='text-s font-bold text-white tablet:text-s laptop:text-l'>
         {name}
       </p>
-      <p class='text-xxs font-medium text-gray-200 laptop:text-s'>{jobTitle}</p>
+      <p class='text-xxs font-medium text-gray-200 laptop:text-s'>
+        {jobTitle}
+      </p>
     </div>
     <div class='flex w-full flex-row items-center gap-x-1 laptop:gap-x-3'>
       <div
@@ -40,3 +44,9 @@ const { title, imageUrl, name, jobTitle, imageCompanyUrl, companyname } =
     </div>
   </div>
 </div>
+
+<style>
+  .image-shadow-inner {
+    background-image: linear-gradient(transparent, #000);
+  }
+</style>

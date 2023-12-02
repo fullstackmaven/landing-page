@@ -3,7 +3,11 @@ import LiveIndicatorPulse from '@components/LiveIndicatorPulse.astro';
 import { Image } from 'astro:assets';
 import classNames from 'classnames';
 import type { BootcampCourse } from 'src/types/Course';
-import ImageLiveLectureTools from '/public/home-page/live-lecture-tools-image.svg';
+import ReactIcon from '@assets/techIcons/react.svg';
+import JavascriptIcon from '@assets/techIcons/javascript.svg';
+import TypescriptIcon from '@assets/techIcons/typescript.svg';
+import NodejsIcon from '@assets/techIcons/nodejs.svg';
+import AwsIcon from '@assets/techIcons/aws.svg';
 
 interface Props {
   course: BootcampCourse;
@@ -22,7 +26,7 @@ const { course, isHeader = false, withBlur = true } = Astro.props;
   >
     <div
       class={classNames(
-        'relative mb-3 flex bg-live-lecture-image h-[268px] w-full bg-no-repeat bg-cover bg-center rounded-xl tablet:rounded-l',
+        'relative mb-3 flex h-[268px] bg-live-lecture-image w-full bg-no-repeat bg-cover bg-center rounded-xl tablet:rounded-l',
         { '!h-[198px]': isHeader },
       )}
     >
@@ -51,13 +55,21 @@ const { course, isHeader = false, withBlur = true } = Astro.props;
             </p>
           </div>
         </div>
-        <Image
-          src={ImageLiveLectureTools}
-          alt='live-lecture-tools-image'
-          loading='lazy'
-          decoding='async'
-          class='tablet:h-6 tablet:w-fit'
-        />
+        {
+          [ReactIcon, JavascriptIcon, TypescriptIcon, NodejsIcon, AwsIcon].map(
+            (icon, index) => (
+              <div class={index !== 0 ? 'ml-[-12px]' : ''}>
+                <Image
+                  src={icon}
+                  alt='live-lecture-tools-image'
+                  loading='lazy'
+                  decoding='async'
+                  class='tablet:h-6 tablet:w-fit'
+                />
+              </div>
+            ),
+          )
+        }
       </div>
       <h2
         class={classNames(

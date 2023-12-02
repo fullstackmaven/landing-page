@@ -3,8 +3,6 @@ import CourseDefinition from '@components/CourseDefinition.astro';
 import Footer from '@components/Footer.astro';
 import { Header } from '@components/Header';
 import GetStarted from '@components/sections/common/getStarted/GetStarted.astro';
-import Questions from '@components/sections/common/questions/Questions.astro';
-import StudentFeedback from '@components/sections/common/studentFeedback/StudentFeedback.astro';
 import HeaderDropdown from '@components/sections/homepage/headerDropdown/HeaderDropdown.astro';
 import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
 import BootcampTuition from '@components/sections/qaCourse/bootcampTuition/BootcampTuition.astro';
@@ -15,6 +13,8 @@ import Schedule from '@components/sections/qaCourse/schedule/Schedule.astro';
 import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
+import Students from '@components/sections/homepage/students/Students.astro';
+import GotAQuestion from '@components/GotAQuestion.astro';
 
 const menuItems = [
   { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
@@ -36,20 +36,17 @@ const menuItems = [
     </Header>
     <Hero courseName='se' />
     <div
-      class='laptop:gap-y8 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-[80px] laptop:pb-[128px]'
+      class='laptop:gap-y8 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-13'
     >
       <CourseDefinition name='se' />
       <Overview />
       <Curriculum client:load />
       <Schedule />
       <WhyCyram />
-      <StudentFeedback
-        headerTitle='BOOTCAMP ALUMNI'
-        title='Meet our alumni who work at companies like Amazon and Microsoft!'
-      />
+      <Students />
       <BootcampTeam />
       <BootcampTuition />
-      <Questions class='!py-0' />
+      <GotAQuestion />
       <GetStarted />
       <Footer />
     </div>

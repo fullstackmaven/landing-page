@@ -23,12 +23,7 @@ const { dark, currentPrice, list, prevPrice, priceList, title, ...attrs } =
   Astro.props;
 ---
 
-<section
-  class={classNames(
-    'border rounded-l border-gray-300 isolate grid max-w-md grid-cols-1 gap-8 laptop:mx-0 laptop:w-fit',
-  )}
-  {...attrs}
->
+<section class={classNames('border rounded-l border-gray-300')} {...attrs}>
   <div
     class={classNames('flex flex-col gap-3 rounded-l bg-white p-6', {
       '!bg-primary': dark,
@@ -79,7 +74,7 @@ const { dark, currentPrice, list, prevPrice, priceList, title, ...attrs } =
         ))
       }
     </ul>
-    <ul class='text-sm xl:mt-10 text-gray-600 space-y-3 leading-6'>
+    <ul class='text-sm text-gray-600 space-y-3'>
       {
         list?.map((data) => (
           <li class='flex gap-x-3'>

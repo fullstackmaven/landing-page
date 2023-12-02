@@ -1,7 +1,5 @@
 ---
 import { Image } from 'astro:assets';
-// import BootcampScheduleImage2 from "/public/qa-course/bootcamp-schedule-image-2.svg";
-// import BootcampScheduleImage3 from "/public/qa-course/bootcamp-schedule-image-3.svg";
 
 interface Props {
   imagePath: string;
@@ -12,24 +10,38 @@ interface Props {
 }
 
 const { imagePath, altText, description, subtitle, title } = Astro.props;
-const src = import(`./../../../../../assets/qa/${imagePath}.svg`);
+const images = import.meta.glob('/src/assets/*.{jpeg,jpg,png,gif}');
 ---
 
 <figure class='relative'>
   <Image
-    src={src}
+    src={images[imagePath]()}
     alt={altText}
     loading='lazy'
     decoding='async'
-    class='w-full rounded-l'
+    class='max-h-[358px] w-full max-w-sm rounded-l tablet:max-h-[384px]'
   />
+  <!-- <Image
+    src={import(`${imagePath}.jpg`)}
+    alt={altText}
+    loading='lazy'
+    decoding='async'
+    class='max-h-[358px] w-full max-w-sm rounded-l tablet:max-h-[384px]'
+  /> -->
   <div
-    class='absolute bottom-0 flex h-full flex-col justify-end py-3 pl-3 pr-6'
+    class='image-shadow-inner absolute bottom-0 flex h-full flex-col justify-end px-4 py-4'
   >
     <h2 class='mb-2 text-s text-white'>{title}</h2>
-    <p class='mb-5 text-xxs text-white'>{subtitle}</p>
-    <p class='text-xxs text-white'>
+    <p class='mb-5 text-xs text-white'>{subtitle}</p>
+    <p class='text-xs text-white'>
       {description}
     </p>
   </div>
 </figure>
+
+<style>
+  .image-shadow-inner {
+    box-shadow: 0px -90px 50px 0px rgba(0, 0, 0, 0.5) inset;
+    border-radius: 12px;
+  }
+</style>

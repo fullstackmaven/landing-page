@@ -120,11 +120,11 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-image': "url('/home-page/hero-image.jpeg')",
-        'live-lecture-image': "url('/home-page/live-lecture-image.jpeg')",
+        'live-lecture-image': "url('/src/assets/home/se-course-image.jpeg')",
       },
       lineHeight: {
         xs: '1rem', //16px
-        s: '1.25rem', //20px
+        s: '1.25rem', //20px TODO: fix duplicate values
         base: '1.25rem', //20px
         l: '1.5rem', //24px
         '2xl': '2.75rem', //44px

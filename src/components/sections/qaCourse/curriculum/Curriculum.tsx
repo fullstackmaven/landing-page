@@ -148,7 +148,7 @@ const Curriculum = () => {
         <p className='text-s tracking-wider text-gray-700'></p>
         <ul className='grid gap-y-2 laptop:hidden'>
           {defaultCurriculum.map((curriculum, index) => (
-            <li key={index}>
+            <li key={index} className='cursor-pointer'>
               <Accordion
                 id={`accordion-${index}`}
                 title={curriculum.title}
@@ -162,7 +162,7 @@ const Curriculum = () => {
 
         <div className='flex flex-col gap-y-4 laptop:flex-col-reverse'>
           <div className='flex flex-col rounded-l border border-gray-300 p-4 tablet:p-6'>
-            <div className='mb-3 grid grid-flow-col grid-rows-2 justify-around gap-y-3 tablet:grid-rows-1'>
+            <div className='mb-3 grid grid-flow-col grid-rows-2 justify-between gap-y-3 tablet:grid-rows-1'>
               <span className='w-fit rounded-4xl bg-orange-900/[0.0825] px-2 py-1 text-xs text-orange-900 tablet:px-4 tablet:py-2 tablet:text-s'>
                 Coaching
               </span>
