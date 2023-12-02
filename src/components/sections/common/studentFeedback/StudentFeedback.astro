@@ -57,13 +57,19 @@ const attrs = Astro.props;
 
 <div {...attrs}>
   <div
-    class='mb-12 grid grid-cols-2 justify-center gap-x-2 tablet:grid-cols-3 tablet:gap-x-4'
+    class='mb-12 grid grid-cols-2 justify-center gap-x-2 tablet:grid-cols-5 tablet:gap-x-4'
   >
     <VideoImage>
       <Image class='w-full' alt='alumni-1' src={ImageAlumni1} />
     </VideoImage>
     <VideoImage>
       <Image class='w-full' alt='alumni-2' src={ImageAlumni2} />
+    </VideoImage>
+    <VideoImage className='hidden tablet:block'>
+      <Image class='w-full' alt='alumni-1' src={ImageAlumni1} />
+    </VideoImage>
+    <VideoImage className='hidden tablet:block'>
+      <Image class='w-full' alt='alumni-1' src={ImageAlumni1} />
     </VideoImage>
     <VideoImage className='hidden tablet:block'>
       <Image class='w-full' alt='alumni-1' src={ImageAlumni1} />

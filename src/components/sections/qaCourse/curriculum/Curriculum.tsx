@@ -83,6 +83,7 @@ const defaultCurriculum: TCurriculum[] = [
 ];
 
 const BOOK_CALL_HEIGHT = 96;
+
 const Curriculum = () => {
   const containerRef = useRef<HTMLElement>(null);
   const bookCallRef = useRef<HTMLDivElement>(null);
@@ -194,17 +195,6 @@ const Curriculum = () => {
           </div>
         </div>
       </section>
-      {/* {showBookCall && (
-        <BookCall
-          ref={bookCallRef}
-          className='laptop:hidden'
-          style={{
-            willChange: 'trasform',
-            transform: 'translate3d(0,96px,0)',
-            transformStyle: 'preserve-3d',
-          }}
-        />
-      )} */}
     </>
   );
 };

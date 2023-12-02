@@ -56,21 +56,26 @@ const { course, isHeader = false, withBlur = true } = Astro.props;
             </p>
           </div>
         </div>
-        {
-          [ReactIcon, JavascriptIcon, TypescriptIcon, NodejsIcon, AwsIcon].map(
-            (icon, index) => (
-              <div class={index !== 0 ? 'ml-[-12px]' : ''}>
-                <Image
-                  src={icon}
-                  alt='live-lecture-tools-image'
-                  loading='lazy'
-                  decoding='async'
-                  class='tablet:h-6 tablet:w-fit'
-                />
+        <div class='flex w-fit'>
+          {
+            [
+              ReactIcon,
+              JavascriptIcon,
+              TypescriptIcon,
+              NodejsIcon,
+              AwsIcon,
+            ].map((icon, index) => (
+              <div
+                class:list={[
+                  index !== 0 && !isHeader && 'ml-[-0.5rem]',
+                  isHeader && 'ml-[-0.8rem]',
+                ]}
+              >
+                <Image src={icon} alt='live-lecture-tools-image' class='w-7' />
               </div>
-            ),
-          )
-        }
+            ))
+          }
+        </div>
       </div>
       <h2
         class={classNames(

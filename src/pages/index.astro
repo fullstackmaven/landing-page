@@ -10,6 +10,7 @@ import Promo from '@components/sections/homepage/promo/Promo.astro';
 import Students from '@components/sections/homepage/students/Students.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
 
 const menuItems = [
   {
@@ -41,6 +42,7 @@ const menuItems = [
         <HeaderDropdown />
       </div>
     </Header>
+    <ViewTransitions />
     <div class='grid gap-12 tablet:gap-15 laptop:gap-16'>
       <Promo />
       <Courses />

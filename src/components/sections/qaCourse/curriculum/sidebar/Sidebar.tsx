@@ -47,6 +47,7 @@ const Sidebar: FC<TSidebarProps> = ({ curriculum = [] }) => {
         </ul>
         <div className='flex gap-y-10 py-10 pr-6'>
           <Content
+            title={curriculum[activeCurriculum].title}
             description={curriculum[activeCurriculum].description}
             topics={curriculum[activeCurriculum].topics}
           />

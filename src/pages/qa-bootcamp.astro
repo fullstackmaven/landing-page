@@ -15,6 +15,7 @@ import Students from '@components/sections/qaCourse/students/Students.astro';
 import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
 
 const menuItems = [
   { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
@@ -35,6 +36,7 @@ const menuItems = [
       </div>
     </Header>
     <Hero courseName='qa' />
+    <ViewTransitions />
   </div>
   <div
     class='flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-15 tablet:pt-16 laptop:gap-y-16 laptop:pt-17'
