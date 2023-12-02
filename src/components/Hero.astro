@@ -7,8 +7,6 @@ import JavascriptIcon from '@assets/techIcons/javascript.svg';
 import TypescriptIcon from '@assets/techIcons/typescript.svg';
 import NodejsIcon from '@assets/techIcons/nodejs.svg';
 import AwsIcon from '@assets/techIcons/aws.svg';
-import SEHeroImage from '@assets/se/people/se-hero-image.jpg';
-import QAHeroImage from '@assets/qa/people/hero-qa-image.jpg';
 
 interface Props {
   courseName: 'se' | 'qa';
@@ -27,12 +25,10 @@ const subTitle =
     ? 'Start your tech career with our immersive coding bootcamp. Create real-world projects and build your job-ready portfolio!'
     : 'Transform into a QA engineer in just 5 months and gain in-demand skills. Join our live online classes and master the art of quality assurance.';
 
-const heroImage = courseName === 'se' ? SEHeroImage : QAHeroImage;
-
-// const heroImage =
-//   courseName === 'se'
-//     ? import(`@assets/se/people/hero-se-image.jpg`)
-//     : import(`@assets/qa/people/hero-qa-image.jpg`);
+const heroImage =
+  courseName === 'se'
+    ? import(`@assets/se/people/se-hero-image.jpg`)
+    : import(`@assets/qa/people/hero-qa-image.jpg`);
 ---
 
 <section

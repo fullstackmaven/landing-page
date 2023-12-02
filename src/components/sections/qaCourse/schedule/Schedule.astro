@@ -57,9 +57,9 @@ const schedules: BootcampSchedule[] = [
         class='relative flex snap-x gap-x-4 overflow-x-scroll laptop:overflow-hidden'
       >
         {
-          schedules.map((data) => (
+          schedules.map((schedule) => (
             <li class='inline-block h-max min-w-max snap-center'>
-              <ScheduleImage {...data} />
+              <ScheduleImage {...schedule} />
             </li>
           ))
         }

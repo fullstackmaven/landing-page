@@ -1,5 +1,5 @@
 export interface BootcampCourse {
-  image: string;
+  imagePath: string;
   courseLink: string;
   title: string;
   courseTitle: string;

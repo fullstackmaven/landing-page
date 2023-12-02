@@ -12,8 +12,6 @@ const { image, altText, description, subtitle, title } = Astro.props;
   <Image
     src={image as ImageMetadata}
     alt={altText as string}
-    loading='lazy'
-    decoding='async'
     class='max-h-[358px] w-full max-w-sm rounded-l tablet:max-h-[384px]'
   />
   <div

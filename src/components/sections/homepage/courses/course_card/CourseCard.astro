@@ -26,9 +26,10 @@ const { course, isHeader = false, withBlur = true } = Astro.props;
   >
     <div
       class={classNames(
-        'relative mb-3 flex h-[268px] bg-live-lecture-image w-full bg-no-repeat bg-cover bg-center rounded-xl tablet:rounded-l',
+        'relative mb-3 flex h-[268px] w-full bg-no-repeat bg-cover bg-center rounded-xl tablet:rounded-l',
         { '!h-[198px]': isHeader },
       )}
+      style={{ backgroundImage: `url(${course.imagePath})` }}
     >
       {
         withBlur && (
