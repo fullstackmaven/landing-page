@@ -8,7 +8,7 @@ interface Props {
 
 const { data } = Astro.props;
 const { country, feedback, imagePath, name } = data;
-const src = import(`./../../../../assets/${imagePath}.svg`);
+const src = import(`./../../../../../public/${imagePath}.svg`);
 ---
 
 <div>
