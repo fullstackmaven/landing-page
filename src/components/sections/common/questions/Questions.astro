@@ -1,19 +1,16 @@
 ---
 import Accordion from '@components/Accordion';
 import { Button } from '@components/Button';
-import type { HTMLAttributes } from 'astro/types';
 import classNames from 'classnames';
-interface TQuestions {
-  question: string;
-  answer: string;
+import type { Faq, FaqPage } from 'src/types/Faq';
+import { Image } from 'astro:assets';
+import WorkDeskImage from '@assets/work-desk.webp';
+
+interface Props extends FaqPage {
+  questions?: Faq[];
 }
 
-interface Props extends HTMLAttributes<'section'> {
-  questions?: TQuestions[];
-  unsure?: boolean;
-}
-
-const defaultQuestions: TQuestions[] = [
+const defaultQuestions: Faq[] = [
   {
     question: 'Can I try Cyram for free?',
     answer: `Yes, you can select a monthly payment plan of $550.00 a month for 10 months and $1,400.00 upfront. Note: You will be required to pay the full duration of the payment plan even if you finish the program before the payment plan ends.`,
@@ -28,15 +25,15 @@ const defaultQuestions: TQuestions[] = [
   },
 ];
 
-const { questions = defaultQuestions, unsure, ...attrs } = Astro.props;
+const { questions = defaultQuestions, page } = Astro.props;
 ---
 
-<div {...attrs}>
+<div>
   <Button
     title='Join intro session'
     category='ghost'
     className={classNames('mb-6 !px-4 !py-2 !text-s font-semibold', {
-      hidden: unsure,
+      hidden: page !== 'home',
     })}
   />
   <ul class='mb-3 flex flex-col gap-y-2'>
@@ -54,7 +51,7 @@ const { questions = defaultQuestions, unsure, ...attrs } = Astro.props;
   </ul>
   <div
     class={classNames('rounded-s border border-gray-300 p-6', {
-      hidden: !unsure,
+      hidden: page === 'home',
     })}
   >
     <h2 class='text-s font-bold text-primary'>Still not sure?</h2>
@@ -69,11 +66,11 @@ const { questions = defaultQuestions, unsure, ...attrs } = Astro.props;
     />
   </div>
 
-  <!-- <Image
-    src={GetStartedImage}
+  <Image
+    src={WorkDeskImage}
     alt='get-started-image'
     class={classNames('mt-6 h-full w-full rounded-l object-cover', {
-      hidden: !unsure,
+      hidden: page === 'home',
     })}
-  /> -->
+  />
 </div>

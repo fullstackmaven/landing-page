@@ -24,13 +24,22 @@ const MenuDrawer: FC<TMenuDrawerProps> = ({ onClose, ...otherProps }) => {
 
           <ul className='flex flex-col gap-y-4 pl-6 font-medium'>
             <li>
-              <p className='text-base text-primary'>Software Engineering</p>
+              <a
+                href='/software-engineering-bootcamp'
+                className='text-base text-primary'
+              >
+                Software Engineering
+              </a>
             </li>
             <li>
-              <p className='text-base text-primary'>Quality Assurance</p>
+              <a href='/qa-bootcamp' className='text-base text-primary'>
+                Quality Assurance
+              </a>
             </li>
             <li>
-              <p className='text-base text-primary'>UX/UI Design</p>
+              <a href='/ui-architecture' className='text-base text-primary'>
+                Frontend Architecture
+              </a>
             </li>
           </ul>
         </li>
