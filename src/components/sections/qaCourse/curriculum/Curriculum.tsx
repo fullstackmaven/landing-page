@@ -133,7 +133,7 @@ const Curriculum = () => {
         className='container grid max-w-screen-desktop gap-y-4'
       >
         <header className='mb-3 grid gap-y-3'>
-          <p className='text-xxs text-gray-700 tablet:text-xs laptop:text-s'>
+          <p className='text-xs text-gray-700 tablet:text-xs laptop:text-s'>
             CURRICULUM
           </p>
           <h1 className='text-l font-bold tracking-widest text-black tablet:text-xl laptop:text-2xl'>
