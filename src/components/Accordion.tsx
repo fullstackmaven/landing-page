@@ -1,3 +1,5 @@
+import ChevronDownIcon from '@assets/chevron-down-icon.svg';
+import ChevronRightIcon from '@assets/chevron-right-icon.svg';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, PropsWithChildren } from 'react';
 
@@ -20,11 +22,11 @@ const Accordion: FC<
       <summary className='flex flex-row justify-between'>
         <div className='flex'>
           <img
-            src='src/assets/chevron-right-icon.svg'
+            src={ChevronRightIcon.src}
             className='flex h-5 w-5 items-center justify-center self-center text-gray-500 group-open:hidden'
           ></img>
           <img
-            src='src/assets/chevron-down-icon.svg'
+            src={ChevronDownIcon.src}
             className='hidden h-5 w-5 items-center justify-center self-center group-open:flex'
           ></img>
           {typeof title !== 'undefined' && (
