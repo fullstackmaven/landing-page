@@ -1,3 +1,4 @@
+import ArrowChevronIcon from '@assets/arrow-chevron.svg';
 import classNames from 'classnames';
 import {
   useEffect,
@@ -164,7 +165,7 @@ const Navbar: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                     {(menuItem.isDropdown ?? false) && (
                       <img
                         alt='arrow-chevron-icon'
-                        src='src/assets/arrow-chevron.svg'
+                        src={ArrowChevronIcon.src}
                       />
                     )}
                   </p>
@@ -199,7 +200,7 @@ const Navbar: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                         {(menuItem.isDropdown ?? false) && (
                           <img
                             alt='arrow-chevron-icon'
-                            src='src/assets/arrow-chevron.svg'
+                            src={ArrowChevronIcon.src}
                           />
                         )}
                       </p>
