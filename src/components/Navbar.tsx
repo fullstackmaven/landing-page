@@ -162,7 +162,10 @@ const Navbar: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                   <p className='flex gap-x-1 font-semibold text-primary laptop:text-xs'>
                     {menuItem.label}
                     {(menuItem.isDropdown ?? false) && (
-                      <img src='src/assets/arrow-chevron.svg' />
+                      <img
+                        alt='arrow-chevron-icon'
+                        src='src/assets/arrow-chevron.svg'
+                      />
                     )}
                   </p>
                 </a>
@@ -194,7 +197,10 @@ const Navbar: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
                       <p className='flex gap-x-1 font-semibold text-primary laptop:text-xs'>
                         {menuItem.label}
                         {(menuItem.isDropdown ?? false) && (
-                          <img src='src/assets/arrow-chevron.svg' />
+                          <img
+                            alt='arrow-chevron-icon'
+                            src='src/assets/arrow-chevron.svg'
+                          />
                         )}
                       </p>
                     </a>
