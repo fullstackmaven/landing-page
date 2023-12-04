@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  .wrapper {
-    @apply mx-auto w-full max-w-7xl px-4 tablet:px-8 laptop:px-12;
+  .gradient-text {
+    background: linear-gradient(90deg, #fa148f 45.77%, #4238b2 84.42%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 

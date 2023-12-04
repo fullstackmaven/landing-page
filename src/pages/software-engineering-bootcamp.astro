@@ -14,6 +14,8 @@ import Schedule from '@components/sections/qa/schedule/Schedule.astro';
 import Students from '@components/sections/qa/students/Students.astro';
 import WhyCyram from '@components/sections/qa/whyCyram/WhyCyram.astro';
 import DevStack from '@components/sections/se/devStack/DevStack.astro';
+import Project from '@components/sections/se/projects/Project.astro';
+import Workshop from '@components/sections/se/workshop/Workshop.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
 
@@ -43,6 +45,8 @@ const menuItems = [
       <Overview />
       <Curriculum client:load />
       <DevStack />
+      <Project />
+      <Workshop />
       <Schedule />
       <WhyCyram />
       <Students />
@@ -54,4 +58,3 @@ const menuItems = [
     </div>
   </>
 </Layout>
- @components/sections/qa/curriculum/Curriculum

@@ -1,0 +1,26 @@
+---
+import ProjectsImage from '@assets/se/project-image.svg';
+import { Image } from 'astro:assets';
+---
+
+<section class='container max-w-screen-desktop'>
+  <header class='grid gap-y-3 tablet:mb-6'>
+    <p class='text-xxs uppercase text-gray-700 tablet:text-xs laptop:text-s'>
+      PROJECTS
+    </p>
+    <h1
+      class:list={[
+        'text-l font-bold tracking-widest text-black tablet:text-xl laptop:text-2xl',
+      ]}
+    >
+      Master how to build fullstack web apps and <span class='gradient-text'
+        >deploy to cloud</span
+      >
+    </h1>
+  </header>
+  <Image
+    alt='workshop-image'
+    src={ProjectsImage}
+    class='mx-auto min-h-[272.445px] tablet:min-h-[333px]'
+  />
+</section>
