@@ -16,7 +16,7 @@ const { image, altText, description, subtitle, title } = Astro.props;
     class='max-h-[358px] w-full max-w-sm rounded-l tablet:max-h-[384px]'
   />
   <div
-    class='image-shadow-inner absolute bottom-0 flex h-full flex-col justify-end px-4 py-4'
+    class='image-shadow-inner absolute bottom-0 flex h-full flex-col justify-end rounded-l px-4 py-4'
   >
     <h2 class='mb-2 text-s text-white'>{title}</h2>
     <p class='mb-5 text-xs text-white'>{subtitle}</p>
@@ -29,6 +29,5 @@ const { image, altText, description, subtitle, title } = Astro.props;
 <style>
   .image-shadow-inner {
     box-shadow: 0px -90px 50px 0px rgba(0, 0, 0, 0.5) inset;
-    border-radius: 12px;
   }
 </style>

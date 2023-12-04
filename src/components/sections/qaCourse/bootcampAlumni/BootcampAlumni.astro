@@ -1,9 +1,7 @@
 ---
-import ImageAlumni1 from '@assets/qa/alumni-1.svg';
-import ImageAlumni2 from '@assets/qa/alumni-2.svg';
-import ImageAlumni3 from '@assets/qa/alumni-3.svg';
-import ImageAlumni4 from '@assets/qa/alumni-4.svg';
-import ImageAlumni5 from '@assets/qa/alumni-5.svg';
+import ImageAlumni1 from '@assets/alumni-1.svg';
+import ImageAlumni2 from '@assets/alumni-2.svg';
+import ImageAlumni3 from '@assets/alumni-3.svg';
 import { Image } from 'astro:assets';
 import VideoImage from './VideoImage/VideoImage.astro';
 ---
@@ -30,12 +28,6 @@ import VideoImage from './VideoImage/VideoImage.astro';
     </VideoImage>
     <VideoImage className='hidden tablet:visible tablet:block'>
       <Image src={ImageAlumni3} alt='alumni-3' loading='lazy' class='w-full' />
-    </VideoImage>
-    <VideoImage className='hidden laptop:block'>
-      <Image src={ImageAlumni4} alt='alumni-4' loading='lazy' class='w-full' />
-    </VideoImage>
-    <VideoImage className='hidden laptop:block'>
-      <Image src={ImageAlumni5} alt='alumni-5' loading='lazy' class='w-full' />
     </VideoImage>
   </div>
 </section>
