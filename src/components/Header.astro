@@ -29,16 +29,16 @@ const {
 >
   {
     headerTitle && (
-      <p class='text-xxs uppercase text-gray-700 tablet:text-xs laptop:text-s'>
+      <p class='text-xs uppercase text-gray-700 tablet:text-s laptop:text-base'>
         {headerTitle}
       </p>
     )
   }
   <h1
     class:list={[
-      'tracking-base laptop:tracking-xl text-l font-bold text-black tablet:text-xl laptop:text-2xl',
+      'text-l font-bold tracking-base text-black tablet:text-xl laptop:text-2xl laptop:tracking-xl',
       {
-        'tracking-l text-xl tablet:text-center tablet:text-3xl laptop:text-4xl':
+        'text-xl tracking-l tablet:text-center tablet:text-3xl laptop:text-4xl':
           isCentered,
       },
     ]}
@@ -49,7 +49,7 @@ const {
     description && (
       <p
         class:list={[
-          'tracking-l text-s text-gray-700 laptop:text-base',
+          'text-s tracking-l text-gray-700 laptop:text-base',
           {
             'tablet:text-center': isCentered,
           },
