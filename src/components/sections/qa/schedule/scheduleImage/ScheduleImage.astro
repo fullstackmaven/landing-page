@@ -13,7 +13,7 @@ const { image, altText, description, subtitle, title } = Astro.props;
   <Image
     src={image as ImageMetadata}
     alt={altText as string}
-    class='max-h-[358px] w-full max-w-sm rounded-l tablet:max-h-[384px]'
+    class='max-h-[358px] w-fit max-w-sm rounded-l object-cover tablet:max-h-[384px]'
   />
   <div
     class='image-shadow-inner absolute bottom-0 flex h-full flex-col justify-end rounded-l px-4 py-4'
