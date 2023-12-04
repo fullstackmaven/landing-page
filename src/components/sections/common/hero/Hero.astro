@@ -45,10 +45,9 @@ const heroImage =
       src={heroImage}
       alt=`${courseName}-course-image`
       class='h-[26rem] w-full rounded-l object-cover'
+      densities={[1.5, 2]}
     />
-    <div
-      class='absolute flex h-full w-full flex-col justify-between border p-4'
-    >
+    <div class='absolute flex h-full w-full flex-col justify-between p-4'>
       <div
         class='flex w-fit items-center gap-x-3 rounded-s border border-gray-400 bg-gray-100 px-2 py-1 backdrop-blur-[2px]'
       >
@@ -64,7 +63,6 @@ const heroImage =
               <Image
                 src={icon}
                 alt={'tech-stack-image'}
-                loading='lazy'
                 class='ml-[-12px] h-12 first:ml-0'
               />
             ),
