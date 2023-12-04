@@ -13,6 +13,7 @@ import Overview from '@components/sections/qa/overview/Overview.astro';
 import Schedule from '@components/sections/qa/schedule/Schedule.astro';
 import Students from '@components/sections/qa/students/Students.astro';
 import WhyCyram from '@components/sections/qa/whyCyram/WhyCyram.astro';
+import DevStack from '@components/sections/se/devStack/DevStack.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
 
@@ -41,6 +42,7 @@ const menuItems = [
       <CourseDefinition name='se' />
       <Overview />
       <Curriculum client:load />
+      <DevStack />
       <Schedule />
       <WhyCyram />
       <Students />
