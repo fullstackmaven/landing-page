@@ -28,7 +28,7 @@ const Accordion: FC<
             className='hidden h-5 w-5 items-center justify-center self-center group-open:flex'
           ></img>
           {typeof title !== 'undefined' && (
-            <p className='ml-2 self-center text-xs font-semibold tracking-wide text-primary tablet:ml-3 tablet:text-s tablet:tracking-wider'>
+            <p className='ml-2 self-center text-xs font-semibold tracking-xs text-primary tablet:ml-3 tablet:text-s tablet:tracking-s'>
               {title}
             </p>
           )}

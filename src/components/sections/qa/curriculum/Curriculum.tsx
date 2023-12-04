@@ -136,11 +136,11 @@ const Curriculum = () => {
           <p className='text-xs text-gray-700 tablet:text-xs laptop:text-s'>
             CURRICULUM
           </p>
-          <h1 className='text-l font-bold tracking-widest text-black tablet:text-xl laptop:text-2xl'>
+          <h1 className='text-l font-bold tracking-base text-black tablet:text-xl laptop:text-2xl'>
             Mastery-based learning with real world projects
           </h1>
         </header>
-        <p className='text-s tracking-wider text-gray-700 laptop:text-base'>
+        <p className='text-s tracking-s text-gray-700 laptop:text-base'>
           At Cyram, we believe in learning at your own pace. No rush or
           pressure. Master topics step by step with hands-on projects. Got it?
           Move on. Need more time? No problem. We're here to help. Graduate with
@@ -182,7 +182,7 @@ const Curriculum = () => {
                 Resume
               </span>
             </div>
-            <p className='text-s tracking-wider text-primary tablet:text-base tablet:tracking-widest'>
+            <p className='text-s tracking-s text-primary tablet:text-base tablet:tracking-base'>
               Cyram is the only bootstrapped Bootcamp. We've grown organically
               with no funding and care passionately about every single one of
               our students.

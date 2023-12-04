@@ -6,9 +6,7 @@ import CourseCard from '../courses/course_card/CourseCard.astro';
 ---
 
 <div class='flex h-full w-full flex-col gap-y-6 bg-cultured'>
-  <p class='text-s tracking-wider'>
-    Go from beginner to expert at your own pace
-  </p>
+  <p class='tracking-s text-s'>Go from beginner to expert at your own pace</p>
   <div class='grid w-full grid-cols-4 gap-x-6'>
     {
       (courses as BootcampCourse[]).map((course: BootcampCourse) => (

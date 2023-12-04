@@ -41,7 +41,7 @@ const { questions = defaultQuestions, page = false } = Astro.props;
       questions.map((question, index) => (
         <li class='flex cursor-pointer flex-col'>
           <Accordion id={`accordion-${index}`} title={question.question}>
-            <p class='text-s font-normal tracking-wider text-primary tablet:pb-5'>
+            <p class='tracking-s text-s font-normal text-primary tablet:pb-5'>
               {question.answer}
             </p>
           </Accordion>
@@ -58,7 +58,7 @@ const { questions = defaultQuestions, page = false } = Astro.props;
     ]}
   >
     <h2 class='text-s font-bold text-primary'>Still not sure?</h2>
-    <p class='text-s tracking-wider text-gray-700'>
+    <p class='tracking-s text-s text-gray-700'>
       if you still have any other questions, feel free to schedule an intro
       session with our team
     </p>

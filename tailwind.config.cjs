@@ -114,9 +114,10 @@ module.exports = {
       },
     },
     letterSpacing: {
-      wide: '0.28px',
-      wider: '0.32px',
-      widest: '0.48px',
+      xs: '0.28px',
+      s: '0.32px',
+      base: '0.48px',
+      l: '0.64px',
     },
     extend: {
       backgroundImage: {
