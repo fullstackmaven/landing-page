@@ -126,75 +126,73 @@ const Curriculum = () => {
     };
   }, []);
   return (
-    <>
-      <section
-        ref={containerRef}
-        id='qacurriculum'
-        className='container grid max-w-screen-desktop gap-y-4'
-      >
-        <header className='mb-3 grid gap-y-3'>
-          <p className='text-xs text-gray-700 tablet:text-xs laptop:text-s'>
-            CURRICULUM
-          </p>
-          <h1 className='text-l font-bold tracking-base text-black tablet:text-xl laptop:text-2xl'>
-            Mastery-based learning with real world projects
-          </h1>
-        </header>
-        <p className='text-s tracking-s text-gray-700 laptop:text-base'>
-          At Cyram, we believe in learning at your own pace. No rush or
-          pressure. Master topics step by step with hands-on projects. Got it?
-          Move on. Need more time? No problem. We're here to help. Graduate with
-          solid QA engineering skills for a successful career.
+    <section
+      ref={containerRef}
+      id='qacurriculum'
+      className='container grid max-w-screen-desktop gap-y-4'
+    >
+      <header className='mb-3 grid gap-y-3'>
+        <p className='text-xs text-gray-700 tablet:text-xs laptop:text-s'>
+          CURRICULUM
         </p>
-        <ul className='grid gap-y-2 laptop:hidden'>
-          {defaultCurriculum.map((curriculum, index) => (
-            <li key={index} className='cursor-pointer'>
-              <Accordion
-                id={`accordion-${index}`}
-                title={curriculum.title}
-                subtitle={curriculum.subtitle}
-              >
-                <Content {...curriculum} />
-              </Accordion>
-            </li>
-          ))}
-        </ul>
-
-        <div className='flex flex-col gap-y-4 laptop:flex-col-reverse'>
-          <div className='flex flex-col rounded-l border border-gray-300 p-4 tablet:p-6'>
-            <div className='mb-3 grid grid-flow-col grid-rows-2 justify-between gap-y-3 tablet:grid-rows-1'>
-              <span className='w-fit rounded-4xl bg-orange-900/[0.0825] px-2 py-1 text-xs text-orange-900 tablet:px-4 tablet:py-2 tablet:text-s'>
-                Coaching
-              </span>
-              <span className='w-fit rounded-4xl bg-purple/[0.0825] px-2 py-1 text-xs text-purple tablet:px-4 tablet:py-2 tablet:text-s'>
-                Workshops
-              </span>
-              <span className='w-fit rounded-4xl bg-green-300/[0.0825] px-2 py-1 text-xs text-green-300 tablet:px-4 tablet:py-2 tablet:text-s'>
-                Interview prep
-              </span>
-              <span className='w-fit rounded-4xl bg-orange-800/[0.0825] px-2 py-1 text-xs text-orange-800 tablet:px-4 tablet:py-2 tablet:text-s'>
-                Portfolio
-              </span>
-              <span className='w-fit rounded-4xl bg-green-300/[0.0825] px-2 py-1 text-xs text-green-300 tablet:px-4 tablet:py-2 tablet:text-s'>
-                Networking
-              </span>
-              <span className='w-fit rounded-4xl bg-blue-200/[0.0825] px-2 py-1 text-xs text-blue-200 tablet:px-4 tablet:py-2 tablet:text-s'>
-                Resume
-              </span>
-            </div>
-            <p className='text-s tracking-s text-primary tablet:text-base tablet:tracking-base'>
-              Cyram is the only bootstrapped Bootcamp. We've grown organically
-              with no funding and care passionately about every single one of
-              our students.
-            </p>
+        <h1 className='text-l font-bold tracking-base text-black tablet:text-xl laptop:text-2xl'>
+          Mastery-based learning with real world projects
+        </h1>
+      </header>
+      <p className='text-s tracking-s text-gray-700 laptop:text-base'>
+        At Cyram, we believe in learning at your own pace. No rush or pressure.
+        Master topics step by step with hands-on projects. Got it? Move on. Need
+        more time? No problem. We're here to help. Graduate with solid QA
+        engineering skills for a successful career.
+      </p>
+      <div className='grid gap-y-2 laptop:hidden'>
+        {defaultCurriculum.map((curriculum, index) => (
+          <div key={index} className='cursor-pointer'>
+            <Accordion
+              id={`accordion-${index}`}
+              title={curriculum.title}
+              subtitle={curriculum.subtitle}
+            >
+              <Content {...curriculum} />
+            </Accordion>
           </div>
+        ))}
+      </div>
 
-          <div className='hidden laptop:block'>
-            <Sidebar curriculum={defaultCurriculum} />
+      <div className='flex flex-col gap-y-4 laptop:flex-col-reverse'>
+        <div className='flex flex-col rounded-l border border-gray-300 p-4 tablet:p-6'>
+          <div className='mb-3 grid grid-flow-col grid-rows-2 justify-between gap-y-3 tablet:grid-rows-1'>
+            <span className='w-fit rounded-4xl bg-orange-900/[0.0825] px-2 py-1 text-xs text-orange-900 tablet:px-4 tablet:py-2 tablet:text-s'>
+              Coaching
+            </span>
+            <span className='w-fit rounded-4xl bg-purple/[0.0825] px-2 py-1 text-xs text-purple tablet:px-4 tablet:py-2 tablet:text-s'>
+              Workshops
+            </span>
+            <span className='w-fit rounded-4xl bg-green-300/[0.0825] px-2 py-1 text-xs text-green-300 tablet:px-4 tablet:py-2 tablet:text-s'>
+              Interview prep
+            </span>
+            <span className='w-fit rounded-4xl bg-orange-800/[0.0825] px-2 py-1 text-xs text-orange-800 tablet:px-4 tablet:py-2 tablet:text-s'>
+              Portfolio
+            </span>
+            <span className='w-fit rounded-4xl bg-green-300/[0.0825] px-2 py-1 text-xs text-green-300 tablet:px-4 tablet:py-2 tablet:text-s'>
+              Networking
+            </span>
+            <span className='w-fit rounded-4xl bg-blue-200/[0.0825] px-2 py-1 text-xs text-blue-200 tablet:px-4 tablet:py-2 tablet:text-s'>
+              Resume
+            </span>
           </div>
+          <p className='text-s tracking-s text-primary tablet:text-base tablet:tracking-base'>
+            Cyram is the only bootstrapped Bootcamp. We've grown organically
+            with no funding and care passionately about every single one of our
+            students.
+          </p>
         </div>
-      </section>
-    </>
+
+        <div className='hidden laptop:block'>
+          <Sidebar curriculum={defaultCurriculum} />
+        </div>
+      </div>
+    </section>
   );
 };
 
