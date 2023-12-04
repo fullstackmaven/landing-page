@@ -17,7 +17,7 @@ import { Image } from 'astro:assets';
 >
   <table class='mb-10 table w-full table-fixed border-collapse'>
     <tbody>
-      <tr>
+      <tr class='h-[112px] tablet:h-16 laptop:h-17'>
         <td class='border border-gray-1100 p-2'>
           <Image class='mx-auto mb-2' alt='react-icon' src={ReactIcon} />
           <p class='text-center'>React</p>
@@ -39,7 +39,7 @@ import { Image } from 'astro:assets';
           <p class='text-center'>TypeScript</p></td
         >
       </tr>
-      <tr>
+      <tr class='tablet:h-16 laptop:h-17'>
         <td class='border border-gray-1100 p-2'>
           <Image class='mx-auto mb-2' alt='nextjs-icon' src={NextjsIcon} />
           <p class='text-center'>Next.js</p>
@@ -53,7 +53,7 @@ import { Image } from 'astro:assets';
           <p class='text-center'>Figma</p></td
         >
       </tr>
-      <tr>
+      <tr class='h-[112px] tablet:h-16 laptop:h-17'>
         <td class='border border-gray-1100 p-2'>
           <Image class='mx-auto mb-2' alt='nodejs-icon' src={NodejsIcon} />
           <p class='text-center'>NodeJS</p>

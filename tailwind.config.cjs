@@ -118,6 +118,7 @@ module.exports = {
       s: '0.32px',
       base: '0.48px',
       l: '0.64px',
+      xl: '0.8px',
     },
     extend: {
       backgroundImage: {

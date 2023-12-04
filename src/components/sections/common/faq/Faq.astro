@@ -9,6 +9,10 @@ const { page } = Astro.props;
 ---
 
 <section class='container max-w-screen-desktop'>
-  <Header headerTitle='FAQ' title='Got a question about our bootcamp?' />
+  <Header
+    headerTitle={page === 'home' ? '' : 'FAQ'}
+    title='Got a question about our bootcamp?'
+    isCentered={page === 'home'}
+  />
   <Questions page={page} />
 </section>

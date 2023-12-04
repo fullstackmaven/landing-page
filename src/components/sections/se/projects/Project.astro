@@ -21,6 +21,8 @@ import { Image } from 'astro:assets';
   <Image
     alt='workshop-image'
     src={ProjectsImage}
-    class='mx-auto min-h-[272.445px] tablet:min-h-[333px]'
+    width={ProjectsImage.width}
+    height={ProjectsImage.height}
+    class='mx-auto mt-6 min-h-[272px] w-fit object-cover tablet:min-h-[333px]'
   />
 </section>
