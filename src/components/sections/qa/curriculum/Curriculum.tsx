@@ -114,6 +114,14 @@ const Curriculum = () => {
       // setShowBookCall(false);
     }
   };
+
+  const headerFields = {
+    headerTitle: 'CURRICULUM',
+    title: 'Mastery-based learning with real world projects',
+    description:
+      "At Cyram, we believe in learning at your own pace. No rush or pressure. Master topics step by step with hands-on projects. Got it? Move on. Need more time? No problem. We're here to help. Graduate with solid QA engineering skills for a successful career.",
+  };
+
   useEffect(() => {
     handleScroll();
 
@@ -125,26 +133,24 @@ const Curriculum = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <section
       ref={containerRef}
       id='qacurriculum'
-      className='container grid max-w-screen-desktop gap-y-4'
+      className='container grid max-w-screen-desktop gap-y-4 tablet:gap-y-6'
     >
-      <header className='mb-3 grid gap-y-3'>
-        <p className='text-xs text-gray-700 tablet:text-xs laptop:text-s'>
-          CURRICULUM
+      <div className='grid gap-y-3'>
+        <p className='text-xxs text-gray-700 tablet:text-xs laptop:text-s'>
+          {headerFields.headerTitle}
         </p>
         <h1 className='text-l font-bold tracking-base text-black tablet:text-xl laptop:text-2xl'>
-          Mastery-based learning with real world projects
+          {headerFields.title}
         </h1>
-      </header>
-      <p className='text-s tracking-s text-gray-700 laptop:text-base'>
-        At Cyram, we believe in learning at your own pace. No rush or pressure.
-        Master topics step by step with hands-on projects. Got it? Move on. Need
-        more time? No problem. We're here to help. Graduate with solid QA
-        engineering skills for a successful career.
-      </p>
+        <p className='text-s tracking-s text-gray-700 laptop:text-base'>
+          {headerFields.description}
+        </p>
+      </div>
       <div className='grid gap-y-2 laptop:hidden'>
         {defaultCurriculum.map((curriculum, index) => (
           <div key={index} className='cursor-pointer'>
