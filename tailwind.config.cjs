@@ -33,6 +33,7 @@ module.exports = {
         800: '#6D6A6A',
         900: '#DADADA',
         1000: '#888',
+        1100: '#1F1F1F',
       },
       red: {
         300: '#CB9390',
@@ -113,9 +114,11 @@ module.exports = {
       },
     },
     letterSpacing: {
-      wide: '0.28px',
-      wider: '0.32px',
-      widest: '0.48px',
+      xs: '0.28px',
+      s: '0.32px',
+      base: '0.48px',
+      l: '0.64px',
+      xl: '0.8px',
     },
     extend: {
       backgroundImage: {

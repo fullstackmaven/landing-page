@@ -1,0 +1,31 @@
+---
+import { Button } from '@components/Button';
+import { courses } from '@components/sections/home/courses/Courses.astro';
+import type { BootcampCourse } from 'src/types/Course';
+import CourseCard from '../courses/course_card/CourseCard.astro';
+---
+
+<div class='flex h-full w-full flex-col gap-y-6 bg-cultured'>
+  <p class='tracking-s text-s'>Go from beginner to expert at your own pace</p>
+  <div class='grid w-full grid-cols-4 gap-x-6'>
+    {
+      (courses as BootcampCourse[]).map((course: BootcampCourse) => (
+        <CourseCard course={course} withBlur={true} isHeader />
+      ))
+    }
+    <div
+      class='flex flex-col justify-end rounded-2xl border border-gray-200 bg-gray-50 p-4'
+    >
+      <h3 class='mb-2 text-s font-bold text-primary'>
+        Not sure which is the right career path for you?
+      </h3>
+      <p class='mb-6 text-xs text-primary'>
+        Take our career quiz. It just takes 3 minutes.
+      </p>
+      <Button
+        title='Take a quiz'
+        className='w-full !bg-orange-800 !py-3 !text-xs !font-bold !text-primary'
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'header'> {
+  headerTitle?: string;
+  title?: string;
+  description?: string;
+  isCentered?: boolean;
+}
+
+const {
+  description,
+  headerTitle,
+  title,
+  isCentered = false,
+  ...attrs
+} = Astro.props;
+---
+
+<header
+  class:list={[
+    'mb-3 grid gap-y-3 tablet:mb-6',
+    {
+      'mb-4 gap-y-4 tablet:mb-8': isCentered,
+    },
+    attrs.class,
+  ]}
+  {...attrs}
+>
+  {
+    headerTitle && (
+      <p class='text-xs uppercase text-gray-700 tablet:text-s laptop:text-base'>
+        {headerTitle}
+      </p>
+    )
+  }
+  <h1
+    class:list={[
+      'text-l font-bold tracking-base text-black tablet:text-xl laptop:text-2xl laptop:tracking-xl',
+      {
+        'text-xl tracking-l tablet:text-center tablet:text-3xl laptop:text-4xl':
+          isCentered,
+      },
+    ]}
+  >
+    {title}
+  </h1>
+  {
+    description && (
+      <p
+        class:list={[
+          'text-s tracking-l text-gray-700 laptop:text-base',
+          {
+            'tablet:text-center': isCentered,
+          },
+        ]}
+      >
+        {description}
+      </p>
+    )
+  }
+</header>

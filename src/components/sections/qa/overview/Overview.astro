@@ -1,0 +1,26 @@
+---
+import ImageOverview from '@assets/qa/overview-image.png';
+import Header from '@components/Header.astro';
+import { Image } from 'astro:assets';
+---
+
+<section id='qaoverview' class='container max-w-screen-desktop'>
+  <Header
+    title='Learn by doing'
+    headerTitle='OVERVIEW'
+    description={`Through our bootcamp, you'll actively participate in coding exercises,
+    project-based assignments, and simulated real-world scenarios. This hands-on
+    approach not only solidifies your understanding but also cultivates
+    problem-solving abilities, critical thinking, and confidence in applying
+    learned concepts to your future jobs.`}
+  />
+  <figure class='mt-4'>
+    <Image
+      src={ImageOverview}
+      alt='overview-image'
+      loading='lazy'
+      decoding='async'
+      class='w-full'
+    />
+  </figure>
+</section>

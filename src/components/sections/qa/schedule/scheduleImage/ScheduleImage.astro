@@ -1,0 +1,33 @@
+---
+import { type ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import type { BootcampSchedule } from '../Schedule.astro';
+
+interface Props extends BootcampSchedule {}
+
+const { image, altText, description, subtitle, title } = Astro.props;
+// const src = import(`./../../../../../assets/${image}.svg`);
+---
+
+<figure class='relative'>
+  <Image
+    src={image as ImageMetadata}
+    alt={altText as string}
+    class='h-[358px] w-[238px] rounded-l object-cover tablet:h-[293px] laptop:h-[370px] laptop:w-[298px]'
+  />
+  <div
+    class='image-shadow-inner absolute bottom-0 flex h-full flex-col justify-end rounded-l px-4 py-4'
+  >
+    <h2 class='mb-2 text-s text-white'>{title}</h2>
+    <p class='mb-5 text-xs text-white'>{subtitle}</p>
+    <p class='text-xs text-white'>
+      {description}
+    </p>
+  </div>
+</figure>
+
+<style>
+  .image-shadow-inner {
+    box-shadow: 0px -90px 50px 0px rgba(0, 0, 0, 0.5) inset;
+  }
+</style>

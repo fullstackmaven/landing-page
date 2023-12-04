@@ -1,0 +1,79 @@
+---
+import Header from '@components/Header.astro';
+import PricingCard from '@components/sections/common/pricingCard/PricingCard.astro';
+
+const upfrontPricing = {
+  title: 'Pay upfront · save $800 🎉',
+  prevPrice: '$9,800',
+  currentPrice: '$9,000',
+  priceList: [
+    {
+      label: '8 months bootcamp',
+      price: '$6,400 USD',
+    },
+    {
+      label: 'Save today',
+      price: '-$800 USD',
+    },
+    {
+      label: 'Total',
+      price: '$9,000 USD',
+    },
+  ],
+  list: [
+    'Covers tuition for 8 months',
+    'Live coding challenge practice',
+    'Learn live with industry experts',
+    'coaching and mentorship',
+    'Launch a job-ready portfolio',
+    '1:1 support and feedback',
+    'Interview prep sessions',
+    'Career support for 6 months',
+  ],
+  dark: true,
+};
+
+const monthlyPricing = {
+  title: 'Pay monthly',
+  prevPrice: '',
+  currentPrice: '800 / month',
+  priceList: [
+    {
+      label: 'Monthly',
+      price: '$800 USD',
+    },
+    {
+      label: '8x monthly payments',
+      price: '$1,225 USD',
+    },
+    {
+      label: 'Total',
+      price: '$9,800 USD',
+    },
+  ],
+  list: [
+    'Covers tuition for 8 months',
+    'Live coding challenge practice',
+    'Learn live with industry experts',
+    'coaching and mentorship',
+    'Launch a job-ready portfolio',
+    '1:1 support and feedback',
+    'Interview prep sessions',
+    'Career support for 6 months',
+  ],
+};
+---
+
+<section id='qatuition' class='container max-w-screen-desktop'>
+  <Header
+    headerTitle='BOOTCAMP TUITION'
+    title='Simple, transparent pricing'
+    description={`We pride ourselves on being one of the most affordable Coding Bootcamps when
+    you factor in the price/month. Other similar programs charge $1,000 to
+    $1,800/month.`}
+  />
+  <div class='flex flex-col gap-4 tablet:flex-row'>
+    <PricingCard {...upfrontPricing} />
+    <PricingCard {...monthlyPricing} />
+  </div>
+</section>

@@ -1,0 +1,55 @@
+---
+import Header from '@components/Header.astro';
+import type { BootcampCourse } from 'src/types/Course';
+import CourseCard from './course_card/CourseCard.astro';
+
+export const courses: BootcampCourse[] = [
+  {
+    imagePath: '/home-page/se-course-image.jpg',
+    courseLink: '/software-engineering-bootcamp',
+    title: 'Software Engineering',
+    courseTitle: 'Software Engineering Bootcamp',
+    duration: 8,
+    type: 'Part time',
+  },
+  {
+    imagePath: '/home-page/qa-course-image.jpg',
+    courseLink: '/qa-bootcamp',
+    title: 'Quality Assurance',
+    courseTitle: 'Quality Assurance Bootcamp',
+    duration: 8,
+    type: 'Part time',
+  },
+  {
+    imagePath: '/home-page/qa-course-image.jpg',
+    courseLink: '/ui-architecture',
+    title: 'UI Architecture',
+    courseTitle: 'UI Architecture Bootcamp',
+    duration: 4,
+    type: 'Part time',
+  },
+];
+---
+
+<section class='container flex max-w-screen-desktop flex-col'>
+  <Header
+    class=''
+    title='Your pathways into tech'
+    description={`
+    Start a life-changing journey with our fully online courses. Keep your
+    current job while gaining expertise in a new profession, all at your own
+    pace.`}
+    isCentered
+  />
+  <ul
+    class='grid w-full gap-y-4 tablet:grid-cols-2 tablet:gap-x-6 laptop:grid-cols-3 laptop:gap-x-4'
+  >
+    {
+      courses.map((course) => (
+        <li class='flex-1'>
+          <CourseCard course={course} />
+        </li>
+      ))
+    }
+  </ul>
+</section>

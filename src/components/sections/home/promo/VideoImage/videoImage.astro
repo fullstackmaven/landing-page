@@ -1,0 +1,33 @@
+---
+import HeroImage from '@assets/home/hero-image.svg';
+import PlayIconDark from '@assets/play-icon-dark.svg';
+import PlayIconLight from '@assets/play-icon-light.svg';
+import { Image } from 'astro:assets';
+
+interface Props {
+  backgroundColor: string;
+}
+
+const { backgroundColor } = Astro.props;
+---
+
+<div class='relative h-fit'>
+  <Image alt='hero-image' src={HeroImage} />
+  <div
+    class:list={[
+      'absolute inset-0 z-10 m-auto h-full w-full rounded-2xl border',
+      backgroundColor,
+    ]}
+  >
+  </div>
+  <Image
+    alt='play-icon-light'
+    src={PlayIconLight}
+    class='absolute inset-0 z-20 m-auto laptop:hidden'
+  />
+  <Image
+    alt='play-icon-dark'
+    src={PlayIconDark}
+    class='absolute inset-0 z-20 m-auto hidden laptop:block'
+  />
+</div>

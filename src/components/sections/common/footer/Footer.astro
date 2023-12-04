@@ -1,0 +1,77 @@
+---
+import FacebookIcon from '@assets/facebook-icon.svg';
+import LinkedinIcon from '@assets/linkedin-icon.svg';
+import YoutubeIcon from '@assets/youtube-icon.svg';
+import { Image } from 'astro:assets';
+---
+
+<footer
+  class='container mb-12 grid max-w-screen-desktop grid-cols-1 gap-y-12 tablet:grid-cols-2 tablet:gap-x-12 tablet:gap-y-6 laptop:grid-cols-3 laptop:gap-13 laptop:gap-x-13'
+>
+  <section class='col-span-1'>
+    <h4
+      class='mb-4 border border-x-0 border-t-0 border-b-gray-300 py-4 text-xs text-primary'
+    >
+      Bootcamps
+    </h4>
+    <ul class='grid gap-4 pl-3'>
+      <li class='text-s font-medium text-primary'>
+        Software Engineering Bootcamp
+      </li>
+      <li class='text-s font-medium text-primary'>
+        Quality Assurance Bootcamp
+      </li>
+      <li class='text-s font-medium text-primary'>Free HTML Course Bootcamp</li>
+      <li class='text-s font-medium text-primary'>Free CSS Course Bootcamp</li>
+    </ul>
+  </section>
+  <section class='col-span-1'>
+    <h4
+      class='mb-4 border border-x-0 border-t-0 border-b-gray-300 py-4 text-xs text-primary'
+    >
+      Useful
+    </h4>
+    <ul class='grid gap-4 pl-3'>
+      <li class='text-s font-medium text-primary'>Career Quiz</li>
+      <li class='text-s font-medium text-primary'>Blog</li>
+      <li class='text-s font-medium text-primary'>Outcomes</li>
+      <li class='text-s font-medium text-primary'>Payment options</li>
+      <li class='text-s font-medium text-primary'>FAQ</li>
+    </ul>
+  </section>
+  <section class='col-span-1 grid gap-y-4'>
+    <h4
+      class='border border-x-0 border-t-0 border-b-gray-300 py-4 text-xs text-primary'
+    >
+      Cyram · Online Coding Bootcamp
+    </h4>
+    <p class='tracking-s text-s text-gray-700'>
+      Getting into tech is made ridiculously expensive by many bootcamps. Being
+      fully self-funded, we happily cut through the noise and help people get
+      into tech at an affordable price, taking a 100% learn-by-doing approach.
+    </p>
+    <ul class='flex gap-x-3'>
+      <li
+        class='flex h-9 w-9 items-center justify-center rounded-full border border-primary/10 bg-gray-50'
+      >
+        <Image src={FacebookIcon} alt='facebook-icon' />
+      </li>
+
+      <li
+        class='flex h-9 w-9 items-center justify-center rounded-full border border-primary/10 bg-gray-50'
+      >
+        <Image src={LinkedinIcon} alt='linkedin-icon' />
+      </li>
+
+      <li
+        class='flex h-9 w-9 items-center justify-center rounded-full border border-primary/10 bg-gray-50'
+      >
+        <Image src={YoutubeIcon} alt='youtube-icon' />
+      </li>
+    </ul>
+  </section>
+  <section class='hidden tablet:block laptop:hidden'></section>
+  <section class='mt-0 flex w-full justify-between tablet:mt-12 laptop:mt-0'>
+    <p class='text-s font-medium text-primary'>© 2023 cyram.io</p>
+  </section>
+</footer>

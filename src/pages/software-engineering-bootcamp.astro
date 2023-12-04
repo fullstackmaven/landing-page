@@ -1,21 +1,23 @@
 ---
-import CourseDefinition from '@components/CourseDefinition.astro';
-import Footer from '@components/Footer.astro';
-import { Header } from '@components/Header';
+import Navbar from '@components/Navbar';
+import CourseDefinition from '@components/sections/common/courseDefinition/CourseDefinition.astro';
+import Faq from '@components/sections/common/faq/Faq.astro';
+import Footer from '@components/sections/common/footer/Footer.astro';
 import GetStarted from '@components/sections/common/getStarted/GetStarted.astro';
-import HeaderDropdown from '@components/sections/homepage/headerDropdown/HeaderDropdown.astro';
-import BootcampTeam from '@components/sections/qaCourse/bootcampTeam/BootcampTeam.astro';
-import BootcampTuition from '@components/sections/qaCourse/bootcampTuition/BootcampTuition.astro';
-import Curriculum from '@components/sections/qaCourse/curriculum/Curriculum';
-import Hero from '@components/Hero.astro';
-import Overview from '@components/sections/qaCourse/overview/Overview.astro';
-import Schedule from '@components/sections/qaCourse/schedule/Schedule.astro';
-import WhyCyram from '@components/sections/qaCourse/whyCyram/WhyCyram.astro';
+import Hero from '@components/sections/common/hero/Hero.astro';
+import HeaderDropdown from '@components/sections/home/headerDropdown/HeaderDropdown.astro';
+import BootcampTeam from '@components/sections/qa/bootcampTeam/BootcampTeam.astro';
+import BootcampTuition from '@components/sections/qa/bootcampTuition/BootcampTuition.astro';
+import Curriculum from '@components/sections/qa/curriculum/Curriculum';
+import Overview from '@components/sections/qa/overview/Overview.astro';
+import Schedule from '@components/sections/qa/schedule/Schedule.astro';
+import Students from '@components/sections/qa/students/Students.astro';
+import WhyCyram from '@components/sections/qa/whyCyram/WhyCyram.astro';
+import DevStack from '@components/sections/se/devStack/DevStack.astro';
+import Project from '@components/sections/se/projects/Project.astro';
+import Workshop from '@components/sections/se/workshop/Workshop.astro';
 import Layout from '@layouts/Layout.astro';
 import '../index.scss';
-import Students from '@components/sections/homepage/students/Students.astro';
-import Faq from '@components/Faq.astro';
-import ViewTransitions from 'astro/components/ViewTransitions.astro';
 
 const menuItems = [
   { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
@@ -30,12 +32,11 @@ const menuItems = [
 
 <Layout title='Quality Assurance Bootcamp'>
   <>
-    <Header client:load menuItems={menuItems}>
+    <Navbar client:load menuItems={menuItems}>
       <div slot='qabootcamp' class='flex h-full w-full flex-col gap-y-6'>
         <HeaderDropdown />
       </div>
-    </Header>
-    <ViewTransitions />
+    </Navbar>
     <Hero courseName='se' />
     <div
       class='laptop:gap-y8 flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-14 tablet:py-13'
@@ -43,6 +44,9 @@ const menuItems = [
       <CourseDefinition name='se' />
       <Overview />
       <Curriculum client:load />
+      <DevStack />
+      <Project />
+      <Workshop />
       <Schedule />
       <WhyCyram />
       <Students />

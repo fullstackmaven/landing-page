@@ -1,11 +1,12 @@
 ---
-import VideoImage from '@components/sections/qaCourse/bootcampAlumni/VideoImage/VideoImage.astro';
+import ImageAlumni1 from '@assets/alumni-1.png';
+import ImageAlumni2 from '@assets/alumni-2.png';
+import ImageAlumni3 from '@assets/alumni-3.png';
+import VideoImage from '@components/sections/qa/bootcampAlumni/VideoImage/VideoImage.astro';
 import type { HTMLAttributes } from 'astro/types';
 import { Image } from 'astro:assets';
 import type { TFeedback } from 'src/types/Feedback';
 import Feedback from '../feedback/Feedback.astro';
-import ImageAlumni1 from '@assets/qa/qa-alumni-2.svg';
-import ImageAlumni2 from '@assets/qa/qa-alumni-3.svg';
 
 const feedbackList: TFeedback[] = [
   {
@@ -66,13 +67,13 @@ const attrs = Astro.props;
       <Image class='w-full' alt='alumni-2' src={ImageAlumni2} />
     </VideoImage>
     <VideoImage className='hidden tablet:block'>
-      <Image class='w-full' alt='alumni-1' src={ImageAlumni1} />
+      <Image class='w-full' alt='alumni-3' src={ImageAlumni3} />
     </VideoImage>
     <VideoImage className='hidden tablet:block'>
-      <Image class='w-full' alt='alumni-1' src={ImageAlumni1} />
+      <Image class='w-full' alt='alumni-4' src={ImageAlumni1} />
     </VideoImage>
     <VideoImage className='hidden tablet:block'>
-      <Image class='w-full' alt='alumni-1' src={ImageAlumni1} />
+      <Image class='w-full' alt='alumni-5' src={ImageAlumni1} />
     </VideoImage>
   </div>
   <div class='grid grid-cols-1 gap-y-10 tablet:grid-cols-2 tablet:gap-x-6'>

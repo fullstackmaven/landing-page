@@ -1,0 +1,131 @@
+---
+import ImageStarPricingDark from '@assets/qa/star-pricing-dark.svg';
+import ImageStarPricing from '@assets/qa/star-pricing.svg';
+import type { HTMLAttributes } from 'astro/types';
+import { Image } from 'astro:assets';
+import type { ReactNode } from 'react';
+
+interface TPriceList {
+  label: string | ReactNode;
+  price: string;
+}
+
+interface Props extends HTMLAttributes<'section'> {
+  dark?: boolean;
+  title?: string;
+  prevPrice?: string;
+  currentPrice?: string;
+  priceList?: TPriceList[];
+  list?: string[];
+}
+
+const { dark, currentPrice, list, prevPrice, priceList, title, ...attrs } =
+  Astro.props;
+---
+
+<section
+  class='isolate grid max-w-md grid-cols-1 gap-8 rounded-l border border-gray-300 laptop:mx-0 laptop:min-w-[343px]'
+  {...attrs}
+>
+  <div
+    class:list={[
+      'flex flex-col gap-3 rounded-l bg-white p-6',
+      {
+        '!bg-primary': dark,
+      },
+    ]}
+  >
+    <div class='flex flex-col gap-3'>
+      <h3
+        id='tier-startup'
+        class:list={[
+          'text-base font-bold',
+          {
+            '!text-white': dark,
+          },
+        ]}
+      >
+        {title}
+      </h3>
+      <p
+        class:list={[
+          'text-gray-600 text-base',
+          {
+            '!text-white': dark,
+          },
+        ]}
+      >
+        <span class='line-through'>{prevPrice}</span>
+        {currentPrice}
+      </p>
+    </div>
+    <ul>
+      {
+        priceList?.map((data) => (
+          <li
+            class:list={[
+              'border-b-[0.5px] border-gray-300',
+              {
+                '!border-gray-1000': dark,
+              },
+            ]}
+          >
+            <p
+              class:list={[
+                ' flex justify-between py-3 text-xs',
+                {
+                  '!text-white': dark,
+                },
+              ]}
+            >
+              {data.label === 'Save today' ? (
+                <span class='rounded-xs bg-neon px-[6px] py-[2px] text-primary'>
+                  Save today
+                </span>
+              ) : (
+                <span class='px-[6px] py-[2px]'>{data.label}</span>
+              )}
+
+              <span>{data.price}</span>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+    <ul class='text-sm text-gray-600 space-y-3'>
+      {
+        list?.map((data) => (
+          <li class='flex gap-x-3'>
+            {dark ? (
+              <Image
+                src={ImageStarPricing}
+                alt='star-mobile'
+                loading='lazy'
+                decoding='async'
+              />
+            ) : (
+              <Image
+                src={ImageStarPricingDark}
+                alt='star-mobile-dark'
+                loading='lazy'
+                decoding='async'
+              />
+            )}
+
+            <p class:list={['text-s', { '!text-white': dark }]}>{data}</p>
+          </li>
+        ))
+      }
+    </ul>
+    <a
+      href='/'
+      aria-describedby='tier-upfront'
+      class:list={[
+        'hover:bg-indigo-500 focus-visible:outline-indigo-600 tracking-s block rounded-s bg-primary px-3 py-2 text-center text-s font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
+        {
+          '!bg-white !text-primary': dark,
+        },
+      ]}>Enroll now</a
+    >
+  </div>
+</section>

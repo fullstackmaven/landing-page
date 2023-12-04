@@ -1,0 +1,25 @@
+---
+import ImagePlayButton from '@assets/qa/play-button.svg';
+import { Image } from 'astro:assets';
+
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<div class:list={['relative', className]}>
+  <div
+    class='absolute inset-0 m-auto h-fit w-fit bg-primary px-5 py-2 laptop:cursor-pointer'
+  >
+    <Image
+      src={ImagePlayButton}
+      alt='play-button'
+      loading='lazy'
+      decoding='async'
+      class='w-full'
+    />
+  </div>
+  <slot />
+</div>
