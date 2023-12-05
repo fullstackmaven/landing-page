@@ -1,4 +1,4 @@
-import ArrowChevronIcon from '@assets/arrow-chevron.svg';
+import ArrowChevronIcon from '@assets/common/arrow-chevron.svg';
 import classNames from 'classnames';
 import {
   useEffect,

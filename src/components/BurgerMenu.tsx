@@ -1,4 +1,4 @@
-import HamburgerIcon from '@assets/hamburger.svg';
+import HamburgerIcon from '@assets/common/hamburger.svg';
 import { type FC, type HTMLAttributes } from 'react';
 
 interface TBurgerMenuProps extends HTMLAttributes<HTMLButtonElement> {}
