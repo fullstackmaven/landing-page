@@ -1,8 +1,9 @@
-export interface Faq {
-  question: string;
-  answer: string;
+export interface TFaq {
+  questions: TFaqContent[];
+  unsure: boolean;
 }
 
-export interface FaqPage {
-  page: 'home' | 'se' | 'qa' | 'ui-arc';
+export interface TFaqContent {
+  question: string;
+  answer: string;
 }

@@ -1,4 +1,5 @@
 ---
+import QACourseImage from '@assets/qa/people/qa-course-image.jpg';
 import Navbar from '@components/Navbar';
 import BootcampTeam from '@components/sections/common/bootcampTeam/BootcampTeam.astro';
 import BootcampTuition from '@components/sections/common/bootcampTuition/BootcampTuition.astro';
@@ -26,6 +27,49 @@ const menuItems = [
   { label: 'Education Team', id: 'qaeducationteam' },
   { label: 'FAQ', id: 'faq' },
 ];
+
+const heroData = {
+  heroTitle: 'Quality Assurance Bootcamp: Ignite Your Tech Journey!',
+  subTitle:
+    'Transform into a QA engineer in just 5 months and gain in-demand skills. Join our live online classes and master the art of quality assurance.',
+  heroAltImage: 'qa-course-image',
+  heroImage: QACourseImage,
+};
+
+const courseDefinitionData = {
+  headerTitle: `HERE'S THE DEAL`,
+  title: 'What is Quality Assurance?',
+  definitions: [
+    {
+      title: 'Bug busters:',
+      description:
+        "QA Engineers test software to find those pesky bugs and glitches. It's a bit like a treasure hunt, but instead of gold, you discover issues in software.",
+    },
+    {
+      title: 'Fast-track to tech:',
+      description:
+        "Start your career as a QA engineer and, as you dive into the tech universe, you'll discover endless possibilities. Whether you want to explore further in automation or explore other tech roles like a software developer or a devops engineer, the path is yours to chart.",
+    },
+  ],
+};
+
+const faqContents = {
+  questions: [
+    {
+      question: 'Can I try Cyram for free?',
+      answer: `Yes, you can select a monthly payment plan of $550.00 a month for 10 months and $1,400.00 upfront. Note: You will be required to pay the full duration of the payment plan even if you finish the program before the payment plan ends.`,
+    },
+    {
+      question: `How long are your courses?`,
+      answer: `Learners progress through the material at their own pace, moving on in the program by demonstrating competency in each sprint. With Cyram’s self-paced format, learners complete the program anywhere between 6 and 10 months.`,
+    },
+    {
+      question: `How much does Cyram cost?`,
+      answer: `Total costs range from $11,950 for upfront tuition to $16,000+ for Deferred Tuition. With Deferred tuition, we don’t require any upfront payments. With both options, you’ll owe nothing if you don’t get a job within a year of graduation (terms apply). Discover all the available tuition choices here!`,
+    },
+  ],
+  unsure: false,
+};
 ---
 
 <Layout title='Quality Assurance Bootcamp'>
@@ -35,13 +79,13 @@ const menuItems = [
         <HeaderDropdown />
       </div>
     </Navbar>
-    <Hero courseName='qa' />
+    <Hero {...heroData} />
     <ViewTransitions />
   </div>
   <div
     class='flex flex-grow flex-col gap-y-12 pt-12 tablet:gap-y-15 tablet:pt-16 laptop:gap-y-16 laptop:pt-17'
   >
-    <CourseDefinition name='qa' />
+    <CourseDefinition {...courseDefinitionData} />
     <Overview />
     <Curriculum client:load />
     <Schedule />
@@ -49,9 +93,8 @@ const menuItems = [
     <BootcampTeam />
     <Students />
     <BootcampTuition />
-    <Faq page='qa' />
+    <Faq {...faqContents} />
     <GetStarted />
     <Footer />
   </div>
 </Layout>
- @components/sections/common/curriculum/Curriculum

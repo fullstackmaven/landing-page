@@ -7,8 +7,7 @@ interface Props {
 }
 
 const { data } = Astro.props;
-const { country, feedback, imagePath, name } = data;
-const src = import(`./../../../../assets/common/student/${imagePath}.png`);
+const { country, feedback, image, name } = data;
 ---
 
 <div>
@@ -16,7 +15,7 @@ const src = import(`./../../../../assets/common/student/${imagePath}.png`);
     <Image
       alt='student-feedback-image'
       class='h-10 w-10 rounded-s object-cover'
-      src={src}
+      src={image}
     />
     <div class=''>
       <p class='text-s font-semibold text-primary tablet:text-xs'>
