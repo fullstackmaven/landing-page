@@ -1,4 +1,4 @@
-import CloseIcon from '@assets/close-icon.svg';
+import CloseIcon from '@assets/common/close-icon.svg';
 import classNames from 'classnames';
 import { type FC, type HTMLAttributes } from 'react';
 

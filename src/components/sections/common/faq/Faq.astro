@@ -1,18 +1,18 @@
 ---
 import Questions from '@components/sections/common/questions/Questions.astro';
-import type { FaqPage } from 'src/types/Faq';
+import type { TFaq } from 'src/types/Faq';
 import Header from '../../../Header.astro';
 
-interface Props extends FaqPage {}
+interface Props extends TFaq {}
 
-const { page } = Astro.props;
+const { questions, unsure } = Astro.props;
 ---
 
 <section class='container max-w-screen-desktop'>
   <Header
-    headerTitle={page === 'home' ? '' : 'FAQ'}
+    headerTitle={!unsure ? '' : 'FAQ'}
     title='Got a question about our bootcamp?'
-    isCentered={page === 'home'}
+    isCentered={!unsure}
   />
-  <Questions page={page} />
+  <Questions questions={questions} unsure={unsure} />
 </section>

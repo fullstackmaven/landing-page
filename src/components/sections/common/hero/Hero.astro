@@ -1,33 +1,21 @@
 ---
-import AwsIcon from '@assets/techIcons/aws.svg';
-import JavascriptIcon from '@assets/techIcons/javascript.svg';
-import NodejsIcon from '@assets/techIcons/nodejs.svg';
-import ReactIcon from '@assets/techIcons/react.svg';
-import TypescriptIcon from '@assets/techIcons/typescript.svg';
+import AwsIcon from '@assets/common/techIcons/aws.svg';
+import JavascriptIcon from '@assets/common/techIcons/javascript.svg';
+import NodejsIcon from '@assets/common/techIcons/nodejs.svg';
+import ReactIcon from '@assets/common/techIcons/react.svg';
+import TypescriptIcon from '@assets/common/techIcons/typescript.svg';
 import { Button } from '@components/Button';
 import LiveIndicatorPulse from '@components/LiveIndicatorPulse.astro';
+import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 interface Props {
-  courseName: 'se' | 'qa';
+  heroTitle: string;
+  subTitle: string;
+  heroImage: ImageMetadata;
+  heroAltImage: string;
 }
 
-// TODO: This component needs to be refactored to work for any course hero
-const { courseName } = Astro.props;
-
-const heroTitle =
-  courseName === 'se'
-    ? 'Software Engineering Bootcamp: Craft Your Tech Future!'
-    : 'Quality Assurance Bootcamp: Ignite Your Tech Journey!';
-
-const subTitle =
-  courseName === 'se'
-    ? 'Start your tech career with our immersive coding bootcamp. Create real-world projects and build your job-ready portfolio!'
-    : 'Transform into a QA engineer in just 5 months and gain in-demand skills. Join our live online classes and master the art of quality assurance.';
-
-const heroImage =
-  courseName === 'se'
-    ? import(`@assets/se/people/se-course-image.jpg`)
-    : import(`@assets/qa/people/qa-course-image.jpg`);
+const { heroAltImage, heroImage, heroTitle, subTitle } = Astro.props;
 ---
 
 <section
@@ -37,13 +25,13 @@ const heroImage =
     <h1 class='text-xl font-bold leading-tight text-black tablet:text-3xl'>
       {heroTitle}
     </h1>
-    <p class='tracking-s text-s leading-6 text-primary'>{subTitle}</p>
+    <p class='text-s leading-6 tracking-s text-primary'>{subTitle}</p>
     <Button title='Enroll now' className='tablet:px-6 tablet:py-3' />
   </div>
   <figure class='relative flex h-auto w-full flex-1 flex-col'>
     <Image
       src={heroImage}
-      alt=`${courseName}-course-image`
+      alt={heroAltImage}
       class='h-[26rem] w-full rounded-l object-cover'
     />
     <div class='absolute flex h-full w-full flex-col justify-between p-4'>

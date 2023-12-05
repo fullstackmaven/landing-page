@@ -1,5 +1,5 @@
-import ChevronDownIcon from '@assets/chevron-down-icon.svg';
-import ChevronRightIcon from '@assets/chevron-right-icon.svg';
+import ChevronDownIcon from '@assets/common/chevron-down-icon.svg';
+import ChevronRightIcon from '@assets/common/chevron-right-icon.svg';
 import classNames from 'classnames';
 import type { FC, HTMLAttributes, PropsWithChildren } from 'react';
 
