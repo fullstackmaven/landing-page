@@ -34,6 +34,7 @@ module.exports = {
         900: '#DADADA',
         1000: '#888888',
         1100: '#1F1F1F',
+        1200: '#666',
       },
       red: {
         300: '#CB9390',
@@ -77,8 +78,10 @@ module.exports = {
       15: '6rem', //96px
       16: '8rem', //128px
       17: '10rem', //160px
-      18: '15rem', //240px
-      19: '18.75rem', //300px
+      17: '10rem', //160px
+      18: '12.5rem', //200px
+      19: '15rem', //240px
+      20: '18.75rem', //300px
     },
     borderRadius: {
       none: '0',
@@ -121,6 +124,12 @@ module.exports = {
       xl: '0.8px',
     },
     extend: {
+      boxShadow: {
+        card: '0px 2px 10px 0px rgba(0, 0, 0, 0.10)',
+      },
+      opacity: {
+        3: 0.03,
+      },
       backgroundImage: {
         'hero-image': "url('/home-page/hero-image.jpeg')",
         'live-lecture-image': "url('/src/assets/home/se-course-image.jpeg')",
