@@ -16,7 +16,7 @@ const { questions, unsure } = Astro.props;
     title='Join intro session'
     category='ghost'
     className={classNames('mb-6 !px-4 !py-2 !text-s font-semibold', {
-      hidden: !unsure,
+      hidden: unsure,
     })}
   />
   <ul class='mb-3 flex flex-col gap-y-2'>
@@ -36,7 +36,7 @@ const { questions, unsure } = Astro.props;
     class:list={[
       'rounded-s border border-gray-300 p-6',
       {
-        hidden: unsure,
+        hidden: !unsure,
       },
     ]}
   >
@@ -55,7 +55,7 @@ const { questions, unsure } = Astro.props;
     src={WorkDeskImage}
     alt='get-started-image'
     class={classNames('mt-6 h-full w-full rounded-l object-cover', {
-      hidden: unsure,
+      hidden: !unsure,
     })}
   />
 </div>
