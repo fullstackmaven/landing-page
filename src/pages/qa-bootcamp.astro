@@ -12,7 +12,7 @@ import Curriculum from '@components/sections/qa/curriculum/Curriculum';
 import Overview from '@components/sections/qa/overview/Overview.astro';
 import Schedule from '@components/sections/qa/schedule/Schedule.astro';
 import Students from '@components/sections/qa/students/Students.astro';
-import WhyCyram from '@components/sections/qa/whyCyram/WhyCyram.astro';
+import WhyFullstack from '@components/sections/qa/whyFullstack/WhyFullstack.astro';
 import Layout from '@layouts/Layout.astro';
 import ViewTransitions from 'astro/components/ViewTransitions.astro';
 import '../index.scss';
@@ -21,7 +21,7 @@ const menuItems = [
   { label: 'Bootcamps', id: 'qabootcamp', isDropdown: true, isLeft: true },
   { label: 'Overview', id: 'qaoverview' },
   { label: 'Curriculum', id: 'qacurriculum' },
-  { label: 'Why Cyram ', id: 'whycyram' },
+  { label: 'Why Fullstack ', id: 'whyfullstack' },
   { label: 'Tuition', id: 'qatuition' },
   { label: 'Education Team', id: 'qaeducationteam' },
   { label: 'FAQ', id: 'faq' },
@@ -45,7 +45,7 @@ const menuItems = [
     <Overview />
     <Curriculum client:load />
     <Schedule />
-    <WhyCyram />
+    <WhyFullstack />
     <BootcampTeam />
     <Students />
     <BootcampTuition />

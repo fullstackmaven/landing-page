@@ -17,7 +17,7 @@ const MenuDrawer: FC<TMenuDrawerProps> = ({ onClose, ...otherProps }) => {
     >
       <ul>
         <li className='flex items-center justify-between'>
-          <p className='text-l font-extrabold text-primary'>Cyram</p>
+          <p className='text-l font-extrabold text-primary'>Fullstack Maven</p>
           <img src={CloseIcon.src} className='h-5 w-5' onClick={onClose} />
         </li>
         <li className='border border-x-0 border-t-0 border-b-gray-75 py-4'>
