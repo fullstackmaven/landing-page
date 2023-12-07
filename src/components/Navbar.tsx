@@ -131,13 +131,13 @@ const Navbar: FC<THeaderProps & HTMLAttributes<HTMLElement>> = ({
         >
           <h1
             className={classNames(
-              'flex-1 text-l font-extrabold text-primary laptop:flex-none',
+              'flex-1 text-base font-extrabold text-primary laptop:flex-none',
               // {
               //   'opacity-0 laptop:opacity-100': !isScrollAtTop,
               // },
             )}
           >
-            <a href='/'>Cyram</a>
+            <a href='/'>Fullstack Maven</a>
           </h1>
           {menuItems
             .filter((menuItem) => menuItem.isLeft)

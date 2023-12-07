@@ -119,7 +119,7 @@ const Curriculum = () => {
     headerTitle: 'CURRICULUM',
     title: 'Mastery-based learning with real world projects',
     description:
-      "At Cyram, we believe in learning at your own pace. No rush or pressure. Master topics step by step with hands-on projects. Got it? Move on. Need more time? No problem. We're here to help. Graduate with solid QA engineering skills for a successful career.",
+      "At Fullstack Maven, we believe in learning at your own pace. No rush or pressure. Master topics step by step with hands-on projects. Got it? Move on. Need more time? No problem. We're here to help. Graduate with solid QA engineering skills for a successful career.",
   };
 
   useEffect(() => {
@@ -188,9 +188,9 @@ const Curriculum = () => {
             </span>
           </div>
           <p className='text-s tracking-s text-primary tablet:text-base tablet:tracking-base'>
-            Cyram is the only bootstrapped Bootcamp. We've grown organically
-            with no funding and care passionately about every single one of our
-            students.
+            Fullstack Maven is the only bootstrapped Bootcamp. We've grown
+            organically with no funding and care passionately about every single
+            one of our students.
           </p>
         </div>
 
